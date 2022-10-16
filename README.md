@@ -1,6 +1,15 @@
 # grupo_9_blockbuster
 Proyecto integrador de Digital House
 
+Nuestro proyecto denominado Blockbuster busca revivir la vieja franquicia de videoclubes dedicada al alquiler de peliculas. Nuestro sitio esta basado en el mecanismo On Demand, donde el usuario puede adquirir a traves de su tarjeta de credito el derecho a ver una pelicula o serie de su preferencia en el momento que lo desee.
+
+Buscamos darle una impronta estetica actual a una empresa que no pudo competir con las plataformas de streaming ya vigentes en la actualidad, y que hoy estaría destinada al publico consumidor de contenido cinematografico en general.
+
+En que nos referenciamos:
+
+- En el carrito de YouTube, por la forma de mostrar en el costado izquierdo una imagen representativa de la pelicula/serie a adquirir.
+- 
+
 WireFrame del proyecto en Figma
 https://www.figma.com/file/HYI7WKGyxuvuJsVl9TA7ac/proyecto?node-id=0%3A1
 
