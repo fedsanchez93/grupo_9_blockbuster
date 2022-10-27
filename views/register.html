@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOCKBUSTER</title>
+    <!-- iconos -->
+    <script src="https://kit.fontawesome.com/fdd9998d29.js" crossorigin="anonymous"></script>
+    <!-- estilos de registro -->
+    <link rel="stylesheet" href="/css/styles-register.css">
+</head>
+<body>
+    <header>
+        <div class="div-titulo">
+        <a href="/index"><h1>BLOCKBUSTER</h1></a>
+    </div>
+    </header>
+
+    <main>
+        <div class="div-registro">
+            <h2 class="registrate">Registrate</h2>
+        
+            <form class="form-registro" action="/clientes" method="post">
+                <article>
+                    <label for="nombre">Nombre de Usuario</label> <br>
+                    <input type="text" name="usuario" id="usuario" placeholder="Usuario" required>
+                    <span class="feedback verificador">Minimo 10 caracteres</span>
+                </article>
+                <article>
+                    <label for="email">Email</label> <br>
+                    <input type="email" name="email" id="email"  placeholder="name@blockbuster.com" required>
+                    <span class="feedback verificador">name@blockbuster.com</span>
+                </article>
+                <article>
+                    <label for="contrasena">Contraseña</label> <br>
+                    <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required>
+                    <span class="feedback verificador">Minimo 6 caracteres</span>
+                </article>
+                <div class="iconos-foto-google">
+                    <div class="div-subir-foto">
+                        <p>Subir foto</p>
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="div-google">
+                        <p>Registrar con Google</p>
+                        <i class="fa-brands fa-google"></i>
+                    </div>
+                </div>
+                <button type="submit" id="crear-cuenta">Crear Cuenta</button>
+                <div >
+                    <label for="ingresar">Ya sos cliente?</label>
+                    <button type="submit"  id="ingresar">Ingresar</button>
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <nav>
+            <ul class="nav-footer-izq">
+                <li>Ayuda</li>
+                <li>Politica y privacidad</li>
+                <li>Soporte</li>
+                <li>Contactanos</li>
+            </ul>
+            <ul class="nav-footer-derecha">
+                <li>Seguinos</li>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>
