@@ -11,28 +11,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
     <link rel="icon" href="/images/logo-mercado-liebre.svg">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/carrito.css">
 </head>
 <body>
     <header class="main-header">
         <div class="top-bar">
-            <i class="fa-solid fa-bars"></i>
-            <img src="/images/blockbuster-logo.svg">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <i class="fa-solid fa-circle-user"></i>
+            <nav class="left-menu-links">
+                <i class="fa-solid fa-bars"></i>
+            </nav>
+            <nav class="middle-menu-links">
+                <img src="/images/blockbuster-logo.svg" class="logo">
+            </nav>
+            <nav class="right-menu-links">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-circle-user"></i>
+            </nav>
         </div>
     </header>
     
     <main class="main-body">
-        <div class="product">
-            <img src="/images/star-wars.jpg">
+        <article class="product-container">
+            <img src="/images/star-wars.jpg" class="product-image">
             <div class="trash-icon">
                 <i class="fa-solid fa-trash-can"></i>
             </div>
-        </div>
-        <div class="dot-menu">
-            <i class="fa-solid fa-ellipsis"></i>
-        </div>
+            <div class="dot-menu">
+                <i class="fa-solid fa-ellipsis"></i>
+            </div>
+        </article>
         <div class="details">
             <h4>Pelicula/Serie</h4>
             <h4>Reseña/sinopsis</h4>

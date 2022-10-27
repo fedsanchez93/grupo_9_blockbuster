@@ -1,0 +1,33 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.top-bar {
+    display: flex;
+    height: 68px;
+    width: 368px;
+    background-color: rgba(31,68,137,1);
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.main-body {
+    height: 678px;
+    background-color: rgba(1,35,83,0.87);
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+}
+
+.product-image{
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin-top: 8px; 
+    margin-bottom: 57px;  
+}
