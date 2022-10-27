@@ -11,3 +11,7 @@ app.listen(PORT,() => console.log("Server listening on port  " + PORT));
 app.get("/", (req,res) => { 
     res.sendFile(path.resolve("./views/home.html"));
 });
+
+app.get("/carrito", (req,res) => {
+    res.sendFile(path.resolve("./views/carrito1.html"));
+});
