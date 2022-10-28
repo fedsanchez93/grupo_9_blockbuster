@@ -17,14 +17,23 @@ a{
     height: 3cm;
     border-radius: 0 0 1cm 1cm;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .logo{
     /* padding-top: 20px; */
     width: 250px;
 }
-
+.menu-derecha{
+    display: flex;
+    justify-content: space-around;
+}
+.menu-derecha h3{
+    padding: 10px;
+    color: #FCC139;
+}
 .div-registro{
     background: #696464;
     display: flex;
