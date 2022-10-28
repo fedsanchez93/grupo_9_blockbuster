@@ -1,19 +1,28 @@
+*{
+    font-family: 'Poppins', sans-serif;
+
+}
+
 body{
-    margin: 0px;
+    margin: 0px;padding: 0%;
+}
+
+a{
+    color: none;
+    text-decoration: none;
 }
 
 .div-titulo{
     background: #1F4489;
     height: 3cm;
     border-radius: 0 0 1cm 1cm;
+    display: flex;
+    justify-content: center;
 }
 
-h1{
-    text-align: center;
-    color: #FCC139;
-    margin: 0px;
-    padding-top: 20px;
-    font-size: 40px;
+.logo{
+    /* padding-top: 20px; */
+    width: 250px;
 }
 
 .div-registro{
@@ -22,9 +31,10 @@ h1{
     flex-direction: column;
     align-items: center;
     border-radius: 20px;
-    margin: 30px;
+    margin: 30px auto;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     flex-wrap: wrap;
+    max-width: 425px;
 }
 .registrate{
     font-size: 25px;
@@ -78,7 +88,7 @@ footer nav{
     background: #1F4489;
     color: #FCC139;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
 }
 .nav-footer-izq{
@@ -115,4 +125,9 @@ footer nav i{
     font-size: 20px;
     border-radius: 1cm;
     border: #1F4489 3px solid;
+}
+
+/* tablet */
+@media (min:425px) {
+    
 }
