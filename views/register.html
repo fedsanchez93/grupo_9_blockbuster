@@ -36,19 +36,19 @@
         
             <form class="form-registro" action="/clientes" method="post">
                 <article>
-                    <label for="nombre">Nombre de Usuario</label> <br>
+                    <label class="label-form" for="nombre">Nombre de Usuario</label> <br>
                     <input type="text" name="usuario" id="usuario" placeholder="Usuario" required>
-                    <span class="feedback verificador">Minimo 10 caracteres</span>
+                    <br><span class="feedback verificador">Minimo 10 caracteres</span>
                 </article>
                 <article>
-                    <label for="email">Email</label> <br>
+                    <label  class="label-form" for="email">Email</label> <br>
                     <input type="email" name="email" id="email"  placeholder="name@blockbuster.com" required>
-                    <span class="feedback verificador">name@blockbuster.com</span>
+                    <br><span class="feedback verificador">name@blockbuster.com</span>
                 </article>
                 <article>
-                    <label for="contrasena">Contraseña</label> <br>
+                    <label  class="label-form" for="contrasena">Contraseña</label> <br>
                     <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required>
-                    <span class="feedback verificador">Minimo 6 caracteres</span>
+                    <br><span class="feedback verificador">Minimo 6 caracteres</span>
                 </article>
                 <div class="iconos-foto-google">
                     <div class="div-subir-foto">
@@ -60,8 +60,10 @@
                         <i class="fa-brands fa-google"></i>
                     </div>
                 </div>
-                <button type="submit" id="crear-cuenta">Crear Cuenta</button>
-                <div >
+                <div class="div-boton-crear-cuenta">
+                    <button type="submit" id="crear-cuenta">Crear Cuenta</button>
+                </div>
+                <div class="div-ingresar">
                     <label for="ingresar">Ya sos cliente?</label>
                     <button type="submit"  id="ingresar">Ingresar</button>
                 </div>
