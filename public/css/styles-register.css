@@ -16,6 +16,7 @@ header{
     position: fixed;
     top: 0px;
     width: 100%;
+    z-index: 10;
 }
 .div-titulo{
     background: #1F4489;
@@ -30,14 +31,24 @@ header{
 .logo{
     /* padding-top: 20px; */
     width: 250px;
+    animation: agrandar 0.5s linear  infinite alternate ;
+}
+@keyframes agrandar {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.05);
+    }
 }
 .menu-derecha{
     display: flex;
     justify-content: space-around;
 }
 .menu-derecha h3{
-    padding: 10px;
+    padding: 0 10px;
     color: #FCC139;
+    margin: 0%;
 }
 
 /* main */
@@ -96,10 +107,12 @@ article{
 .div-subir-foto{
 padding: 10px;
 text-align: center;
+
 }
 .div-google{
     padding: 10px;
     text-align: center;
+
 }
 .fa-user,.fa-google{
     padding: 8px;
@@ -107,6 +120,7 @@ text-align: center;
     border-radius: 1cm;
     font-size: 25px;
     color: white;
+    opacity: 0.5;
 }
 
 .label-form{
