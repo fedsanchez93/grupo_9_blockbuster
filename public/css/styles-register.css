@@ -4,6 +4,7 @@
 }
 
 body{
+    background-image: url('/images/fondo.jpg');
     margin: 0px;padding: 0%;
 }
 
@@ -33,6 +34,12 @@ header{
     width: 250px;
     animation: agrandar 0.5s linear  infinite alternate ;
 }
+.logo:hover{
+    border: solid 2px #FCC139;
+    transform: scale(1.08);
+    transition: 0.3s;
+    animation-direction: alternate-reverse;
+}
 @keyframes agrandar {
     0%{
         transform: scale(1);
@@ -44,6 +51,12 @@ header{
 .menu-derecha{
     display: flex;
     justify-content: space-around;
+}
+.menu-derecha h3:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+    border: solid 2px #FCC139;
+
 }
 .menu-derecha h3{
     padding: 0 10px;
@@ -109,12 +122,35 @@ padding: 10px;
 text-align: center;
 
 }
+/* .boton-subir-foto{
+    height: 1cm;
+    width: 1cm;
+    background: none;
+    color: none;
+    position: relative;
+    bottom: 1.3cm;
+} */
+
+.image-upload>input {
+    display: none;
+  }
+
+.fa-user{
+    position: relative;
+    z-index: 10;
+    color: white;
+    padding: 8px;
+    border: white solid 2px;
+    border-radius: 1cm;
+    font-size: 25px;
+    opacity: 0.5;
+}
 .div-google{
     padding: 10px;
     text-align: center;
 
 }
-.fa-user,.fa-google{
+.fa-google{
     padding: 8px;
     border: white solid 2px;
     border-radius: 1cm;
@@ -164,7 +200,9 @@ footer nav{
     align-items: center;
     justify-content: center;
 }
-
+.nav-footer-izq li:hover{
+    font-size: 25px;
+}
 .nav-footer-derecha{
     display: flex;
     margin: 0;
@@ -173,6 +211,9 @@ footer nav{
 .nav-footer-derecha li{
     padding: 10px;
     
+}
+.nav-footer-derecha i:hover{
+    font-size: 20px;
 }
 li{
     list-style:none;
