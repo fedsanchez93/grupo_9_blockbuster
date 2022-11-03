@@ -64,8 +64,10 @@ header{
     margin: 0%;
 }
 
+
+
 /* main */
-.div-registro{
+.div-login{
 
     background: #696464;
     max-width: 425px;
@@ -78,13 +80,13 @@ header{
     flex-wrap: wrap; */
     position: relative;
 }
-.registrate{
+.iniciar-secion{
     padding-top: 30px;
     font-size: 25px;
     color: white;
     text-align: center;
 }
-.form-registro input{
+.form-login input{
     background: black;
     padding: 10px;
     border-radius: 10px;
@@ -92,16 +94,12 @@ header{
     /* text-align: center; */
     width: 5cm;
 }
-.form-registro article:hover input{
-    border: #FCC139 solid 2px;
-}
-
 article{
     margin: 15px;
     text-align: center;
     padding: 8px;
 }
-.form-registro label{
+.form-login label{
     color: white;
     text-align: left;
 }
@@ -119,7 +117,6 @@ article{
 }
 .iconos-foto-google p{
     margin: 0;
-    padding: 0px;
     color: white;
 }
 .div-subir-foto{
@@ -150,20 +147,10 @@ text-align: center;
     font-size: 25px;
     opacity: 0.5;
 }
-.div-subir-foto:hover .fa-user {
-    opacity: 1;
-}
 .div-google{
     padding: 10px;
-    /* text-align: center; */
-    display: flex;
-    align-items: center;
-    border: rgba(255, 0, 0, 0.5) solid 2px;
-    border-radius: 1cm;
-    margin: 8px 0;
-}
-.div-google:hover{
-    border: rgba(255, 0, 0, 1) solid 2px;
+    text-align: center;
+
 }
 .fa-google{
     padding: 8px;
@@ -173,10 +160,7 @@ text-align: center;
     color: white;
     opacity: 0.5;
 }
-.logo-google{
-    width: 1.5cm;
-    border-radius: 0.5cm;
-}
+
 .label-form{
     position: absolute;
     left: 20%;
@@ -207,27 +191,24 @@ text-align: center;
     border-radius: 1cm;
     border: #1F4489 3px solid;
 }
-#ingresar:hover, #crear-cuenta:hover{
-    border: #FCC139 solid 3px;
-}
-.div-registro:hover{
-    box-shadow: 5px 5px 10px rgb(180, 174, 174);
 
-}
+
+
+
+
+
+
 /* footer */
 footer{
     position: fixed;
     bottom: 0px;
     width: 100%;
-    background: #1F4489;
-
 }
 footer nav{
+    background: #1F4489;
     color: #FCC139;
-    width: 90%;
-    margin: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
 }
 .nav-footer-izq{
@@ -239,8 +220,7 @@ footer nav{
     justify-content: center;
 }
 .nav-footer-izq li:hover{
-    border-bottom:solid #FCC139 2px ;
-    border-top: solid #FCC139 2px  ;
+    font-size: 25px;
 }
 .nav-footer-derecha{
     display: flex;
@@ -268,5 +248,12 @@ footer nav i{
 
 /* tablet */
 @media (min:425px) {
+    
+}
 
+/* Escritorio */
+@media (min:1023px) {
+    footer {
+        
+    }
 }

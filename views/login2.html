@@ -9,7 +9,7 @@
     <!-- iconos -->
     <script src="https://kit.fontawesome.com/fdd9998d29.js" crossorigin="anonymous"></script>
     <!-- estilos de registro -->
-    <link rel="stylesheet" href="/css/styles-register.css">
+    <link rel="stylesheet" href="/css/login2.css">
     <!-- estilo de letra Popins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,14 +32,14 @@
 
     <main>
         <!-- <img src="/images/fondo.jpg" alt="imagen-de-fondo"> -->
-        <div class="div-registro">
-            <h2 class="registrate">Registrate</h2>
+        <div class="div-login">
+            <h2 class="iniciar-secion">Iniciar Secion</h2>
         
-            <form class="form-registro" action="/" method="GET">
+            <form class="form-login" action="/" method="GET">
                 <article>
                     <label class="label-form" for="nombre">Nombre de Usuario</label> <br>
                     <input type="text" name="usuario" id="usuario" placeholder="Usuario" required>
-                    <br><span class="feedback verificador">Minimo 10 caracteres</span>
+                    <br><span class="feedback verificador">Usuario Incorrect</span>
                 </article>
                 <article>
                     <label  class="label-form" for="email">Email</label> <br>
@@ -49,12 +49,13 @@
                 <article>
                     <label  class="label-form" for="contrasena">Contraseña</label> <br>
                     <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required>
-                    <br><span class="feedback verificador">Minimo 6 caracteres</span>
+                    <br><span class="feedback verificador">Password Incorrect</span>
                 </article>
 
+                
                 <div class="iconos-foto-google">
                     <div class="div-subir-foto">
-                        <p>Subir foto</p>
+                        <p>Face Id</p>
                         <div class="image-upload">
                             <label for="file-input">
                                 <i class="fa-solid fa-user"></i>
@@ -65,20 +66,18 @@
                     </div>
 
                     <div class="div-google">
-                        <img src="/images/logo-google.jpeg" alt="logo-google" class="logo-google">
-                        <p>Continuar con Google</p>
-                        <!-- <i class="fa-brands fa-google"></i> -->
+                        <p>Ingresar con Google</p>
+                        <i class="fa-brands fa-google"></i>
                     </div>
                 </div>
-                
                 <div class="div-boton-crear-cuenta">
-                    <button type="submit" id="crear-cuenta">Crear Cuenta</button>
+                    <button type="submit" id="crear-cuenta">Ingresar</button>
                 </div>
             </form>
             <form action="/login" method="GET">
                 <div class="div-ingresar">
-                    <label for="ingresar">Ya sos cliente?</label>
-                    <button type="submit"  id="ingresar">Ingresar</button>
+                    <label for="ingresar">No sos cliente?</label>
+                    <button type="submit"  id="ingresar">Registrate</button>
                 </div>
             </form>
             
@@ -86,8 +85,10 @@
 
     </main>
 
+
+
     <footer>
-        <nav class="contenido-footer">
+        <nav>
             <ul class="nav-footer-izq">
                 <li>Ayuda</li>
                 <li>Politica y privacidad</li>
@@ -102,6 +103,7 @@
             </ul>
         </nav>
     </footer>
+
 </body>
 
 </html>
