@@ -86,7 +86,7 @@ header{
     color: white;
     text-align: center;
 }
-.form-login input{
+.input-text input{
     background: black;
     padding: 10px;
     border-radius: 10px;
@@ -94,7 +94,7 @@ header{
     /* text-align: center; */
     width: 5cm;
 }
-article{
+.input-text{
     margin: 15px;
     text-align: center;
     padding: 8px;
@@ -192,8 +192,15 @@ text-align: center;
     border: #1F4489 3px solid;
 }
 
+.article-recordarme{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.article-recordarme input{
 
-
+}
 
 
 
@@ -253,7 +260,5 @@ footer nav i{
 
 /* Escritorio */
 @media (min:1023px) {
-    footer {
-        
-    }
+    
 }
