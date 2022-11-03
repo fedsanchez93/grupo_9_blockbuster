@@ -28,13 +28,14 @@ app.get("/login2", (req,res) => {
     res.sendFile(path.resolve("./views/login2.html"));
 });
 
-app.get("/", (req, res) => {
+app.get("/login", (req, res) => {
     res.sendFile(path.resolve("./views/login.html"));
   })
   
   app.get("/home", (req, res) => {
     res.sendFile(path.resolve("./views/home.html"));
   })
+  
   
 
 
