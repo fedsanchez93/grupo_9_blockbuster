@@ -1,0 +1,206 @@
+:root{
+    --yellow: rgba(252, 193, 57, 1);
+    --light-blue: rgba(31, 68, 137, 1);
+    --light-gray: rgba(105, 100, 100, 0.59);
+    --light-black: rgba(15, 14, 14, 0.88);
+    --dark-blue: rgba(3, 6, 67, 1);
+    --white: rgba(255, 255, 255, 1);
+    --base-font-family: 'Roboto', sans-serif;
+
+}
+
+
+body{
+    background-color: white;
+    background-image: url("/images/fondo.jpg.jpg");
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+main{
+    background-color: rgba(3, 4, 26, 1);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+header{
+    background-color: var(--dark-blue);
+}
+
+footer{
+    background-color: var(--yellow);
+    margin-bottom: 0%;
+    
+}
+
+/*header*/
+.iconos1cubo{
+    display: inline-block;
+}
+.iconos2cubo{
+    display: inline-block; 
+   
+   
+}
+.iconos1{
+    display: inline-block;
+    color: var(--yellow);
+    font-size: 30px;
+    padding-right: 30px;
+    margin-left: 25px;
+ 
+}
+.iconos2{
+    display: inline-block;
+    color: var(--yellow);
+    font-size: 30px;
+    padding-right: 50px;
+    
+    
+}
+
+
+.logo{
+    display: inline-block;
+    width: 500px;
+    margin-left: 250px;
+    margin-right: 550px;
+}
+
+.titulos{
+text-align: left;
+padding-left: 20px;
+padding-top: 20px;
+font-size: 30px;
+color: var(--white);
+font-weight: 600;
+margin-left: 15px;
+
+}
+ /*main*/
+
+ .pelis{
+    width: 200px;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: 7px 7px 7px 7px rgba(11, 7, 7, 0.59); ;
+ }
+
+
+.nombre-peli{
+    font-size: 20px;
+    color: var(--light-gray);
+    font-weight: 600;
+    text-align: center;
+
+}
+ .ver-mas{
+   font-size: 18px;
+   color: var(--white);
+   font-weight: 500;
+   background-color: var(--light-gray) ;
+   border-radius: 10px;
+   text-align: center;
+   border: none;
+   width: 125px;
+   height: 50px;
+ }
+
+ .btn-neon{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: white;
+    letter-spacing: 4px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.2s;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.btn-neon:hover{
+    background-color: var(--yellow);
+    box-shadow: 0 0 10px #FCC139, 0 0 40px #FCC139, 0 0 80px #FCC139;
+}
+
+ .caja{
+    text-align: center;
+ }
+ .articulos{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 50px;
+ }
+
+ .personajes{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 50px;
+ }
+ .personas{
+    width: 250px;
+    height: 250px;
+   border-radius: 400px;
+ }
+.nombres{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+ .articulos2{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 50px;
+ }
+
+ /*section*/
+
+ .frase{
+    width: 100%;
+    height: 200px;
+    color: white;
+    font-size: 70px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color:  rgba(3, 6, 67, 0.49);
+    padding-top: 100px;
+    padding-left: 30px;
+ }
+
+
+
+/*footer*/
+.listaA{  /* llamo al bloque de la lista*/
+    display: inline-block;
+    text-align: left;
+    font-size: 25px;
+   font-weight: 700;
+}
+.listaB{   /* llamo al bloque de la lista*/
+    display: inline-block;
+    text-align: right;
+    font-size: 25px;
+    margin-left: 43%;
+    font-weight: 700;
+    
+}
+.lista2{   /* llamo a los elementos de la lista*/
+    display: inline-block;
+    color: var(--light-blue);
+    padding-right: 20px;
+    
+}
+.barra3{     /* modifico los links de la lista*/
+    text-decoration: none;
+    color: var(--light-blue);
+}
+.iconos{  /* modifico los links de la lista de iconos*/
+    display: inline-block;
+    color: var(--light-blue);
+}
+
+.iconos i{   /* modifico el icono en si*/
+    padding-right: 10px;
+    font-size: 30px;
+    
+}

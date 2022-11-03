@@ -1,0 +1,186 @@
+:root{
+    --yellow: rgba(252, 193, 57, 1);
+    --light-blue: rgba(31, 68, 137, 1);
+    --light-gray: rgba(105, 100, 100, 0.59);
+    --light-black: rgba(15, 14, 14, 0.88);
+    --dark-blue: rgba(3, 6, 67, 1);
+    --white: rgba(255, 255, 255, 1);
+    --base-font-family: 'Roboto', sans-serif;
+
+}
+
+body{
+    background-color: white;
+    background-image: url("/images/fondo.jpg.jpg");
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+header{
+    background-color: rgba(3, 6, 67, 1);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 100px;
+}
+section{
+    background-color: rgba(3, 6, 67, 0.49);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 250px;
+    margin-top: 20px;
+    }
+
+footer{
+    background-color: rgba(3, 6, 67, 1);
+    margin-bottom: 0%;
+}
+
+/*header*/
+.logo{
+    text-align: left;
+    display: inline-block;
+    margin-top: 8px;
+    }
+
+.lista{
+    display: inline-block;
+    position: relative;
+    text-align: right;
+    margin-left: 50%; 
+}
+
+.lista1{
+   display: inline-block;
+   font-size: 30px;
+   padding-right: 30px;
+}
+.barra{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+.mundo{
+    display: inline-block;
+    color: white;
+}
+
+
+
+/*main*/
+
+.register{
+    display: inline-block;
+    margin-left: 38%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    background-color: rgba(81, 73, 73, 0.31);
+    width: 450px;
+    height: 600px;
+    border-radius: 10%;
+    box-shadow: 7px 7px 7px 7px rgba(11, 7, 7, 0.59);
+    color: white;
+    text-align: center;
+   }
+
+   .titulo{
+    margin-top: 30px;
+    font-size: 50px;
+    
+   }
+
+   .botones{
+    border-radius: 15px;
+    width: 300px;
+    height: 35px ;
+    background-color: black ;
+    color: white ;
+    padding-left: 20px;
+    border: none;
+    font-size: 20px;
+    font-weight: 550;
+   }
+
+   .olvidaste{
+    margin-top: 0px;
+    font-size: 20px;
+   }
+
+   .lista-recordar{
+    font-size: 25px;
+    border: none;
+    margin-bottom: 25px;
+    
+   }
+    
+   .btn-neon{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: white;
+    letter-spacing: 4px;
+    font-size: 25px;
+    text-decoration: none;
+    transition: 0.2s;
+    background-color: black;
+    border-radius: 10px;
+}
+.btn-neon:hover{
+    background-color: var(--yellow);
+    box-shadow: 0 0 10px #FCC139, 0 0 40px #FCC139, 0 0 80px #FCC139;
+}
+
+
+   .cliente{
+    margin-top: 40px;
+    font-size: 30px;
+   }
+
+  .barra2{
+    text-decoration: none;
+    color: var(--white);
+   }
+
+
+/*sector*/
+
+.sector{
+    color: white;
+    font-size: 80px;
+    text-align: center;
+    padding-top: 4%;
+    font-weight: 600;
+}
+
+   
+
+/*footer*/
+.listaA{  /* llamo al bloque de la lista*/
+    display: inline-block;
+    text-align: left;
+    font-size: 25px;
+    font-weight: 600;
+}
+.listaB{   /* llamo al bloque de la lista*/
+    display: inline-block;
+    text-align: right;
+    font-size: 25px;
+    margin-left: 43%;
+    font-weight: 600;
+}
+.lista2{   /* llamo a los elementos de la lista*/
+    display: inline-block;
+    color: var(--yellow);
+    padding-right: 20px;
+    
+}
+.barra3{     /* modifico los links de la lista*/
+    text-decoration: none;
+    color: var(--yellow);
+}
+.iconos{  /* modifico los links de la lista de iconos*/
+    display: inline-block;
+    color: var(--yellow);
+}
+
+.iconos i{   /* modifico el icono en si*/
+    padding-right: 10px;
+    font-size: 30px;
+}
