@@ -89,6 +89,17 @@ header .tablet-pc{
 }
 
 
+/*MAIN*/
+
+.contenido{
+    height: 300px;
+    width: 250px;
+    background-color: aliceblue;
+    margin: 30px;
+    text-align: center;
+    line-height: 300px;
+}
+
 /*FOOTER*/
 
 footer{
