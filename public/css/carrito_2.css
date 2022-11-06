@@ -1,0 +1,138 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.top-bar {
+    display: flex;
+    height: 68px;
+    width: 100%;
+    background-color: rgba(31,68,137,1);
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.top-bar i{
+    color:azure;
+}
+
+.main-body {
+    margin: 0 auto;
+    width: 100%;
+    background-color: rgba(1,35,83,0.87);
+}
+
+.product-container {
+    display: block;
+    width:60%;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.product .fa-trash-can{
+    position: absolute;
+    right: 20px;
+    bottom: 160px;
+}
+
+.product .fa-ellipsis{
+    display: block;
+    text-align: center;
+    font-size: 10vw;
+}
+
+.product-image{
+    display: block;
+    width: 100%;
+    padding-top: 15px;  
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.details h4{
+    color:azure;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.details p{
+    color:azure;
+    font-weight: 300;
+    font-size: 12px;
+    margin: 0 0 0 0;
+}
+
+.details h6{
+    color:azure;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.middle-menu .pay-button {
+    display: block;
+    text-align: center;
+    padding-top: 30px;
+
+}
+
+.main-footer {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    color: rgb(3,6,67);
+    font-weight: 600;
+    background-color: rgb(252,193,57);
+}
+
+.main-footer li {
+    padding-top:5px;
+    list-style: none;
+    font-size: 14px;
+    filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+}
+
+.footer-icons{
+    color: inherit;
+    padding-right: 5px;
+    font-size:16px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 60px;
+}
+
+.btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 603;
+    font-size: 14px;
+    color: #fff;
+    background-color: #3d3a3a;
+    padding: 10px 30px;
+    border: solid #000000 1.5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 14px;
+    transition : 1000ms;
+    transform: translateY(0);
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transition : 1000ms;
+    padding: 10px 50px;
+    transform : translateY(-0px);
+    background-color: #fff;
+    color: #0066cc;
+    border: solid 1.5px #0066cc;
+}
+
+
