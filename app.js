@@ -19,7 +19,7 @@ app.get("/carrito", (req,res) => {
 });
 
 app.get("/carrito2", (req,res) => {
-    res.sendFile(path.resolve("./views/carrito_2"));
+    res.sendFile(path.resolve("./views/carrito2.html"));
 });
 
 app.get("/register", (req,res) => {

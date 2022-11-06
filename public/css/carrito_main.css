@@ -135,4 +135,10 @@
     border: solid 1.5px #0066cc;
 }
 
+@media (min-width: 361px) {
 
+    .top-bar i{
+        size: 50vw;
+    }    
+
+}
