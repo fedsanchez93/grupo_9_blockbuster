@@ -36,22 +36,25 @@
             <h2 class="iniciar-secion">Iniciar Secion</h2>
         
             <form class="form-login" action="/" method="GET">
-                <article>
-                    <label class="label-form" for="nombre">Nombre de Usuario</label> <br>
-                    <input type="text" name="usuario" id="usuario" placeholder="Usuario" required>
-                    <br><span class="feedback verificador">Usuario Incorrect</span>
+                <article class="input-text">
+                    <label class="label-form" for="nombre">Nombre de Usuario o Email</label> <br>
+                    <input type="text" name="usuario" id="usuario" placeholder="Usuario o name@buster.com" required>
+                    <br><span class="feedback verificador">Usuario o Email Incorrect </span>
                 </article>
-                <article>
-                    <label  class="label-form" for="email">Email</label> <br>
-                    <input type="email" name="email" id="email"  placeholder="name@blockbuster.com" required>
-                    <br><span class="feedback verificador">name@blockbuster.com</span>
-                </article>
-                <article>
+                
+                <article class="input-text">
                     <label  class="label-form" for="contrasena">Contraseña</label> <br>
                     <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required>
                     <br><span class="feedback verificador">Password Incorrect</span>
                 </article>
+                <article class="article-recordarme">
+                    <input type="checkbox" name="recordarme" value=“si”>
+                    <label for="recordarme">Recordarme</label>
+                </article>
 
+                <article>
+                    
+                </article>
                 
                 <div class="iconos-foto-google">
                     <div class="div-subir-foto">
@@ -104,6 +107,7 @@
         </nav>
     </footer>
 
+    
 </body>
 
 </html>
