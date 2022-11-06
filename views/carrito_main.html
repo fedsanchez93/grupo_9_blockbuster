@@ -31,22 +31,23 @@
     
     <main class="main-body">
         <article class="product-container">
-            <img src="/images/star-wars.jpg" class="product-image">
-            <div class="trash-icon">
+            <div class="product">
+                <img src="/images/star-wars.jpg" class="product-image">
                 <i class="fa-solid fa-trash-can"></i>
-            </div>
-            <div class="dot-menu">
                 <i class="fa-solid fa-ellipsis"></i>
             </div>
+            <div class="details">
+                <h4>Pelicula/Serie</h4>
+                <p>Reseña/sinopsis</p>
+                <h6>Año y duracion</h6>
+            </div>
         </article>
-        <div class="details">
-            <h4>Pelicula/Serie</h4>
-            <h4>Reseña/sinopsis</h4>
-            <h4>Año y duracion</h4>
-        </div>
-        <div class="pay-button">
-            <button type="submit">Pagar</button>
-        </div>
+
+        <article class="middle-menu">
+            <div class="buttons">
+                <button type="submit" class="btn">Pagar</button>
+            </div>
+        </article>
     </main>
 
     <footer class="main-footer">
@@ -60,7 +61,11 @@
         </ul>
         <ul class="right-links">
             <li>Seguinos</li>
-            <li>Redes Sociales</li>
+            <li>
+                <a class="footer-icons" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="footer-icons" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="footer-icons" href="#"><i class="fab fa-facebook-square"></i></a>
+            </li>
         </ul>
     </footer>
 </body>
