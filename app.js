@@ -18,6 +18,10 @@ app.get("/carrito", (req,res) => {
     res.sendFile(path.resolve("./views/carrito_main.html"));
 });
 
+app.get("/carrito2", (req,res) => {
+    res.sendFile(path.resolve("./views/carrito_2"));
+});
+
 app.get("/register", (req,res) => {
     res.sendFile(path.resolve("./views/register.html"));
 });
