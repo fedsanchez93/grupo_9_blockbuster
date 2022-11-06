@@ -27,6 +27,8 @@ header{
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
+    animation: aparecer 3s  ;
+
 }
 
 .logo{
@@ -34,6 +36,16 @@ header{
     width: 250px;
     animation: agrandar 0.5s linear  infinite alternate ;
 }
+
+@keyframes aparecer {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 .logo:hover{
     border: solid 2px #FCC139;
     transform: scale(1.08);
