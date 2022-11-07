@@ -33,7 +33,7 @@ header{
 header .burger-menu{
     background-color: var(--dark-blue);
     color: white;
-    display: block;  /*Si no uso display:block o inlineblock, no salen bien las propiedades del boton hamburguesa*/
+    display: none;  /*Si no uso display:block o inlineblock, no salen bien las propiedades del boton hamburguesa*/
     font-size: 20px;
     text-align: center;
     width: 60px;
@@ -42,6 +42,10 @@ header .burger-menu{
     border-radius: 4px;
     margin: auto;
     }
+
+.main-header.celular{
+    display: none;
+}
 
 .main-header{
         border: solid 1px red;
@@ -64,65 +68,191 @@ header .burger-menu{
 
 
 .logo-header{
-    padding: 5px;
-    height: 50px;
-    order: 1;
+    width: 50%;
+    }
 
+.main-header.logo{
+    flex-grow: 0.5;
 }
 
 
+.tablet-pc ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
 
-header .tablet-pc{
-    display: none;
+.tablet-pc ul li{
+    margin: 10px 20px;
 }
 
 .logo{
     order: 2;
 }
 
-.burger{
+.navegador.tablet-pc.izquierda{
     order: 1;
 }
 
-.navegador{
+.navegador.tablet-pc.derecha{
     order: 3;
 }
 
 
 /*MAIN*/
 
-.contenido{
-    height: 300px;
-    width: 250px;
-    background-color: aliceblue;
-    margin: 30px;
-    text-align: center;
-    line-height: 300px;
+main .fila1{
+    display: flex;
+    flex-wrap: nowrap;
 }
+
+.col-main{
+    border: solid 1px red;
+}
+
+.col-main.col1{
+    width: 40vw;
+    text-align: center;
+    padding: 35px;
+    height: 700px;
+}
+
+.col1 .imagen{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.imagen img{
+    max-height: 800px;
+    max-width: 100%;
+}
+
+.col1 .caracteristicas{
+    display: flex;
+    justify-content: space-evenly;
+    border: solid 1px greenyellow;
+    width: 100%;
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: var(--yellow);
+}
+
+.col-main.col2{
+    width: 35vw;
+    padding: 10px;
+    color: white;
+    text-align: justify;
+}
+
+.col-main.col2 h2{
+    text-decoration: underline;
+    text-decoration-color: var(--yellow);
+}
+
+.col-main.col2 .botones {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: solid 1px greenyellow;
+    width: 100%;
+    margin-top: 50px;
+    height: 50px;
+}
+
+.sinopsis{
+    font-size: 13px;
+}
+
+.botones div{
+    background-color: var(--yellow);
+    height: 100%;
+    width: 130px;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 50px
+}
+.botones a{
+    height: 100%;
+    width: 70px;
+    text-decoration: none;
+    font-weight: bold;
+    color:black;
+    font-size: 18px;  
+}
+
+
+.col-main.col3{
+    width: 25vw;
+    padding: 10px;
+    
+}
+
+.calificaciones ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: var(--yellow);
+}
+
+.calificaciones li{
+    margin: 40px 0;
+}
+
+.calificaciones a{
+    text-decoration: none;
+    color: var(--yellow);
+}
+
+.calificaciones .calificacion{
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    color: white;
+    text-align: center;
+    border-radius: 18px;
+    border: solid 2px var(--yellow);
+}
+
+
+
+
 
 /*FOOTER*/
 
 footer{
     background-color: var(--yellow);
-    height: 10vh;
+    height: 100px;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+
 }
 
 .col-footer{
+    display: flex;
+    flex-direction: column;
     border: solid 1px red;
-    color: white;
-    text-align: left;
+    color: var(--light-blue);
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    padding: 15px;
+
+
+
 }
 
 .col-footer ul{
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 0;    
 }
 
 .col3 .redes-sociales{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
+
+
