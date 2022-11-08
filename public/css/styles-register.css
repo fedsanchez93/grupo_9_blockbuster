@@ -194,38 +194,50 @@ text-align: center;
     left: 20%;
 }
 
-#crear-cuenta{
-    color: white;
-    background: #000;
-    padding: 10px;
-    font-size: 30px;
-    border-radius: 1cm;
-    border: #1F4489 3px solid;
 
-}
 .div-boton-crear-cuenta{
     text-align: center;
 }
 .div-ingresar{
     text-align: center;
 }
+        #crear-cuenta{
+        color: white;
+        background: #000;
+        padding: 10px;
+        font-size: 30px;
+        border-radius: 1cm;
+        border: #1F4489 3px solid;
 
-#ingresar{
+    }
+    #ingresar{
+        /* color: white;
+        background: #000;
+        padding: 5px;
+        margin: 10px;
+        font-size: 20px;
+        border-radius: 1cm;
+        border: #1F4489 3px solid; */
+
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
     color: white;
-    background: #000;
-    padding: 5px;
-    margin: 10px;
-    font-size: 20px;
-    border-radius: 1cm;
-    border: #1F4489 3px solid;
-}
-#ingresar:hover, #crear-cuenta:hover{
-    border: #FCC139 solid 3px;
-}
-.div-registro:hover{
-    box-shadow: 5px 5px 10px rgb(180, 174, 174);
+    letter-spacing: 4px;
+    font-size: 25px;
+    text-decoration: none;
+    transition: 0.2s;
+    background-color: black;
+    border-radius: 10px;
+    }
+    #ingresar:hover, #crear-cuenta:hover{
+        background-color: var(--yellow);
+        box-shadow: 0 0 10px #FCC139, 0 0 40px #FCC139, 0 0 80px #FCC139;
+    }
+    .div-registro:hover{
+        box-shadow: 5px 5px 10px rgb(180, 174, 174);
 
-}
+    }
 /* footer */
 footer{
     position: fixed;
