@@ -14,12 +14,17 @@ body{
     background-color: white;
     background-image: url("/images/fondo.jpg.jpg");
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+<<<<<<< HEAD
     width: 100%;
+=======
+    margin: auto;
+>>>>>>> edc2e016d2b5dc3fb0f78f5d7fcfe91a5334e649
 }
 
 main{
-    background-color: rgba(3, 4, 26, 1);
+    background-color: rgba(3, 4, 26, 0.6);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+<<<<<<< HEAD
     width: 100%;
 }
 
@@ -30,6 +35,11 @@ header{
     justify-content: space-between;
     width: 100%;
 }
+=======
+    margin-top: 120px;
+}
+
+>>>>>>> edc2e016d2b5dc3fb0f78f5d7fcfe91a5334e649
 
 footer{
     background-color: var(--yellow);
@@ -39,6 +49,7 @@ footer{
 }
 
 /*header*/
+<<<<<<< HEAD
 .logo{
     width: 30vw; 
 }
@@ -46,6 +57,45 @@ footer{
     color: var(--yellow);
     font-size: 2vw;
     padding: 1vw;
+=======
+.iconos1{
+    color: var(--yellow);
+    font-size: 30px;
+    padding:15px
+ 
+}
+.iconos2{
+    color: var(--yellow);
+    font-size: 30px;
+    padding:15px;
+    
+    
+}
+.container-header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    background-color: var(--dark-blue);
+    z-index: 10;
+}
+.div-logo{
+    margin: 100;
+    padding: auto;
+}
+.div-iconos-header{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+.logo{
+    text-align: center;
+    margin: auto;
+    padding: auto;
+>>>>>>> edc2e016d2b5dc3fb0f78f5d7fcfe91a5334e649
 }
 
 
@@ -75,6 +125,20 @@ footer{
     text-align: center;
 
 }
+<<<<<<< HEAD
+=======
+ /* .ver-mas{
+   font-size: 18px;
+   color: var(--white);
+   font-weight: 500;
+   background-color: var(--light-gray) ;
+   border-radius: 10px;
+   text-align: center;
+   border: none;
+   width: 125px;
+   height: 50px;
+ } */
+>>>>>>> edc2e016d2b5dc3fb0f78f5d7fcfe91a5334e649
 
  .btn-neon{
     position: relative;
@@ -99,8 +163,13 @@ footer{
  .articulos{
     display: flex;
     justify-content: space-around;
+<<<<<<< HEAD
     padding-bottom: 5%;
     
+=======
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+>>>>>>> edc2e016d2b5dc3fb0f78f5d7fcfe91a5334e649
  }
  .articulos2{
     width: 30%;
@@ -110,7 +179,12 @@ footer{
  .personajes{
     display: flex;
     justify-content: space-around;
+<<<<<<< HEAD
     padding-bottom: 5%;
+=======
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+>>>>>>> edc2e016d2b5dc3fb0f78f5d7fcfe91a5334e649
  }
  .personas{
     width: 15vw;
@@ -124,41 +198,79 @@ footer{
     font-weight: 500;
 }
 
+<<<<<<< HEAD
 
 
+=======
+ .articulos2{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+ }
+/* articulos */
+section article{
+    padding: 10px;
+}
+>>>>>>> edc2e016d2b5dc3fb0f78f5d7fcfe91a5334e649
  /*section*/
-
  .frase{
+<<<<<<< HEAD
     width: 100vw;
     height: 20vh;
+=======
+    width: 100%;
+    height: auto;
+>>>>>>> edc2e016d2b5dc3fb0f78f5d7fcfe91a5334e649
     color: white;
     font-size: 4vw;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color:  rgba(3, 6, 67, 0.49);
+<<<<<<< HEAD
     padding-top: 3vh;
+=======
+>>>>>>> edc2e016d2b5dc3fb0f78f5d7fcfe91a5334e649
  }
-
+.frase div{
+    padding: 50px 30px ;
+}
 
 
 /*footer*/
+.container-footer{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
 .listaA{  /* llamo al bloque de la lista*/
     display: inline-block;
     text-align: left;
     font-size: 160%;
    font-weight: 700;
+   padding: 0%;
 }
 .listaB{   /* llamo al bloque de la lista*/
     display: inline-block;
     text-align: right;
+<<<<<<< HEAD
     font-size: 180%;
     margin-left: 43%;
+=======
+    font-size: 25px;
+>>>>>>> edc2e016d2b5dc3fb0f78f5d7fcfe91a5334e649
     font-weight: 700;
+    padding: 0%;
     
 }
 .lista2{   /* llamo a los elementos de la lista*/
     display: inline-block;
+<<<<<<< HEAD
     color: var(--light-blue);
     
+=======
+    color: var(--light-blue);    
+>>>>>>> edc2e016d2b5dc3fb0f78f5d7fcfe91a5334e649
 }
 .barra3{     /* modifico los links de la lista*/
     text-decoration: none;
@@ -171,6 +283,12 @@ footer{
 }
 
 .iconos i{   /* modifico el icono en si*/
+<<<<<<< HEAD
     font-size: 2vw;
+=======
+    font-size: 30px;
+    padding: 3px;
+>>>>>>> edc2e016d2b5dc3fb0f78f5d7fcfe91a5334e649
     
 }
+
