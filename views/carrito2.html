@@ -16,24 +16,44 @@
 <body>
     <header class="main-header">
         <div class="top-bar">
-            <nav class="left-menu-links">
+            <nav class="left-menu-button">
                 <i class="fa-solid fa-bars"></i>
             </nav>
-            <nav class="middle-menu-links">
-                <img src="/images/blockbuster-logo.svg" class="logo">
+            <nav class="left-menu">
+                <ul class="left-options">
+                    <li>BUSCAR</li>
+                    <li>LISTA DE DESEOS</li>
+                </ul>
             </nav>
-            <nav class="right-menu-links">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <i class="fa-solid fa-circle-user"></i>
+            <nav class="middle-logo">
+                <img src="/images/blockbuster-logo.svg">
             </nav>
+            <nav class="right-menu-buttons">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-circle-user"></i>
+            </nav>
+            <nav class="right-menu">
+                <ul class="right-options">
+                    <li>CARRITO</li>
+                    <li>MIS ALQUILERES</li>
+                    <!-- <li><i class="fa-solid fa-circle-user"></i></li> -->
+                </ul>
+            </nav> 
+            <nav class="user-options">
+                <ul>
+                    <li><i class="fa-solid fa-circle-user"></i></li>
+                </ul>      
+            </nav> 
         </div>
     </header>
     
     <main class="main-body">
         <article class="product-container">
             <div class="product">
-                <img src="/images/star-wars.jpg" class="product-image">
-                <i class="fa-solid fa-trash-can"></i>
+                <div class="product-image">
+                    <img src="/images/star-wars.jpg">
+                    <i class="fa-solid fa-trash-can"></i>
+                </div>
                 <i class="fa-solid fa-ellipsis"></i>
             </div>
             <div class="details">
@@ -44,9 +64,23 @@
         </article>
 
         <article class="middle-menu">
-            <form action="/" method="GET">
+            <form action="/carrito3" method="GET">
+                <div class="creditcard-data">
+                    <div class="fullname">
+                        <input type="text" name="name" placeholder="Nombre y apellido" required minlength="5">
+                    </div>
+                    <div class="cardnumber">
+                        <input type="text" name="creditcard" placeholder="N° de tarjeta de credito" required>
+                    </div>
+                    <div class="ccv">
+                        <input type="password" name="ccv" placeholder="CCV" required>
+                    </div>
+                    <div class="expiration">
+                        <input type="text" name="mmaa" placeholder="MM/AA" required>
+                    </div>
+                </div>
                 <div class="buttons">
-                    <button type="submit" class="btn">Pagar</button>
+                    <button type="submit" class="btn">Confirmar pago</button>
                 </div>
             </form>
         </article>
@@ -54,15 +88,15 @@
 
     <footer class="main-footer">
         <ul class="left-links">
-            <li>Ayuda</li>
-            <li>Soporte</li>
+            <li class="help">Ayuda</li>
+            <li class="support">Soporte</li>
         </ul>
         <ul class="middle-links">
-            <li>Política y Privacidad</li>
-            <li>Contactanos</li>
+            <li class="terms">Política y Privacidad</li>
+            <li class="contactus">Contactanos</li>
         </ul>
         <ul class="right-links">
-            <li>Seguinos</li>
+            <li class="followus">Seguinos</li>
             <li>
                 <a class="footer-icons" href="#"><i class="fab fa-instagram"></i></a>
                 <a class="footer-icons" href="#"><i class="fab fa-twitter"></i></a>
