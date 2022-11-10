@@ -98,7 +98,7 @@ footer{
     text-align: center;
 
 }
- /* .ver-mas{
+  .ver-mas{
    font-size: 18px;
    color: var(--white);
    font-weight: 500;
@@ -108,7 +108,7 @@ footer{
    border: none;
    width: 125px;
    height: 50px;
- } */
+ } 
 
  .btn-neon{
     position: relative;
