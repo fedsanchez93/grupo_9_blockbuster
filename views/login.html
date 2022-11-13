@@ -7,67 +7,96 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles-login.css">
     <link rel="icon" href="images/blockbuster-logo 1.svg">
+    <!-- estilo de letra Popins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,800&display=swap" rel="stylesheet">
     <title>BLOCKBUSTER</title>
 </head>
 <body>
-<header>
-    <div class="logo" >
-   <img class="logo" src="images/blockbuster-logo 1.svg"> 
-</div>
+    <header class="main-header">
+        <div class="top-bar">
+            <nav class="left-menu-button">
+                <i class="fa-solid fa-bars"></i>
+            </nav>
+            <nav class="left-menu">
+                <ul class="left-options">
+                    <li>BUSCAR</li>
+                    <li>LISTA DE DESEOS</li>
+                </ul>
+            </nav>
+            <nav class="middle-logo">
+                <img src="/images/blockbuster-logo.svg">
+            </nav>
+            <nav class="right-menu-buttons">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-circle-user"></i>
+            </nav>
+            <nav class="right-menu">
+                <ul class="right-options">
+                    <li>CARRITO</li>
+                    <li>MIS ALQUILERES</li>
+                </ul>
+            </nav> 
+            <nav class="user-options">
+                <ul>
+                    <li><i class="fa-solid fa-circle-user"></i></li>
+                </ul>      
+            </nav> 
+        </div>
+    </header>
 
-   <ul class="lista" type="none"> 
-    <li class="lista1"><a class="barra" href="/home">INGRESAR</a></li>
-    <li class="lista1"><a class="barra" href="#">REGISTRATE</a></li> 
-    </ul>
+    <main class="main-body">
+        <article class="register">
+            <form action="/">
+                <h1 class="titulo">INICIA SESIÓN</h1>
+                <div class="grupo1">
+                <label for="last-name"></label>
+                <input class="botones" type="text" placeholder="E-mail" name="last-name" required>
+                </div><br>
+                    
+                <div class="grupo2">
+                <label for="contraseña"></label>
+                <input class="botones" type="text" placeholder="Contraseña" name="contraseña" required>
+                </div><br>
 
-</header>
+                <div class="olvidaste"><a class="barra2" href="#">¿Olvidaste tu contraseña?</a></div><br>
+                        
+                <label class="lista-recordar"><input class="lista-recordar" type="checkbox" name="categorias" value="recordar">Recordarme</label><br>
+                        
+                <a href="/home" class="btn-neon">Ingresar</a>
+                        
+                <div class="cliente"><a class="barra2" href="#">¿No sos cliente?</a></div><br> 
 
-  <main class="register">
-  <form action="/">
-  <h1 class="titulo">INICIA SESIÓN</h1>
-  <div class="grupo1">
-  <label for="last-name"></label>
-  <input class="botones" type="text" placeholder="E-mail" name="last-name" required>
-  </div><br>
-        
-  <div class="grupo2">
-  <label for="contraseña"></label>
-  <input class="botones" type="text" placeholder="Contraseña" name="contraseña" required>
-  </div><br>
+                <a href="#" class="btn-neon">REGISTRATE</a>
+            </form>
+        </article>
+    </main>
 
-  <div class="olvidaste"><a class="barra2" href="#">¿Olvidaste tu contraseña?</a></div><br>
-        
-  <label class="lista-recordar"><input class="lista-recordar" type="checkbox" name="categorias" value="recordar">Recordarme</label><br>
-        
-  <a href="/home" class="btn-neon">Ingresar</a>
-        
-  <div class="cliente"><a class="barra2" href="#">¿No sos cliente?</a></div><br> 
+    <section>
+        <div class="sector">Donde quieras, cuando quieras</div>
+    </section>
 
-  <a href="#" class="btn-neon">REGISTRATE</a>
-</form>
-</main>
-<section>
-    <div class="sector">Donde quieras, cuando quieras</div>
-</section>
-<footer>
-        <ul class="listaA" type="none">
-            <li class="lista2"><a class="barra3" href="Ayuda">Ayuda</a></li>
-            <li class="lista2"><a class="barra3" href="Soporte">Soporte</a></li>
-            <li class="lista2"><a class="barra3" href="Contacto">Contacto</a></li>
-            <li class="lista2"><a class="barra3" href="Politicas y Privacidad">Políticas y Privacidad</a></li>
+    <footer class="main-footer">
+        <ul class="left-links">
+            <li class="help">Ayuda</li>
+            <li class="support">Soporte</li>
         </ul>
-           <ul class="listaB" type="none">
-            <li class="lista2">Seguinos</li>
-            <li class="lista2"><div class="iconos">
-               <a class="iconos" href="#"><i class="fab fa-instagram"></i></a>
-               <a class="iconos" href="#"><i class="fab fa-twitter"></i></a>
-               <a class="iconos" href="#"><i class="fab fa-facebook-square"></i></a>
-            </div>
+        <ul class="middle-links">
+            <li class="terms">Política y Privacidad</li>
+            <li class="contactus">Contactanos</li>
+        </ul>
+        <ul class="right-links">
+            <li class="followus">Seguinos</li>
+            <li>
+                <a class="footer-icons" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="footer-icons" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="footer-icons" href="#"><i class="fab fa-facebook-square"></i></a>
             </li>
-             </ul>
-              </footer>
-            </body>
-            </html>
+        </ul>
+    </footer>       
+</body>
+</html>
