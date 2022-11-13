@@ -6,14 +6,46 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"rel="stylesheet" />
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"rel="stylesheet" /> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles-home.css">
     <link rel="icon" href="images/blockbuster-logo 1.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
 </head>
 <body>
-    <header>
+    <header class="main-header">
+        <div class="top-bar">
+            <nav class="left-menu-button">
+                <i class="fa-solid fa-bars"></i>
+            </nav>
+            <nav class="left-menu">
+                <ul class="left-options">
+                    <li>BUSCAR</li>
+                    <li>LISTA DE DESEOS</li>
+                </ul>
+            </nav>
+            <nav class="middle-logo">
+                <img src="/images/blockbuster-logo.svg">
+            </nav>
+            <nav class="right-menu-buttons">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-circle-user"></i>
+            </nav>
+            <nav class="right-menu">
+                <ul class="right-options">
+                    <li>CARRITO</li>
+                    <li>MIS ALQUILERES</li>
+                </ul>
+            </nav> 
+            <nav class="user-options">
+                <ul>
+                    <li><i class="fa-solid fa-circle-user"></i></li>
+                </ul>      
+            </nav> 
+        </div>
+    </header>
+    <!-- <header>
         <div class="container-header">
             <div class="div-logo" >
                 <img class="logo" src="images/blockbuster-logo 1.svg"> 
@@ -31,7 +63,7 @@
                 </div>
             </div>
         </div>
-</header>
+</header> -->
 <main>
     <div class="video">
 
@@ -136,7 +168,25 @@
 <section class="frase">
     <div>Historias únicas, estrellas icónicas y mucho más..</div>
 </section>
-<footer>
+<footer class="main-footer">
+    <ul class="left-links">
+        <li class="help">Ayuda</li>
+        <li class="support">Soporte</li>
+    </ul>
+    <ul class="middle-links">
+        <li class="terms">Política y Privacidad</li>
+        <li class="contactus">Contactanos</li>
+    </ul>
+    <ul class="right-links">
+        <li class="followus">Seguinos</li>
+        <li>
+            <a class="footer-icons" href="#"><i class="fab fa-instagram"></i></a>
+            <a class="footer-icons" href="#"><i class="fab fa-twitter"></i></a>
+            <a class="footer-icons" href="#"><i class="fab fa-facebook-square"></i></a>
+        </li>
+    </ul>
+</footer>
+<!-- <footer>
     <div class="container-footer">
     <ul class="listaA" type="none">
         <li class="lista2"><a class="barra3" href="Ayuda">Ayuda</a></li>
@@ -154,6 +204,6 @@
         </li>
          </ul>
         </div>
-</footer>
+</footer> -->
 </body>
 </html>

@@ -5,6 +5,9 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
+/* = = = = = HEADER = = = = = */
+
 li {
     list-style: none;
 }
@@ -49,6 +52,8 @@ li {
 .right-menu-buttons i{
     padding-right: 10px;
 }
+
+/* = = = = = MAIN BODY = = = = = */
 
 .main-body {
     margin: 0 auto;
@@ -117,6 +122,8 @@ li {
 
 }
 
+/* = = = = = FOOTER = = = = = */
+
 .main-footer {
     display: flex;
     justify-content: space-evenly;
@@ -175,6 +182,9 @@ li {
     color: #0066cc;
     border: solid 1.5px #0066cc;
 }
+
+
+/* = = = = = MEDIA QUERIES = = = = = */
 
 @media (min-width: 500px) {
 
