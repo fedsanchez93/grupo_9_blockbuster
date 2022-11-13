@@ -126,7 +126,7 @@ li {
 
 
 
-/*main*/
+/* = = = = = MAIN BODY = = = = = */
 
 .main-body {
     display: block;
@@ -143,6 +143,7 @@ li {
     box-shadow: 7px 7px 7px 7px rgba(11, 7, 7, 0.59);
     color: white;
     text-align: center;
+    max-width: 425px;
    }
 
    .titulo{
@@ -153,7 +154,7 @@ li {
 
    .botones{
     border-radius: 15px;
-    width: 300px;
+    width: 70%;
     height: 35px ;
     background-color: black ;
     color: white ;
@@ -186,6 +187,7 @@ li {
     transition: 0.2s;
     background-color: black;
     border-radius: 10px;
+    width:80%;
 }
 .btn-neon:hover{
     background-color: var(--yellow);
