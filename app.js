@@ -15,7 +15,7 @@ app.get("/home", (req, res) => {
     res.sendFile(path.resolve("./views/home.html"));
   })
 app.get("/carrito", (req,res) => {
-    res.sendFile(path.resolve("./views/carrito_main.html"));
+    res.sendFile(path.resolve("./views/carrito.html"));
 });
 
 app.get("/carrito2", (req,res) => {
