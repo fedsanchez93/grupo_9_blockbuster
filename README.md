@@ -15,6 +15,9 @@ Buscamos darle una impronta estetica actual a una empresa que no pudo competir c
 ### WireFrame del proyecto en Figma
 https://www.figma.com/file/HYI7WKGyxuvuJsVl9TA7ac/proyecto?node-id=0%3A1
 
+### Tablero de trabajo Trello
+https://trello.com/b/tncZd58N/grupo9blockbuster
+
 Integrantes del equipo:
 ======================
 - Mi nombre es Laura Belén Córdoba
