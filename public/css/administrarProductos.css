@@ -1,0 +1,28 @@
+.form-ingreso-producto{
+    border: solid 2px black;
+    border-radius: 10px;
+    text-align: center;
+    width: 15cm;
+    margin: auto;
+    padding: 20px;
+}
+.div-input-texto{
+    text-align: right;
+    width: 60%;
+    margin: auto;
+}
+.input-texto{
+    padding: 5px;
+
+}
+.input-texto label{
+    padding-right: 20px;
+}
+.input-imagen{
+    padding: 5px;
+    margin: 5px;
+}
+.boton-guardar{
+    padding: 5px;
+    margin: 5px;
+}

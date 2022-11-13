@@ -1,0 +1,57 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/administrarProductos.css">
+</head>
+<body>
+    
+    <main>
+        <form  class="form-ingreso-producto" action="/" method="GET">
+            <h2>Ingresar una nueva pelicula</h2>
+            <div class="div-input-texto">
+                <div class="input-texto">
+                    <label for="producto">Nombre</label>
+                    <input type="text" name="nombre">
+                </div>
+                <div class="input-texto">
+                    <label for="precio">Descripcion</label>
+                    <input type="text" name="descripcion">
+                </div>
+                <div class="input-texto">
+                    <label for="precio">Categoria</label>
+                    <input type="text" name="categoria">
+                </div>
+                <div class="input-texto">
+                    <label for="precio">Genero</label>
+                    <input type="text" name="genero">
+                </div>
+                <div class="input-texto">
+                    <label for="precio">Precio</label>
+                    <input type="text" name="precio">
+                </div>
+            </div>
+                <div class="input-imagen">
+                    <label for="imagen">Subir archivo</label>
+                    <input type="file" name="imagen" id="">
+                </div>
+            
+                <button type="submit" class="boton-guardar">Guardar y Subir</button>
+        </form>
+    
+        <form class="form-filtrar-productos" action="buscar" method="get">
+            <input type="search" name="buscar-producto" id="">
+            <input type="submit" value="Buscar-producto-para-editar">
+        </form>
+
+
+    </main>
+
+</body>
+</html>

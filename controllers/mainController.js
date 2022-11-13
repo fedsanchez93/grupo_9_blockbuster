@@ -19,7 +19,9 @@ const mainController = {
     productDetail: (req,res)=>{
         res.render('productDetail')
     },
-
+    administrarProductos: (req,res)=>{
+        res.render('administrarProductos')
+    },
 }
 
 
