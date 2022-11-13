@@ -138,18 +138,10 @@ article{
     color: white;
 }
 .div-subir-foto{
-padding: 10px;
-text-align: center;
+    padding: 10px;
+    text-align: center;
 
 }
-/* .boton-subir-foto{
-    height: 1cm;
-    width: 1cm;
-    background: none;
-    color: none;
-    position: relative;
-    bottom: 1.3cm;
-} */
 
 .image-upload>input {
     display: none;
@@ -164,16 +156,16 @@ text-align: center;
     border-radius: 1cm;
     font-size: 25px;
     opacity: 0.5;
+    size:70%;
 }
 .div-subir-foto:hover .fa-user {
     opacity: 1;
 }
 .div-google{
     padding: 10px;
-    /* text-align: center; */
+    justify-content: center;
     display: flex;
     align-items: center;
-    border: rgba(255, 0, 0, 0.5) solid 2px;
     border-radius: 1cm;
     margin: 8px 0;
 }
@@ -204,43 +196,44 @@ text-align: center;
 .div-ingresar{
     text-align: center;
 }
-        #crear-cuenta{
+
+    #crear-cuenta{
         color: white;
         background: #000;
         padding: 10px;
-        font-size: 30px;
+        font-size: 18px;
         border-radius: 1cm;
         border: #1F4489 3px solid;
+        width: 65%;
 
     }
+
     #ingresar{
-        /* color: white;
         background: #000;
-        padding: 5px;
         margin: 10px;
-        font-size: 20px;
-        border-radius: 1cm;
-        border: #1F4489 3px solid; */
-
-    position: relative;
-    display: inline-block;
-    padding: 15px 30px;
-    color: white;
-    letter-spacing: 4px;
-    font-size: 25px;
-    text-decoration: none;
-    transition: 0.2s;
-    background-color: black;
-    border-radius: 10px;
+        border: #1F4489 3px solid;
+        position: relative;
+        display: inline-block;
+        padding: 15px 30px;
+        color: white;
+        font-size: 18px;
+        text-decoration: none;
+        transition: 0.2s;
+        background-color: black;
+        border-radius: 10px;
+        width: 60%;
     }
+
     #ingresar:hover, #crear-cuenta:hover{
         background-color: var(--yellow);
         box-shadow: 0 0 10px #FCC139, 0 0 40px #FCC139, 0 0 80px #FCC139;
     }
+
     .div-registro:hover{
         box-shadow: 5px 5px 10px rgb(180, 174, 174);
 
     }
+
 /* footer */
 
     .main-footer {
