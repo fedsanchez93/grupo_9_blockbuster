@@ -127,6 +127,7 @@ article{
 .iconos-foto-google{
     display: flex;
     justify-content: space-around;
+    align-items: baseline;
 }
 .iconos-foto-google p{
     margin: 0;
@@ -134,9 +135,10 @@ article{
     color: white;
 }
 .div-subir-foto{
+    display: flex;
     padding: 10px;
     text-align: center;
-
+    align-items: center;
 }
 
 .image-upload>input {
@@ -150,7 +152,7 @@ article{
     padding: 8px;
     border: white solid 2px;
     border-radius: 1cm;
-    font-size: 25px;
+    font-size: 15px;
     opacity: 0.5;
     size:70%;
 }
@@ -172,12 +174,12 @@ article{
     padding: 8px;
     border: white solid 2px;
     border-radius: 1cm;
-    font-size: 25px;
+    font-size: 20px;
     color: white;
     opacity: 0.5;
 }
 .logo-google{
-    width: 1.5cm;
+    width: 1cm;
     border-radius: 0.5cm;
 }
 .label-form{
