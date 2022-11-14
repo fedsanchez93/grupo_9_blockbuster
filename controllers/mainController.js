@@ -1,5 +1,9 @@
 const path = require('path')
 
+let listaPeliculas = require('./listaPeliculasController')
+
+
+
 const mainController = {
     home: (req,res)=>{
         res.render('home')
@@ -20,7 +24,7 @@ const mainController = {
         res.render('productDetail')
     },
     administrarProductos: (req,res)=>{
-        res.render('administrarProductos')
+        res.render('administrarProductos', {listaPeliculas})
     },
 }
 

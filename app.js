@@ -15,6 +15,9 @@ app.use('/', rutasMain)
 
 
 
+
+
+
 // app.get("/", (req,res) => { 
 //     res.sendFile(path.resolve("./views/home.html"));
 // });

@@ -26,23 +26,23 @@
             <h2>Ingresar una nueva pelicula</h2>
             <div class="div-input-texto">
                 <div class="input-texto">
-                    <label for="producto">Nombre</label>
+                    <label for="producto">Nombre</label> <br>
                     <input type="text" name="nombre">
                 </div>
                 <div class="input-texto">
-                    <label for="precio">Descripcion</label>
+                    <label for="precio">Descripcion</label> <br>
                     <input type="text" name="descripcion">
                 </div>
                 <div class="input-texto">
-                    <label for="precio">Categoria</label>
+                    <label for="precio">Categoria</label><br>
                     <input type="text" name="categoria">
                 </div>
                 <div class="input-texto">
-                    <label for="precio">Genero</label>
+                    <label for="precio">Genero</label><br>
                     <input type="text" name="genero">
                 </div>
                 <div class="input-texto">
-                    <label for="precio">Precio</label>
+                    <label for="precio">Precio</label><br>
                     <input type="text" name="precio">
                 </div>
             </div>
@@ -55,10 +55,33 @@
         </form>
     
         <form class="form-filtrar-productos" action="buscar" method="get">
+            <h2>Buscar producto para editar</h2>
             <input type="search" name="buscar-producto" id="">
-            <input type="submit" value="Buscar-producto-para-editar">
+            <input type="submit" value="Buscar">
         </form>
 
+            <section>
+                <% listaPeliculas.forEach(element => { %>
+
+                    <article class="articuloEnFila">
+                        <label class="label-edicion" for="">ID <%= element.id %> </label>
+                        <img class="img-pelicula" src="<%= element.imagen %> ">
+                        <div>
+                        <label class="label-edicion" for="">Titulo</label> <br>
+                        <input class="input-edicion" type="text" name="" placeholder="<%= element.titulo %>">
+                    </div><div>
+                        <label class="label-edicion" for="">Descripcion</label> <br>
+                        <input class="input-edicion" type="text" name="" placeholder="<%= element.descripcion %>">
+                    </div><div>
+                        <label class="label-edicion" for="">Precio</label> <br>
+                        <input class="input-edicion" type="text" name="" placeholder="<%= element.precio %>">
+                    </div> 
+                        <a href="# " class="botonFormBusc">Guardar</a>
+                        <a href="/productDetail/<%= element.id %> " class="botonFormBusc">Ver</a>
+                    </article>
+
+                <% }); %> 
+            </section>
 
     </main>
     <%- include('partials/footer') %> 

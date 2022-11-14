@@ -12,7 +12,7 @@ router.get('/login',mainController.login);
 router.get('/register',mainController.register);
 router.get('/carrito',mainController.carrito);
 router.get('/carrito2',mainController.carrito2);
-router.get('/productDetail',mainController.productDetail);
+router.get('/productDetail/:id?',mainController.productDetail);
 router.get('/administrarProductos',mainController.administrarProductos);
 
 module.exports = router;

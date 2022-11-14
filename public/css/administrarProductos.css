@@ -1,15 +1,27 @@
+
+main{
+    background: rgb(13, 196, 19, 0.8);
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 1cm;
+}
+
 .form-ingreso-producto{
     border: solid 2px black;
     border-radius: 10px;
     text-align: center;
-    width: 15cm;
+    width: 70%;
     margin: auto;
     padding: 20px;
+    
 }
 .div-input-texto{
     text-align: right;
     width: 60%;
     margin: auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 .input-texto{
     padding: 5px;
@@ -25,4 +37,55 @@
 .boton-guardar{
     padding: 5px;
     margin: 5px;
+}
+
+
+.form-filtrar-productos{
+    border: solid 2px black;
+    border-radius: 10px;
+    text-align: center;
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+
+
+
+
+.articuloEnFila{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 2px solid brown;
+    border-radius: 20px;
+    width: 80%;
+    margin: 10px auto ;
+
+}
+.img-pelicula{
+    width: 70px;
+    height: 10%;
+    margin: 10px;
+}
+.label-edicion{
+    color: white;
+    height: 1cm;
+}
+.input-edicion{
+    height: 1cm;
+    margin: 3px 10px;
+    border-radius: 5px;
+}
+
+.botonFormBusc{
+    height: 1cm;
+    width: 3cm;
+    text-align: center;
+    text-decoration: none;
+    border: solid black 2px;
+    border-radius: 10px;
+    padding: 7px ;
+    margin: 10px;
 }
