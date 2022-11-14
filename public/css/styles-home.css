@@ -141,23 +141,23 @@ main{
     padding-bottom: 50px;
  }
  .personas{
-    width: 15vw;
-    height: 33vh;
+    width: 180px;
+    height: 180px;
    border-radius: 50%;
  }
 .nombres{
     color: white;
     text-align: center;
-    font-size: 1vw;
+    font-size: 20px;
     font-weight: 500;
 }
 
- .articulos2{
+ /* .articulos2{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     padding-bottom: 50px;
- }
+ } */
 /* articulos */
 section article{
     padding: 10px;
