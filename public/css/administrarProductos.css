@@ -89,3 +89,22 @@ main{
     padding: 7px ;
     margin: 10px;
 }
+
+
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 2px solid brown;
+    border-radius: 20px;
+    width: 80%;
+    margin: 10px auto ;
+}
+
+.tituloPeli{
+    color: white;
+}
+.texto{
+    color: white;
+}

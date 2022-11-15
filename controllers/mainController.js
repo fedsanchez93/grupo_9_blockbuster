@@ -24,7 +24,12 @@ const mainController = {
         res.render('productDetail')
     },
     administrarProductos: (req,res)=>{
-        res.render('administrarProductos', {listaPeliculas})
+        let filtrar = req.query.filtrar
+        let resultados = []
+        
+        res.render('administrarProductos', {listaPeliculas, filtrar, resultados})
+    },listadoProductos: (req,res)=>{
+        res.render('listadoProductos', {listaPeliculas})
     },
 }
 

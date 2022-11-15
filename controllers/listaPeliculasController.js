@@ -48,46 +48,7 @@ let listaPeliculas = [
         duracion:'',
         precio: '$1000'
     },
-    {   id:7,
-        titulo:'',
-        imagen:'',
-        descripcion:'',
-        genero:'',
-        duracion:'',
-        precio: '$1000'
-    },
-    {   id:8,
-        titulo:'',
-        imagen:'',
-        descripcion:'',
-        genero:'',
-        duracion:'',
-        precio: '$1000'
-    },
-    {   id:9,
-        titulo:'',
-        imagen:'',
-        descripcion:'',
-        genero:'',
-        duracion:'',
-        precio: '$1000'
-    },
-    {   id:10,
-        titulo:'',
-        imagen:'',
-        descripcion:'',
-        genero:'',
-        duracion:'',
-        precio: '$1000'
-    },
-    {   id:11,
-        titulo:'',
-        imagen:'',
-        descripcion:'',
-        genero:'',
-        duracion:'',
-        precio: '$1000'
-    },
+    
 
 ]
 
