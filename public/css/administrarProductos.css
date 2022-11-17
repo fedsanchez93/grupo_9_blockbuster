@@ -50,9 +50,6 @@ main{
 }
 
 
-
-
-
 .articuloEnFila{
     display: flex;
     align-items: center;
@@ -64,6 +61,11 @@ main{
     margin: 10px auto ;
 
 }
+
+.articuloEnFila a {
+    text-decoration: none;
+}
+
 .img-pelicula{
     width: 70px;
     height: 10%;
