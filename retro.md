@@ -29,6 +29,7 @@ Realizar al menos una reunión semanal para comentar la situación en la que cad
 - More of:
 
 Apoyarnos entre nosotros cuando se presentan obstaculos dificiles de sortear. Hacer un intercambio de tareas si creemos que seriamos mas utiles en otras. 
+Utilizar el tablero de Trello o nuestro propio tablero de trabajo para medir que tan bien posicionados estamos frente al objetivo.
 
 - Keep doing:
 
