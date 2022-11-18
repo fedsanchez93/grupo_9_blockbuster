@@ -17,7 +17,7 @@ Seguir esforzandonos de la manera en la que cada uno lo esta haciendo, compromet
 
 - Less of/Stop doing:
 
-Comunicarnos a principio y final de cada sprint. Para seguir el camino a cumplir los objetivos del sprint, no hay que dar por hecho que todos tenemos claro todo el tiempo lo que debemos hacer. Aprovechemos las reuniones semanales para repasar las tareas y pedir ayuda si es necesario.
+Comunicarnos solo a principio y final de cada sprint. Para seguir el camino a cumplir los objetivos del sprint, no hay que dar por hecho que todos tenemos claro todo el tiempo lo que debemos hacer. Aprovechemos las reuniones semanales para repasar las tareas y pedir ayuda si es necesario.
 
 
 ### Retrospectiva del Sprint 3
