@@ -1,7 +1,11 @@
 const path = require('path')
+const fs = require('fs');
 
-let listaPeliculas = require('./listaPeliculasController')
 
+//let listaPeliculas = require('./listaPeliculasController')
+
+const productsFilePath = path.join(__dirname, '../data/products.json');
+const listaPeliculas = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 const mainController = {

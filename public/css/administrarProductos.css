@@ -110,3 +110,10 @@ main{
 .texto{
     color: white;
 }
+
+.trailer{
+    border-radius: 20px;
+    width:560px ;
+    height: 310px;
+    margin: 50px;
+}

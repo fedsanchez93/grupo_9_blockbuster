@@ -1,0 +1,58 @@
+[
+    {   "id":1,
+        "titulo":"2012",
+        "imagen":"/images/2012.jpg",
+        "descripcion":"Esta es la descripcion",
+        "genero":"",
+        "duracion":"",
+        "precio": "$1000",
+        "trailer":"https://www.youtube.com/embed/9ooDeS4Ep5Q"
+    },
+    {   "id":2,
+        "titulo":"1917",
+        "imagen":"/images/197.jpg",
+        "descripcion":"",
+        "genero":"",
+        "duracion":"",
+        "precio": "$1000",
+        "trailer":"https://www.youtube.com/embed/YrbdN5zaouU"
+    },
+    {   "id":3,
+        "titulo":"El Guason",
+        "imagen":"/images/El Guason.jpg",
+        "descripcion":"",
+        "genero":"",
+        "duracion":"",
+        "precio": "$1000",
+        "trailer":"https://www.youtube.com/embed/TobNCFMK_bs"
+    },
+    {   "id":4,
+        "titulo":"Los Vengadores",
+        "imagen":"/images/LosVengadores.jpg",
+        "descripcion":"",
+        "genero":"",
+        "duracion":"",
+        "precio": "$1000",
+        "trailer":"https://www.youtube.com/embed/HQIiYqOVTWo"
+    },
+    {   "id":5,
+        "titulo":"Smile",
+        "imagen":"/images/smile.jpg",
+        "descripcion":"",
+        "genero":"",
+        "duracion":"",
+        "precio": "$1000",
+        "trailer":"https://www.youtube.com/embed/yhKiQGJop_8"
+    },
+    {   "id":6,
+        "titulo":"Maquinas Mortales",
+        "imagen":"/images/MaquinasMortales.jpg",
+        "descripcion":"Esta pela es de esos casos únicos donde la destroza la crítica injustamente sin merecerlo, su atmósfera es genial, tan Steam Punk, te entretiene sin más.",
+        "genero":"",
+        "duracion":"",
+        "precio": "$1000",
+        "trailer":"https://www.youtube.com/embed/zDABDg7vwsk"
+    }
+    
+
+]

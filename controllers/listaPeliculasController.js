@@ -6,7 +6,8 @@ let listaPeliculas = [
         descripcion:'Esta es la descripcion',
         genero:'',
         duracion:'',
-        precio: '$1000'
+        precio: '$1000',
+        trailer:'https://www.youtube.com/watch?v=9ooDeS4Ep5Q'
     },
     {   id:2,
         titulo:'1917',
