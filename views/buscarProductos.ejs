@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head') %> 
+    <title>Blockbuster</title>
+    <link rel="stylesheet" href="/css/buscarProductos.css">
+
+</head>
+<body>
+    
+
+    <%- include('partials/header') %>  
+<main>
+
+    <form class="form-BuscarProductos" action="/buscarProductos" method="get">
+        <h2 class="texto">Buscar Peliculas</h2>
+        <input class="input-buscador" type="search" name="filtrar" id="">
+        <input  class="botonBuscar" type="submit" value="Buscar">
+        
+    </form>
+
+    <section class="section-card">
+    <% peliculasFiltradas.forEach(element => { %>
+
+        
+
+        <article class="card">
+            <img class="img-pelicula" src="<%= element.imagen %> ">
+            <h2 class="tituloPeli"><%= element.titulo %></h2>
+            <h3 class="texto"><%= element.descripcion %></h3>
+            <h3 class="texto"><%= element.precio %></h3>
+            <a href="/productDetail?<%= element.id %> " class="botonVer">Ver</a>
+        </article>
+    <% }); %> 
+    </section>
+
+    <%- include('partials/footer') %> 
+</main>
+</body>
+</html>

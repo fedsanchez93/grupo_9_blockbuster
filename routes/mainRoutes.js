@@ -15,6 +15,7 @@ router.get('/carrito2',mainController.carrito2);
 router.get('/productDetail/:id?',mainController.productDetail);
 router.get('/administrarProductos',mainController.administrarProductos);
 router.get('/listadoProductos',mainController.listadoProductos);
+router.get('/buscarProductos/:buscar?/',mainController.buscarProductos);
 
 module.exports = router;
 

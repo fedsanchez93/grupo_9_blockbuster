@@ -28,10 +28,20 @@ const mainController = {
         let resultados = []
         
         res.render('administrarProductos', {listaPeliculas, filtrar, resultados})
-    },listadoProductos: (req,res)=>{
+    },
+    listadoProductos: (req,res)=>{
         res.render('listadoProductos', {listaPeliculas})
     },
+    buscarProductos: (req,res)=>{
+        let palabraBuscada = req.query.filtrar || ''
+        let peliculasFiltradas = []
+        for(let i = 0 ;  i< listaPeliculas.length;i++){
+            if(listaPeliculas[i].titulo.includes(palabraBuscada)){
+                peliculasFiltradas.push(listaPeliculas[i])
+            }
+        }
+        res.render('buscarProductos', {listaPeliculas, peliculasFiltradas,palabraBuscada})
+    },
 }
-
 
 module.exports = mainController
