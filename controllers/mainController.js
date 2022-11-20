@@ -35,7 +35,7 @@ const mainController = {
     buscarProductos: (req,res)=>{
         let palabraBuscada = req.query.filtrar || ''
         let peliculasFiltradas = []
-        for(let i = 0 ;  i< listaPeliculas.length;i++){
+        for(let i = 0 ;  i< listaPeliculas.length ;i++){
             if(listaPeliculas[i].titulo.includes(palabraBuscada)){
                 peliculasFiltradas.push(listaPeliculas[i])
             }
