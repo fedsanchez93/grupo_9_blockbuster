@@ -25,7 +25,8 @@ const mainController = {
         res.render('carrito2')
     },
     productDetail: (req,res)=>{
-        res.render('productDetail')
+        let id = req.query.id || 4
+        res.render('productDetail', {listaPeliculas, id})
     },
     administrarProductos: (req,res)=>{
         let palabraBuscada = req.query.filtrar || ''
