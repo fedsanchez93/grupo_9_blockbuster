@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <%- include('partials/head') %> 
+    <link rel="stylesheet" href="../css/styles-editarproducs.css">
+    <title>Blockbuster</title>
+
+</head>
+<body>
+    <%- include('partials/header') %>  
+
+<main>
+    <form action="" method="post">
+
+    </form>
+    
+
+
+    <main class="all-form">
+        <!-- register form -->
+        <!-- <div class="center"></div> -->
+        <h1 class="tituloPag">Editar Pelicula ID:...</h1>
+
+        <form action="POST">
+            <div class="txt_field">
+                <input type="text" placeholder="2012" >
+                <span></span>
+                <label> Nombre de pelicula: 2012</label>
+            </div>
+
+            <div class="txt_field">
+                <input type="text" >
+                <span></span>
+                <label>Descripcion</label>
+            </div>
+            <div class="txt_field">
+                <input type="text" >
+                <span></span>
+                <label>URL imagen</label>
+            </div>
+            <div class="txt_field">
+                <input type="text" >
+                <span></span>
+                <label>URL Trailer</label>
+            </div>
+            <div class="txt_field">
+                <input type="text" >
+                <span></span>
+                <label>Duracion</label>
+            </div>
+            <div class="txt_field">
+                <input type="text" >
+                <span></span>
+                <label>Año</label>
+            </div>
+            <div class="txt_field">
+                <input type="text" >
+                <span></span>
+                <label>Origen</label>
+            </div>
+            <div class="txt_field">
+                <input type="text" >
+                <span></span>
+                <label>Precio</label>
+            </div>
+            <div class="txt_field">
+                <input type="text" >
+                <span></span>
+                <label>Calificacion IMDb</label>
+            </div>
+            <div class="txt_field">
+                <input type="text" >
+                <span></span>
+                <label>Calificacion Rotten Tomatoes</label>
+            </div>
+ 
+ 
+            <div class="txt_field">
+ 
+            <select class="select" name="Genero-Pelicula" id="">
+                <option value="Dramatico">Dramatico</option>
+                <option value="Ficcion">Ficcion</option>
+                <option value="Comedia">Comedia</option>
+                <option value="Romantica">Romantica</option>
+                <option value="Accion">Accion</option>
+                <option value="Suspenso">Suspenso</option>
+                <option value="Terror">Terror</option>
+            </select>
+
+            <input type="text" >
+            <span></span>
+            <label>Genero</label>
+        </div>
+
+        <div class="txt_field">
+ 
+            <select class="select" name="Idioma-Pelicula" id="">
+                <option value="Español">Español</option>
+                <option value="English">English</option>
+                <option value="Portugues">Portugues</option>
+                
+            </select>
+
+            <input type="text" >
+            <span></span>
+            <label>Idioma</label>
+        </div>
+
+
+
+        
+        <label class="label-calificacion">Calificacion Blockbuster</label>
+        <form class="form-estrellas">
+            <p class="clasificacion">
+                <input id="radio1" type="radio" name="estrellas1" value="5"><!--
+                --><label class="label-estrella" for="radio1">★</label><!--
+                --><input id="radio2" type="radio" name="estrellas1" value="4"><!--
+                --><label class="label-estrella" for="radio2">★</label><!--
+                --><input id="radio3" type="radio" name="estrellas1" value="3"><!--
+                --><label class="label-estrella" for="radio3">★</label><!--
+                --><input id="radio4" type="radio" name="estrellas1" value="2"><!--
+                --><label class="label-estrella" for="radio4">★</label><!--
+                --><input id="radio5" type="radio" name="estrellas1" value="1"><!--
+                --><label class="label-estrella" for="radio5">★</label><!--
+                -->
+            </p>
+          </form>
+
+          
+          
+
+
+            <!-- on/off -->
+            <div class="switch-holder">
+                <div class="switch-label">
+                    <span>Destacada</span>
+                </div>
+                <div class="switch-toggle">
+                    <input type="checkbox" id="bluetooth">
+                    <label for="bluetooth"></label>
+                </div>
+            </div>
+
+
+
+            <div class="pass"></div>
+            <input type="submit" value="Guardar">
+            <div class="signup_link">
+                <a href="/register">Crear nueva pelicula</a>
+            </div>
+
+
+        </form>
+
+
+
+
+
+</main>
+
+
+
+
+    <%- include('partials/footer') %> 
+
+</body>
+</html>

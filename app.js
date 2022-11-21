@@ -13,6 +13,8 @@ app.listen(PORT,() => console.log("Server listening on port  " + PORT));
 const rutasMain = require('./routes/mainRoutes');
 app.use('/', rutasMain)
 
+const rutasProducts = require('./routes/productsRouter');
+app.use('/products', rutasProducts)
 
 
 

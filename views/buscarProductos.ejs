@@ -3,7 +3,7 @@
 <head>
     <%- include('partials/head') %> 
     <title>Blockbuster</title>
-    <link rel="stylesheet" href="/css/buscarProductos.css">
+    <link rel="stylesheet" href="../css/buscarProductos.css">
 
 </head>
 <body>
@@ -12,7 +12,7 @@
     <%- include('partials/header') %>  
 <main>
 
-    <form class="form-BuscarProductos" action="/buscarProductos" method="get">
+    <form class="form-BuscarProductos" action="/products/buscarProductos" method="get">
         <!-- <h2 class="texto">Buscar Peliculas</h2> -->
         <input class="input-buscador" type="search" name="filtrar" placeholder="Buscar Peliculas" id="">
         <input  class="botonBuscar" type="submit" value="Buscar">
@@ -29,7 +29,7 @@
             <h2 class="tituloPeli"><%= element.titulo %></h2>
             <!-- <h3 class="texto"><%= element.descripcion %></h3> -->
             <h3 class="texto"><%= element.precio %></h3>
-            <a href="/productDetail?id=<%= element.id %> " class="botonVer">Ver Mas</a>
+            <a href="/products/productDetail?id=<%= element.id %> " class="botonVer">Ver Mas</a>
         </article>
     <% }); %> 
     </section>

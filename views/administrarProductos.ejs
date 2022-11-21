@@ -44,7 +44,7 @@
                 <button type="submit" class="boton-guardar">Guardar y Subir</button>
         </form>
     
-        <form class="form-filtrar-productos" action="/administrarProductos" method="get">
+        <form class="form-filtrar-productos" action="/products/administrarProductos" method="get">
             <h2>Buscar pelicula para editar</h2>
             <input type="search" name="filtrar" id="">
             <input type="submit" value="Buscar">
@@ -60,9 +60,9 @@
                 </div>
                 <h2 class="texto">"<%= element.titulo %>"   -   <%= element.descripcion %>  -   <%= element.precio %></h2>
                 <div class="div-botones">
-                    <a href="/productDetail?id=<%= element.id %> " class="botonFormBusc">Editar</a>
-                    <a href="/productDetail?id=<%= element.id %> " class="botonFormBusc">Ver</a>
-                    <a href="/productDetail?id=<%= element.id %> " class="botonFormBusc">Eliminar</a>
+                    <a href="/products/productDetail?id=<%= element.id %> " class="botonFormBusc">Editar</a>
+                    <a href="/products/productDetail?id=<%= element.id %> " class="botonFormBusc">Ver</a>
+                    <a href="/products/productDetail?id=<%= element.id %> " class="botonFormBusc">Eliminar</a>
                 </div>
             </article>
             <% }); %> 
