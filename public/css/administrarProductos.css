@@ -1,6 +1,6 @@
 
 main{
-    background: rgb(13, 196, 19, 0.8);
+    background: rgba(31,68,137,1);
     width: 80%;
     margin: 30px auto;
     padding: 20px;
@@ -41,7 +41,9 @@ main{
 
 
 .form-filtrar-productos{
-    border: solid 2px black;
+    border-top: solid 2px white;
+    border-right: solid 2px white;
+    border-left: solid 2px white;
     border-radius: 10px;
     text-align: center;
     width: 50%;
@@ -67,8 +69,8 @@ main{
 }
 
 .img-pelicula{
-    width: 70px;
-    height: 10%;
+    width: 150px;
+    height: 150px;
     margin: 10px;
 }
 .label-edicion{
@@ -90,8 +92,15 @@ main{
     border-radius: 10px;
     padding: 7px ;
     margin: 10px;
+    background: #000;
+    color: white;
 }
 
+.section-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 .card{
     display: flex;
@@ -100,7 +109,7 @@ main{
     flex-wrap: wrap;
     border: 2px solid brown;
     border-radius: 20px;
-    width: 80%;
+    width: 12cm;
     margin: 10px auto ;
 }
 
@@ -108,12 +117,23 @@ main{
     color: white;
 }
 .texto{
-    color: white;
+    color: black;
+    font-size: small;
 }
 
 .trailer{
     border-radius: 20px;
-    width:560px ;
-    height: 310px;
-    margin: 50px;
+    width:250px ;
+    height: 150px;
+    margin: 10px;
+}
+.div-img-video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div-botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
