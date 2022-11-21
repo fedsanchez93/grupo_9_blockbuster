@@ -10,7 +10,7 @@ const listaPeliculas = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const mainController = {
     home: (req,res)=>{
-        res.render('home')
+        res.render('home', {listaPeliculas})
     },
     login: (req,res)=>{
         res.render('login')

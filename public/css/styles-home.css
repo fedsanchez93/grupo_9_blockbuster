@@ -85,14 +85,15 @@ main{
  }
 
 .nombre-peli{
-    font-size: 1vw;
+    font-size: 20px;
     color: var(--light-gray);
     font-weight: 600;
     text-align: center;
-
+    color: white;
+    margin-bottom: 0;
 }
   .ver-mas{
-   font-size: 18px;
+   font-size: 10px;
    color: var(--white);
    font-weight: 500;
    background-color: var(--light-gray) ;
@@ -106,13 +107,15 @@ main{
  .btn-neon{
     position: relative;
     display: inline-block;
-    padding: 4% 6%;
+    padding: 10px 20px;
     color: white;
     font-size: 150%;
     text-decoration: none;
     transition: 0.2s;
     background-color: black;
     border-radius: 10px;
+    border: 1px rgba(255, 255, 255, 0.5) solid;
+    margin-bottom: 30px;
 }
 
 .btn-neon:hover{
@@ -127,10 +130,11 @@ main{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding-bottom: 50px;
+    padding-bottom: 25px;
  }
  .articulos2{
-    width: 30%;
+    min-width: 5cm;
+    width: 16%;
     text-align: center;
   }
 
