@@ -1,3 +1,10 @@
+
+
+.form-BuscarProductos{
+    margin: 1cm;
+}
+
+
 .section-card{
     display: flex;
     justify-content: space-around;
@@ -19,24 +26,26 @@
 
 .img-pelicula{
     width: 100%;
-    max-height: 10cm;
+    max-height: 7cm;
     border-radius: 10px;
-
+    
 }
 
 .tituloPeli, .texto, .botonVer{
     color: white;
     background: #000;
     border-radius: 10px;
-    margin: 5px;
+    margin: 15px;
     padding: 5px;
     text-decoration: none;
+    font-size: medium;
 }
 
 .input-buscador{
+    margin-left: 30%;
     border-radius: 10px;
-    width: 70%;
-    height: 1.5cm;
+    width: 40%;
+    height: 1.2cm;
     padding: 10px;
 }
 .botonBuscar{
@@ -44,7 +53,6 @@
     height: 1.2cm;
     background: white;
     color: black;
-    border: solid 5px green;
     border-radius: 10px;
     padding: auto;
     text-align: center;
