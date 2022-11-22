@@ -11,18 +11,16 @@
     <%- include('partials/header') %>  
 
 <main>
-    <form action="" method="post">
-
-    </form>
+    
     
 
 
     <main class="all-form">
         <!-- register form -->
         <!-- <div class="center"></div> -->
-        <h1 class="tituloPag">Editar Pelicula ID:...</h1>
+        <h1 class="tituloPag">Subir Nueva Pelicula</h1>
 
-        <form action="/products/editarProducto?_method=PUT" method="POST">
+        <form action="/products/guardarNuevoProducto" method="POST">
             <div class="txt_field">
                 <input type="text" placeholder="2012" >
                 <span></span>
@@ -114,24 +112,8 @@
 
 
 
-        <!-- <div>
-        <label class="label-calificacion">Calificacion Blockbuster</label>
-        <form class="form-estrellas">
-            <p class="clasificacion">
-                <input id="radio1" type="radio" name="estrellas1" value="5">
-                <label class="label-estrella" for="radio1">★</label>
-                <input id="radio2" type="radio" name="estrellas1" value="4">
-                <label class="label-estrella" for="radio2">★</label>
-                <input id="radio3" type="radio" name="estrellas1" value="3">
-                <label class="label-estrella" for="radio3">★</label>
-                <input id="radio4" type="radio" name="estrellas1" value="2">
-                <label class="label-estrella" for="radio4">★</label>
-                <input id="radio5" type="radio" name="estrellas1" value="1">
-                <label class="label-estrella" for="radio5">★</label>
-                
-            </p>
-        </form>
-    </div> -->
+        
+        
 
           
           
@@ -151,10 +133,11 @@
 
 
             <div class="pass">
-            <input type="submit" value="Guardar">
-        </div>
+            <input type="submit" value="Subir Pelicula" >
+            </div>
+
             <div class="signup_link">
-                <a href="/products/crearNuevoProducto">Crear nueva pelicula</a>
+                <a href="/products/editarProducto">Editar una pelicula</a>
             </div>
 
 

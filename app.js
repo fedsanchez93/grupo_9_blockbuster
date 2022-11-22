@@ -8,6 +8,13 @@ const router = express.Router()
 app.use(express.static('public')); // Recursos estaticos
 app.set("view engine", "ejs")
 
+// esto es para put y delete
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
+//para que el formulario llegue en formato json
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
 app.listen(PORT,() => console.log("Server listening on port  " + PORT));
 
 const rutasMain = require('./routes/mainRoutes');

@@ -4,6 +4,10 @@ const fs = require('fs');
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const listaPeliculas = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+
+// Atencion que todas las rutas de este controller empiezan con /products
+
+
 const productsController = {
 
     productDetail: (req,res)=>{
@@ -35,7 +39,24 @@ const productsController = {
     },
     editarProducto:(req,res)=>{
         res.render('editarProducto')
-    }
+    },
+
+    guardarProductoEditado:(req,res)=>{
+        res.redirect('/')
+    },
+
+    crearNuevoProducto:(req,res)=>{
+        res.render('crearNuevoProducto')
+    },
+
+    guardarNuevoProducto:(req,res)=>{
+        res.redirect('/')
+    },
+
+    eliminarProducto:(req,res)=>{
+        res.redirect('/')
+    },
+    
 }
 
 module.exports = productsController

@@ -96,7 +96,11 @@ main{
     background: #000;
     color: white;
 }
-
+.botonFormBusc:hover{
+    color: orange;
+    text-decoration:solid;
+    transform: scale(1.02);
+}
 .section-cards{
     display: flex;
     flex-wrap: wrap;

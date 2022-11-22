@@ -60,9 +60,12 @@
                 </div>
                 <h2 class="texto">"<%= element.titulo %>"   -   <%= element.descripcion %>  -   <%= element.precio %></h2>
                 <div class="div-botones">
-                    <a href="/products/productDetail?id=<%= element.id %> " class="botonFormBusc">Editar</a>
-                    <a href="/products/productDetail?id=<%= element.id %> " class="botonFormBusc">Ver</a>
-                    <a href="/products/productDetail?id=<%= element.id %> " class="botonFormBusc">Eliminar</a>
+                    <a href="/products/editarProducto?id=<%= element.id %>" class="botonFormBusc">Editar</a>
+                    <a href="/products/productDetail?id=<%= element.id %>" class="botonFormBusc">Ver</a>
+
+                    <form action="/products/eliminarProducto/<%= element.id %>/?_method=DELETE" method="POST">
+                        <input class="botonFormBusc" type="submit" value="Eliminar">
+                    </form>
                 </div>
             </article>
             <% }); %> 
