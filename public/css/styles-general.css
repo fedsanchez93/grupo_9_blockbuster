@@ -5,7 +5,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
+/* Not-found */
+.h1-not-found{
+    color: white;
+    text-align: center;
+    margin: 10%;
+}
 /* = = = = = MAIN BODY = = = = = */
 
 body{

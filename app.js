@@ -23,7 +23,9 @@ app.use('/', rutasMain)
 const rutasProducts = require('./routes/productsRouter');
 app.use('/products', rutasProducts)
 
-
+app.use((req,res,next)=>{
+    res.status(404).render('not-found')
+})
 
 
 
