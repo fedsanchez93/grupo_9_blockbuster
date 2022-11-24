@@ -7,38 +7,45 @@ main{
     border-radius: 1cm;
 }
 
-.form-ingreso-producto{
-    border: solid 2px black;
-    border-radius: 10px;
+
+.boton-ingresar-pelicula{
     text-align: center;
+    border: white solid 2px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 50px auto;
+    width: fit-content;
+
+}
+.boton-ingresar-pelicula:hover{
+    color: orange;
+    border: orange solid 2px;
+    transform: scale(1.05);
+}
+
+ .inputBuscar{
+    text-align: center;
+    border: white solid 2px;
+    border-radius: 10px;
+    padding: 10px;
+    margin:  auto;
     width: 70%;
-    margin: auto;
-    padding: 20px;
-    
+    color: white;
+    background: #000;
+    cursor: pointer;
+    margin-top: 10px;
 }
-.div-input-texto{
-    text-align: right;
-    width: 60%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
+.inputBuscar:hover{
+    color: orange;
+    border: orange solid 2px;
+    transform: scale(1.05);
 }
-.input-texto{
-    padding: 5px;
-
+.inputBuscador{
+    width: 70%;
+    border-radius: 10px;
+    padding: 10px;
+    border: solid 2px blue;
 }
-.input-texto label{
-    padding-right: 20px;
-}
-.input-imagen{
-    padding: 5px;
-    margin: 5px;
-}
-.boton-guardar{
-    padding: 5px;
-    margin: 5px;
-}
-
 
 .form-filtrar-productos{
     border-top: solid 2px white;
@@ -95,6 +102,7 @@ main{
     margin: 10px;
     background: #000;
     color: white;
+    cursor: pointer;
 }
 .botonFormBusc:hover{
     color: orange;
@@ -123,7 +131,8 @@ main{
 }
 .texto{
     color: black;
-    font-size: small;
+    text-align: center;
+    
 }
 
 .trailer{
@@ -136,9 +145,13 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+
 }
 .div-botones{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+
 }

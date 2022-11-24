@@ -85,13 +85,17 @@ form .txt_field {
 }
 
 .pass {
-    margin: -5px 0 20px 5px;
+    
     color: #a6a6a6;
     cursor: pointer;
+    transition: 0.5s;
+    margin: 20px;
 }
 
 .pass:hover {
-    text-decoration: underline;
+  color: orange;
+    border: orange solid 2px;
+    transform: scale(1.01);
 }
 
 input[type="submit"] {
@@ -137,10 +141,10 @@ input[type="submit"]:hover {
     display: flex;
     padding: 10px 20px;
     border-radius: 10px;
-    box-shadow: -8px -8px 15px rgba(255, 255, 255, .7),
+    box-shadow: -8px -8px 15px rgba(234, 225, 225, 0.7),
           10px 10px 10px rgba(0, 0, 0, .2),
-          inset 8px 8px 15px rgba(255, 255, 255, .7),
-          inset 10px 10px 10px rgba(0, 0, 0, .2);
+          inset 8px 8px 15px rgba(15, 52, 173, 0.7),
+          inset 10px 10px 10px rgba(72, 126, 220, 0.2);
     justify-content: space-between;
     align-items: center;
   }

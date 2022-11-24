@@ -38,11 +38,12 @@ const productsController = {
         res.render('buscarProductos', {listaPeliculas, peliculasFiltradas,palabraBuscada})
     },
     editarProducto:(req,res)=>{
-        res.render('editarProducto')
+        let idProducto = req.query.id 
+        res.render('editarProducto',{idProducto, listaPeliculas})
     },
 
     guardarProductoEditado:(req,res)=>{
-        res.redirect('/')
+        res.redirect('/products/administrarProductos')
     },
 
     crearNuevoProducto:(req,res)=>{
@@ -50,11 +51,11 @@ const productsController = {
     },
 
     guardarNuevoProducto:(req,res)=>{
-        res.redirect('/')
+        res.redirect('/products/administrarProductos')
     },
 
     eliminarProducto:(req,res)=>{
-        res.redirect('/')
+        res.redirect('/products/administrarProductos')
     },
     
 }

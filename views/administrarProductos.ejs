@@ -12,8 +12,9 @@
 
 
     <main>
-        <form  class="form-ingreso-producto" action="/" method="GET">
-            <h2>Ingresar una nueva pelicula</h2>
+        <a class="a" href="/products/crearNuevoProducto"><h2 class="boton-ingresar-pelicula">Ingresar una nueva pelicula</h2></a>
+        
+        <!-- <form  class="form-ingreso-producto" action="/" method="GET">
             <div class="div-input-texto">
                 <div class="input-texto">
                     <label for="producto">Nombre</label> <br>
@@ -42,12 +43,11 @@
                 </div>
             
                 <button type="submit" class="boton-guardar">Guardar y Subir</button>
-        </form>
+        </form> -->
     
         <form class="form-filtrar-productos" action="/products/administrarProductos" method="get">
-            <h2>Buscar pelicula para editar</h2>
-            <input type="search" name="filtrar" id="">
-            <input type="submit" value="Buscar">
+            <input type="search" name="filtrar" id="" class="inputBuscador" placeholder="El Guason...">
+            <input class="inputBuscar" type="submit" value="Buscar pelicula">
             
         </form>
 
@@ -58,7 +58,7 @@
                     <img class="img-pelicula" src="<%= element.imagen %> ">
                     <iframe class="trailer" src="<%= element.trailer %> " title="YouTube video player" frameborder="0" ></iframe>
                 </div>
-                <h2 class="texto">"<%= element.titulo %>"   -   <%= element.descripcion %>  -   <%= element.precio %></h2>
+                <h2 class="texto">"<%= element.titulo %>" </h2>
                 <div class="div-botones">
                     <a href="/products/editarProducto?id=<%= element.id %>" class="botonFormBusc">Editar</a>
                     <a href="/products/productDetail?id=<%= element.id %>" class="botonFormBusc">Ver</a>
