@@ -39,22 +39,69 @@ const productsController = {
     },
     editarProducto:(req,res)=>{
         let idProducto = req.query.id 
+
+        console.log(idProducto, 'editarproducto')
         res.render('editarProducto',{idProducto, listaPeliculas})
     },
 
     guardarProductoEditado:(req,res)=>{
+        let idProducto = req.query.id
+        let newPelicula = {
+            id: req.body.id || 1,
+            titulo:req.body.titulo,
+            imagen:req.body.imagen,
+            descripcion:req.body.descripcion,
+            genero:req.body.genero || '',
+            idioma:req.body.idioma || '',
+            duracion:req.body.duracion,
+            precio:req.body.precio,
+            trailer:req.body.trailer,
+            categoria:req.body.categoria || '',
+            CalificacionBlockbuster:req.body.CalificacionBlockbuster,
+            CalificacionIMDb:req.body.CalificacionIMDb,
+            CalificacionRottenTomatoes:req.body.CalificacionRottenTomatoes,
+        }
+        
+        console.log(newPelicula, idProducto)
+        let newlistaPeliculas = listaPeliculas.map(element => {
+			if(newPelicula.id == element.id){return element = newPelicula}
+			return element
+		})
+
+        fs.writeFileSync(productsFilePath, JSON.stringify(newlistaPeliculas,null, '\t' ))
+        
         res.redirect('/products/administrarProductos')
     },
 
     crearNuevoProducto:(req,res)=>{
-        res.render('crearNuevoProducto')
+        let idProducto = req.query.id
+        res.render('crearNuevoProducto', {idProducto})
     },
 
     guardarNuevoProducto:(req,res)=>{
+        let newPelicula = {
+            id: listaPeliculas[listaPeliculas.length-1].id+1,
+            titulo:req.body.titulo || '',
+            imagen:req.body.imagen || "/images/MaquinasMortales.jpg",
+            descripcion:req.body.descripcion,
+            genero:req.body.genero || '',
+            idioma:req.body.idioma || '',
+            duracion:req.body.duracion,
+            precio:req.body.precio,
+            trailer:req.body.trailer || "https://www.youtube.com/embed/zDABDg7vwsk",
+            categoria:req.body.categoria || '',
+            CalificacionBlockbuster:req.body.CalificacionBlockbuster,
+            CalificacionIMDb:req.body.CalificacionIMDb,
+            CalificacionRottenTomatoes:req.body.CalificacionRottenTomatoes,
+        }
+        listaPeliculas.push(newPelicula)
+        fs.writeFileSync(productsFilePath, JSON.stringify(listaPeliculas,null, '\t' ))
+
         res.redirect('/products/administrarProductos')
     },
 
     eliminarProducto:(req,res)=>{
+        
         res.redirect('/products/administrarProductos')
     },
     

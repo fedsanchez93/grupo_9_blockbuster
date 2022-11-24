@@ -22,58 +22,58 @@
 
         <form action="/products/guardarNuevoProducto" method="POST">
             <div class="txt_field">
-                <input type="text" placeholder="2012" >
+                <input type="text" name="titulo" placeholder="2012" >
                 <span></span>
                 <label> Nombre de pelicula: 2012</label>
             </div>
 
             <div class="txt_field">
-                <input type="text" >
+                <input type="text" name="descripcion">
                 <span></span>
                 <label>Descripcion</label>
             </div>
-            <div class="txt_field">
-                <input type="text" >
+            <div class="txt_field" >
+                <input type="text" name="imagen">
                 <span></span>
                 <label>URL imagen</label>
             </div>
             <div class="txt_field">
-                <input type="text" >
+                <input type="text" name="trailer" >
                 <span></span>
                 <label>URL Trailer</label>
             </div>
             <div class="txt_field">
-                <input type="text" >
+                <input type="text" name="duracion">
                 <span></span>
                 <label>Duracion</label>
             </div>
             <div class="txt_field">
-                <input type="text" >
+                <input type="text" name="anio" >
                 <span></span>
                 <label>Año</label>
             </div>
             <div class="txt_field">
-                <input type="text" >
+                <input type="text" name="origen">
                 <span></span>
                 <label>Origen</label>
             </div>
             <div class="txt_field">
-                <input type="text" >
+                <input type="text" name="precio" >
                 <span></span>
                 <label>Precio</label>
             </div>
             <div class="txt_field">
-                <input type="text" >
+                <input type="text" name="CalificacionBlockbuster" >
                 <span></span>
                 <label>Calificacion Blockbuster</label>
             </div>
             <div class="txt_field">
-                <input type="text" >
+                <input type="text" name="CalificacionIMDb">
                 <span></span>
                 <label>Calificacion IMDb</label>
             </div>
             <div class="txt_field">
-                <input type="text" >
+                <input type="text" name="CalificacionRottenTomatoes" >
                 <span></span>
                 <label>Calificacion Rotten Tomatoes</label>
             </div>
@@ -81,7 +81,8 @@
  
             <div class="txt_field">
  
-            <select class="select" name="Genero-Pelicula" id="">
+            <select class="select" name="genero" id="">
+                <option value="">Seleccionar</option>
                 <option value="Dramatico">Dramatico</option>
                 <option value="Ficcion">Ficcion</option>
                 <option value="Comedia">Comedia</option>
@@ -91,21 +92,22 @@
                 <option value="Terror">Terror</option>
             </select>
 
-            <input type="text" >
+            <!-- <input type="text" > -->
             <span></span>
             <label>Genero</label>
         </div>
 
         <div class="txt_field">
  
-            <select class="select" name="Idioma-Pelicula" id="">
+            <select class="select" name="idioma" id="">
+                <option value="">Seleccionar</option>
                 <option value="Español">Español</option>
                 <option value="English">English</option>
                 <option value="Portugues">Portugues</option>
                 
             </select>
 
-            <input type="text" >
+            <!-- <input type="text" > -->
             <span></span>
             <label>Idioma</label>
         </div>
@@ -125,7 +127,7 @@
                     <span>Destacada</span>
                 </div>
                 <div class="switch-toggle">
-                    <input type="checkbox" id="bluetooth">
+                    <input type="checkbox" name="categoria" id="bluetooth">
                     <label for="bluetooth"></label>
                 </div>
             </div>

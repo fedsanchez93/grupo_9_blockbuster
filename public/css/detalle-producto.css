@@ -18,7 +18,7 @@ body{
 
 /*HEADER*/
 
-header{
+/* header{
     background-color: var(--light-blue); 
     width: 100%;
     height: 16vh;
@@ -26,7 +26,7 @@ header{
     justify-content: space-evenly;
     align-items: center;
 
-}
+} */
 
 
 
@@ -236,19 +236,19 @@ header{
 
 /*FOOTER*/
 
-footer{
+/* footer{
     background-color: var(--yellow);
     height: 100px;
     display: flex;
     justify-content: space-evenly;
     margin-top: 20px;
 
-}
+} */
 
-.col-footer{
+/* .col-footer{
     display: flex;
     flex-direction: column;
-    /*border: solid 1px red;*/
+    /*border: solid 1px red;
     color: var(--light-blue);
     height: 100%;
     justify-content: center;
@@ -270,7 +270,7 @@ footer{
 .col3 .redes-sociales{
     display: flex;
     justify-content: space-evenly;
-}
+} */
 
 
 /* MEDIA QUIERIES */

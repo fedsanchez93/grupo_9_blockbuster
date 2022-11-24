@@ -1,6 +1,6 @@
 
 main{
-    background: rgba(31,68,137,1);
+    background: rgba(31,68,137,0.8);
     width: 80%;
     margin: 30px auto;
     padding: 20px;
@@ -124,6 +124,7 @@ main{
     border-radius: 20px;
     width: 12cm;
     margin: 10px auto ;
+    background: rgba(241, 243, 245, 0.8);
 }
 
 .tituloPeli{
