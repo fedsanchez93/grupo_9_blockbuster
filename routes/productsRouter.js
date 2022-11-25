@@ -12,9 +12,10 @@ app.use(express.static(path.resolve(__dirname,'./public')));
 
 router.get('/productDetail/:id?',prodctsController.productDetail);
 router.get('/administrarProductos',prodctsController.administrarProductos);
-router.get('/listadoProductos',prodctsController.listadoProductos);
+router.get('/listadoDeseos',prodctsController.listadoDeseos);
 router.get('/buscarProductos/:buscar?/',prodctsController.buscarProductos);
 router.get('/editarProducto/:id?',prodctsController.editarProducto);
+router.get('/misAlquileres',prodctsController.misAlquileres);
 
 router.get('/crearNuevoProducto',prodctsController.crearNuevoProducto);
 

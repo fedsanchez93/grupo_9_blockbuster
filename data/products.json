@@ -29,15 +29,16 @@
 		"CalificacionRottenTomatoes": "9,5"
 	},
 	{
-		"id": 3,
+		"id": "3",
 		"titulo": "El Guason",
 		"imagen": "/images/El Guason.jpg",
 		"descripcion": "descripcion",
-		"genero": "",
+		"genero": "Dramatico",
+		"idioma": "Español",
 		"duracion": "",
 		"precio": "$1000",
 		"trailer": "https://www.youtube.com/embed/TobNCFMK_bs",
-		"categoria": "mas-buscadas",
+		"categoria": "",
 		"CalificacionBlockbuster": "9",
 		"CalificacionIMDb": "8",
 		"CalificacionRottenTomatoes": "9,5"
@@ -83,5 +84,35 @@
 		"CalificacionBlockbuster": "9",
 		"CalificacionIMDb": "8",
 		"CalificacionRottenTomatoes": "9,5"
+	},
+	{
+		"id": "7",
+		"titulo": "",
+		"imagen": "/images/MaquinasMortales.jpg",
+		"descripcion": "",
+		"genero": "Suspenso",
+		"idioma": "Portugues",
+		"duracion": "",
+		"precio": "",
+		"trailer": "https://www.youtube.com/embed/zDABDg7vwsk",
+		"categoria": "",
+		"CalificacionBlockbuster": "",
+		"CalificacionIMDb": "",
+		"CalificacionRottenTomatoes": ""
+	},
+	{
+		"id": 8,
+		"titulo": "terror",
+		"imagen": "/images/MaquinasMortales.jpg",
+		"descripcion": "",
+		"genero": "Terror",
+		"idioma": "",
+		"duracion": "",
+		"precio": "",
+		"trailer": "https://www.youtube.com/embed/zDABDg7vwsk",
+		"categoria": "",
+		"CalificacionBlockbuster": "",
+		"CalificacionIMDb": "",
+		"CalificacionRottenTomatoes": ""
 	}
 ]

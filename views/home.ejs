@@ -17,12 +17,14 @@
 
 
             <% listaPeliculas.forEach(element => { %>
+                <a href="/products/productDetail?id=<%= element.id %>" >
             <article class="articulos2">
             <img class="pelis" src="<%= element.imagen %>"> 
             <div class="caja"><p class="nombre-peli"> <%= element.titulo %> </p>
             <a href="/products/productDetail?id=<%= element.id %>" class="btn-neon">VER MAS</a>
             </div>
             </article>
+                </a>
             <% }) %>
 
 
@@ -78,12 +80,14 @@
     <section class="articulos">
 
         <% listaPeliculas.forEach(element => { %>
+            <a href="/products/productDetail?id=<%= element.id %>" >
             <article class="articulos2">
             <img class="pelis" src="<%= element.imagen %>"> 
             <div class="caja"><p class="nombre-peli"> <%= element.titulo %> </p>
             <a href="/products/productDetail?id=<%= element.id %>" class="btn-neon">VER MAS</a>
             </div>
             </article>
+            </a>
             <% }) %>
 
         <!-- <article class="articulos2">

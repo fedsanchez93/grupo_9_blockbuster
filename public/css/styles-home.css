@@ -118,7 +118,7 @@ main{
     margin-bottom: 30px;
 }
 
-.btn-neon:hover{
+.articulos2:hover .btn-neon{
     background-color: var(--yellow);
     box-shadow: 0 0 10px #FCC139, 0 0 40px #FCC139, 0 0 80px #FCC139;
 }

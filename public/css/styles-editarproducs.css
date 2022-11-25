@@ -28,7 +28,9 @@
 
 
 }
-
+.input-id{
+  display: none;
+}
 /* .center form {
     padding: 0 40px;
     box-sizing: border-box;
@@ -90,6 +92,7 @@ form .txt_field {
     cursor: pointer;
     transition: 0.5s;
     margin: 20px;
+    border-radius: 30px;
 }
 
 .pass:hover {

@@ -9,7 +9,10 @@ const listaPeliculas = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 const productsController = {
-
+    misAlquileres: (req,res)=>{
+        let id = req.query.id || 4
+        res.render('misAlquileres', {listaPeliculas, id})
+    },
     productDetail: (req,res)=>{
         let id = req.query.id || 4
         res.render('productDetail', {listaPeliculas, id})
@@ -24,8 +27,8 @@ const productsController = {
         }
         res.render('administrarProductos', {listaPeliculas, peliculasFiltradas})
     },
-    listadoProductos: (req,res)=>{
-        res.render('listadoProductos', {listaPeliculas})
+    listadoDeseos: (req,res)=>{
+        res.render('listadoDeseos', {listaPeliculas})
     },
     buscarProductos: (req,res)=>{
         let palabraBuscada = req.query.filtrar || ''
@@ -40,7 +43,7 @@ const productsController = {
     editarProducto:(req,res)=>{
         let idProducto = req.query.id 
 
-        console.log(idProducto, 'editarproducto')
+        // console.log(idProducto, 'editarproducto')
         res.render('editarProducto',{idProducto, listaPeliculas})
     },
 

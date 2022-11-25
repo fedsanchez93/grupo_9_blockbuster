@@ -7,6 +7,11 @@ main{
     border-radius: 1cm;
 }
 
+.titulo{
+    color: white;
+    text-align: center;
+    margin: 40px auto;
+}
 
 .boton-ingresar-pelicula{
     text-align: center;

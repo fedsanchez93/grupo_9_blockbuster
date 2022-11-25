@@ -1,4 +1,3 @@
-<h1>listado de productos</h1>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +10,8 @@
 <body>
     
     <%- include('partials/header') %>  
-
+    <h1 class="titulo">Mis Alquileres</h1>
+<section class="section-cards">
     <% listaPeliculas.forEach(element => { %>
 
         
@@ -19,12 +19,14 @@
         <article class="card">
             <img class="img-pelicula" src="<%= element.imagen %> ">
             <h2 class="tituloPeli"><%= element.titulo %></h2>
-            <h3 class="texto"><%= element.descripcion %></h3>
+            <!-- <h3 class="texto"><%= element.descripcion %></h3> -->
             <h3 class="texto"><%= element.precio %></h3>
-            <a href="/productDetail?<%= element.id %> " class="botonFormBusc">Ver</a>
+            <a href="/products/productDetail?id=<%= element.id %> " class="botonFormBusc">VER AHORA</a>
+            <a href="/products/productDetail?id=<%= element.id %> " class="botonFormBusc">COMPARTIR</a>
+
         </article>
     <% }); %> 
-
+</section>
 
     <%- include('partials/footer') %> 
 

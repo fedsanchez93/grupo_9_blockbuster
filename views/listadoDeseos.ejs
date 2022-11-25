@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head') %> 
+    <title>Blockbuster</title>
+    <link rel="stylesheet" href="css/styles-home.css">
+    <link rel="stylesheet" href="/css/administrarProductos.css">  
+</head>
+<body>
+    
+    <%- include('partials/header') %>  
+    <h1 class="titulo">Listado De Deseos</h1>
+<section class="section-cards">
+    <% listaPeliculas.forEach(element => { %>
+
+        
+
+        <article class="card">
+            <img class="img-pelicula" src="<%= element.imagen %> ">
+            <h2 class="tituloPeli"><%= element.titulo %></h2>
+            <!-- <h3 class="texto"><%= element.descripcion %></h3> -->
+            <h3 class="texto"><%= element.precio %></h3>
+            <a href="/products/productDetail?id=<%= element.id %> " class="botonFormBusc">Comprar</a>
+            <a href="/products/productDetail?id=<%= element.id %> " class="botonFormBusc">Quitar</a>
+
+        </article>
+    <% }); %> 
+</section>
+
+    <%- include('partials/footer') %> 
+
+</body>
+</html>
