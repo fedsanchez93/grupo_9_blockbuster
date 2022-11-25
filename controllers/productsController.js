@@ -101,7 +101,15 @@ const productsController = {
     },
 
     eliminarProducto:(req,res)=>{
-        
+        let idProducto = req.params.id
+        let newProducts =[]
+
+		listaPeliculas.forEach(element => {
+			if(idProducto != element.id){newProducts.push(element)}
+		});
+		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts,null, '\t'))
+
+
         res.redirect('/products/administrarProductos')
     },
     
