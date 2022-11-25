@@ -86,14 +86,15 @@ li {
 
 .product-image {
     position: relative;
+    width: 60%;
+    margin: auto;
 }
 
 .product-image img{
     display: block;
     width: 100%;
     padding-top: 15px;  
-    margin-right: auto;
-    margin-left: auto;
+    margin: auto;
 }
 
 .details h4{

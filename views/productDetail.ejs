@@ -43,10 +43,16 @@
     </header>
     
     <main>
+
+        <h2 class="titulo">
+            <%= listaPeliculas[id-1].titulo %> 
+        </h2>
+
         <section class="xxxx">
+
             <div class="bloque1">
-                <div class="imagen">
-                    <img src="<%= listaPeliculas[id-1].imagen%> ">
+                <div class="div-imagen">
+                    <img class="imagen" src="<%= listaPeliculas[id-1].imagen%> ">
                 </div>
                 <div class="caracteristicas">
                     <p>Idioma: <%= listaPeliculas[id-1].id%></p>
@@ -55,22 +61,23 @@
                     <p>origen: <%= listaPeliculas[id-1].id%></p>
                 </div>
             </div>
+
             <div class="bloque2">
-                <h2 class="titulo">
-                    <%= listaPeliculas[id-1].titulo %> 
-                </h2>
+                
                 <div class="sinopsis">
                     <%= listaPeliculas[id-1].descripcion %>
-                    </div>
+                </div>
+                <iframe class="trailer" src="<%= listaPeliculas[id-1].trailer %> " title="YouTube video player" frameborder="0" ></iframe>
                 <div class="botones">
-                    <div class="boton trailer">
+                    <!-- <div class="boton trailer">
                         <a href="#">Ver trailer</a>
-                    </div>
+                    </div> -->
                     <div class="boton alquiler">
-                        <a href="#">Alquilar/Ver</a>   
+                        <a href="/carrito/<%= listaPeliculas[id-1].id%>">Alquilar/Ver</a>   
                     </div>
                 </div>
             </div>
+
             <div class="bloque3">
                 <div class="calificaciones">
                     <ul></a>
@@ -80,8 +87,8 @@
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
+
+        </section>
     </main>
 
     <footer>

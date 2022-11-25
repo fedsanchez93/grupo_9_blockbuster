@@ -103,6 +103,14 @@ body{
 
 /*MAIN*/
 
+
+.titulo{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 20px;
+}
+
 .xxxx{
     display: flex;
     flex-wrap: wrap;
@@ -117,10 +125,16 @@ body{
     /* background-color: lightcoral; */
     padding: 10px;
 }
-.bloque1 .imagen{
+.bloque1 .div-imagen{
 
     text-align: center;
     margin: auto;
+}
+
+.imagen{
+    width: 300px;
+    margin: 10px;
+
 }
 
 .bloque1 img{
@@ -162,8 +176,8 @@ body{
 
 
 .bloque2 .sinopsis{
-    font-size: 13px;
-    text-align: justify;
+    font-size: 18px;
+    text-align: center;
 }
 
 .bloque2 .botones {
@@ -173,7 +187,7 @@ body{
    /* border: solid 1px greenyellow;*/
     max-width: 100%;
     height: 50px;
-    margin-top: 35px;
+    margin: 20px;
 }
 
 .bloque2 .boton{
@@ -193,7 +207,13 @@ body{
     color:black;
     font-size: 14px;  
 }
-
+.trailer{
+    width: 100%;
+    height: 350px;
+    margin: 25px auto;
+    border-radius: 20px;
+    border: solid 5px white;
+}
 
 .bloque3{
     width: 90%;
@@ -201,7 +221,7 @@ body{
     /* background-color: rgba(255, 0, 0, 0.2); */
     margin: auto;
     margin-top: 10px;
-    
+    text-align: center;
 }
 
 .calificaciones ul{
@@ -213,6 +233,8 @@ body{
 
 .calificaciones li{
     margin: 20px 0;
+    display: block;
+    text-align: center;
 }
 
 .calificaciones a{
@@ -228,6 +250,7 @@ body{
     text-align: center;
     border-radius: 18px;
     border: solid 2px var(--yellow);
+    margin: 5px auto;
 }
 
 
