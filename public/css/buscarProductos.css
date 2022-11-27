@@ -7,11 +7,11 @@
 
 
 .section-card{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
     justify-content: space-around;
+    grid-gap: 20px;
     width: 90%;
-    align-items: center;
-    flex-wrap: wrap;
     margin: auto;
 }
 
