@@ -4,8 +4,8 @@
   "description": "Nuestro proyecto denominado Blockbuster busca revivir la vieja franquicia de videoclubes dedicada al alquiler de peliculas. Nuestro sitio esta basado en el mecanismo On Demand, donde el usuario puede adquirir a traves de su tarjeta de credito el derecho a ver una pelicula o serie de su preferencia en el momento que lo desee.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "test": "nodemon app.js",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
