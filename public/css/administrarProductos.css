@@ -123,16 +123,17 @@ main{
 .card{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    border: 2px solid brown;
+    border: 2px solid rgb(185, 200, 19);
     border-radius: 20px;
-    width: 12cm;
+    width:max-content;
     margin: 10px auto ;
     background: rgba(241, 243, 245, 0.8);
 }
 
 .tituloPeli{
+    font-size: 15px;
     color: white;
 }
 .texto{
@@ -160,4 +161,16 @@ main{
     align-items: center;
     flex-wrap: wrap;
 
+}
+
+
+
+.iconos-nav i{
+    color: white;
+    border: solid white 2px;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    cursor: pointer;
 }

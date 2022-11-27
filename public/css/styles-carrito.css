@@ -53,6 +53,82 @@ li {
     padding-right: 10px;
 }
 
+/* ofertas Alquilando */
+
+.compras-ofertas{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.compras-ofertas ul{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    /* height: 150px; */
+}
+.item-oferta{
+    color: rgb(252,193,57);
+    border: rgb(252,193,57) solid 2px;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+    width: 400px;
+    cursor: pointer;
+    text-align: center;
+}
+/* cards carrito */
+
+.section-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: 2px solid rgb(185, 200, 19);
+    border-radius: 20px;
+    width:max-content;
+    margin: 10px auto ;
+    background: rgba(241, 243, 245, 0.8);
+}
+
+.tituloPeli{
+    font-size: 15px;
+    color: white;
+}
+.texto{
+    color: black;
+    text-align: center;
+    
+}
+
+.img-pelicula{
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+
+
+.iconos-nav i{
+    color: white;
+    border: solid white 2px;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
 /* = = = = = MAIN BODY = = = = = */
 
 .main-body {

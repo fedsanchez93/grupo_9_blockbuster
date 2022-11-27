@@ -4,7 +4,7 @@
 <head>
     <%- include('partials/head') %> 
     <title>Blockbuster</title>
-    <link rel="stylesheet" href="css/styles-home.css">
+    <!-- <link rel="stylesheet" href="css/styles-home.css"> -->
     <link rel="stylesheet" href="/css/administrarProductos.css">  
 </head>
 <body>
@@ -17,13 +17,17 @@
         
 
         <article class="card">
-            <img class="img-pelicula" src="<%= element.imagen %> ">
-            <h2 class="tituloPeli"><%= element.titulo %></h2>
-            <!-- <h3 class="texto"><%= element.descripcion %></h3> -->
-            <h3 class="texto"><%= element.precio %></h3>
-            <a href="/carrito/<%= element.id %> " class="botonFormBusc">Comprar</a>
-            <a href="/products/productDetail?id=<%= element.id %> " class="botonFormBusc">Quitar</a>
-
+            <div>
+                <img class="img-pelicula" src="<%= element.imagen %> ">
+                <h2 class="tituloPeli texto"><%= element.titulo %></h2>
+                <h3 class="texto"><%= element.precio %></h3>
+            </div>
+            <!-- <a href="/carrito/<%= element.id %> " class="botonFormBusc">Comprar</a>
+            <a href="/products/productDetail?id=<%= element.id %> " class="botonFormBusc">Quitar</a> -->
+            <div class="iconos-nav">
+                <i class="fa-solid fa-cart-plus"></i>
+                <i class="fa-regular fa-trash-can"></i>
+            </div>
         </article>
     <% }); %> 
 </section>

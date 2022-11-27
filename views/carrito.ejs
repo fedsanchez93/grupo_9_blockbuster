@@ -12,6 +12,41 @@
     
     <main>
 
+    <div class="ofertasYcards">
+        <section class="compras-ofertas">
+            <h1 class="titulo">Carrito On Line</h1>
+            <ul>
+                <li class="item-oferta">Alquilar 1 Pelicula con 5% descuento</li>
+                <li class="item-oferta">Alquilar 5 Peliculas con 10% descuento</li>
+                <li class="item-oferta">Alquilar 10 Peliculas con 20% descuento</li>
+                <li class="item-oferta">Alquilar 20 Peliculas con 30% descuento</li>
+            </ul>
+        </section>
+
+        <section class="section-cards">
+            <% listaPeliculas.forEach(element => { %>
+        
+                
+        
+                <article class="card">
+                    <div>
+                        <img class="img-pelicula" src="<%= element.imagen %> ">
+                        <h2 class="tituloPeli texto"><%= element.titulo %></h2>
+                        <h3 class="texto"><%= element.precio %></h3>
+                    </div>
+                    <!-- <a href="/carrito/<%= element.id %> " class="botonFormBusc">Comprar</a>
+                    <a href="/products/productDetail?id=<%= element.id %> " class="botonFormBusc">Quitar</a> -->
+                    <div class="iconos-nav">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                        <i class="fa-regular fa-trash-can"></i>
+                    </div>
+                </article>
+            <% }); %> 
+        </section>
+
+    </div>
+
+
         <h2 class="titulo">
             <%= listaPeliculas[id-1].titulo %> 
         </h2>
