@@ -105,20 +105,17 @@ main{
  } 
 
  .btn-neon{
-    position: relative;
-    display: inline-block;
-    padding: 10px 20px;
     color: white;
-    font-size: 150%;
-    text-decoration: none;
-    transition: 0.2s;
-    background-color: black;
+    background: #000;
     border-radius: 10px;
-    border: 1px rgba(255, 255, 255, 0.5) solid;
-    margin-bottom: 30px;
+    margin: 15px;
+    padding: 15px;
+    text-decoration: none;
+    font-size: medium;
+    height: 100%;
 }
 
-.articulos2:hover .btn-neon{
+.btn-neon:hover{
     background-color: var(--yellow);
     box-shadow: 0 0 10px #FCC139, 0 0 40px #FCC139, 0 0 80px #FCC139;
 }
@@ -126,18 +123,8 @@ main{
  .caja{
     text-align: center;
  }
- .articulos{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding-bottom: 25px;
-}
 
-.articulos2{
-    min-width: 5cm;
-    width: 16%;
-    text-align: center;
-}
+
 
  .personajes{
     display: flex;
