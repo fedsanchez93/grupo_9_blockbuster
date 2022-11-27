@@ -182,6 +182,7 @@ li {
     border: none;
     margin-bottom: 25px;
     margin-top: 20px;
+    cursor: pointer;
 }
     
 .btn-neon{

@@ -32,9 +32,9 @@
 
                 <div class="iconos-foto-google">
                     <div class="div-subir-foto">
-                        <p>Subir foto</p>
                         <div class="image-upload">
-                            <label for="file-input">
+                            <label for="file-input" class="div-subir-foto">
+                                <p>Subir foto</p>
                                 <i class="fa-solid fa-user"></i>
                             </label>
                             <input id="file-input" type="file" />
@@ -53,7 +53,7 @@
             </form>
             <form action="/login" method="GET">
                 <div class="div-ingresar">
-                    <label for="ingresar">Ya sos cliente?</label><br>
+                    <label class="yaSosCliente" for="ingresar">Ya sos cliente?</label><br>
                     <button type="submit"  id="ingresar">Ingresar</button>
                 </div>
             </form>
@@ -64,7 +64,7 @@
         <section class="section-sector">
             <div class="sector">Donde quieras, cuando quieras</div>
         </section>
-        
+
     </main>
 
     <%- include('partials/footer') %>  

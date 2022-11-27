@@ -143,6 +143,8 @@ article{
     padding: 10px;
     text-align: center;
     align-items: center;
+    cursor: pointer;
+
 }
 
 .image-upload>input {
@@ -171,6 +173,7 @@ article{
     border-radius: 1cm;
     margin: 8px 0;
     border: rgba(255, 0, 0, 0) solid 2px;
+    cursor: pointer;
 }
 .div-google:hover{
     border: rgba(255, 0, 0, 1) solid 2px;
@@ -192,7 +195,12 @@ article{
     left: 20%;
 }
 
-
+.yaSosCliente{
+    color: white;
+    padding-top: 20px;
+    margin-bottom: 0;
+    cursor: pointer;
+}
 .div-boton-crear-cuenta{
     text-align: center;
 }
@@ -208,7 +216,7 @@ article{
         border-radius: 1cm;
         border: black 3px solid;
         width: 65%;
-
+        cursor: pointer;
     }
 
     #ingresar{
@@ -225,6 +233,7 @@ article{
         background-color: black;
         border-radius: 10px;
         width: 60%;
+        cursor: pointer;
     }
 
     #ingresar:hover, #crear-cuenta:hover{
