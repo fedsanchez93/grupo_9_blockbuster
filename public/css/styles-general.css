@@ -80,7 +80,7 @@ a{
 .main-footer {
     display: flex;
     justify-content: space-evenly;
-    height: 70px;
+    max-height: 55px;
     width: 100%;
     color: rgb(3,6,67);
     font-weight: 600;
