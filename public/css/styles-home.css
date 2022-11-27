@@ -131,12 +131,13 @@ main{
     justify-content: space-around;
     flex-wrap: wrap;
     padding-bottom: 25px;
- }
- .articulos2{
+}
+
+.articulos2{
     min-width: 5cm;
     width: 16%;
     text-align: center;
-  }
+}
 
  .personajes{
     display: flex;
