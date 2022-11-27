@@ -16,7 +16,7 @@
     <p class="titulos">Más Buscados</p>
 
     <section class="section-card">
-        <% listaPeliculas.forEach(element => { %>       
+        <% masBuscadas.forEach(element => { %>       
             <a href="/products/productDetail?id=<%= element.id %> " class="botonVer">
             <article class="card">
                 <img class="img-pelicula" src="<%= element.imagen %> ">
@@ -52,19 +52,18 @@
     </section>
 
     <p class="titulos">Recomendados Para Vos</p>
-    <section class="articulos">
-        <% listaPeliculas.forEach(element => { %>
-            <a href="/products/productDetail?id=<%= element.id %>" >
-            <article class="articulos2">
-                <img class="pelis" src="<%= element.imagen %>"> 
-                <div class="caja"><p class="nombre-peli"> <%= element.titulo %> </p>
-                <a href="/products/productDetail?id=<%= element.id %>" class="btn-neon">VER MAS</a>
-                </div>
+    <section class="section-card">
+        <% recomendadas.forEach(element => { %>       
+            <a href="/products/productDetail?id=<%= element.id %> " class="botonVer">
+            <article class="card">
+                <img class="img-pelicula" src="<%= element.imagen %> ">
+                <h2 class="tituloPeli"><%= element.titulo %></h2>
+                <!-- <h3 class="texto"><%= element.descripcion %></h3> -->
+                <!-- <h3 class="texto"><%= element.precio %></h3> -->              
             </article>
             </a>
-        <% }) %>
+        <% }); %> 
     </section>
-    </main>
 
     <section class="frase">
         <div>Historias únicas, estrellas icónicas y mucho más..</div>
