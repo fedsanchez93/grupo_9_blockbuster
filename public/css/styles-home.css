@@ -69,8 +69,8 @@ main{
 
 .titulos{
     text-align: left;
-    padding: 2vw;
-    font-size: 2vw;
+    padding: 5px;
+    font-size: 30px;
     color: var(--white);
     font-weight: 600;
     margin-left: 2vw
