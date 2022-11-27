@@ -19,7 +19,11 @@ const mainController = {
         res.render('register')
     },
     carrito: (req,res)=>{
-        res.render('carrito')
+        let id = req.params.id || 4
+        let anterior = id-1 || listaPeliculas.length
+        let siguiente = listaPeliculas.length>=( parseInt(id)+1) ? ( parseInt(id)+1) : 1
+        res.render('carrito', {listaPeliculas, id, anterior, siguiente})
+        // res.render('carrito')
     },
     carrito2: (req,res)=>{
         res.render('carrito2')

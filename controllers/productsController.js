@@ -15,7 +15,9 @@ const productsController = {
     },
     productDetail: (req,res)=>{
         let id = req.query.id || 4
-        res.render('productDetail', {listaPeliculas, id})
+        let anterior = id-1 || listaPeliculas.length
+        let siguiente = listaPeliculas.length>=( parseInt(id)+1) ? ( parseInt(id)+1) : 1
+        res.render('productDetail', {listaPeliculas, id, anterior, siguiente})
     },
     administrarProductos: (req,res)=>{
         let palabraBuscada = req.query.filtrar || ''
@@ -114,6 +116,10 @@ const productsController = {
 
 
         res.redirect('/products/administrarProductos')
+    },
+    video:(req,res)=>{
+        let idProducto = req.params.id || 1
+        res.render('video', {listaPeliculas, idProducto})
     },
     
 }

@@ -3,19 +3,82 @@
 <head>
     <%- include('partials/head') %> 
     <title>Carrito</title>
+    <link href="../css/detalle-producto.css" rel="stylesheet"> 
+
     <link rel="stylesheet" href="/css/styles-carrito.css">
 </head>
 <body>
     <%- include('partials/header') %> 
     
-    <main class="main-body">
+    <main>
+
+        <h2 class="titulo">
+            <%= listaPeliculas[id-1].titulo %> 
+        </h2>
+
+        <section class="xxxx">
+
+            <div class="bloque1">
+                <div class="div-imagen">
+                    <img class="imagen" src="<%= listaPeliculas[id-1].imagen%> ">
+                </div>
+                <div class="caracteristicas">
+                    <p>Idioma: <%= listaPeliculas[id-1].id%></p>
+                    <p>duracion: <%= listaPeliculas[id-1].id%></p>
+                    <p>año: <%= listaPeliculas[id-1].id%></p>
+                    <p>origen: <%= listaPeliculas[id-1].id%></p>
+                </div>
+            </div>
+
+            <div class="bloque2">
+                
+                <div class="sinopsis">
+                    <%= listaPeliculas[id-1].descripcion %>
+                </div>
+                <iframe class="trailer" width="100%" height="350" src="<%= listaPeliculas[id-1].trailer %> " title="YouTube video player" frameborder="0" ></iframe>
+               
+                <div class="div-precios"><h3>Precio Alquiler <%= listaPeliculas[id-1].precio%></h3> <h3>Precio Compra <%= listaPeliculas[id-1].precio%></h3></div>
+               
+                    <div class="botones">
+                    <!-- <div class="boton trailer">
+                        <a href="#">Ver trailer</a>
+                    </div> -->
+                    <!-- <div class="boton alquiler">
+                        <a href="/carrito/<%= listaPeliculas[id-1].id%>">Alquilar/Ver</a>   
+                    </div> -->
+                    <article class="middle-menu">
+                        <form action="/products/misAlquileres" method="GET">
+                            <div class="buttons">
+                                <button type="submit" class="btn">Pagar</button>
+                            </div>
+                        </form>
+                    </article>
+                </div>
+            </div>
+
+            <div class="bloque3">
+                <div class="calificaciones">
+                    <ul></a>
+                        <li><a class="botonNav" href="/carrito/<%= anterior %> "> <= Anterior </a>    <a class="botonNav" href="/carrito/<%= siguiente %>"> Siguiente =></a></li>
+                        <li><a href="#">Calificación Blockbuster</a><div class="calificacion"><%= listaPeliculas[id-1].CalificacionBlockbuster %></div></li>
+                        <li><a href="#">Calificación IMDb</a> <div class="calificacion"><%= listaPeliculas[id-1].CalificacionIMDb %></div></li>
+                        <li><a href="#">Calificación Rotten Tomatoes </a><div class="calificacion"><%= listaPeliculas[id-1].CalificacionRottenTomatoes %></div></li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- <main class="main-body">
+
         <article class="product-container">
             <div class="product">
                 <div class="product-image">
                     <img src="/images/star-wars.jpg">
-                    <i class="fa-solid fa-trash-can"></i>
+                    <i class="fa-solid fa-trash-can"></i> tacho
                 </div>
-                <i class="fa-solid fa-ellipsis"></i>
+                <i class="fa-solid fa-ellipsis"></i> 
             </div>
             <div class="details">
                 <h4>Pelicula/Serie</h4>
@@ -25,13 +88,13 @@
         </article>
 
         <article class="middle-menu">
-            <form action="/carrito2" method="GET">
+            <form action="/products/misAlquileres" method="GET">
                 <div class="buttons">
                     <button type="submit" class="btn">Pagar</button>
                 </div>
             </form>
         </article>
-    </main>
+    </main> -->
     
     <%- include('partials/footer') %> 
 </body>

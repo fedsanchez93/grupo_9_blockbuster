@@ -175,9 +175,10 @@ body{
 }
 
 
-.bloque2 .sinopsis{
+ .sinopsis{
     font-size: 18px;
     text-align: center;
+    color: white;
 }
 
 .bloque2 .botones {
@@ -207,14 +208,30 @@ body{
     color:black;
     font-size: 14px;  
 }
+.botonNav{
+    border: #FCC139 solid 1px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+}
+.div-trailer{
+    width: 90%;
+    margin: 30px auto;
+    min-height: 500px;
+}
 .trailer{
-    width: 100%;
-    height: 350px;
+    /* width: 100%;
+    height: 350px; */
     margin: 25px auto;
     border-radius: 20px;
     border: solid 5px white;
 }
 
+.div-precios{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
 .bloque3{
     width: 90%;
     padding: 10px;

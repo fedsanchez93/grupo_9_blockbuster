@@ -16,6 +16,8 @@ router.get('/listadoDeseos',prodctsController.listadoDeseos);
 router.get('/buscarProductos/:buscar?/',prodctsController.buscarProductos);
 router.get('/editarProducto/:id?',prodctsController.editarProducto);
 router.get('/misAlquileres',prodctsController.misAlquileres);
+router.get('/video/:id?',prodctsController.video);
+
 
 router.get('/crearNuevoProducto',prodctsController.crearNuevoProducto);
 
