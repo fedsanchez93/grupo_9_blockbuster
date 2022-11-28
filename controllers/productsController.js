@@ -50,7 +50,7 @@ const productsController = {
     },
 
     guardarProductoEditado:(req,res)=>{
-        let idProducto = req.query.id
+        // let idProducto = req.query.id
         let newPelicula = {
             id: req.body.id || 1,
             titulo:req.body.titulo,
@@ -67,7 +67,7 @@ const productsController = {
             CalificacionRottenTomatoes:req.body.CalificacionRottenTomatoes,
         }
         
-        console.log(newPelicula, idProducto)
+        // console.log(newPelicula, idProducto)
         let newlistaPeliculas = listaPeliculas.map(element => {
 			if(newPelicula.id == element.id){return element = newPelicula}
 			return element

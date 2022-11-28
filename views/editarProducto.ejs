@@ -22,7 +22,7 @@
         <!-- <div class="center"></div> -->
         <h1 class="tituloPag">Editando Pelicula ID: <%= idProducto %></h1>
 
-        <form action="/products/editarProducto?_method=PUT" method="POST">
+        <form class="form-ingreso-peli" action="/products/editarProducto?_method=PUT" method="POST">
 
             <input class="input-id" type="text" name="id" value="<%= idProducto %>">
 
@@ -104,7 +104,7 @@
 
         <div class="txt_field">
  
-            <select class="select" name="idioma" id="">
+            <select class="select" name="idioma" id="idioma">
                 <option value="">Seleccionar</option>
                 <option value="Español"  <%= listaPeliculas[idProducto-1].idioma == "Español" ?  "selected" : null %> >Español</option>
                 <option value="English"  <%= listaPeliculas[idProducto-1].idioma == "English" ?  "selected" : null %> >English</option>
@@ -114,7 +114,7 @@
 
             <!-- <input type="text" > -->
             <span></span>
-            <label>Idioma</label>
+            <label for="idioma">Idioma</label>
         </div>
 
 
@@ -153,11 +153,17 @@
                 </div>
             </div>
 
+            <div class="image-upload">
+                <label for="file-input" class="div-subir-foto">
+                    <p>Subir foto</p>
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                </label>
+                <input id="file-input" type="file" />
+            </div>
 
-
-            <div class="pass">
-            <input type="submit" value="Guardar">
-        </div>
+            
+            <input class="pass" type="submit" value="Guardar">
+        
             <div class="signup_link">
                 <a href="/products/crearNuevoProducto">Crear nueva pelicula</a>
             </div>

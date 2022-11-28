@@ -15,15 +15,16 @@
 		"CalificacionRottenTomatoes": "9,5"
 	},
 	{
-		"id": 2,
+		"id": "2",
 		"titulo": "1917",
 		"imagen": "/images/197.jpg",
 		"descripcion": "descripcion",
 		"genero": "",
+		"idioma": "",
 		"duracion": "",
 		"precio": "$1000",
 		"trailer": "https://www.youtube.com/embed/YrbdN5zaouU",
-		"categoria": "mas-buscadas",
+		"categoria": "",
 		"CalificacionBlockbuster": "9",
 		"CalificacionIMDb": "8",
 		"CalificacionRottenTomatoes": "9,5"
@@ -116,13 +117,13 @@
 		"CalificacionRottenTomatoes": ""
 	},
 	{
-		"id": 9,
+		"id": "9",
 		"titulo": "2013 alex el leon",
 		"imagen": "/images/MaquinasMortales.jpg",
 		"descripcion": "alex",
-		"genero": "",
-		"idioma": "",
-		"duracion": "",
+		"genero": "Dramatico",
+		"idioma": "Español",
+		"duracion": "90",
 		"precio": "",
 		"trailer": "https://www.youtube.com/embed/zDABDg7vwsk",
 		"categoria": "",

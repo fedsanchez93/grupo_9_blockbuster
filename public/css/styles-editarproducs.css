@@ -36,14 +36,22 @@
     box-sizing: border-box;
 } */
 
+.form-ingreso-peli{
+  display: flex;
+  flex-wrap: wrap;
+}
+
 form .txt_field {
     position: relative;
     border-bottom: 2px solid #adadad;
-    margin: 30px 0;
+    margin: 30px auto;
+    max-width: 400px;
+    min-width: 300px;
 }
 
 .txt_field input {
     width: 100%;
+    /* max-width: 400px; */
     padding: 0 5px;
     height: 40px;
     font-size: 16px;
@@ -120,10 +128,11 @@ input[type="submit"]:hover {
 }
 
 .signup_link {
-    margin: 30px 0;
+    margin: 30px auto;
     text-align: center;
     font-size: 16px;
     color: #666666;
+    align-self: center;
 }
 
 .signup_link a {
@@ -213,6 +222,7 @@ input[type="submit"]:hover {
 
   .select{
     margin-left: 2cm;
+    cursor: pointer;
   }
 
 .label-calificacion{
@@ -258,3 +268,36 @@ input[type="submit"]:hover {
     color: orange;
   }
   /* fin estrellas */
+
+
+
+  /* subir foto */
+
+.image-upload>input {
+  display: none;
+}
+
+.div-subir-foto i{
+  position: relative;
+  z-index: 10;
+  color: white;
+  padding: 8px;
+  margin: 5px;
+  border: white solid 2px;
+  border-radius: 1cm;
+  font-size: 20px;
+  /* opacity: 0.5; */
+  size:70%;
+}
+.div-subir-foto{
+  display: flex;
+  padding: 10px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+}
+.div-subir-foto p{
+  margin: auto;
+}
