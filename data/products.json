@@ -192,7 +192,7 @@
 		"CalificacionRottenTomatoes": ""
 	},
 	{
-		"id": 14,
+		"id": "14",
 		"titulo": "2013 alex el leon",
 		"imagen": "/images/MaquinasMortales.jpg",
 		"descripcion": "alex",
@@ -201,7 +201,7 @@
 		"duracion": "",
 		"precio": "",
 		"trailer": "https://www.youtube.com/embed/zDABDg7vwsk",
-		"categoria": "recomendadas",
+		"categoria": "",
 		"CalificacionBlockbuster": "",
 		"CalificacionIMDb": "",
 		"CalificacionRottenTomatoes": ""
@@ -237,7 +237,7 @@
 		"CalificacionRottenTomatoes": ""
 	},
 	{
-		"id": 17,
+		"id": "17",
 		"titulo": "2013 alex el leon",
 		"imagen": "/images/MaquinasMortales.jpg",
 		"descripcion": "alex",
@@ -246,7 +246,7 @@
 		"duracion": "",
 		"precio": "",
 		"trailer": "https://www.youtube.com/embed/zDABDg7vwsk",
-		"categoria": "recomendadas",
+		"categoria": "",
 		"CalificacionBlockbuster": "",
 		"CalificacionIMDb": "",
 		"CalificacionRottenTomatoes": ""
