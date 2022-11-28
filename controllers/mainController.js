@@ -2,7 +2,9 @@ const path = require('path')
 const fs = require('fs');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
+const charactersFilePath = path.join(__dirname, '../data/characters.json')
 const listaPeliculas = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const listaPersonajes = JSON.parse(fs.readFileSync(charactersFilePath, 'utf-8'));
 
 const masBuscadas = listaPeliculas.filter(function(product){
 	return product.categoria == "mas-buscadas";
@@ -14,7 +16,7 @@ const recomendadas = listaPeliculas.filter(function(product){
 
 const mainController = {
     home: (req,res)=>{
-        res.render('home', {masBuscadas, recomendadas})
+        res.render('home', {masBuscadas, recomendadas, listaPersonajes})
     },
     login: (req,res)=>{
         res.render('login')

@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Emilia Clarke",
+        "image": "images/emiliaclarke.png"
+    },
+    {
+        "id": 2,
+        "name": "Robert Downey Jr",
+        "image": "images/robertdowneyjr.png"
+    },
+    {
+        "id": 3,
+        "name": "Gal Gadot",
+        "image": "images/galgadot.png"
+    },
+    {
+        "id": 4,
+        "name": "Jim Parsons",
+        "image": "images/sheldoncooper.png"
+    }
+]

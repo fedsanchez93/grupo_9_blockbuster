@@ -3,7 +3,6 @@
 <head>
     <%- include('partials/head') %> 
     <link rel="stylesheet" href="css/styles-home.css">
-    <link rel="stylesheet" href="../css/buscarProductos.css">
     <title>Home</title>
 </head>
 <body>
@@ -19,34 +18,21 @@
         <% masBuscadas.forEach(element => { %>       
             <a href="/products/productDetail?id=<%= element.id %> " class="botonVer">
             <article class="card">
-                <img class="img-pelicula" src="<%= element.imagen %> ">
+                <img class="img-pelicula" src="<%= element.imagen %>">
                 <h2 class="btn-neon"><%= element.titulo %></h2>         
             </article>
             </a>
         <% }); %> 
     </section>
        
-        <p class="titulos">Buscá por tus personajes favoritos</p>
-        <section class="personajes">
-        <article>
-            <a href="/productDetail"><img class="personas" src="images/emiliaclarke.png">
-            <p class="nombres">Emilia Clarke</p></a> 
-        </article> 
-
-        <article>
-            <a href="/productDetail"><img class="personas" src="/images/robertdowneyjr.png">
-            <p class="nombres">Robert Downey JR</p></a>
-        </article>
-
-        <article>
-            <a href="/productDetail"><img class="personas" src="/images/galgadot.png">
-            <p class="nombres">Gal Gadot</p></a> 
-        </article>
-
-        <article>
-            <a href="/productDetail"><img class="personas" src="/images/sheeldoncooper.png">
-            <p class="nombres">Jim Parsons</p></a>
-        </article>
+    <p class="titulos">Buscá por tus personajes favoritos</p>
+    <section class="personajes">
+        <% listaPersonajes.forEach(element => { %>
+            <article>
+                <a href="/productDetail"><img class="personas" src="<%= element.image %>">
+                <p class="nombres"><%= element.name %></p></a> 
+            </article>
+        <% }); %>  
     </section>
 
     <p class="titulos">Recomendados Para Vos</p>
@@ -55,7 +41,7 @@
             <a href="/products/productDetail?id=<%= element.id %> " class="botonVer">
             <article class="card">
                 <img class="img-pelicula" src="<%= element.imagen %> ">
-                <h2 class="tituloPeli"><%= element.titulo %></h2>         
+                <h2 class="btn-neon"><%= element.titulo %></h2>         
             </article>
             </a>
         <% }); %> 
