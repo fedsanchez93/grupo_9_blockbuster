@@ -1,16 +1,22 @@
 const path = require('path')
 const fs = require('fs');
 
-
-//let listaPeliculas = require('./listaPeliculasController')
-
 const productsFilePath = path.join(__dirname, '../data/products.json');
+const charactersFilePath = path.join(__dirname, '../data/characters.json')
 const listaPeliculas = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const listaPersonajes = JSON.parse(fs.readFileSync(charactersFilePath, 'utf-8'));
 
+const masBuscadas = listaPeliculas.filter(function(product){
+	return product.categoria == "mas-buscadas";
+});
+
+const recomendadas = listaPeliculas.filter(function(product){
+	return product.categoria == "recomendadas";
+});
 
 const mainController = {
     home: (req,res)=>{
-        res.render('home', {listaPeliculas})
+        res.render('home', {masBuscadas, recomendadas, listaPersonajes})
     },
     login: (req,res)=>{
         res.render('login')
@@ -28,33 +34,6 @@ const mainController = {
     carrito2: (req,res)=>{
         res.render('carrito2')
     },
-    // productDetail: (req,res)=>{
-    //     let id = req.query.id || 4
-    //     res.render('productDetail', {listaPeliculas, id})
-    // },
-    // administrarProductos: (req,res)=>{
-    //     let palabraBuscada = req.query.filtrar || ''
-    //     let peliculasFiltradas = []
-    //     for(let i = 0 ;  i< listaPeliculas.length ;i++){
-    //         if(listaPeliculas[i].titulo.toLowerCase().includes(palabraBuscada.toLowerCase())){
-    //             peliculasFiltradas.push(listaPeliculas[i])
-    //         }
-    //     }
-    //     res.render('administrarProductos', {listaPeliculas, peliculasFiltradas})
-    // },
-    // listadoProductos: (req,res)=>{
-    //     res.render('listadoProductos', {listaPeliculas})
-    // },
-    // buscarProductos: (req,res)=>{
-    //     let palabraBuscada = req.query.filtrar || ''
-    //     let peliculasFiltradas = []
-    //     for(let i = 0 ;  i< listaPeliculas.length ;i++){
-    //         if(listaPeliculas[i].titulo.toLowerCase().includes(palabraBuscada.toLowerCase())){
-    //             peliculasFiltradas.push(listaPeliculas[i])
-    //         }
-    //     }
-    //     res.render('buscarProductos', {listaPeliculas, peliculasFiltradas,palabraBuscada})
-    // },
 }
 
 module.exports = mainController

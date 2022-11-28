@@ -67,6 +67,39 @@ main{
     margin-top: 120px;
 }
 
+.section-card{ 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    justify-content: space-around;
+    grid-gap: 20px;
+    width: 90%;
+    margin: auto;
+}
+
+.card{
+    width: 6cm;
+    height: 10cm; 
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(195, 180, 180, 0.3);
+    transition: 500ms;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+
+a.botonVer {
+    text-decoration: none;
+}
+
+.img-pelicula{
+    width: 100%;
+    max-height: 7cm;
+    border-radius: 10px;
+}
+
 .titulos{
     text-align: left;
     padding: 5px;
@@ -84,59 +117,21 @@ main{
     box-shadow: 7px 7px 7px 7px rgba(11, 7, 7, 0.59); ;
  }
 
-.nombre-peli{
-    font-size: 20px;
-    color: var(--light-gray);
-    font-weight: 600;
-    text-align: center;
-    color: white;
-    margin-bottom: 0;
-}
-  .ver-mas{
-   font-size: 10px;
-   color: var(--white);
-   font-weight: 500;
-   background-color: var(--light-gray) ;
-   border-radius: 10px;
-   text-align: center;
-   border: none;
-   width: 125px;
-   height: 50px;
- } 
-
  .btn-neon{
-    position: relative;
-    display: inline-block;
-    padding: 10px 20px;
     color: white;
-    font-size: 150%;
-    text-decoration: none;
-    transition: 0.2s;
-    background-color: black;
+    background: #000;
     border-radius: 10px;
-    border: 1px rgba(255, 255, 255, 0.5) solid;
-    margin-bottom: 30px;
+    margin: 15px;
+    padding: 15px;
+    text-decoration: none;
+    font-size: medium;
+    height: 100%;
 }
 
-.articulos2:hover .btn-neon{
+.btn-neon:hover{
     background-color: var(--yellow);
     box-shadow: 0 0 10px #FCC139, 0 0 40px #FCC139, 0 0 80px #FCC139;
 }
-
- .caja{
-    text-align: center;
- }
- .articulos{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding-bottom: 25px;
- }
- .articulos2{
-    min-width: 5cm;
-    width: 16%;
-    text-align: center;
-  }
 
  .personajes{
     display: flex;
@@ -156,12 +151,6 @@ main{
     font-weight: 500;
 }
 
- /* .articulos2{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding-bottom: 50px;
- } */
 /* articulos */
 section article{
     padding: 10px;
