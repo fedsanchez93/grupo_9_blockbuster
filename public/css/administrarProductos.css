@@ -61,10 +61,10 @@ main{
 }
 
 .form-filtrar-productos{
-    border-top: solid 2px white;
-    border-right: solid 2px white;
-    border-left: solid 2px white;
-    border-radius: 10px;
+    border-top: solid 1.5px rgb(252,193,57);
+    border-right: solid 1px rgb(252,193,57);
+    border-left: solid 1px rgb(252,193,57);
+    border-radius: 25px;
     text-align: center;
     width: 100%;
     margin-top: 20px;
