@@ -4,11 +4,10 @@
     <%- include('partials/head') %> 
     <title>Blockbuster</title>
     <link rel="stylesheet" href="../css/buscarProductos.css">
-
+    
 </head>
 <body>
     
-
     <%- include('partials/header') %>  
 <main>
 
@@ -22,11 +21,10 @@
     <section class="section-card">
     <% peliculasFiltradas.forEach(element => { %>
 
-        
         <a href="/products/productDetail?id=<%= element.id %> " class="botonVer">
         <article class="card">
             <img class="img-pelicula" src="<%= element.imagen %> ">
-            <h2 class="tituloPeli"><%= element.titulo %></h2>
+            <h2 class="btn-neon"><%= element.titulo %></h2>
             <!-- <h3 class="texto"><%= element.descripcion %></h3> -->
             <!-- <h3 class="texto"><%= element.precio %></h3> -->
             

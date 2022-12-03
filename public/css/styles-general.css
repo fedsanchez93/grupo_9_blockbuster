@@ -27,6 +27,17 @@ li {
     list-style: none;
 }
 
+ul a {
+    transition: 500ms ease-in-out 0s;
+}
+
+ul a:hover {
+    text-decoration: none;
+    color: rgb(252,193,57);
+    transform: scale(1.05);
+    transition: 500ms;
+}
+
 .top-bar {
     display: flex;
     height: 76px;
@@ -45,6 +56,12 @@ li {
 
 .middle-logo {
     padding-left: 10px;
+    transition: 500ms ease-in-out 0s;
+}
+
+.middle-logo:hover {
+    transition: 500ms;
+    transform: scale(1.1);
 }
 
 .middle-logo img{
