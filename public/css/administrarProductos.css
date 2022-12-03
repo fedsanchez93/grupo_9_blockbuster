@@ -21,7 +21,8 @@ main{
     border-radius: 10px;
     padding: 10px;
     margin: 50px auto;
-    width: fit-content; 
+    width: fit-content;
+    transition: 500ms ease-in-out 0s; 
 }
 
 .boton-ingresar-pelicula:hover{
@@ -29,6 +30,7 @@ main{
     color: orange;
     border: orange solid 2px;
     transform: scale(1.05);
+    transition: 500ms;
 }
 
 .inputBuscar{
@@ -42,10 +44,12 @@ main{
     background: #000;
     cursor: pointer;
     margin-top: 10px;
+    transition: 500ms ease-in-out 0s;
 }
-.inputBuscar:hover{
+.inputBuscar:hover {
     color: orange;
     border: orange solid 2px;
+    transition: 500ms;
     transform: scale(1.05);
 }
 
@@ -113,11 +117,13 @@ main{
     background: #000;
     color: white;
     cursor: pointer;
+    transition: 100ms ease-in-out 0s; 
 }
 .botonFormBusc:hover{
     color: orange;
     text-decoration:solid;
     transform: scale(1.02);
+    transition: 100ms;
 }
 
 .botonFormDelete{
@@ -132,12 +138,14 @@ main{
     background: #000;
     color: white;
     cursor: pointer;
+    transition: 100ms ease-in-out 0s; 
 }
 
 .botonFormDelete:hover{
-    color:red;
+    color:red;    
     text-decoration:solid;
     transform: scale(1.02);
+    transition: 100ms;
 }
 
 .section-cards{
