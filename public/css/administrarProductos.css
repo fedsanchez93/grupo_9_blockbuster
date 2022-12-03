@@ -2,7 +2,7 @@
 main{
     background: rgba(31,68,137,0.8);
     width: 80%;
-    margin: 30px auto;
+    margin: 20px auto;
     padding: 20px;
     border-radius: 1cm;
 }
@@ -14,21 +14,24 @@ main{
 }
 
 .boton-ingresar-pelicula{
+    display: block;
+    font-size: 20px;
     text-align: center;
     border: white solid 2px;
     border-radius: 10px;
     padding: 10px;
     margin: 50px auto;
-    width: fit-content;
-
+    width: fit-content; 
 }
+
 .boton-ingresar-pelicula:hover{
+    text-decoration: none;
     color: orange;
     border: orange solid 2px;
     transform: scale(1.05);
 }
 
- .inputBuscar{
+.inputBuscar{
     text-align: center;
     border: white solid 2px;
     border-radius: 10px;
@@ -45,6 +48,7 @@ main{
     border: orange solid 2px;
     transform: scale(1.05);
 }
+
 .inputBuscador{
     width: 100%;
     border-radius: 10px;
@@ -115,18 +119,39 @@ main{
     text-decoration:solid;
     transform: scale(1.02);
 }
+
+.botonFormDelete{
+    height: 1cm;
+    width: 3cm;
+    text-align: center;
+    text-decoration: none;
+    border: solid black 2px;
+    border-radius: 10px;
+    padding: 7px ;
+    margin: 10px;
+    background: #000;
+    color: white;
+    cursor: pointer;
+}
+
+.botonFormDelete:hover{
+    color:red;
+    text-decoration:solid;
+    transform: scale(1.02);
+}
+
 .section-cards{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
+} 
 
 .card{
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    border: 2px solid rgb(185, 200, 19);
+    border: 2px solid rgb(252,193,57);
     border-radius: 20px;
     width:max-content;
     margin: 10px auto ;
@@ -141,6 +166,10 @@ main{
     color: black;
     text-align: center;
     
+}
+
+h2.texto{
+    font-size: 26px;
 }
 
 .trailer{
@@ -164,8 +193,6 @@ main{
 
 }
 
-
-
 .iconos-nav i{
     color: white;
     border: solid white 2px;
@@ -174,6 +201,11 @@ main{
     margin: 10px;
     font-size: 20px;
     cursor: pointer;
+}
+
+iframe.trailer {
+    width: 220px;
+    height: 150px;
 }
 
 @media (max-width: 500px) {
