@@ -83,14 +83,26 @@ li {
 /* cards carrito */
 
 .section-cards{
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    
+    justify-content: center; */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    justify-content: space-around;
+    grid-gap: 20px;
+    width: 100%;
+    margin: auto; 
 }
 
 .card{
-    display: flex;
+    align-items: center;
+    text-align: center;
+    border: 2px solid rgb(252,193,57);
+    border-radius: 20px;
+    width: 230px;
+    margin: 10px auto ;
+    background: rgba(241, 243, 245, 0.8);
+    /* display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -99,7 +111,8 @@ li {
     width:max-content;
     margin: 10px auto ;
     background: rgba(241, 243, 245, 0.8);
-}
+    */
+} 
 
 .tituloPeli{
     font-size: 15px;
