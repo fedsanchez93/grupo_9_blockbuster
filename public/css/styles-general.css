@@ -233,6 +233,37 @@ a{
     .right-menu li {
         padding-left: 15px;
         margin: 5px;
+        transition: 500ms ease-in-out 0s;
+    }
+
+    .fa-heart-circle-plus {
+        transition: 500ms ease-in-out 0s;
+    }
+
+    .fa-heart-circle-plus:hover {
+        color: rgb(252,193,57);
+        transform: scale(1.05);
+        transition: 500ms;
+    }
+
+    .fa-user-gear {
+        transition: 500ms ease-in-out 0s;
+    }
+
+    .fa-user-gear:hover {
+        color: rgb(252,193,57);
+        transform: scale(1.05);
+        transition: 500ms;
+    }
+
+    .fa-circle-user {
+        transition: 500ms ease-in-out 0s;
+    }
+
+    .fa-circle-user:hover {
+        color: rgb(252,193,57);
+        transform: scale(1.05);
+        transition: 500ms;
     }
 
     .main-footer {
