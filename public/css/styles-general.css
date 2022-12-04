@@ -81,6 +81,10 @@ ul a:hover {
     display: none;
 }
 
+.admin-options {
+    display: none;
+}
+
 .right-menu-buttons i{
     padding-right: 10px;
 }
@@ -180,6 +184,10 @@ a{
     }
 
     .user-options {
+        display: flex;
+    }
+
+    .admin-options {
         display: flex;
     }
 
