@@ -101,18 +101,14 @@ li {
     border-radius: 20px;
     width: 230px;
     margin: 10px auto ;
-    background: rgba(241, 243, 245, 0.8);
-    /* display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    border: 2px solid rgb(185, 200, 19);
-    border-radius: 20px;
-    width:max-content;
-    margin: 10px auto ;
-    background: rgba(241, 243, 245, 0.8);
-    */
+    background: rgba(195, 180, 180, 0.3);
+    transition: 100ms ease-in-out 0s; 
 } 
+
+.card:hover {
+    transform: scale(1.05);
+    transition: 100ms;
+}
 
 .tituloPeli{
     font-size: 15px;
@@ -148,7 +144,7 @@ li {
     color:#8ac926;   
     border: solid #8ac926 2px; 
     text-decoration:solid;
-    transform: scale(1.05);
+    transform: scale(1.1);
     transition: 100ms;
 }
 
@@ -156,7 +152,7 @@ li {
     color:red;   
     border: solid red 2px; 
     text-decoration:solid;
-    transform: scale(1.05);
+    transform: scale(1.1);
     transition: 100ms;
 }
 
