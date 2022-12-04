@@ -141,7 +141,26 @@ li {
     margin: 10px;
     font-size: 20px;
     cursor: pointer;
+    transition: 100ms ease-in-out 0s; 
 }
+
+.fa-dollar-sign:hover {
+    color:#8ac926;   
+    border: solid #8ac926 2px; 
+    text-decoration:solid;
+    transform: scale(1.05);
+    transition: 100ms;
+}
+
+.fa-trash-can:hover {
+    color:red;   
+    border: solid red 2px; 
+    text-decoration:solid;
+    transform: scale(1.05);
+    transition: 100ms;
+}
+
+
 /* = = = = = MAIN BODY = = = = = */
 
 .main-body {
