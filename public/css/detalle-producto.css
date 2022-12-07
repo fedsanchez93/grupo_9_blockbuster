@@ -146,7 +146,7 @@ body{
 }
 
 .bloque1 .caracteristicas{
-    display: flex;
+    /* display: flex; */
     justify-content: space-evenly;
     margin: auto;
    /* border: solid 1px greenyellow;*/
