@@ -1,0 +1,13 @@
+*{
+    color: rgb(249, 240, 240);
+    text-align: center;
+}
+
+.div-img{
+    width: 200px;
+    margin: auto;
+}
+.div-img img{
+    width: 100%;
+    border-radius: 20%;
+}

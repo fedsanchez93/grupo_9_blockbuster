@@ -3,12 +3,23 @@
 <head>
     <%- include('../partials/head') %> 
     <title>Perfil Usuario: </title>
-
+    <link rel="stylesheet" href="../../css/users.css">
 </head>
 <body>
     <%- include('../partials/header') %> 
     
     <main>
+        <h2>Perfil Usuario</h2>
+        <h3><%= listaUsers[0].name %> </h3>
+        <h3><%= listaUsers[0].usuario %> </h3>
+        <h3><%= listaUsers[0].email %> </h3>
+        <h3><%= listaUsers[0].categoria %> </h3>
+        <h3><%= listaUsers[0].name %> </h3>
+        <div class="div-img">
+            <img src="<%= listaUsers[0].image %>" alt="img">
+        </div>
+
+        
 
     </main>
       
