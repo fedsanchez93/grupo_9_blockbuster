@@ -1,161 +1,182 @@
-[{
-    "id": 1,
-    "name": "Artus Spurryer",
-    "usuario": "Spurryer",
-    "email": "aspurryer0@addtoany.com",
-    "image": "/images/emiliaclarke.png",
-    "categoria": "admin",
-    "password": "KqSfW4e"
-  }, {
-    "id": 2,
-    "name": "Truman Strippel",
-    "usuario": "Strippel",
-    "email": "tstrippel1@joomla.org",
-    "image": "images/emiliaclarke.png",
-    "categoria": "admin",
-    "password": "QPhK97h"
-  }, {
-    "id": 3,
-    "name": "Scarface Hurlestone",
-    "usuario": "Hurlestone",
-    "email": "shurlestone2@ibm.com",
-    "image": "/images/robertdowneyjr.png",
-    "categoria": "visitante",
-    "password": "pAbAeK"
-  }, {
-    "id": 4,
-    "name": "Consolata Bartaletti",
-    "usuario": "Bartaletti",
-    "email": "cbartaletti3@qq.com",
-    "image": "images/emiliaclarke.png",
-    "categoria": "visitante",
-    "password": "VYVJ3FTy"
-  }, {
-    "id": 5,
-    "name": "Cori Gimber",
-    "usuario": "Gimber",
-    "email": "cgimber4@berkeley.edu",
-    "image": "/images/galgadot.png",
-    "categoria": "visitante",
-    "password": "T1hFWUbExRqN"
-  }, {
-    "id": 6,
-    "name": "Noni Croson",
-    "usuario": "Croson",
-    "email": "ncroson5@sakura.ne.jp",
-    "image": "images/emiliaclarke.png",
-    "categoria": "admin",
-    "password": "w9z6tefL4mO"
-  }, {
-    "id": 7,
-    "name": "Mayor Nelsey",
-    "usuario": "Nelsey",
-    "email": "mnelsey6@sogou.com",
-    "image": "/images/sheeldoncooper.png",
-    "categoria": "admin",
-    "password": "rTEnpqKG"
-  }, {
-    "id": 8,
-    "name": "Anthia Clemenzo",
-    "usuario": "Clemenzo",
-    "email": "aclemenzo7@smh.com.au",
-    "image": "/images/galgadot.png",
-    "categoria": "visitante",
-    "password": "nKnosXm"
-  }, {
-    "id": 9,
-    "name": "Parnell Bruhnsen",
-    "usuario": "Bruhnsen",
-    "email": "pbruhnsen8@wikia.com",
-    "image": "/images/galgadot.png",
-    "categoria": "visitante",
-    "password": "aFKaIwyr6TiH"
-  }, {
-    "id": 10,
-    "name": "Jobye Weaving",
-    "usuario": "Weaving",
-    "email": "jweaving9@google.co.uk",
-    "image": "/images/galgadot.png",
-    "categoria": "visitante",
-    "password": "VAWVY8VVMz"
-  }, {
-    "id": 11,
-    "name": "Sergeant Humburton",
-    "usuario": "Humburton",
-    "email": "shumburtona@behance.net",
-    "image": "/images/sheeldoncooper.png",
-    "categoria": "admin",
-    "password": "gxr7T58pm"
-  }, {
-    "id": 12,
-    "name": "Calhoun Klain",
-    "usuario": "Klain",
-    "email": "cklainb@about.com",
-    "image": "/images/robertdowneyjr.png",
-    "categoria": "admin",
-    "password": "pjWIRzY"
-  }, {
-    "id": 13,
-    "name": "Pauline Davidovicz",
-    "usuario": "Davidovicz",
-    "email": "pdavidoviczc@latimes.com",
-    "image": "/images/robertdowneyjr.png",
-    "categoria": "admin",
-    "password": "NJ7FDmm"
-  }, {
-    "id": 14,
-    "name": "Rebekah Sarvar",
-    "usuario": "Sarvar",
-    "email": "rsarvard@discuz.net",
-    "image": "/images/galgadot.png",
-    "categoria": "admin",
-    "password": "sfWdGErLR2H"
-  }, {
-    "id": 15,
-    "name": "Jasun Craw",
-    "usuario": "Craw",
-    "email": "jcrawe@answers.com",
-    "image": "/images/robertdowneyjr.png",
-    "categoria": "admin",
-    "password": "FQ3dUTfTlcyN"
-  }, {
-    "id": 16,
-    "name": "Aron Huerta",
-    "usuario": "Huerta",
-    "email": "ahuertaf@ibm.com",
-    "image": "/images/galgadot.png",
-    "categoria": "admin",
-    "password": "LcfJIcAtE"
-  }, {
-    "id": 17,
-    "name": "Levon Jouen",
-    "usuario": "Jouen",
-    "email": "ljoueng@abc.net.au",
-    "image": "/images/galgadot.png",
-    "categoria": "admin",
-    "password": "WNyNCDQSU"
-  }, {
-    "id": 18,
-    "name": "Pippy Petherick",
-    "usuario": "Petherick",
-    "email": "ppetherickh@nasa.gov",
-    "image": "/images/galgadot.png",
-    "categoria": "admin",
-    "password": "dSJa7uVb"
-  }, {
-    "id": 19,
-    "name": "Cassius Mayers",
-    "usuario": "Mayers",
-    "email": "cmayersi@amazon.co.uk",
-    "image": "/images/galgadot.png",
-    "categoria": "admin",
-    "password": "7QRP0Axg2hhg"
-  }, {
-    "id": 20,
-    "name": "Gerianna Horstead",
-    "usuario": "Horstead",
-    "email": "ghorsteadj@addtoany.com",
-    "image": "images/emiliaclarke.png",
-    "categoria": "admin",
-    "password": "KBIUnpFpL66q"
-  }]
+[
+	{
+		"id": 1,
+		"name": "Artus Spurryer",
+		"usuario": "Spurryer",
+		"email": "aspurryer0@addtoany.com",
+		"image": "/images/emiliaclarke.png",
+		"categoria": "admin",
+		"password": "KqSfW4e"
+	},
+	{
+		"id": 2,
+		"name": "Truman Strippel",
+		"usuario": "Strippel",
+		"email": "tstrippel1@joomla.org",
+		"image": "images/emiliaclarke.png",
+		"categoria": "admin",
+		"password": "QPhK97h"
+	},
+	{
+		"id": 3,
+		"name": "Scarface Hurlestone",
+		"usuario": "Hurlestone",
+		"email": "shurlestone2@ibm.com",
+		"image": "/images/robertdowneyjr.png",
+		"categoria": "visitante",
+		"password": "pAbAeK"
+	},
+	{
+		"id": 4,
+		"name": "Consolata Bartaletti",
+		"usuario": "Bartaletti",
+		"email": "cbartaletti3@qq.com",
+		"image": "images/emiliaclarke.png",
+		"categoria": "visitante",
+		"password": "VYVJ3FTy"
+	},
+	{
+		"id": 5,
+		"name": "Cori Gimber",
+		"usuario": "Gimber",
+		"email": "cgimber4@berkeley.edu",
+		"image": "/images/galgadot.png",
+		"categoria": "visitante",
+		"password": "T1hFWUbExRqN"
+	},
+	{
+		"id": 6,
+		"name": "Noni Croson",
+		"usuario": "Croson",
+		"email": "ncroson5@sakura.ne.jp",
+		"image": "images/emiliaclarke.png",
+		"categoria": "admin",
+		"password": "w9z6tefL4mO"
+	},
+	{
+		"id": 7,
+		"name": "Mayor Nelsey",
+		"usuario": "Nelsey",
+		"email": "mnelsey6@sogou.com",
+		"image": "/images/sheeldoncooper.png",
+		"categoria": "admin",
+		"password": "rTEnpqKG"
+	},
+	{
+		"id": 8,
+		"name": "Anthia Clemenzo",
+		"usuario": "Clemenzo",
+		"email": "aclemenzo7@smh.com.au",
+		"image": "/images/galgadot.png",
+		"categoria": "visitante",
+		"password": "nKnosXm"
+	},
+	{
+		"id": 9,
+		"name": "Parnell Bruhnsen",
+		"usuario": "Bruhnsen",
+		"email": "pbruhnsen8@wikia.com",
+		"image": "/images/galgadot.png",
+		"categoria": "visitante",
+		"password": "aFKaIwyr6TiH"
+	},
+	{
+		"id": 10,
+		"name": "Jobye Weaving",
+		"usuario": "Weaving",
+		"email": "jweaving9@google.co.uk",
+		"image": "/images/galgadot.png",
+		"categoria": "visitante",
+		"password": "VAWVY8VVMz"
+	},
+	{
+		"id": 11,
+		"name": "Sergeant Humburton",
+		"usuario": "Humburton",
+		"email": "shumburtona@behance.net",
+		"image": "/images/sheeldoncooper.png",
+		"categoria": "admin",
+		"password": "gxr7T58pm"
+	},
+	{
+		"id": 12,
+		"name": "Calhoun Klain",
+		"usuario": "Klain",
+		"email": "cklainb@about.com",
+		"image": "/images/robertdowneyjr.png",
+		"categoria": "admin",
+		"password": "pjWIRzY"
+	},
+	{
+		"id": 13,
+		"name": "Pauline Davidovicz",
+		"usuario": "Davidovicz",
+		"email": "pdavidoviczc@latimes.com",
+		"image": "/images/robertdowneyjr.png",
+		"categoria": "admin",
+		"password": "NJ7FDmm"
+	},
+	{
+		"id": 14,
+		"name": "Rebekah Sarvar",
+		"usuario": "Sarvar",
+		"email": "rsarvard@discuz.net",
+		"image": "/images/galgadot.png",
+		"categoria": "admin",
+		"password": "sfWdGErLR2H"
+	},
+	{
+		"id": 15,
+		"name": "Jasun Craw",
+		"usuario": "Craw",
+		"email": "jcrawe@answers.com",
+		"image": "/images/robertdowneyjr.png",
+		"categoria": "admin",
+		"password": "FQ3dUTfTlcyN"
+	},
+	{
+		"id": 16,
+		"name": "Aron Huerta",
+		"usuario": "Huerta",
+		"email": "ahuertaf@ibm.com",
+		"image": "/images/galgadot.png",
+		"categoria": "admin",
+		"password": "LcfJIcAtE"
+	},
+	{
+		"id": 17,
+		"name": "Levon Jouen",
+		"usuario": "Jouen",
+		"email": "ljoueng@abc.net.au",
+		"image": "/images/galgadot.png",
+		"categoria": "admin",
+		"password": "WNyNCDQSU"
+	},
+	{
+		"id": 18,
+		"name": "Pippy Petherick",
+		"usuario": "Petherick",
+		"email": "ppetherickh@nasa.gov",
+		"image": "/images/galgadot.png",
+		"categoria": "admin",
+		"password": "dSJa7uVb"
+	},
+	{
+		"id": 19,
+		"name": "Cassius Mayers",
+		"usuario": "Mayers",
+		"email": "cmayersi@amazon.co.uk",
+		"image": "/images/galgadot.png",
+		"categoria": "admin",
+		"password": "7QRP0Axg2hhg"
+	},
+	{
+		"id": 20,
+		"name": "Gerianna Horstead",
+		"usuario": "Horstead",
+		"email": "ghorsteadj@addtoany.com",
+		"image": "images/emiliaclarke.png",
+		"categoria": "admin",
+		"password": "KBIUnpFpL66q"
+	}
+]

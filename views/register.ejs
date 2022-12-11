@@ -13,11 +13,16 @@
         <div class="div-registro">
             <h2 class="registrate">Registrate</h2>
         
-            <form class="form-registro" action="/" method="GET">
+            <form class="form-registro" action="/users/guardarRegistro" method="POST" enctype="multipart/form-data">
                 <article>
-                    <label class="label-form" for="nombre">Nombre de Usuario</label> <br>
+                    <label class="label-form" for="name">Nombre y Apellido</label> <br>
+                    <input type="text" name="name" id="name" placeholder="Nombre y Apellido" required>
+                    <br><span class="feedback verificador">Este campo no puede estar vacio</span>
+                </article>
+                <article>
+                    <label class="label-form" for="usuario">Nombre de Usuario</label> <br>
                     <input type="text" name="usuario" id="usuario" placeholder="Usuario" required>
-                    <br><span class="feedback verificador">Minimo 10 caracteres</span>
+                    <br><span class="feedback verificador">Minimo 5 caracteres</span>
                 </article>
                 <article>
                     <label  class="label-form" for="email">Email</label> <br>
@@ -25,8 +30,8 @@
                     <br><span class="feedback verificador">name@blockbuster.com</span>
                 </article>
                 <article>
-                    <label  class="label-form" for="contrasena">Contraseña</label> <br>
-                    <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required>
+                    <label  class="label-form" for="password">Contraseña</label> <br>
+                    <input type="password" name="password" id="password" placeholder="Contraseña" required>
                     <br><span class="feedback verificador">Minimo 6 caracteres</span>
                 </article>
 
@@ -37,7 +42,7 @@
                                 <p>Subir foto</p>
                                 <i class="fa-solid fa-user"></i>
                             </label>
-                            <input id="file-input" type="file" />
+                            <input id="file-input" name="imageUser" type="file" />
                         </div>
                     </div>
 
@@ -61,12 +66,12 @@
         </div>
 
 
-        <section class="video-intro">
+        <!-- <section class="video-intro">
             <video  controls muted width="80%" height="400px" autoplay >
                 <source src="/images/videoIntro.mp4"  type="video/mp4">
                 no es compatible
             </video>
-        </section>
+        </section> -->
 
 
         <section class="section-sector">

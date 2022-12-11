@@ -11,3 +11,15 @@
     width: 100%;
     border-radius: 20%;
 }
+
+h2{
+    padding-top: 40px;
+}
+
+section{
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 16cm;
+    margin: 50px auto;
+    padding: 20px;
+}
