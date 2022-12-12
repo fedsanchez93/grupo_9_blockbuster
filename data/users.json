@@ -226,5 +226,13 @@
 		"email": "telasysssblanco@gmail.com",
 		"password": "uu",
 		"image": "1670790411799_img_.jpeg"
+	},
+	{
+		"id": 27,
+		"name": " david",
+		"usuario": "david",
+		"email": "david@g.com",
+		"password": "$2a$10$//u4Oa3UBATw2ed3.3Mm1uD2Ex6kr0U/xYQ6zxg.cbDA0Lee2V5XO",
+		"image": "1670808668652_img_.jpeg"
 	}
 ]

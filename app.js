@@ -5,6 +5,8 @@ const path = require('path');
 const PORT = process.env.PORT || 5000;
 const router = express.Router()
 
+const session = require('express-session')
+
 app.use(express.static('public')); // Recursos estaticos
 app.set("view engine", "ejs")
 

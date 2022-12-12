@@ -10,29 +10,33 @@
 
     <main class="main-body">
         <article class="register">
-            <form action="/">
+            <form action="/users/login" method="POST">
                 <div class="credenciales">
                     <h1 class="titulo">Iniciar sesión</h1>
-                    <label for="last-name"></label>
-                    <input class="text-box" type="text" placeholder="E-mail" name="last-name" required>
-                    <label for="contraseña"></label>
-                    <input class="text-box" type="password" placeholder="Contraseña" name="contraseña" required>
+                    <label for="email"></label>
+                    <input class="text-box" type="text" placeholder="E-mail" name="email" required>
+                    <label for="password"></label>
+                    <input class="text-box" type="password" placeholder="Contraseña" name="password" required>
                 </div>
                     
-                <div class="olvidaste">
-                    <a class="barra2" href="#">¿Olvidaste tu contraseña?</a>
-                </div>
+                
                         
                 <label class="lista-recordar"><input class="lista-recordar" type="checkbox" name="categorias" value="recordar">Recordarme</label><br>
                         
-                <a href="/home" class="btn-neon">Ingresar</a>
-                   <input type="button" value="">     
+                <!-- <a href="/home" class="btn-neon">Ingresar</a> -->
+                   <!-- <input type="button" class="btn-neon" value="Ingresar">  -->
+                   <button type="submit" class="btn-neon">Ingresar</button>
+                </form>
+
+                <div class="olvidaste">
+                    <a class="barra2" href="#">¿Olvidaste tu contraseña?</a>
+                </div>
                 <div class="cliente">
                     <a class="barra2" href="/register">¿No sos cliente?</a>
                 </div> 
 
                 <a href="/register" class="btn-neon">Registrarme</a>
-            </form>
+            
         </article>
     </main>
 

@@ -4,25 +4,29 @@
     "description": "Nuestro proyecto denominado Blockbuster busca revivir la vieja franquicia de videoclubes dedicada al alquiler de peliculas. Nuestro sitio esta basado en el mecanismo On Demand, donde el usuario puede adquirir a traves de su tarjeta de credito el derecho a ver una pelicula o serie de su preferencia en el momento que lo desee.",
     "main": "app.js",
     "scripts": {
-      "test": "nodemon app.js",
-      "start": "nodemon app.js"
+        "test": "nodemon app.js",
+        "start": "nodemon app.js"
     },
     "repository": {
-      "type": "git",
-      "url": "git+https://github.com/fedsanchez93/grupo_9_blockbuster.git"
+        "type": "git",
+        "url": "git+https://github.com/fedsanchez93/grupo_9_blockbuster.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "bugs": {
-      "url": "https://github.com/fedsanchez93/grupo_9_blockbuster/issues"
+        "url": "https://github.com/fedsanchez93/grupo_9_blockbuster/issues"
     },
     "homepage": "https://github.com/fedsanchez93/grupo_9_blockbuster#readme",
     "dependencies": {
-      "ejs": "^3.1.8",
-      "express": "^4.18.2",
-      "method-override": "^3.0.0",
-      "multer": "^1.4.5-lts.1",
-      "nodemon": "^2.0.20"
+        "bcryptjs": "^2.4.3",
+        "cookie-parser": "^1.4.6",
+        "ejs": "^3.1.8",
+        "express": "^4.18.2",
+        "express-session": "^1.17.3",
+        "express-validator": "^6.14.2",
+        "method-override": "^3.0.0",
+        "multer": "^1.4.5-lts.1",
+        "nodemon": "^2.0.20"
     }
-  }
+}

@@ -21,6 +21,7 @@ app.use(express.static(path.resolve(__dirname,'./public')));
 router.get('/perfil',usersController.perfil)
 router.post('/guardarRegistro', uploadFile.single('imageUser'),  usersController.guardarRegistro)
 router.get('/editarPerfil', usersController.editarPerfil)
+router.post('/login', usersController.verificarLogin)
 
 
 

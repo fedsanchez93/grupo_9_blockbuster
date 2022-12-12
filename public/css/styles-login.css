@@ -196,7 +196,7 @@ li {
     background-color: black;
     border-radius: 10px;
     width:80%;
-    height: 20%;
+    /* height: 20%; */
 }
 
 .btn-neon:hover{

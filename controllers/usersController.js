@@ -37,6 +37,19 @@ const controller = {
         console.log(newUser)
         res.render(salida ,{old:req.body, listaUsers})
         //console.log(req.file.filename)
+    },
+    verificarLogin:(req,res)=>{
+        let usuario = {
+            email:req.body.email,
+            password:req.body.password
+        }
+        
+        listaUsers.forEach(element => {
+            if(element.email == usuario.email && bcrypt.compareSync(usuario.password, element.password)){
+                console.log(element)
+            }
+        });
+        
     }
 }
 
