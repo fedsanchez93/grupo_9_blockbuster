@@ -1,5 +1,6 @@
 const path = require('path')
 const fs = require('fs');
+const bcrypt = require('bcryptjs')
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const listaUsers = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -24,7 +25,7 @@ const controller = {
             name:req.body.name,
             usuario:req.body.usuario,
             email:req.body.email,
-            password:req.body.password,
+            password: bcrypt.hashSync( req.body.password, 10),
             image:req.file.filename || '/emiliaclarke.png'
         }
         if(!emailRepetido){
