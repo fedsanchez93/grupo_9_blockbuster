@@ -16,7 +16,7 @@
             <form class="form-registro" action="/users/guardarRegistro" method="POST" enctype="multipart/form-data">
                 <article>
                     <label class="label-form" for="name">Nombre y Apellido</label> <br>
-                    <input type="text" name="name" id="name" placeholder="Nombre y Apellido" required>
+                    <input type="text" name="name" id="name" placeholder="Nombre y Apellido" required value="<%= locals.old ? old.name : null %> ">
                     <br><span class="feedback verificador">Este campo no puede estar vacio</span>
                 </article>
                 <article>

@@ -12,6 +12,13 @@ const controller = {
         res.render('users/editarPerfilUser',{listaUsers})
     },
     guardarRegistro:(req,res)=>{
+        let emailRepetido = false
+        let salida
+        listaUsers.forEach(element => {
+           if( element.email == req.body.email ){
+            emailRepetido = true
+           } 
+        });
         let newUser = {
             id: (listaUsers[listaUsers.length-1].id)+1,
             name:req.body.name,
@@ -20,12 +27,15 @@ const controller = {
             password:req.body.password,
             image:req.file.filename || '/emiliaclarke.png'
         }
+        if(!emailRepetido){
         listaUsers.push(newUser)
         fs.writeFileSync(usersFilePath, JSON.stringify(listaUsers,null, '\t' ))
-
+        salida = 'users/perfilUser'
+        }else{  salida = 'register'  }
+        
         console.log(newUser)
-        console.log(req.file.filename)
-        res.redirect('/register')
+        res.render(salida ,{old:req.body, listaUsers})
+        //console.log(req.file.filename)
     }
 }
 

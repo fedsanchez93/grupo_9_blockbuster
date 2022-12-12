@@ -84,6 +84,7 @@ const productsController = {
     },
 
     guardarNuevoProducto:(req,res)=>{
+        
         let newPelicula = {
             id: listaPeliculas[listaPeliculas.length-1].id+1,
             titulo:req.body.titulo || '',

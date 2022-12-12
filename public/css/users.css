@@ -22,4 +22,13 @@ section{
     width: 16cm;
     margin: 50px auto;
     padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+form input, form button{
+    color: blue;
+    display: block;
+    margin: 20px auto;
+
 }
