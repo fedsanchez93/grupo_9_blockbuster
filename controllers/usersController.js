@@ -41,15 +41,32 @@ const controller = {
     verificarLogin:(req,res)=>{
         let usuario = {
             email:req.body.email,
-            password:req.body.password
+            password:req.body.password,
+            recordarme:req.body.recordarme
         }
-        
+        //console.log(usuario.recordarme)
+        let salida
         listaUsers.forEach(element => {
-            if(element.email == usuario.email && bcrypt.compareSync(usuario.password, element.password)){
-                console.log(element)
+            if(element.email == usuario.email && bcrypt.compareSync(usuario.password, element.password) && usuario.recordarme == 'recordarme'){
+                res.cookie('usuarioLogueado',element.email)
+                salida = '/perfil'
+                //console.log('hola')
+                
+                
+                // req.session.usuario = element
+                //console.log(req.cookies.usuarioLogueado)
+                
+                // //console.log(req.cookies.usuario)
+                // if(usuario.recordarme == 'recordarme'){res.cookie('usuario',element.email)}
+            }else if(element.email == usuario.email && bcrypt.compareSync(usuario.password, element.password)){
+                req.session.usuario = element
+                salida = '/users/perfil'
+            }else{
+                salida = '/login'
             }
+            
         });
-        
+        res.redirect(salida)
     }
 }
 

@@ -234,5 +234,13 @@
 		"email": "david@g.com",
 		"password": "$2a$10$//u4Oa3UBATw2ed3.3Mm1uD2Ex6kr0U/xYQ6zxg.cbDA0Lee2V5XO",
 		"image": "1670808668652_img_.jpeg"
+	},
+	{
+		"id": 28,
+		"name": " jose",
+		"usuario": "jose",
+		"email": "jose@j.com",
+		"password": "$2a$10$Ji9wdtD0XxYKlBpaZrfSkOXpgrSQqnGo6DeRPHlVtApGkFmZLHQ06",
+		"image": "1670810615507_img_.png"
 	}
 ]
