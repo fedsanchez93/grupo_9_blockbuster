@@ -26,12 +26,12 @@ const controller = {
             usuario:req.body.usuario,
             email:req.body.email,
             password: bcrypt.hashSync( req.body.password, 10),
-            image:req.file.filename || '/emiliaclarke.png'
+            image: req.file ? req.file.filename : '/emiliaclarke.png'
         }
         if(!emailRepetido){
         listaUsers.push(newUser)
         fs.writeFileSync(usersFilePath, JSON.stringify(listaUsers,null, '\t' ))
-        salida = 'users/perfilUser'
+        salida = './users/perfilUser'
         }else{  salida = 'register'  }
         
         console.log(newUser)

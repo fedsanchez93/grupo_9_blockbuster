@@ -4,8 +4,15 @@
 		"titulo": "2012",
 		"imagen": "/images/2012.jpg",
 		"descripcion": "Un escritor frustrado lucha por mantener a su familia con vida cuando una serie de catástrofes mundiales amenaza con aniquilar a la humanidad.",
-		"genero": ["Acción","Aventura", "Ciencia Ficción"],
-		"idioma": ["Español","Inglés"],
+		"genero": [
+			"Acción",
+			"Aventura",
+			"Ciencia Ficción"
+		],
+		"idioma": [
+			"Español",
+			"Inglés"
+		],
 		"duracion": "2h 38min",
 		"año": 2009,
 		"precio": 1000,
@@ -20,8 +27,15 @@
 		"titulo": "1917",
 		"imagen": "/images/197.jpg",
 		"descripcion": "Dos jóvenes soldados ingleses tienen una misión imposible durante la Primera Guerra Mundial: entregar un mensaje tras las líneas enemigas para evitar que sus compañeros caigan en una trampa.",
-		"genero": ["Bélico", "Acción","Drama"],
-		"idioma": ["Español","Inglés"],
+		"genero": [
+			"Bélico",
+			"Acción",
+			"Drama"
+		],
+		"idioma": [
+			"Español",
+			"Inglés"
+		],
 		"duracion": "1h 59min",
 		"año": 2019,
 		"precio": 1000,
@@ -52,8 +66,15 @@
 		"titulo": "Los Vengadores: End Game",
 		"imagen": "/images/LosVengadores.jpg",
 		"descripcion": "Cuando un enemigo inesperado surge como una gran amenaza para la seguridad mundial, Nick Fury, director de la Agencia SHIELD, decide reclutar a un equipo para salvar al mundo de un desastre casi seguro. Adaptación del cómic de Marvel 'Los Vengadores', el legendario grupo de superhéroes formado por Ironman, Hulk, Thor y el Capitán América entre otros.",
-		"genero": ["Acción","Aventura", "Drama"],
-		"idioma": ["Español","Inglés"],
+		"genero": [
+			"Acción",
+			"Aventura",
+			"Drama"
+		],
+		"idioma": [
+			"Español",
+			"Inglés"
+		],
 		"duracion": "3h 1min",
 		"año": 2019,
 		"precio": 1000,
@@ -68,8 +89,15 @@
 		"titulo": "Smile",
 		"imagen": "/images/smile.jpg",
 		"descripcion": "descripcion",
-		"genero": ["Terror","Misterio", "Suspenso"],
-		"idioma": ["Español","Inglés"],
+		"genero": [
+			"Terror",
+			"Misterio",
+			"Suspenso"
+		],
+		"idioma": [
+			"Español",
+			"Inglés"
+		],
 		"duracion": "1h 55min",
 		"año": 2022,
 		"precio": 1000,
@@ -84,8 +112,15 @@
 		"titulo": "Maquinas Mortales",
 		"imagen": "/images/MaquinasMortales.jpg",
 		"descripcion": "Una misteriosa joven llamada Hester Shaw une sus fuerzas a las de Anna Fang, una peligrosa forajida con una recompensa en mente, y Tom Natsworthy, un paria de Londres, para liderar la lucha contra una gigante ciudad depredadora sobre ruedas.",
-		"genero": ["Acción", "Aventura", "Fantasía"],
-		"idioma": ["Español","Inglés"],
+		"genero": [
+			"Acción",
+			"Aventura",
+			"Fantasía"
+		],
+		"idioma": [
+			"Español",
+			"Inglés"
+		],
 		"duracion": "2h 8min",
 		"año": 2018,
 		"precio": 1000,
@@ -101,7 +136,10 @@
 		"imagen": "/images/Tonto_y_retonto.jpg",
 		"descripcion": "Después de que una mujer deje un maletín en la terminal del aeropuerto, un tonto conductor de limusina y su amigo todavía más tonto emprenden un viaje por carretera a través del país hasta Aspen para devolverlo.",
 		"genero": "Comedia",
-		"idioma": ["Español","Inglés"],
+		"idioma": [
+			"Español",
+			"Inglés"
+		],
 		"duracion": "1h 47min",
 		"año": 1994,
 		"precio": 1000,
@@ -116,8 +154,14 @@
 		"titulo": "Mas barato por docena",
 		"imagen": "/images/mas_barato_por_docena.jpg",
 		"descripcion": "Un padre debe adaptarse a su nuevo trabajo y cuidar de su inmensa e inestable progenie mientras su mujer va de gira con su libro.",
-		"genero": ["Comedia","Familiar"],
-		"idioma": ["Español","Inglés"],
+		"genero": [
+			"Comedia",
+			"Familiar"
+		],
+		"idioma": [
+			"Español",
+			"Inglés"
+		],
 		"duracion": "1h 38min",
 		"año": 2003,
 		"precio": 1000,
@@ -132,8 +176,15 @@
 		"titulo": "La Roca",
 		"imagen": "/images/La_roca.jpg",
 		"descripcion": "Un químico y un exconvicto deben liderar el contraataque cuando un grupo de militares renegados amenaza con un ataque con gas nervioso desde Alcatraz contra San Francisco.",
-		"genero": ["Acción","Aventura", "Suspenso"],
-		"idioma": ["Español","Inglés"],
+		"genero": [
+			"Acción",
+			"Aventura",
+			"Suspenso"
+		],
+		"idioma": [
+			"Español",
+			"Inglés"
+		],
 		"duracion": "2h 16min",
 		"año": 1996,
 		"precio": 1000,
@@ -148,8 +199,14 @@
 		"titulo": "En Busca de la felicidad",
 		"imagen": "/images/en_busca_de_la_felicidad.jpg",
 		"descripcion": "Un vendedor en apuros se queda con la custodia de su hijo cuando está a punto de comenzar una carrera profesional que le cambiará la vida.",
-		"genero": ["Biografía","Drama"],
-		"idioma": ["Español","Inglés"],
+		"genero": [
+			"Biografía",
+			"Drama"
+		],
+		"idioma": [
+			"Español",
+			"Inglés"
+		],
 		"duracion": "1h 57min",
 		"año": 2006,
 		"precio": 1000,
@@ -164,8 +221,15 @@
 		"titulo": "Harry Potter y el cáliz de fuego",
 		"imagen": "/images/Harry_Potter_Caliz_De_fuego.jpg",
 		"descripcion": "Harry Potter se encuentra compitiendo en un peligroso torneo entre escuelas de magia rivales, pero está distraído por pesadillas recurrentes.",
-		"genero": ["Familiar","Aventura", "Fantasía"],
-		"idioma": ["Español","Inglés"],
+		"genero": [
+			"Familiar",
+			"Aventura",
+			"Fantasía"
+		],
+		"idioma": [
+			"Español",
+			"Inglés"
+		],
 		"duracion": "2h 37min",
 		"año": 2005,
 		"precio": 1000,
@@ -180,8 +244,15 @@
 		"titulo": "Fuego contra fuego",
 		"imagen": "/images/Fuego_contra_fuego.jpg",
 		"descripcion": "Un grupo de ladrones profesionales de alto nivel empieza a sentir a la policía de Los Ángeles en los talones cuando, sin saberlo, deja una pista en su último atraco.",
-		"genero": ["Acción","Crimen", "Drama"],
-		"idioma": ["Español","Inglés"],
+		"genero": [
+			"Acción",
+			"Crimen",
+			"Drama"
+		],
+		"idioma": [
+			"Español",
+			"Inglés"
+		],
 		"duracion": "2h 50min",
 		"año": 1995,
 		"precio": 1000,
@@ -196,8 +267,15 @@
 		"titulo": "El rey león",
 		"imagen": "/images/El_rey_leon.jpg",
 		"descripcion": "El pequeño león Simba, príncipe heredero, es engañado por su malvado tío, quien desea el trono para sí mismo.",
-		"genero": ["Animación","Aventura", "Drama"],
-		"idioma": ["Español","Inglés"],
+		"genero": [
+			"Animación",
+			"Aventura",
+			"Drama"
+		],
+		"idioma": [
+			"Español",
+			"Inglés"
+		],
 		"duracion": "1h 28min",
 		"año": 1994,
 		"precio": 1000,
@@ -212,8 +290,15 @@
 		"titulo": "Toy Story 2",
 		"imagen": "/images/Toy_Story_2.jpg",
 		"descripcion": "Cuando Woody es secuestrado por un coleccionista de juguetes, Buzz y sus amigos emprenden una misión de rescate, pero Woody encuentra tentadora la idea de ser inmortalizado en un museo.",
-		"genero": ["Animación","Aventura", "Comedia"],
-		"idioma": ["Español","Inglés"],
+		"genero": [
+			"Animación",
+			"Aventura",
+			"Comedia"
+		],
+		"idioma": [
+			"Español",
+			"Inglés"
+		],
 		"duracion": "1h 32min",
 		"año": 1999,
 		"precio": 1000,
@@ -228,8 +313,14 @@
 		"titulo": "Forrest Gump",
 		"imagen": "/images/Forrest_Gump.jpg",
 		"descripcion": "Las presidencias de Kennedy y Johnson, los acontecimientos de Vietnam, el Watergate y otros eventos históricos se desarrollan a través de la perspectiva de un hombre de Alabama con un coeficiente intelectual de 75.",
-		"genero": ["Drama","Romance"],
-		"idioma": ["Español","Inglés"],
+		"genero": [
+			"Drama",
+			"Romance"
+		],
+		"idioma": [
+			"Español",
+			"Inglés"
+		],
 		"duracion": "2h 22min",
 		"año": 1994,
 		"precio": 1000,
@@ -239,5 +330,4 @@
 		"CalificacionIMDb": "8,8",
 		"CalificacionRottenTomatoes": "9,5"
 	}
-
 ]
