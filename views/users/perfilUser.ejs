@@ -10,16 +10,20 @@
     
     <main>
         <h2>Perfil Usuario</h2>
+        
+
         <section >
-            <h3>Nombre: <%= listaUsers[0].name %> </h3>
-            <h3>Usuario: <%= listaUsers[0].usuario %> </h3>
-            <h3>Email: <%= listaUsers[0].email %> </h3>
-            <h3>Categoria: <%= listaUsers[0].categoria %> </h3>
+            <h3>Nombre: <%= user.name %> </h3>
+            <h3>Usuario: <%= user.usuario %> </h3>
+            <h3>Email: <%= user.email %> </h3>
+            <h3>Categoria: <%= user.categoria %> </h3>
             <div class="div-img">
-                <img src="<%= listaUsers[0].image %>" alt="img">
+                <img src="/images/users/<%= user.image %>" alt="img">
             </div>
         </section>
-        <h3><a href="#">Cerrar sesion</a></h3>
+
+
+        <h3><a href="/users/logout">Cerrar sesion</a></h3>
         <h3><a href="/users/editarPerfil">Editar Mis Datos</a></h3>
 
         

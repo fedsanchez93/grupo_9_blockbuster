@@ -1,15 +1,21 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const cookies = require('cookie-parser');
+app.use(cookies());
 
 const PORT = process.env.PORT || 5000;
 const router = express.Router()
+
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 const session = require('express-session')
 app.use(session({secret:'Mensaje Secreto', resave:false ,saveUninitialized:false}))
 
 app.use(express.static('public')); // Recursos estaticos
 app.set("view engine", "ejs")
+
+app.use(userLoggedMiddleware);
 
 // esto es para put y delete
 const methodOverride = require('method-override');

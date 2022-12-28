@@ -4,12 +4,14 @@ const path = require('path');
 const app = express();
 const mainController = require('../controllers/mainController');
 
+const guestMiddleware = require('../middlewares/guestMiddleware');
+
 app.use(express.static(path.resolve(__dirname,'./public')));
 
 router.get('/',mainController.home);
 router.get('/home',mainController.home);
-router.get('/login',mainController.login);
-router.get('/register',mainController.register);
+router.get('/login',guestMiddleware, mainController.login);
+router.get('/register',guestMiddleware, mainController.register);
 router.get('/carrito/:id?/',mainController.carrito);
 router.get('/carrito2/:id?/',mainController.carrito2);
 // router.get('/productDetail/:id?',mainController.productDetail);
