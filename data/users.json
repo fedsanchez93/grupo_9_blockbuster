@@ -210,5 +210,13 @@
   "email": "amoshechami@gmail.com",
   "password": "$2a$10$1JW9J55VnN6LkrnRdWPlBeUQetwjl2PJfQZMMuOzPj3/4lAv2vDDa",
   "image": "/userFoto.jpeg"
+ },
+ {
+  "id": 25,
+  "name": "jose chami",
+  "usuario": "bircatel",
+  "email": "telasyblanco@gmail.com",
+  "password": "$2a$10$XO6h2LElcXxtFQyruzblh.A.dkazw672UpQPaSne.H1lWH4wTBlRu",
+  "image": "/userFoto.jpeg"
  }
 ]
