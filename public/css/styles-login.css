@@ -227,6 +227,13 @@ li {
     font-weight: 400;
 } 
 
+
+.verificador,.feedback{
+    color: orange;
+    margin: 10px auto;
+    font-size: 12px;
+}
+
    
 /* = = = = = FOOTER = = = = = */
 

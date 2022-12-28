@@ -16,23 +16,39 @@
             <form class="form-registro" action="/users/guardarRegistro" method="POST" enctype="multipart/form-data">
                 <article>
                     <label class="label-form" for="name">Nombre y Apellido</label> <br>
-                    <input type="text" name="name" id="name" placeholder="Nombre y Apellido" required value="<%= locals.old ? old.name : null %>">
-                    <br><span class="feedback verificador">Este campo no puede estar vacio</span>
+                    <input type="text" name="name" id="name" placeholder="Nombre y Apellido"  value="<%= locals.oldData ? oldData.name : null %>">
+                    <br>
+                    <!-- <span class="feedback verificador">Este campo no puede estar vacio</span> -->
+                    <% if (locals.errors && errors.name) { %>
+                        <div class=" verificador"> <%= errors.name.msg %></div>
+                    <% } %>
                 </article>
                 <article>
                     <label class="label-form" for="usuario">Nombre de Usuario</label> <br>
-                    <input type="text" name="usuario" id="usuario" placeholder="Usuario" required value="<%= locals.old ? old.usuario : null %>">
-                    <br><span class="feedback verificador">Minimo 5 caracteres</span>
+                    <input type="text" name="usuario" id="usuario" placeholder="Usuario"  value="<%= locals.oldData ? oldData.usuario : null %>">
+                    <br>
+                    <!-- <span class="feedback verificador">Minimo 5 caracteres</span> -->
+                    <% if (locals.errors && errors.usuario) { %>
+                        <div class=" verificador"> <%= errors.usuario.msg %></div>
+                    <% } %>
                 </article>
                 <article>
                     <label  class="label-form" for="email">Email</label> <br>
-                    <input type="email" name="email" id="email"  placeholder="name@blockbuster.com" required value="<%= locals.old ? old.email : null %>">
-                    <br><span class="feedback verificador">name@blockbuster.com</span>
+                    <input type="email" name="email" id="email"  placeholder="name@blockbuster.com"  value="<%= locals.oldData ? oldData.email : null %>">
+                    <br>
+                    <!-- <span class="feedback verificador">name@blockbuster.com</span> -->
+                    <% if (locals.errors && errors.email) { %>
+                        <div class=" verificador"> <%= errors.email.msg %></div>
+                    <% } %>
                 </article>
                 <article>
                     <label  class="label-form" for="password">Contraseña</label> <br>
-                    <input type="password" name="password" id="password" placeholder="Contraseña" required>
-                    <br><span class="feedback verificador">Minimo 6 caracteres</span>
+                    <input type="password" name="password" id="password" placeholder="Contraseña" >
+                    <br>
+                    <!-- <span class="feedback verificador">Minimo 6 caracteres</span> -->
+                    <% if (locals.errors && errors.password) { %>
+                        <div class=" verificador"> <%= errors.password.msg %></div>
+                    <% } %>
                 </article>
 
                 <div class="iconos-foto-google">
@@ -40,18 +56,23 @@
                         <div class="image-upload">
                             <label for="file-input" class="div-subir-foto">
                                 <p>Subir foto</p>
+                                
                                 <i class="fa-solid fa-user"></i>
                             </label>
                             <input id="file-input" name="imageUser" type="file" />
                         </div>
                     </div>
+                    
 
                     <div class="div-google">
                         <p>Continuar con Google</p>
                         <img src="/images/logo-google.jpeg" alt="logo-google" class="logo-google">
                     </div>
                 </div>
-                
+                <% if (locals.errors && errors.imageUser) { %>
+                    <div class=" verificador"> <%= errors.imageUser.msg %></div>
+                <% } %>
+                <br><br>
                 <div class="div-boton-crear-cuenta">
                     <button type="submit" id="crear-cuenta">Crear Cuenta</button>
                 </div>
