@@ -12,7 +12,7 @@ const controller = {
         res.render('users/perfilUser',{listaUsers, id, user: req.session.userLogged})
     },
     editarPerfil:(req,res)=>{
-        res.render('users/editarPerfilUser',{listaUsers})
+        res.render('users/editarPerfilUser',{listaUsers, user: req.session.userLogged})
     },
     guardarRegistro:(req,res)=>{
         let emailRepetido = false
@@ -30,7 +30,7 @@ const controller = {
             password: bcrypt.hashSync( req.body.password, 10),
             image: req.file ? req.file.filename : '/userFoto.jpeg'
         }
-        res.redirect('/users/login')
+        res.redirect('/login')
         // if(!emailRepetido){
         listaUsers.push(newUser)
         fs.writeFileSync(usersFilePath, JSON.stringify(listaUsers,null, '\t' ))

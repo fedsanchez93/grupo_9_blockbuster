@@ -16,7 +16,7 @@ const recomendadas = listaPeliculas.filter(function(product){
 
 const mainController = {
     home: (req,res)=>{
-        res.render('home', {masBuscadas, recomendadas, listaPersonajes})
+        res.render('home', {masBuscadas, recomendadas, listaPersonajes, user: req.session.userLogged})
     },
     login: (req,res)=>{
         res.render('login')
@@ -28,7 +28,7 @@ const mainController = {
         let id = req.params.id || 4
         let anterior = id-1 || listaPeliculas.length
         let siguiente = listaPeliculas.length>=( parseInt(id)+1) ? ( parseInt(id)+1) : 1
-        res.render('carrito', {listaPeliculas, id, anterior, siguiente})
+        res.render('carrito', {listaPeliculas, id, anterior, siguiente, user: req.session.userLogged})
         // res.render('carrito')
     },
     carrito2: (req,res)=>{

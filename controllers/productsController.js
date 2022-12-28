@@ -11,13 +11,13 @@ const listaPeliculas = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const productsController = {
     misAlquileres: (req,res)=>{
         let id = req.query.id || 4
-        res.render('misAlquileres', {listaPeliculas, id})
+        res.render('misAlquileres', {listaPeliculas, id, user: req.session.userLogged})
     },
     productDetail: (req,res)=>{
         let id = req.query.id || 4
         let anterior = id-1 || listaPeliculas.length
         let siguiente = listaPeliculas.length>=( parseInt(id)+1) ? ( parseInt(id)+1) : 1
-        res.render('productDetail', {listaPeliculas, id, anterior, siguiente})
+        res.render('productDetail', {listaPeliculas, id, anterior, siguiente, user: req.session.userLogged})
     },
     administrarProductos: (req,res)=>{
         let palabraBuscada = req.query.filtrar || ''
@@ -27,10 +27,10 @@ const productsController = {
                 peliculasFiltradas.push(listaPeliculas[i])
             }
         }
-        res.render('administrarProductos', {listaPeliculas, peliculasFiltradas})
+        res.render('administrarProductos', {listaPeliculas, peliculasFiltradas, user: req.session.userLogged})
     },
     listadoDeseos: (req,res)=>{
-        res.render('listadoDeseos', {listaPeliculas})
+        res.render('listadoDeseos', {listaPeliculas, user: req.session.userLogged})
     },
     buscarProductos: (req,res)=>{
         let palabraBuscada = req.query.filtrar || ''
@@ -40,13 +40,13 @@ const productsController = {
                 peliculasFiltradas.push(listaPeliculas[i])
             }
         }
-        res.render('buscarProductos', {listaPeliculas, peliculasFiltradas,palabraBuscada})
+        res.render('buscarProductos', {listaPeliculas, peliculasFiltradas,palabraBuscada, user: req.session.userLogged})
     },
     editarProducto:(req,res)=>{
         let idProducto = req.query.id 
 
         // console.log(idProducto, 'editarproducto')
-        res.render('editarProducto',{idProducto, listaPeliculas})
+        res.render('editarProducto',{idProducto, listaPeliculas, user: req.session.userLogged})
     },
 
     guardarProductoEditado:(req,res)=>{
@@ -80,7 +80,7 @@ const productsController = {
 
     crearNuevoProducto:(req,res)=>{
         let idProducto = req.query.id
-        res.render('crearNuevoProducto', {idProducto})
+        res.render('crearNuevoProducto', {idProducto, user: req.session.userLogged})
     },
 
     guardarNuevoProducto:(req,res)=>{
@@ -120,7 +120,7 @@ const productsController = {
     },
     video:(req,res)=>{
         let idProducto = req.params.id || 1
-        res.render('video', {listaPeliculas, idProducto})
+        res.render('video', {listaPeliculas, idProducto, user: req.session.userLogged})
     },
     
 }

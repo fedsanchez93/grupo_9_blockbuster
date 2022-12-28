@@ -178,5 +178,13 @@
 		"image": "/userFoto.jpeg",
 		"categoria": "admin",
 		"password": "KBIUnpFpL66q"
+	},
+	{
+		"id": 21,
+		"name": "david",
+		"usuario": "david",
+		"email": "moshechami@gmail.com",
+		"password": "$2a$10$3F/9hHfVndjO8o.EEXS7F.ZfxV3xXe.RVleA46pYPoDugtyeLu/Rm",
+		"image": "1672258135754_img_.png"
 	}
 ]

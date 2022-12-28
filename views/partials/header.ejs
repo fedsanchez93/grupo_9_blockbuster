@@ -25,7 +25,8 @@
         </nav> 
         <nav class="user-options">
             <ul>
-                <a href="/login"><li><i class="fa-solid fa-circle-user"></i></li></a>
+                <a href="/login"><li><i class="fa-solid fa-circle-user"></i><%= locals.user? ' Hola '+ user.name+'!': null %> </li></a>
+
             </ul>      
         </nav> 
         <nav class="admin-options">
