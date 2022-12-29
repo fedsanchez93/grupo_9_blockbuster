@@ -185,7 +185,7 @@
   "usuario": "david",
   "email": "moshechami@gmail.com",
   "password": "$2a$10$3F/9hHfVndjO8o.EEXS7F.ZfxV3xXe.RVleA46pYPoDugtyeLu/Rm",
-  "image": "1672258135754_img_.png"
+  "image": "/userFoto.jpeg"
  },
  {
   "id": 22,
@@ -218,5 +218,45 @@
   "email": "telasyblanco@gmail.com",
   "password": "$2a$10$XO6h2LElcXxtFQyruzblh.A.dkazw672UpQPaSne.H1lWH4wTBlRu",
   "image": "/userFoto.jpeg"
+ },
+ {
+  "id": 26,
+  "name": "mijal",
+  "usuario": "mijal",
+  "email": "mijal@gmail.com",
+  "password": "$2a$10$C0iZVYuq.HapRqKoiGbe1OrUkLCVxWXwk/5aR9NzV7yyVhZ5fBlrW",
+  "image": "/1672273246164_img_.jpeg"
+ },
+ {
+  "id": 27,
+  "name": "moshe david chami",
+  "usuario": "a",
+  "email": "moshechami1@gmail.com",
+  "password": "$2a$10$f3LpZO/reEe7l071oOxTX.b9g5QMBmAyi5hzk8xM.bXIwu1kruUlO",
+  "image": "/userFoto.jpeg"
+ },
+ {
+  "id": 28,
+  "name": "moshe david chami",
+  "usuario": "moshe david",
+  "email": "moshechami2@gmail.com",
+  "password": "$2a$10$gitpg5dYn34hpHo/tzFXFeArRRdMElzls0n1Yv.dhACUaeO6LUMMO",
+  "image": "1672273983341_img_.jpeg"
+ },
+ {
+  "id": 29,
+  "name": "MOSHE DAVID CHAMI",
+  "usuario": "a",
+  "email": "moshechami3@gmail.com",
+  "password": "$2a$10$RB4.JS/bJONlro0PgaHi3Os8KBlYIU3UOja22APE.rI6LT33o33HC",
+  "image": "/userFoto.jpeg"
+ },
+ {
+  "id": 30,
+  "name": "TZIPORAAAAAAAAAA❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️🏆 ",
+  "usuario": "Tziporaaaaaaaaaa❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️🏆 ",
+  "email": "tziporachami@gmail.com",
+  "password": "$2a$10$66h4wKy9TY1lDYQWyHuLn.Wi86wCqoq7Z/66piahBnm99Wz2aqi5S",
+  "image": "1672274323006_img_.png"
  }
 ]

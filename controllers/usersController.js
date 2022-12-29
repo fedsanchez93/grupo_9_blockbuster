@@ -15,28 +15,28 @@ const controller = {
     editarPerfil:(req,res)=>{
         res.render('users/editarPerfilUser',{listaUsers, user: req.session.userLogged})
     },
-    guardarRegistro:(req,res)=>{
-        let emailRepetido = false
-        let salida
-        listaUsers.forEach(element => {
-           if( element.email == req.body.email ){
-            emailRepetido = true
-           } 
-        });
-        let newUser = {
-            id: (listaUsers[listaUsers.length-1].id)+1,
-            name:req.body.name,
-            usuario:req.body.usuario,
-            email:req.body.email,
-            password: bcrypt.hashSync( req.body.password, 10),
-            image: req.file ? req.file.filename : '/userFoto.jpeg'
-        }
-        res.redirect('/login')
-        // if(!emailRepetido){
-        listaUsers.push(newUser)
-        fs.writeFileSync(usersFilePath, JSON.stringify(listaUsers,null, '\t' ))
+    // guardarRegistro:(req,res)=>{
+    //     let emailRepetido = false
+    //     let salida
+    //     listaUsers.forEach(element => {
+    //        if( element.email == req.body.email ){
+    //         emailRepetido = true
+    //        } 
+    //     });
+    //     let newUser = {
+    //         id: (listaUsers[listaUsers.length-1].id)+1,
+    //         name:req.body.name.toUpperCase(),
+    //         usuario:req.body.usuario,
+    //         email:req.body.email,
+    //         password: bcrypt.hashSync( req.body.password, 10),
+    //         image: req.file ? req.file.filename : '/userFoto.jpeg'
+    //     }
+    //     res.redirect('/login')
+    //     // if(!emailRepetido){
+    //     listaUsers.push(newUser)
+    //     fs.writeFileSync(usersFilePath, JSON.stringify(listaUsers,null, '\t' ))
         
-    },
+    // },
     processRegister: (req, res) => {
 		const resultValidation = validationResult(req);
 
@@ -63,6 +63,7 @@ const controller = {
 
 		let userToCreate = {
 			...req.body,
+			name:req.body.name.toUpperCase(),
 			password: bcrypt.hashSync(req.body.password, 10),
 			image: req.file ? req.file.filename : '/userFoto.jpeg'
 		}

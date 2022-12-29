@@ -25,8 +25,14 @@
         </nav> 
         <nav class="user-options">
             <ul>
-                <a href="/login"><li><i class="fa-solid fa-circle-user"></i><%= locals.user? ' Hola '+ user.name+'!': null %> </li></a>
-
+                <a href="/login">
+                    <% if(locals.user) { %>
+                        Hola <%= user.name  %>!
+                        <img class="img-user-nav-bar" src="/images/users/<%= user.image %>" alt="image" >
+                <% }else{ %>
+                    <i class="fa-solid fa-circle-user"></i>
+                    <% } %>
+                </a>
             </ul>      
         </nav> 
         <nav class="admin-options">

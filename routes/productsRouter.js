@@ -4,6 +4,8 @@ const path = require('path');
 const app = express();
 const prodctsController = require('../controllers/productsController');
 
+const authMiddleware = require('../middlewares/authMiddleware');
+
 // Atencion que todas las rutas de este router empiezan con /products/
 
 app.use(express.static(path.resolve(__dirname,'./public')));
@@ -12,10 +14,10 @@ app.use(express.static(path.resolve(__dirname,'./public')));
 
 router.get('/productDetail/:id?',prodctsController.productDetail);
 router.get('/administrarProductos',prodctsController.administrarProductos);
-router.get('/listadoDeseos',prodctsController.listadoDeseos);
+router.get('/listadoDeseos', authMiddleware, prodctsController.listadoDeseos);
 router.get('/buscarProductos/:buscar?/',prodctsController.buscarProductos);
 router.get('/editarProducto/:id?',prodctsController.editarProducto);
-router.get('/misAlquileres',prodctsController.misAlquileres);
+router.get('/misAlquileres', authMiddleware, prodctsController.misAlquileres);
 router.get('/video/:id?',prodctsController.video);
 
 
