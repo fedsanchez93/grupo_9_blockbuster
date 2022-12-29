@@ -50,6 +50,25 @@ const User = {
 		let finalUsers = allUsers.filter(oneUser => oneUser.id !== id);
 		fs.writeFileSync(this.fileName, JSON.stringify(finalUsers, null, ' '));
 		return true;
+	},
+
+	agregarToDeseos: function (idUser, idPelicula){
+		let usuario = this.findByPk(idUser)
+		let newDeseos = usuario.listaDeseos
+		newDeseos.push(idPelicula) 
+		let newUser = {
+			...usuario,
+			listaDeseos:newDeseos
+		}
+		let allUsers = this.findAll();
+		let finalUsers = []
+		allUsers.forEach(element => {
+			newUser.id == element.id ? finalUsers.push(newUser) : finalUsers.push(element)
+		});
+		console.log(finalUsers)
+		//return finalUsers
+		fs.writeFileSync(this.fileName, JSON.stringify(finalUsers, null, '  '));
+		return true;
 	}
 }
 

@@ -30,6 +30,7 @@ router.get('/editarPerfil', usersController.editarPerfil)
 router.post('/login',guestMiddleware, usersController.loginProcess)
 router.get('/logout/', usersController.logout);
 
+router.get('/listadoDeseos/:id?/', usersController.deseos)
 
 
 module.exports = router;

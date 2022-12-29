@@ -1,262 +1,276 @@
 [
- {
-  "id": 1,
-  "name": "Artus Spurryer",
-  "usuario": "Spurryer",
-  "email": "aspurryer0@addtoany.com",
-  "image": "/emiliaclarke.png",
-  "categoria": "admin",
-  "password": "KqSfW4e"
- },
- {
-  "id": 2,
-  "name": "Truman Strippel",
-  "usuario": "Strippel",
-  "email": "tstrippel1@joomla.org",
-  "image": "/emiliaclarke.png",
-  "categoria": "admin",
-  "password": "QPhK97h"
- },
- {
-  "id": 3,
-  "name": "Scarface Hurlestone",
-  "usuario": "Hurlestone",
-  "email": "shurlestone2@ibm.com",
-  "image": "/robertdowneyjr.png",
-  "categoria": "visitante",
-  "password": "pAbAeK"
- },
- {
-  "id": 4,
-  "name": "Consolata Bartaletti",
-  "usuario": "Bartaletti",
-  "email": "cbartaletti3@qq.com",
-  "image": "/emiliaclarke.png",
-  "categoria": "visitante",
-  "password": "VYVJ3FTy"
- },
- {
-  "id": 5,
-  "name": "Cori Gimber",
-  "usuario": "Gimber",
-  "email": "cgimber4@berkeley.edu",
-  "image": "/galgadot.png",
-  "categoria": "visitante",
-  "password": "T1hFWUbExRqN"
- },
- {
-  "id": 6,
-  "name": "Noni Croson",
-  "usuario": "Croson",
-  "email": "ncroson5@sakura.ne.jp",
-  "image": "/emiliaclarke.png",
-  "categoria": "admin",
-  "password": "w9z6tefL4mO"
- },
- {
-  "id": 7,
-  "name": "Mayor Nelsey",
-  "usuario": "Nelsey",
-  "email": "mnelsey6@sogou.com",
-  "image": "/sheeldoncooper.png",
-  "categoria": "admin",
-  "password": "rTEnpqKG"
- },
- {
-  "id": 8,
-  "name": "Anthia Clemenzo",
-  "usuario": "Clemenzo",
-  "email": "aclemenzo7@smh.com.au",
-  "image": "/galgadot.png",
-  "categoria": "visitante",
-  "password": "nKnosXm"
- },
- {
-  "id": 9,
-  "name": "Parnell Bruhnsen",
-  "usuario": "Bruhnsen",
-  "email": "pbruhnsen8@wikia.com",
-  "image": "/galgadot.png",
-  "categoria": "visitante",
-  "password": "aFKaIwyr6TiH"
- },
- {
-  "id": 10,
-  "name": "Jobye Weaving",
-  "usuario": "Weaving",
-  "email": "jweaving9@google.co.uk",
-  "image": "/galgadot.png",
-  "categoria": "visitante",
-  "password": "VAWVY8VVMz"
- },
- {
-  "id": 11,
-  "name": "Sergeant Humburton",
-  "usuario": "Humburton",
-  "email": "shumburtona@behance.net",
-  "image": "/sheeldoncooper.png",
-  "categoria": "admin",
-  "password": "gxr7T58pm"
- },
- {
-  "id": 12,
-  "name": "Calhoun Klain",
-  "usuario": "Klain",
-  "email": "cklainb@about.com",
-  "image": "/robertdowneyjr.png",
-  "categoria": "admin",
-  "password": "pjWIRzY"
- },
- {
-  "id": 13,
-  "name": "Pauline Davidovicz",
-  "usuario": "Davidovicz",
-  "email": "pdavidoviczc@latimes.com",
-  "image": "/robertdowneyjr.png",
-  "categoria": "admin",
-  "password": "NJ7FDmm"
- },
- {
-  "id": 14,
-  "name": "Rebekah Sarvar",
-  "usuario": "Sarvar",
-  "email": "rsarvard@discuz.net",
-  "image": "/galgadot.png",
-  "categoria": "admin",
-  "password": "sfWdGErLR2H"
- },
- {
-  "id": 15,
-  "name": "Jasun Craw",
-  "usuario": "Craw",
-  "email": "jcrawe@answers.com",
-  "image": "/robertdowneyjr.png",
-  "categoria": "admin",
-  "password": "FQ3dUTfTlcyN"
- },
- {
-  "id": 16,
-  "name": "Aron Huerta",
-  "usuario": "Huerta",
-  "email": "ahuertaf@ibm.com",
-  "image": "/galgadot.png",
-  "categoria": "admin",
-  "password": "LcfJIcAtE"
- },
- {
-  "id": 17,
-  "name": "Levon Jouen",
-  "usuario": "Jouen",
-  "email": "ljoueng@abc.net.au",
-  "image": "/galgadot.png",
-  "categoria": "admin",
-  "password": "WNyNCDQSU"
- },
- {
-  "id": 18,
-  "name": "Pippy Petherick",
-  "usuario": "Petherick",
-  "email": "ppetherickh@nasa.gov",
-  "image": "/galgadot.png",
-  "categoria": "admin",
-  "password": "dSJa7uVb"
- },
- {
-  "id": 19,
-  "name": "Cassius Mayers",
-  "usuario": "Mayers",
-  "email": "cmayersi@amazon.co.uk",
-  "image": "/galgadot.png",
-  "categoria": "admin",
-  "password": "7QRP0Axg2hhg"
- },
- {
-  "id": 20,
-  "name": "Gerianna Horstead",
-  "usuario": "Horstead",
-  "email": "ghorsteadj@addtoany.com",
-  "image": "/userFoto.jpeg",
-  "categoria": "admin",
-  "password": "KBIUnpFpL66q"
- },
- {
-  "id": 21,
-  "name": "david",
-  "usuario": "david",
-  "email": "moshechami@gmail.com",
-  "password": "$2a$10$3F/9hHfVndjO8o.EEXS7F.ZfxV3xXe.RVleA46pYPoDugtyeLu/Rm",
-  "image": "/userFoto.jpeg"
- },
- {
-  "id": 22,
-  "name": "aa",
-  "usuario": "aa",
-  "email": "aa@g.c",
-  "password": "$2a$10$NDf4bdS8sAcDxQ6dWr8VJOHqe7ys39y9VWac5GcH/Q5chPlKC6ypK",
-  "image": "1672261024039_img_.jpeg"
- },
- {
-  "id": 23,
-  "name": "a",
-  "usuario": "",
-  "email": "a@s.c",
-  "password": "$2a$10$lLEurlVr6TOrgwfiTqWlbeg7hIfMzaufq4uwV.Z9JFjsUlGQLtNXm",
-  "image": "1672261909619_img_.jpeg"
- },
- {
-  "id": 24,
-  "name": "csdscsdvsdv",
-  "usuario": "",
-  "email": "amoshechami@gmail.com",
-  "password": "$2a$10$1JW9J55VnN6LkrnRdWPlBeUQetwjl2PJfQZMMuOzPj3/4lAv2vDDa",
-  "image": "/userFoto.jpeg"
- },
- {
-  "id": 25,
-  "name": "jose chami",
-  "usuario": "bircatel",
-  "email": "telasyblanco@gmail.com",
-  "password": "$2a$10$XO6h2LElcXxtFQyruzblh.A.dkazw672UpQPaSne.H1lWH4wTBlRu",
-  "image": "/userFoto.jpeg"
- },
- {
-  "id": 26,
-  "name": "mijal",
-  "usuario": "mijal",
-  "email": "mijal@gmail.com",
-  "password": "$2a$10$C0iZVYuq.HapRqKoiGbe1OrUkLCVxWXwk/5aR9NzV7yyVhZ5fBlrW",
-  "image": "/1672273246164_img_.jpeg"
- },
- {
-  "id": 27,
-  "name": "moshe david chami",
-  "usuario": "a",
-  "email": "moshechami1@gmail.com",
-  "password": "$2a$10$f3LpZO/reEe7l071oOxTX.b9g5QMBmAyi5hzk8xM.bXIwu1kruUlO",
-  "image": "/userFoto.jpeg"
- },
- {
-  "id": 28,
-  "name": "moshe david chami",
-  "usuario": "moshe david",
-  "email": "moshechami2@gmail.com",
-  "password": "$2a$10$gitpg5dYn34hpHo/tzFXFeArRRdMElzls0n1Yv.dhACUaeO6LUMMO",
-  "image": "1672273983341_img_.jpeg"
- },
- {
-  "id": 29,
-  "name": "MOSHE DAVID CHAMI",
-  "usuario": "a",
-  "email": "moshechami3@gmail.com",
-  "password": "$2a$10$RB4.JS/bJONlro0PgaHi3Os8KBlYIU3UOja22APE.rI6LT33o33HC",
-  "image": "/userFoto.jpeg"
- },
- {
-  "id": 30,
-  "name": "TZIPORAAAAAAAAAA❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️🏆 ",
-  "usuario": "Tziporaaaaaaaaaa❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️🏆 ",
-  "email": "tziporachami@gmail.com",
-  "password": "$2a$10$66h4wKy9TY1lDYQWyHuLn.Wi86wCqoq7Z/66piahBnm99Wz2aqi5S",
-  "image": "1672274323006_img_.png"
- }
+  {
+    "id": 1,
+    "name": "Artus Spurryer",
+    "usuario": "Spurryer",
+    "email": "aspurryer0@addtoany.com",
+    "image": "/emiliaclarke.png",
+    "categoria": "admin",
+    "password": "KqSfW4e"
+  },
+  {
+    "id": 2,
+    "name": "Truman Strippel",
+    "usuario": "Strippel",
+    "email": "tstrippel1@joomla.org",
+    "image": "/emiliaclarke.png",
+    "categoria": "admin",
+    "password": "QPhK97h"
+  },
+  {
+    "id": 3,
+    "name": "Scarface Hurlestone",
+    "usuario": "Hurlestone",
+    "email": "shurlestone2@ibm.com",
+    "image": "/robertdowneyjr.png",
+    "categoria": "visitante",
+    "password": "pAbAeK"
+  },
+  {
+    "id": 4,
+    "name": "Consolata Bartaletti",
+    "usuario": "Bartaletti",
+    "email": "cbartaletti3@qq.com",
+    "image": "/emiliaclarke.png",
+    "categoria": "visitante",
+    "password": "VYVJ3FTy"
+  },
+  {
+    "id": 5,
+    "name": "Cori Gimber",
+    "usuario": "Gimber",
+    "email": "cgimber4@berkeley.edu",
+    "image": "/galgadot.png",
+    "categoria": "visitante",
+    "password": "T1hFWUbExRqN"
+  },
+  {
+    "id": 6,
+    "name": "Noni Croson",
+    "usuario": "Croson",
+    "email": "ncroson5@sakura.ne.jp",
+    "image": "/emiliaclarke.png",
+    "categoria": "admin",
+    "password": "w9z6tefL4mO"
+  },
+  {
+    "id": 7,
+    "name": "Mayor Nelsey",
+    "usuario": "Nelsey",
+    "email": "mnelsey6@sogou.com",
+    "image": "/sheeldoncooper.png",
+    "categoria": "admin",
+    "password": "rTEnpqKG"
+  },
+  {
+    "id": 8,
+    "name": "Anthia Clemenzo",
+    "usuario": "Clemenzo",
+    "email": "aclemenzo7@smh.com.au",
+    "image": "/galgadot.png",
+    "categoria": "visitante",
+    "password": "nKnosXm"
+  },
+  {
+    "id": 9,
+    "name": "Parnell Bruhnsen",
+    "usuario": "Bruhnsen",
+    "email": "pbruhnsen8@wikia.com",
+    "image": "/galgadot.png",
+    "categoria": "visitante",
+    "password": "aFKaIwyr6TiH"
+  },
+  {
+    "id": 10,
+    "name": "Jobye Weaving",
+    "usuario": "Weaving",
+    "email": "jweaving9@google.co.uk",
+    "image": "/galgadot.png",
+    "categoria": "visitante",
+    "password": "VAWVY8VVMz"
+  },
+  {
+    "id": 11,
+    "name": "Sergeant Humburton",
+    "usuario": "Humburton",
+    "email": "shumburtona@behance.net",
+    "image": "/sheeldoncooper.png",
+    "categoria": "admin",
+    "password": "gxr7T58pm"
+  },
+  {
+    "id": 12,
+    "name": "Calhoun Klain",
+    "usuario": "Klain",
+    "email": "cklainb@about.com",
+    "image": "/robertdowneyjr.png",
+    "categoria": "admin",
+    "password": "pjWIRzY"
+  },
+  {
+    "id": 13,
+    "name": "Pauline Davidovicz",
+    "usuario": "Davidovicz",
+    "email": "pdavidoviczc@latimes.com",
+    "image": "/robertdowneyjr.png",
+    "categoria": "admin",
+    "password": "NJ7FDmm"
+  },
+  {
+    "id": 14,
+    "name": "Rebekah Sarvar",
+    "usuario": "Sarvar",
+    "email": "rsarvard@discuz.net",
+    "image": "/galgadot.png",
+    "categoria": "admin",
+    "password": "sfWdGErLR2H"
+  },
+  {
+    "id": 15,
+    "name": "Jasun Craw",
+    "usuario": "Craw",
+    "email": "jcrawe@answers.com",
+    "image": "/robertdowneyjr.png",
+    "categoria": "admin",
+    "password": "FQ3dUTfTlcyN"
+  },
+  {
+    "id": 16,
+    "name": "Aron Huerta",
+    "usuario": "Huerta",
+    "email": "ahuertaf@ibm.com",
+    "image": "/galgadot.png",
+    "categoria": "admin",
+    "password": "LcfJIcAtE"
+  },
+  {
+    "id": 17,
+    "name": "Levon Jouen",
+    "usuario": "Jouen",
+    "email": "ljoueng@abc.net.au",
+    "image": "/galgadot.png",
+    "categoria": "admin",
+    "password": "WNyNCDQSU"
+  },
+  {
+    "id": 18,
+    "name": "Pippy Petherick",
+    "usuario": "Petherick",
+    "email": "ppetherickh@nasa.gov",
+    "image": "/galgadot.png",
+    "categoria": "admin",
+    "password": "dSJa7uVb"
+  },
+  {
+    "id": 19,
+    "name": "Cassius Mayers",
+    "usuario": "Mayers",
+    "email": "cmayersi@amazon.co.uk",
+    "image": "/galgadot.png",
+    "categoria": "admin",
+    "password": "7QRP0Axg2hhg"
+  },
+  {
+    "id": 20,
+    "name": "Gerianna Horstead",
+    "usuario": "Horstead",
+    "email": "ghorsteadj@addtoany.com",
+    "image": "/userFoto.jpeg",
+    "categoria": "admin",
+    "password": "KBIUnpFpL66q"
+  },
+  {
+    "id": 21,
+    "name": "david",
+    "usuario": "david",
+    "email": "moshechami@gmail.com",
+    "password": "$2a$10$3F/9hHfVndjO8o.EEXS7F.ZfxV3xXe.RVleA46pYPoDugtyeLu/Rm",
+    "image": "/userFoto.jpeg"
+  },
+  {
+    "id": 22,
+    "name": "aa",
+    "usuario": "aa",
+    "email": "aa@g.c",
+    "password": "$2a$10$NDf4bdS8sAcDxQ6dWr8VJOHqe7ys39y9VWac5GcH/Q5chPlKC6ypK",
+    "image": "1672261024039_img_.jpeg"
+  },
+  {
+    "id": 23,
+    "name": "a",
+    "usuario": "",
+    "email": "a@s.c",
+    "password": "$2a$10$lLEurlVr6TOrgwfiTqWlbeg7hIfMzaufq4uwV.Z9JFjsUlGQLtNXm",
+    "image": "1672261909619_img_.jpeg"
+  },
+  {
+    "id": 24,
+    "name": "csdscsdvsdv",
+    "usuario": "",
+    "email": "amoshechami@gmail.com",
+    "password": "$2a$10$1JW9J55VnN6LkrnRdWPlBeUQetwjl2PJfQZMMuOzPj3/4lAv2vDDa",
+    "image": "/userFoto.jpeg"
+  },
+  {
+    "id": 25,
+    "name": "jose chami",
+    "usuario": "bircatel",
+    "email": "telasyblanco@gmail.com",
+    "password": "$2a$10$XO6h2LElcXxtFQyruzblh.A.dkazw672UpQPaSne.H1lWH4wTBlRu",
+    "image": "/userFoto.jpeg"
+  },
+  {
+    "id": 26,
+    "name": "mijal",
+    "usuario": "mijal",
+    "email": "mijal@gmail.com",
+    "password": "$2a$10$C0iZVYuq.HapRqKoiGbe1OrUkLCVxWXwk/5aR9NzV7yyVhZ5fBlrW",
+    "image": "/1672273246164_img_.jpeg"
+  },
+  {
+    "id": 27,
+    "name": "moshe david chami",
+    "usuario": "a",
+    "email": "moshechami1@gmail.com",
+    "password": "$2a$10$f3LpZO/reEe7l071oOxTX.b9g5QMBmAyi5hzk8xM.bXIwu1kruUlO",
+    "image": "/userFoto.jpeg"
+  },
+  {
+    "id": 28,
+    "name": "moshe david chami",
+    "usuario": "moshe david",
+    "email": "moshechami2@gmail.com",
+    "password": "$2a$10$gitpg5dYn34hpHo/tzFXFeArRRdMElzls0n1Yv.dhACUaeO6LUMMO",
+    "image": "1672273983341_img_.jpeg"
+  },
+  {
+    "id": 29,
+    "name": "MOSHE DAVID CHAMI",
+    "usuario": "a",
+    "email": "moshechami3@gmail.com",
+    "password": "$2a$10$RB4.JS/bJONlro0PgaHi3Os8KBlYIU3UOja22APE.rI6LT33o33HC",
+    "image": "/userFoto.jpeg",
+    "listaDeseos": [
+      "1",
+      "2",
+      "3",
+      4
+    ],
+    "carrito": [
+      "3",
+      "4"
+    ],
+    "alquileres": [
+      "5",
+      "6"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "TZIPORAAAAAAAAAA❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️🏆 ",
+    "usuario": "Tziporaaaaaaaaaa❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️🏆 ",
+    "email": "tziporachami@gmail.com",
+    "password": "$2a$10$66h4wKy9TY1lDYQWyHuLn.Wi86wCqoq7Z/66piahBnm99Wz2aqi5S",
+    "image": "1672274323006_img_.png"
+  }
 ]

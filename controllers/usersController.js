@@ -112,6 +112,10 @@ const controller = {
 		res.clearCookie('userEmail');
 		req.session.destroy();
 		return res.redirect('/');
+	},
+	deseos:(req,res)=>{
+		User.agregarToDeseos(29,  4)
+		res.redirect('/products/listadoDeseos')
 	}
 }
 
