@@ -283,5 +283,21 @@
   "email": "davidchami@gmail.com",
   "password": "$2a$10$Wb8pVxbbqqMiqsSCFWsFWuPkZCLeXJ02yGj1KFVxE0rwY3WEW6G0a",
   "image": "/userFoto.jpeg"
+ },
+ {
+  "id": 32,
+  "name": "NICOLÁS BENEDETTI",
+  "usuario": "Nicolás",
+  "email": "nico@dg.com",
+  "password": "$2a$10$Aq8Na88jcBHa0qlgfwIowuwtayFaNqRZSyZTZ1Yorma5vSJf9QuAS",
+  "image": "/userFoto.jpeg"
+ },
+ {
+  "id": 33,
+  "name": "FEDERICO SANCHEZ",
+  "usuario": "fedesanchez",
+  "email": "feddrsanchez@gmail.com",
+  "password": "$2a$10$KrIiMbEPmAhcsncKHfCIPedMJ7UKGGtgIPBR4D2181.CVl1Fc6jle",
+  "image": "/userFoto.jpeg"
  }
 ]
