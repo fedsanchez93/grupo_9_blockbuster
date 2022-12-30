@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %> 
+    <title>Lista de Usuarios </title>
+    <link rel="stylesheet" href="../../css/users.css">
+
+</head>
+<body>
+    <%- include('../partials/header') %> 
+   
+<main>
+<section class="section-lista-usuarios">
+<% listaUsers.forEach(element => { %>
+    <ul>
+        <li><%= element.id %></li><br>
+        <li><%= element.name %></li><br>
+        <li><%= element.email %> </li><br>
+        <li>Admin    <input type="checkbox" name="" id="" ></li>
+        <li><input type="button" value="Update"></li>
+    </ul>
+<% }) %>
+</section>
+</main>
+         
+    <%- include('../partials/footer') %> 
+</body>
+</html>
