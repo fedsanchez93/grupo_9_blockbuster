@@ -114,7 +114,7 @@ const controller = {
 		return res.redirect('/');
 	},
 	deseos:(req,res)=>{
-		User.agregarToDeseos(29,  4)
+		User.agregarToDeseos(28,  4)
 		res.redirect('/products/listadoDeseos')
 	}
 }

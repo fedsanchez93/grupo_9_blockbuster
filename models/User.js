@@ -54,7 +54,7 @@ const User = {
 
 	agregarToDeseos: function (idUser, idPelicula){
 		let usuario = this.findByPk(idUser)
-		let newDeseos = usuario.listaDeseos
+		let newDeseos = usuario.listaDeseos? usuario.listaDeseos : []
 		newDeseos.push(idPelicula) 
 		let newUser = {
 			...usuario,

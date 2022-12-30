@@ -241,7 +241,8 @@
     "usuario": "moshe david",
     "email": "moshechami2@gmail.com",
     "password": "$2a$10$gitpg5dYn34hpHo/tzFXFeArRRdMElzls0n1Yv.dhACUaeO6LUMMO",
-    "image": "1672273983341_img_.jpeg"
+    "image": "1672273983341_img_.jpeg",
+    "listaDeseos": [4]
   },
   {
     "id": 29,
