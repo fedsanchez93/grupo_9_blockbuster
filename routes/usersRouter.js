@@ -32,5 +32,5 @@ router.get('/logout/', usersController.logout);
 
 router.get('/listadoDeseos/:id?/', usersController.deseos)
 
-
+router.get('/listaUsuarios', usersController.listaUsuarios)
 module.exports = router;

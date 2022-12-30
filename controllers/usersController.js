@@ -95,6 +95,9 @@ const controller = {
 	deseos:(req,res)=>{
 		User.agregarToDeseos(28,  4)
 		res.redirect('/products/listadoDeseos')
+	},
+	listaUsuarios:(req,res)=>{
+		res.render('users/listaUsuarios',{listaUsers})
 	}
 }
 

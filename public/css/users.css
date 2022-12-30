@@ -52,3 +52,25 @@ form{
     border-radius: 20px;
     padding: 20px;
 }
+
+.section-lista-usuarios{
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    color: white;
+    text-align: right;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.section-lista-usuarios input{
+    color: blueviolet;
+    border: 1px blueviolet solid;
+    padding: 3px;
+}
+.section-lista-usuarios ul{
+    border: solid 1px white;
+    width: 8cm;
+}
