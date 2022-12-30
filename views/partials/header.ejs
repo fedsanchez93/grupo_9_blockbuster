@@ -4,10 +4,12 @@
             <i class="fa-solid fa-bars"></i>
         </nav>
         <nav class="left-menu">
+            <% if(locals.user) { %>
             <ul class="left-options">
                 <li><a href="/products/buscarProductos">BUSCAR</a></li>
                 <li><a href="/products/listadoDeseos"><i class="fa-solid fa-heart-circle-plus"></i> LISTA DE DESEOS</a></li>
             </ul>
+            <% } %>
         </nav>
         <a href="/"><nav class="middle-logo">
             <img src="/images/blockbuster-logo.svg">
@@ -43,9 +45,11 @@
             </ul>      
         </nav> 
         <nav class="admin-options">
+            <% if(locals.user) { %>
             <ul>
                 <a href="/products/administrarProductos"><i class="fa-solid fa-user-gear"></i></a>
             </ul>
+            <% } %>
         </nav>
     </div>
 </header>
