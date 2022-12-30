@@ -11,10 +11,18 @@
     
     <main>
         <form action="/guardarEdicionUser" method="POST">
-            <input type="text" name="name" id="" value="<%= listaUsers[0].name %> ">
-            <input type="text" name="usuario" id="" value="<%= listaUsers[0].usuario %> ">
-            <input type="text" name="email" id="" value="<%= listaUsers[0].email %> ">
-            <input type="text" name="password" id="" value="<%= listaUsers[0].password %> ">
+            <h4>Email:  <%= user.email %></h4>
+            <div>
+            <label for="name">Nombre y Apellido</label>
+            <input type="text" name="name" id="" value="<%= user.name %> "></div>
+            <div><label for="usuario">Usuario</label>
+            <input type="text" name="usuario" id="" value="<%= user.usuario %> "></div>
+            
+            <input type="text" name="password" id="" value="" placeholder="password anterior">
+            <div>
+            <input type="text" name="newPassword" id="" value="" placeholder="Nueva contraseña">
+            <input type="text" name="password" id="" value="" placeholder="Repita Nueva contraseña">
+        </div>
             <button type="submit">Guardar</button>
         </form>
     </main>

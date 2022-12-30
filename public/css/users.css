@@ -6,6 +6,7 @@
 .div-img{
     width: 200px;
     margin: auto;
+    border: 5px solid salmon;
 }
 .div-img img{
     width: 100%;
@@ -26,9 +27,28 @@ section{
     text-align: center;
 }
 
-form input, form button{
+form input{
     color: blue;
-    display: block;
-    margin: 20px auto;
+    margin: 8px auto; 
+    padding: 5px;
+    width: 300px;
+    border-radius: 5px;
+    border: 2px solid blueviolet;
 
+}
+form button{
+    color: black;
+    margin: 8px auto; 
+    padding: 5px;
+    width: 100px;
+    border-radius: 10px;
+    border: 2px solid blueviolet;
+    cursor: pointer;
+}
+form{
+    width: 80%;
+    margin: 50px auto;
+    border: 10px blueviolet solid;
+    border-radius: 20px;
+    padding: 20px;
 }
