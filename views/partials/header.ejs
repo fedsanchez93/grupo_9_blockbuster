@@ -15,9 +15,15 @@
             <img src="/images/blockbuster-logo.svg">
         </nav></a>
         <nav class="right-menu-buttons">
+            <% if(locals.user) { %>
                 <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+                <img class="img-user-nav-bar" src="/images/users/<%= user.image %>" alt="image" >
+            <% } else { %>
                 <a href="/login"><i class="fa-solid fa-circle-user"></i></a>
+            <% } %>
+            <% if(locals.user && user.category == "admin") { %>
                 <a href="/products/administrarProductos"><i class="fa-solid fa-user-gear"></i></a>
+            <% } %>
         </nav>
         <nav class="right-menu">
             <% if(locals.user) { %>
@@ -35,17 +41,14 @@
         <nav class="user-options">
             <ul>
                 <a href="/login">
-                    <% if(locals.user) { %>
-                        Hola <%= user.name  %>! 
+                    <% if(locals.user) { %>                        
                         <img class="img-user-nav-bar" src="/images/users/<%= user.image %>" alt="image" >
-                <% }else{ %>
-                    <i class="fa-solid fa-circle-user"></i>
                     <% } %>
                 </a>
             </ul>      
         </nav> 
         <nav class="admin-options">
-            <% if(locals.user) { %>
+            <% if(locals.user && user.category == "admin") { %>
             <ul>
                 <a href="/products/administrarProductos"><i class="fa-solid fa-user-gear"></i></a>
             </ul>
