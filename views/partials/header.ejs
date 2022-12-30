@@ -18,10 +18,17 @@
                 <a href="/products/administrarProductos"><i class="fa-solid fa-user-gear"></i></a>
         </nav>
         <nav class="right-menu">
+            <% if(locals.user) { %>
             <ul class="right-options">
                 <li><a href="/carrito">CARRITO</a></li>
                 <li><a href="/products/misAlquileres">MIS ALQUILERES</a></li>
             </ul>
+            <% } else {%>
+            <ul class="right-options">
+                <li><a href="/register">REGISTRARSE</a></li>
+                <li><a href="/login">INICIAR SESIÓN</a></li>
+            </ul>
+            <% } %>
         </nav> 
         <nav class="user-options">
             <ul>
