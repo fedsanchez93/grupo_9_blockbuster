@@ -30,7 +30,12 @@
             <p><%= user.email %> </p>
             </div>
             <div class="info-perfil">
-            <h3>Categoria:</h3>
+            <h3>Categoría:</h3>
+            <% if (user.categoria) { %>
+                <p><%= user.categoria %> </p>
+                <%} else { %>  
+                <p>"sin categoría"</p>  
+            <% } %>
             <p><%= user.categoria %> </p>
             </div>
             <div class="info-perfil">

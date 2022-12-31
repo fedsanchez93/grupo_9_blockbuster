@@ -253,7 +253,7 @@
   "email": "moshechami3@gmail.com",
   "password": "$2a$10$RB4.JS/bJONlro0PgaHi3Os8KBlYIU3UOja22APE.rI6LT33o33HC",
   "image": "/userFoto.jpeg",
-  "categoria":"admin",
+  "categoria": "admin",
   "listaDeseos": [
    "1",
    "2",
@@ -284,7 +284,7 @@
   "email": "davidchami@gmail.com",
   "password": "$2a$10$Wb8pVxbbqqMiqsSCFWsFWuPkZCLeXJ02yGj1KFVxE0rwY3WEW6G0a",
   "image": "/userFoto.jpeg",
-  "categoria":"admin"
+  "categoria": "admin"
  },
  {
   "id": 32,
@@ -301,7 +301,7 @@
   "email": "feddrsanchez@gmail.com",
   "password": "$2a$10$KrIiMbEPmAhcsncKHfCIPedMJ7UKGGtgIPBR4D2181.CVl1Fc6jle",
   "image": "/userFoto.jpeg",
-  "category":"admin"
+  "category": "admin"
  },
  {
   "id": 34,
@@ -310,6 +310,15 @@
   "email": "moshechami11@gmail.com",
   "password": "$2a$10$zUM2KfygKnfaDL9AGOI3ze3RI5Yw9/qRmAoS16lpUHLx0kaImVxJ2",
   "image": "1672434606439_img_.jpg",
-  "categoria":"admin"
+  "categoria": "admin"
+ },
+ {
+  "id": 35,
+  "name": "NICO BEN 1",
+  "usuario": "Nico 1",
+  "email": "nico1@dg.com",
+  "password": "$2a$10$gqLWRSIUiY79x0aURcVzJuvYNVS2.5Z/ZSpyAMFeM0XbzQeEaoJ0e",
+  "image": "1672517890698_img_.png",
+  "category": "visitor"
  }
 ]

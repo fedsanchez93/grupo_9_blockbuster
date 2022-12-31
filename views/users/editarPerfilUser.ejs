@@ -7,24 +7,63 @@
 
 </head>
 <body>
-    <%- include('../partials/header') %> 
-    
+    <%- include('../partials/header') %>
+
     <main>
+
+        <h1>Editar perfil del usuario:</h1>
+    
+    <section>
         <form action="/guardarEdicionUser" method="POST">
-            <h4>Email:  <%= user.email %></h4>
-            <div>
-            <label for="name">Nombre y Apellido</label>
-            <input type="text" name="name" id="" value="<%= user.name %> "></div>
-            <div><label for="usuario">Usuario</label>
-            <input type="text" name="usuario" id="" value="<%= user.usuario %> "></div>
+            <div class="info-perfil">
+                <label for="email">e-mail:</label>
+                <input type="email" name="email" id="" value="<%= user.email %> ">
+            </div>
+            <div class="info-perfil">
+                <label for="name">Nombre:</label>
+                <input type="text" name="name" id="" value="<%= user.name %> ">
+            </div>
+            <div class="info-perfil">
+                <label for="last_name">Apellido:</label>
+                <input type="text" name="last_name" id="" value="<%= user.name %> ">
+            </div>
+            <div class="info-perfil">
+                <label for="usuario">Usuario:</label>
+                <input type="text" name="usuario" id="" value="<%= user.usuario %> ">
+            </div>
+            <div class="info-perfil">
+                <label for="usuario">Contraseña Actual:</label>
+                <input type="password" name="password" id="" value="" placeholder="*******">
+            </div>
+            <div class="info-perfil">
+                <label for="usuario">Contraseña Nueva:</label>
+                <input type="text" name="newPassword" id="" value="" placeholder="Nueva contraseña">
+            </div>
+            <div class="info-perfil">
+                <label for="usuario">Contraseña Nueva:</label>
+                <input type="text" name="newPassword" id="" value="" placeholder="Repita Nueva contraseña">
+            </div>
+              
+            <div class="info-perfil">
+                <div class="image-upload">
+                    <label for="file-input" class="div-subir-foto">
+                        <p>Subir foto</p>
+                    </label>
+                    <input id="file-input" name="imageUser" type="file" />
+                </div>
+                
+                <div class="div-img">
+                    <img src="/images/users/<%= user.image %>" alt="img">
+                </div>
+            </div>
+           
+            <div class="botones">
+                <h2 class="button"><a href="/users/perfil">Volver</a></h2>
+                <!-- Hacer boton de actualizar datos de usuario --><h2 class="button"><a href="/users/logout">Guardar</a></h2>
+            </div>
             
-            <input type="text" name="password" id="" value="" placeholder="password anterior">
-            <div>
-            <input type="text" name="newPassword" id="" value="" placeholder="Nueva contraseña">
-            <input type="text" name="password" id="" value="" placeholder="Repita Nueva contraseña">
-        </div>
-            <button type="submit">Guardar</button>
         </form>
+    </section>
     </main>
       
     <%- include('../partials/footer') %> 
