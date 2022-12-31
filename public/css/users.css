@@ -1,33 +1,83 @@
 *{
     color: rgb(249, 240, 240);
     text-align: center;
+
 }
 
 .div-img{
-    width: 200px;
-    margin: auto;
-    border: 5px solid salmon;
-    border-radius: 25%;
-}
-.div-img img{
-    width: 100%;
-    border-radius: 20%;
+    width: 150px;
+    height: 150px;
+
 }
 
-h2{
+.div-img img{
+    width: 100%;
+    border-radius: 5%;
+}
+
+h1{
     padding-top: 40px;
+    padding-bottom: 40px;
+    text-decoration: underline;
+    text-decoration-color: var(--yellow); 
+
+
+}
+
+
+a  {
+    font-size: 15px;
+}
+
+h2.button{
+    border-radius: 15px;
+    background-color: var(--yellow);
+    height: 60px;
+    width: 150px;
+    align-items: center;
+
+}
+
+h3{
+    font-size: 25px;
+    text-align: left;
+    margin: 10px 10px;
+    text-decoration: underline;
+    text-decoration-color: var(--yellow);
+
+}
+
+p{
+    margin: 10px;
+    align-items: center;
+    font-size: 22px;
+    font-style: italic;
+}
+
+.botones{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 30px;
 }
 
 section{
     border: 1px solid white;
     border-radius: 10px;
-    width: 16cm;
+    width: 80%;
     margin: 50px auto;
-    padding: 20px;
+    padding: 5% 10%;
     color: white;
     text-align: center;
-}
+    background-color:rgba(1, 35, 83, 0.87);}
 
+section div.info-perfil{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 form input{
     color: blue;
     margin: 8px auto; 
@@ -54,24 +104,10 @@ form{
     padding: 20px;
 }
 
-.section-lista-usuarios{
-    border: 1px solid white;
-    border-radius: 10px;
-    width: 80%;
-    margin: 20px auto;
-    padding: 20px;
-    color: white;
-    text-align: right;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.section-lista-usuarios input{
-    color: blueviolet;
-    border: 1px blueviolet solid;
-    padding: 3px;
-}
-.section-lista-usuarios ul{
-    border: solid 1px white;
-    width: 8cm;
+@media (min-width: 900px) {
+
+    section{
+        width: 20cm;
+        padding: 35px 100px;
+    }
 }

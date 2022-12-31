@@ -9,24 +9,43 @@
     <%- include('../partials/header') %> 
     
     <main>
-        <h2>Perfil Usuario</h2>
+        <h1>Perfil del usuario:</h1>
         
 
         <section >
-            <h3>Nombre: <%= user.name %> </h3>
-            <h3>Usuario: <%= user.usuario %> </h3>
-            <h3>Email: <%= user.email %> </h3>
-            <h3> <%= user.category == "admin"? 'Categoria: ' +user.category : null%> </h3>
-            <div class="div-img">
-                <img src="/images/users/<%= user.image %>" alt="img">
+            <div class="info-perfil">
+            <h3>Nombre:</h3>
+            <p> <%= user.name %></p>
+            </div>
+            <div class="info-perfil">
+            <h3>Apellido:</h3>
+            <p> <%= user.name %></p>
+            </div>
+            <div class="info-perfil">
+            <h3>Usuario:</h3>
+            <p><%= user.usuario %> </p>
+            </div>
+            <div class="info-perfil">
+            <h3>Email:</h3>
+            <p><%= user.email %> </p>
+            </div>
+            <div class="info-perfil">
+            <h3>Categoria:</h3>
+            <p><%= user.categoria %> </p>
+            </div>
+            <div class="info-perfil">
+            <h3>Imágen de perfil:</h3>
+                <div class="div-img">
+                    <img src="/images/users/<%= user.image %>" alt="img">
+                </div>
+            </div>
+            
+            <div class="botones">
+                    <h2 class="button"><a href="/users/editarPerfil">Editar</a></h2>
+                    <h2 class="button"><a href="/users/logout">Cerrar sesion</a></h2>
             </div>
         </section>
 
-
-        <h3><a href="/users/logout">Cerrar sesion</a></h3>
-        <h3><a href="/users/editarPerfil">Editar Mis Datos</a></h3>
-
-        
 
     </main>
       
