@@ -320,5 +320,14 @@
   "password": "$2a$10$gqLWRSIUiY79x0aURcVzJuvYNVS2.5Z/ZSpyAMFeM0XbzQeEaoJ0e",
   "image": "1672517890698_img_.png",
   "category": "visitor"
+ },
+ {
+  "id": 36,
+  "name": "TEST TEST",
+  "usuario": "Test",
+  "email": "test@blockbuster.com",
+  "password": "$2a$10$jZNo8ezI0AvOtlIbOyeq3Oju24mHG3wAR0Rba18qdDJ29TI6.VDLi",
+  "image": "/userFoto.jpeg",
+  "category": "visitor"
  }
 ]
