@@ -9,7 +9,7 @@
     <%- include('../partials/header') %> 
     
     <main>
-    <h1>Bienvenido <%= user.name %> !</h1>
+    <h1 class = "welcome">Bienvenido, <%= user.name %> </h1>
     <section class="main-info">
         <article class="info-perfil">
             <p>Nombre y apellido: <%= user.name %></p>
@@ -23,10 +23,10 @@
             <% } %>
             </p>
             <p>Imágen de perfil:</p>
-                <div class="div-img">
-                    <img src="/images/users/<%= user.image %>" alt="img">
-                </div>
-            <div class="botones">
+            <div class="div-img">
+                <img src="/images/users/<%= user.image %>" alt="img">
+            </div>
+            <div class="buttons">
                 <a href="/users/editarPerfil" class="button">Editar</a>
                 <a href="/users/logout" class="button">Cerrar sesion</a>
             </div>
