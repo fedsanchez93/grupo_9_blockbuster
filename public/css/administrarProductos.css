@@ -1,4 +1,4 @@
-
+/* /products/administrarProductos */
 main{
     background: rgba(31,68,137,0.8);
     width: 80%;
@@ -22,6 +22,7 @@ main{
     padding: 10px;
     margin: 20px auto;
     width: fit-content;
+    height: fit-content;
     transition: 500ms ease-in-out 0s; 
 }
 
@@ -66,7 +67,7 @@ main{
     border-left: solid 1px rgb(252,193,57);
     border-radius: 25px;
     text-align: center;
-    width: 100%;
+    max-width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 20px;
@@ -241,6 +242,22 @@ h2.texto{
 iframe.trailer {
     width: 220px;
     height: 150px;
+}
+
+/* headerAdmin */
+.sectionHeaderAdmin{
+    width: 100%;
+    background-color:rgba(1, 35, 83, 0.87);
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+}
+
+.headerAdmin{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
 @media (max-width: 500px) {

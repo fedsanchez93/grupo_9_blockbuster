@@ -3,7 +3,7 @@
 <head>
     <%- include('partials/head') %> 
     <title>Blockbuster</title>
-    <link rel="stylesheet" href="css/styles-general.css">
+    <!-- <link rel="stylesheet" href="css/styles-general.css"> -->
     <link rel="stylesheet" href="/css/administrarProductos.css">    
 </head>
 <body>
@@ -11,13 +11,11 @@
     <%- include('partials/header') %>  
 
     <main>
+        <%- include('partials/headerAdmin') %>  
         <form class="form-filtrar-productos" action="/products/administrarProductos" method="get">
             <input type="search" name="filtrar" id="" class="inputBuscador" placeholder="El Guason...">
             <input class="inputBuscar" type="submit" value="Buscar pelicula">
         </form>
-
-        <a href="/products/crearNuevoProducto" class="boton-ingresar-pelicula">Ingresar una nueva pelicula</a>
-        <a href="/users/listaUsuarios" class="boton-ingresar-pelicula">Listado de usuarios</a>
         <section class="section-cards">
             <% peliculasFiltradas.forEach(element => { %>
             <article class="card">
