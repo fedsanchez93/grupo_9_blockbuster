@@ -99,6 +99,7 @@ const controller = {
 	},
 	listaUsuarios:(req,res)=>{
 		res.render('users/listaUsuarios',{listaUsers})
+		
 	}
 }
 
