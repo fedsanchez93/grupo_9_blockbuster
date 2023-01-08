@@ -6,6 +6,7 @@ const usersController = require('../controllers/usersController');
 
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
+const adminMiddleware = require('../middlewares/adminMiddleware');
 
 const validations = require('../middlewares/validateRegisterMiddleware');
 
@@ -33,4 +34,5 @@ router.get('/logout/', usersController.logout);
 router.get('/listadoDeseos/:id?/', usersController.deseos)
 
 router.get('/listaUsuarios', usersController.listaUsuarios)
+router.get('/editarUsuario', usersController.editarUsuario);
 module.exports = router;

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %> 
+    <title>Editar Perfil Usuario: <%= user.name %></title>
+    <link rel="stylesheet" href="../../css/users.css">
+
+</head>
+<body>
+    <%- include('../partials/header') %>
+
+    <main>
+
+        <h1>Editar perfil del usuario:</h1>
+    
+    <section>
+        <form action="/guardarEdicionUser" method="POST">
+            <div class="info-perfil">
+                <label for="email">e-mail:</label>
+                <input type="email" name="email" id="" value="<%= user.email %> ">
+            </div>
+            <div class="info-perfil">
+                <label for="name">Nombre:</label>
+                <input type="text" name="name" id="" value="<%= user.name %> ">
+            </div>
+            <div class="info-perfil">
+                <label for="usuario">Usuario:</label>
+                <input type="text" name="usuario" id="" value="<%= user.usuario %> ">
+            </div>
+            <div class="info-perfil">
+                <label for="usuario">Contraseña Nueva:</label>
+                <input type="text" name="newPassword" id="" value="" placeholder="Nueva contraseña">
+            </div>
+                         
+            <div class="botones">
+                <h2 class="button"><a href="/users/perfil">Volver</a></h2>
+                <!-- Hacer boton de actualizar datos de usuario --><h2 class="button"><a href="/users/logout">Guardar</a></h2>
+            </div>
+            
+        </form>
+    </section>
+    </main>
+      
+    <%- include('../partials/footer') %> 
+</body>
+</html>

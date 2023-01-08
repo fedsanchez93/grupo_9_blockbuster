@@ -100,6 +100,14 @@ const controller = {
 	listaUsuarios:(req,res)=>{
 		res.render('users/listaUsuarios',{listaUsers})
 		
+	},
+
+	editarUsuario:(req,res)=>{
+		if(req.session.userLogged.category == "admin") { 
+			res.render('users/editarPerfilAdmin',{user: req.session.userLogged});
+		} else {
+			res.redirect('/');
+		}
 	}
 }
 

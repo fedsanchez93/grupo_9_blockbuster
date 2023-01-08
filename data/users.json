@@ -186,7 +186,7 @@
   "email": "moshechami@gmail.com",
   "password": "$2a$10$3F/9hHfVndjO8o.EEXS7F.ZfxV3xXe.RVleA46pYPoDugtyeLu/Rm",
   "image": "/userFoto.jpeg",
-  "category":"admin"
+  "category": "admin"
  },
  {
   "id": 22,
@@ -328,6 +328,15 @@
   "usuario": "Test",
   "email": "test@blockbuster.com",
   "password": "$2a$10$jZNo8ezI0AvOtlIbOyeq3Oju24mHG3wAR0Rba18qdDJ29TI6.VDLi",
+  "image": "/userFoto.jpeg",
+  "category": "visitor"
+ },
+ {
+  "id": 37,
+  "name": "FEDERICO SANCHEZ 2",
+  "usuario": "fsanchez2",
+  "email": "feddrsanchez2@gmail.com",
+  "password": "$2a$10$VDOnbkYTuF/GSrrYmMhovuBUE5YYGmMingFeiFkIIwKDIqjSiGCR6",
   "image": "/userFoto.jpeg",
   "category": "visitor"
  }
