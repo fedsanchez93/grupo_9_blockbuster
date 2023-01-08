@@ -98,7 +98,50 @@ const controller = {
 		res.redirect('/products/listadoDeseos')
 	},
 	listaUsuarios:(req,res)=>{
-		res.render('users/listaUsuarios',{listaUsers})
+		res.render('users/listaUsuarios',{listaUsers,user: req.session.userLogged})
+		
+	},
+
+	editarUsuario:(req,res)=>{
+		if(req.session.userLogged.category == "admin") { 
+			let userToEdit = listaUsers.find(user => user.id == req.params.id);
+
+			res.render('users/editarPerfilAdmin',{user:req.session.userLogged, userToEdit});
+		} else {
+			res.redirect('/');
+		}
+	},
+
+	guardarUsuario:(req,res)=> {
+
+		let userToEdit = listaUsers.find(user => user.id == req.params.id);
+
+		userToEdit = {
+			"id": userToEdit.id,
+			"name": userToEdit.name,
+			"usuario": userToEdit.usuario,
+			"email": userToEdit.email,
+			password: bcrypt.hashSync(req.body.password, 10),
+			"image": userToEdit.image,
+			"category": req.body.category
+		};
+
+		listaUsers.map(user => {
+			if(userToEdit.id == user.id)
+				return user;
+		});
+
+		let newlistaUsers = listaUsers.map(element => {
+			if(userToEdit.id == element.id){return element = userToEdit}
+			return element
+		})
+
+        fs.writeFileSync(usersFilePath, JSON.stringify(newlistaUsers,null, '\t' ))
+
+			//res.json({listaUsers});
+
+		res.render('users/listaUsuarios',{listaUsers, user:req.session.userLogged});
+	//res.send('details',{user});
 	}
 }
 

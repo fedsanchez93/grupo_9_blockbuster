@@ -32,5 +32,8 @@ router.get('/logout/', usersController.logout);
 
 router.get('/listadoDeseos/:id?/', usersController.deseos)
 
-router.get('/listaUsuarios', usersController.listaUsuarios)
+router.get('/listaUsuarios', usersController.listaUsuarios);
+
+router.get('/editarUsuario/:id/', usersController.editarUsuario);
+router.put('/editarUsuario/:id/', usersController.guardarUsuario);
 module.exports = router;
