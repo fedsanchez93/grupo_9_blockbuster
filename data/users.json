@@ -332,12 +332,12 @@
 		"category": "visitor"
 	},
 	{
-		"id": 37,
-		"name": "FEDERICO SANCHEZ 2",
-		"usuario": "fsanchez2",
-		"email": "feddrsanchez2@gmail.com",
-		"password": "$2a$10$7AHd0G96EMLB.jBlHnHzquYmVNXgliozinRhEd9z0jW8WB93qQ2mq",
+		"id": 38,
+		"name": "FEDERICO SANCHEZ",
+		"usuario": "fsanchez3",
+		"email": "feddrsanchez3@gmail.com",
+		"password": "$2a$10$o6q0LjRP73PZsLytSLF/9uxNdG151YAKl7WGkSoYhRYdvfohqS1li",
 		"image": "/userFoto.jpeg",
-		"category": "visitor "
+		"category": "visitor"
 	}
 ]
