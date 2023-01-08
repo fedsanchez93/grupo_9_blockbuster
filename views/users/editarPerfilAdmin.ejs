@@ -3,7 +3,7 @@
 <head>
     <%- include('../partials/head') %> 
     <link rel="stylesheet" href="../../css/users.css">
-    <title>Editar Perfil Usuario: <%= user.name %></title>
+    <title>Editar Perfil Usuario: <%= userToEdit.name %></title>
 </head>
 <body>
     <%- include('../partials/header') %>
@@ -16,15 +16,15 @@
         <form action="/guardarEdicionUser" method="POST">
             <div class="info-perfil">
                 <label for="email">e-mail:</label>
-                <input type="email" name="email" id="" value="<%= user.email %> ">
+                <input type="email" name="email" id="" value="<%= userToEdit.email %> ">
             </div>
             <div class="info-perfil">
                 <label for="name">Nombre:</label>
-                <input type="text" name="name" id="" value="<%= user.name %> ">
+                <input type="text" name="name" id="" value="<%= userToEdit.name %> ">
             </div>
             <div class="info-perfil">
                 <label for="usuario">Usuario:</label>
-                <input type="text" name="usuario" id="" value="<%= user.usuario %> ">
+                <input type="text" name="usuario" id="" value="<%= userToEdit.usuario %> ">
             </div>
             <div class="info-perfil">
                 <label for="usuario">Contraseña Nueva:</label>
