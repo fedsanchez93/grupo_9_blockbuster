@@ -110,6 +110,29 @@ const controller = {
 		} else {
 			res.redirect('/');
 		}
+	},
+
+	guardarUsuario:(req,res)=> {
+
+		let userToEdit = listaUsers.find(user => user.id == req.params.id);
+
+		userToEdit = {
+			"id": userToEdit.id,
+			"password": bcrypt.hashSync(req.body.password, 10), 
+			"category": req.body.category
+		};
+
+		let user = listaUsers.map(user => {
+			if(userToEdit.id == user.id)
+				return user;
+		});
+
+		fs.writeFileSync(usersFilePath, JSON.stringify(listaUser,null, '\t'));
+
+		console.log(user);
+
+		res.redirect('users/listaUsuarios');
+	//res.send('details',{user});
 	}
 }
 
