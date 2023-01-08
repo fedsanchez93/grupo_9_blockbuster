@@ -35,5 +35,5 @@ router.get('/listadoDeseos/:id?/', usersController.deseos)
 router.get('/listaUsuarios', usersController.listaUsuarios);
 
 router.get('/editarUsuario/:id/', usersController.editarUsuario);
-router.post('/editarUsuario/:id/', usersController.guardarUsuario);
+router.put('/editarUsuario/:id/', usersController.guardarUsuario);
 module.exports = router;

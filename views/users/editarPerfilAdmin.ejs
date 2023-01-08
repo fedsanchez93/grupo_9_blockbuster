@@ -13,7 +13,7 @@
         <h1>Editar perfil del usuario:</h1>
     
     <section>
-        <form action="/guardarEdicionUser" method="POST">
+        <form action="/users/editarUsuario/<%=userToEdit.id%>?_method=PUT" method="POST">
             <div class="info-perfil">
                 <label for="email">e-mail:</label>
                 <input type="email" name="email" id="" value="<%= userToEdit.email %> ">
@@ -28,12 +28,16 @@
             </div>
             <div class="info-perfil">
                 <label for="usuario">Contraseña Nueva:</label>
-                <input type="password" name="newPassword" id="" value="" placeholder="Nueva contraseña">
+                <input type="password" name="password" id="" value="" placeholder="Nueva contraseña">
+            </div>
+            <div class="info-perfil">
+                <label for="usuario">Categoria:</label>
+                <input type="text" name="category" id="" value="<%= userToEdit.category %> ">
             </div>
                          
             <div class="botones">
                 <h2 class="button"><a href="/users/listaUsuarios">Volver</a></h2>
-                <h2 class="button" type="submit"><a href="/users/perfil">Guardar</a></h2>
+                <button type="submit" class="button">Guardar</button>
             </div>
             
         </form>

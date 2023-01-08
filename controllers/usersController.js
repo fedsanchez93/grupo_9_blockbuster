@@ -118,20 +118,29 @@ const controller = {
 
 		userToEdit = {
 			"id": userToEdit.id,
-			"password": bcrypt.hashSync(req.body.password, 10), 
+			"name": userToEdit.name,
+			"usuario": userToEdit.usuario,
+			"email": userToEdit.email,
+			password: bcrypt.hashSync(req.body.password, 10),
+			"image": userToEdit.image,
 			"category": req.body.category
 		};
 
-		let user = listaUsers.map(user => {
+		listaUsers.map(user => {
 			if(userToEdit.id == user.id)
 				return user;
 		});
 
-		fs.writeFileSync(usersFilePath, JSON.stringify(listaUser,null, '\t'));
+		let newlistaUsers = listaUsers.map(element => {
+			if(userToEdit.id == element.id){return element = userToEdit}
+			return element
+		})
 
-		console.log(user);
+        fs.writeFileSync(usersFilePath, JSON.stringify(newlistaUsers,null, '\t' ))
 
-		res.redirect('users/listaUsuarios');
+			//res.json({listaUsers});
+
+		res.render('users/listaUsuarios',{listaUsers, user:req.session.userLogged});
 	//res.send('details',{user});
 	}
 }
