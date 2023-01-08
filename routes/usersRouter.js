@@ -36,4 +36,9 @@ router.get('/listaUsuarios', usersController.listaUsuarios);
 
 router.get('/editarUsuario/:id/', usersController.editarUsuario);
 router.put('/editarUsuario/:id/', usersController.guardarUsuario);
+
+router.get('/eliminarUsuario/:id/', usersController.confirmarBorrado);
+router.delete('/eliminarUsuario/:id/', usersController.borrarUsuario);
+
+
 module.exports = router;

@@ -126,23 +126,40 @@ const controller = {
 			"category": req.body.category
 		};
 
-		listaUsers.map(user => {
+		/*listaUsers.map(user => {
 			if(userToEdit.id == user.id)
 				return user;
-		});
+		});*/
 
-		let newlistaUsers = listaUsers.map(element => {
+		let newListaUsers= listaUsers.map(element => {
 			if(userToEdit.id == element.id){return element = userToEdit}
 			return element
 		})
 
-        fs.writeFileSync(usersFilePath, JSON.stringify(newlistaUsers,null, '\t' ))
+        fs.writeFileSync(usersFilePath, JSON.stringify(newListaUsers,null, '\t' ))
 
-			//res.json({listaUsers});
+		res.redirect('/');
+	},
 
-		res.render('users/listaUsuarios',{listaUsers, user:req.session.userLogged});
-	//res.send('details',{user});
-	}
+	confirmarBorrado: (req,res)=> {
+		if(req.session.userLogged.category == "admin") { 
+			let userToDelete = listaUsers.find(user => user.id == req.params.id);
+			res.render('users/eliminarUsuario',{user:req.session.userLogged, userToDelete});
+		} else {
+			res.redirect('/');
+		}
+	},
+
+	borrarUsuario: (req,res)=> {
+		if(req.session.userLogged.category == "admin") { 
+			let userDelete = listaUsers.filter(user => user.id != req.params.id);
+			fs.writeFileSync(usersFilePath, JSON.stringify(userDelete,null, '\t'));
+			res.redirect('/');
+		} else {
+			res.redirect('/');
+		}
+	} 
+
 }
 
 module.exports = controller

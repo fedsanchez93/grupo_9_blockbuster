@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %> 
+    <link rel="stylesheet" href="../../css/users.css">
+    <title>Eliminar Perfil Usuario: <%= userToDelete.name %></title>
+</head>
+<body>
+    <%- include('../partials/header') %>
+
+    <main>
+
+        <h1>Eliminar perfil del usuario:</h1>
+    
+    <section>
+        <form action="/users/eliminarUsuario/<%=userToDelete.id%>?_method=DELETE" method="POST">
+            <div class="info-perfil">
+                <label for="email">e-mail:</label>
+                <input type="email" name="email" id="" value="<%= userToDelete.email %> ">
+            </div>
+            <div class="info-perfil">
+                <label for="name">Nombre:</label>
+                <input type="text" name="name" id="" value="<%= userToDelete.name %> ">
+            </div>
+            <div class="info-perfil">
+                <label for="usuario">Usuario:</label>
+                <input type="text" name="usuario" id="" value="<%= userToDelete.usuario %> ">
+            </div>
+            <div class="info-perfil">
+                <label for="usuario">Categoria:</label>
+                <input type="text" name="category" id="" value="<%= userToDelete.category %> ">
+            </div>
+                         
+            <div class="botones">
+                <h2 class="button"><a href="/users/listaUsuarios">Volver</a></h2>
+                <button type="submit" class="button">Eliminar cuenta</button>
+            </div>
+            
+        </form>
+    </section>
+    </main>
