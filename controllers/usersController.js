@@ -126,18 +126,12 @@ const controller = {
 			"category": req.body.category
 		};
 
-		/*listaUsers.map(user => {
-			if(userToEdit.id == user.id)
-				return user;
-		});*/
-
 		let newListaUsers= listaUsers.map(element => {
 			if(userToEdit.id == element.id){return element = userToEdit}
 			return element
 		})
 
         fs.writeFileSync(usersFilePath, JSON.stringify(newListaUsers,null, '\t' ))
-
 		res.redirect('/');
 	},
 
