@@ -104,7 +104,9 @@ const controller = {
 
 	editarUsuario:(req,res)=>{
 		if(req.session.userLogged.category == "admin") { 
-			res.render('users/editarPerfilAdmin',{user: req.session.userLogged});
+			let userToEdit = listaUsers.find(user => user.id == req.params.id);
+
+			res.render('users/editarPerfilAdmin',{user: userToEdit});
 		} else {
 			res.redirect('/');
 		}
