@@ -98,7 +98,7 @@ const controller = {
 		res.redirect('/products/listadoDeseos')
 	},
 	listaUsuarios:(req,res)=>{
-		res.render('users/listaUsuarios',{listaUsers})
+		res.render('users/listaUsuarios',{listaUsers,user: req.session.userLogged})
 		
 	},
 
