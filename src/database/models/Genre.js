@@ -1,3 +1,5 @@
+
+
 module.exports = (sequelize, dataTypes)=>{
 
     let alias = 'Genre'

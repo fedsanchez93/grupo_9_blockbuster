@@ -1,5 +1,4 @@
 
-
 module.exports = (sequelize, dataTypes)=>{
 
     let alias = 'Language'
@@ -12,7 +11,7 @@ module.exports = (sequelize, dataTypes)=>{
             allowNull: false
         },
         language: {
-            type: dataTypes.STRING(45),
+            type: dataTypes.STRING(50),
             allowNull: false
         }
     }
@@ -21,7 +20,7 @@ module.exports = (sequelize, dataTypes)=>{
         tableName : 'languages',
         timestamps: false
     }
-    const Language = sequelize.define(alias, cols, config)
+    const Language = sequelize.define(alias, cols, config);
     
-    return Language
+    return Language;
 }
