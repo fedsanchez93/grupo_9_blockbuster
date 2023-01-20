@@ -15,39 +15,39 @@ module.exports = (sequelize, dataTypes)=>{
             type: dataTypes.STRING(100),
             allowNull: false
         },
-        image: {
+        image_url: {
             type: dataTypes.STRING(100)
         },
         description: {
-            type: dataTypes.STRING(10000) //en realidad TEXT
+            type: dataTypes.STRING(300) //en realidad TEXT
         },
         length: {
-            type: dataTypes.DECIMAL(5,2)
+            type: dataTypes.INTEGER
         },
-        year: {
+        release_year: {
             type: dataTypes.INTEGER
         },
         price: {
-            type: dataTypes.DECIMAL(10,2)
+            type: dataTypes.DECIMAL(5,2)
         },
         trailer: {
             type: dataTypes.STRING(300)
         },
-        movie: {
-            type: dataTypes.STRING(300)
+        is_active: {
+            type: dataTypes.TINYINT
         },
-        CalificacionBlockbuster: {
-            type: dataTypes.DECIMAL(6,3)
+        movie_url: {
+            type: dataTypes.STRING(100)
         },
-        CalificacionIMDb: {
-            type: dataTypes.DECIMAL(6,3)
+        blockbuster_rating: {
+            type: dataTypes.DECIMAL(2,1)
         },
-        CalificacionRottenTomatoes: {
-            type: dataTypes.DECIMAL(6,3)
+        imdb_rating: {
+            type: dataTypes.DECIMAL(2,1)
         },
-        isActive: {
-            type: dataTypes.INTEGER
-        },
+        rotten_tomatoes_rating: {
+            type: dataTypes.DECIMAL(2,1)
+        }
     }
 
     let config = {
