@@ -6,7 +6,7 @@ module.exports = (sequelize, dataTypes)=>{
 
     let cols = {
         id: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER.UNSIGNED,
             primaryKey: true,
             autoIncrement: true,
             allowNull: false
