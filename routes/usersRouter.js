@@ -2,12 +2,12 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const app = express();
-const usersController = require('../controllers/usersController');
+const usersController = require('../src/controllers/usersController');
 
-const guestMiddleware = require('../middlewares/guestMiddleware');
-const authMiddleware = require('../middlewares/authMiddleware');
+const guestMiddleware = require('../src/middlewares/guestMiddleware');
+const authMiddleware = require('../src/middlewares/authMiddleware');
 
-const validations = require('../middlewares/validateRegisterMiddleware');
+const validations = require('../src/middlewares/validateRegisterMiddleware');
 
 // Multer
 const multer = require('multer') // multer va en routes

@@ -7,7 +7,7 @@ app.use(cookies());
 const PORT = process.env.PORT || 5000;
 const router = express.Router()
 
-const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware');
 
 const session = require('express-session')
 app.use(session({secret:'Mensaje Secreto', resave:false ,saveUninitialized:false}))

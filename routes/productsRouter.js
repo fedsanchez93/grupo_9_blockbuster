@@ -2,9 +2,9 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const app = express();
-const prodctsController = require('../controllers/productsController');
+const prodctsController = require('../src/controllers/productsController');
 
-const authMiddleware = require('../middlewares/authMiddleware');
+const authMiddleware = require('../src/middlewares/authMiddleware');
 
 // Atencion que todas las rutas de este router empiezan con /products/
 

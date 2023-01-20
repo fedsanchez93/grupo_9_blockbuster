@@ -2,11 +2,11 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const app = express();
-const mainController = require('../controllers/mainController');
+const mainController = require('../src/controllers/mainController');
 
-const authMiddleware = require('../middlewares/authMiddleware');
+const authMiddleware = require('../src/middlewares/authMiddleware');
 
-const guestMiddleware = require('../middlewares/guestMiddleware');
+const guestMiddleware = require('../src/middlewares/guestMiddleware');
 
 app.use(express.static(path.resolve(__dirname,'./public')));
 
