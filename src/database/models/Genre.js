@@ -1,4 +1,3 @@
-
 module.exports = (sequelize, dataTypes)=>{
 
     let alias = 'Genre'
@@ -11,7 +10,7 @@ module.exports = (sequelize, dataTypes)=>{
             allowNull: false
         },
         genre: {
-            type: dataTypes.STRING(45)
+            type: dataTypes.STRING(50)
         }
     }
 
@@ -19,7 +18,7 @@ module.exports = (sequelize, dataTypes)=>{
         tableName : 'genres',
         timestamps: false
     }
-    const Genre = sequelize.define(alias, cols, config)
+    const Genre = sequelize.define(alias, cols, config);
     
-    return Genre
+    return Genre;
 }
