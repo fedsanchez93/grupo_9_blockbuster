@@ -55,7 +55,7 @@ module.exports = (sequelize, dataTypes)=>{
         timestamps: true
     }
 
-    const Movie = sequelize.define(alias, cols, config)
+    const Movie = sequelize.define(alias, cols, config);
     
-    return Movie
+    return Movie;
 }
