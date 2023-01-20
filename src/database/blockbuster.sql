@@ -41,14 +41,14 @@ CREATE TABLE IF NOT EXISTS `languages` (
 CREATE TABLE IF NOT EXISTS `movies` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(100) NOT NULL,
-  `image_url` varchar(50) NOT NULL DEFAULT '',
+  `image_url` varchar(100) NOT NULL DEFAULT '',
   `description` varchar(300) NOT NULL,
   `length` int(10) unsigned NOT NULL,
-  `release_year` year(4) DEFAULT NULL,
-  `price` int(10) unsigned NOT NULL,
+  `release_year` int(10) unsigned DEFAULT NULL,
+  `price` decimal(5,2) unsigned NOT NULL DEFAULT 0.00,
   `trailer` int(11) DEFAULT NULL,
-  `is_active` binary(50) NOT NULL,
-  `movie_url` varchar(50) DEFAULT NULL,
+  `is_active` tinyint(4) NOT NULL DEFAULT 0,
+  `movie_url` varchar(100) DEFAULT NULL,
   `blockbuster_rating` decimal(2,1) unsigned DEFAULT NULL,
   `imdb_rating` decimal(2,1) unsigned DEFAULT NULL,
   `rotten_tomatoes_rating` decimal(2,1) unsigned DEFAULT NULL,
@@ -133,13 +133,14 @@ CREATE TABLE IF NOT EXISTS `users` (
   `name` varchar(50) NOT NULL,
   `username` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `password` varchar(100) NOT NULL,
-  `image_url` varchar(50) DEFAULT NULL,
-  `is_admin` binary(50) NOT NULL,
+  `password` varchar(500) NOT NULL,
+  `image_url` varchar(100) DEFAULT NULL,
+  `is_admin` tinyint(4) NOT NULL DEFAULT 0,
   `id_favorite_genre` int(10) unsigned DEFAULT NULL,
-  `is_active` binary(50) DEFAULT NULL,
+  `is_active` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `id_favorite_genre` (`id_favorite_genre`)
+  KEY `id_favorite_genre` (`id_favorite_genre`),
+  CONSTRAINT `id_favorite_genre_genre_fk` FOREIGN KEY (`id_favorite_genre`) REFERENCES `genres` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- La exportación de datos fue deseleccionada.
