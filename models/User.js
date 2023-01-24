@@ -3,7 +3,7 @@
 const fs = require('fs');
 
 const User = {
-	fileName: './data/users.json',
+	fileName: './src/data/users.json',
 
 	getData: function () {
 		return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));
@@ -72,4 +72,4 @@ const User = {
 	}
 }
 
-module.exports = User;
+module.exports = User; 
