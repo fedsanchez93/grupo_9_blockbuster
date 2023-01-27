@@ -1,5 +1,6 @@
 const path = require('path')
 const fs = require('fs');
+const db = require('../database/models');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const charactersFilePath = path.join(__dirname, '../data/characters.json')
@@ -16,7 +17,11 @@ const recomendadas = listaPeliculas.filter(function(product){
 
 const mainController = {
     home: (req,res)=>{
-        res.render('home', {masBuscadas, recomendadas, listaPersonajes, user: req.session.userLogged})
+        //res.render('home', {masBuscadas, recomendadas, listaPersonajes, user: req.session.userLogged})
+        db.Movie.findAll({
+            include: [{association: "genres"}]
+        })
+            .then(movies => res.json(movies));
     },
     login: (req,res)=>{
         res.render('login')

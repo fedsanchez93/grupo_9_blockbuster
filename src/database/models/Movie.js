@@ -52,10 +52,25 @@ module.exports = (sequelize, dataTypes)=>{
 
     let config = {
         tableName : 'movies',
-        timestamps: true
+        timestamps: false
     }
 
     const Movie = sequelize.define(alias, cols, config);
     
+    Movie.associate = (modelos)=>{
+        /*Movie.belongsTo(modelos.Genre, {
+            as:'genero',
+            foreignKey:'id_genre'
+        });*/
+
+        Movie.belongsToMany(modelos.Genre, {
+            as:'genres',
+            through:'movies_genres',
+            foreignKey:'id_movie',
+            otherKey:'id_genre',
+            timestamps:false
+        })
+    }
+
     return Movie;
 }

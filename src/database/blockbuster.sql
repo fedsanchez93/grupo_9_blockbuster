@@ -24,9 +24,11 @@ CREATE TABLE IF NOT EXISTS `genres` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `genre` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- La exportación de datos fue deseleccionada.
+-- Volcando datos para la tabla blockbuster_db.genres: ~1 rows (aproximadamente)
+REPLACE INTO `genres` (`id`, `genre`) VALUES
+	(1, 'Acción');
 
 -- Volcando estructura para tabla blockbuster_db.languages
 CREATE TABLE IF NOT EXISTS `languages` (
@@ -35,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `languages` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- La exportación de datos fue deseleccionada.
+-- Volcando datos para la tabla blockbuster_db.languages: ~0 rows (aproximadamente)
 
 -- Volcando estructura para tabla blockbuster_db.movies
 CREATE TABLE IF NOT EXISTS `movies` (
@@ -53,13 +55,15 @@ CREATE TABLE IF NOT EXISTS `movies` (
   `imdb_rating` decimal(2,1) unsigned DEFAULT NULL,
   `rotten_tomatoes_rating` decimal(2,1) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- La exportación de datos fue deseleccionada.
+-- Volcando datos para la tabla blockbuster_db.movies: ~1 rows (aproximadamente)
+REPLACE INTO `movies` (`id`, `title`, `image_url`, `description`, `length`, `release_year`, `price`, `trailer`, `is_active`, `movie_url`, `blockbuster_rating`, `imdb_rating`, `rotten_tomatoes_rating`) VALUES
+	(1, 'Titulo_test', '', 'Descripcion de prueba', 120, NULL, 0.00, NULL, 1, NULL, NULL, NULL, NULL);
 
 -- Volcando estructura para tabla blockbuster_db.movies_genres
 CREATE TABLE IF NOT EXISTS `movies_genres` (
-  `id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `id_movie` int(10) unsigned DEFAULT NULL,
   `id_genre` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -67,9 +71,11 @@ CREATE TABLE IF NOT EXISTS `movies_genres` (
   KEY `id_genre` (`id_genre`),
   CONSTRAINT `genres_id_genre_fk` FOREIGN KEY (`id_genre`) REFERENCES `genres` (`id`),
   CONSTRAINT `genres_id_movie_fk` FOREIGN KEY (`id_movie`) REFERENCES `movies` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- La exportación de datos fue deseleccionada.
+-- Volcando datos para la tabla blockbuster_db.movies_genres: ~0 rows (aproximadamente)
+REPLACE INTO `movies_genres` (`id`, `id_movie`, `id_genre`) VALUES
+	(1, 1, 1);
 
 -- Volcando estructura para tabla blockbuster_db.movies_languages
 CREATE TABLE IF NOT EXISTS `movies_languages` (
@@ -83,7 +89,7 @@ CREATE TABLE IF NOT EXISTS `movies_languages` (
   CONSTRAINT `languages_id_movie_fk` FOREIGN KEY (`id_movie`) REFERENCES `movies` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- La exportación de datos fue deseleccionada.
+-- Volcando datos para la tabla blockbuster_db.movies_languages: ~0 rows (aproximadamente)
 
 -- Volcando estructura para tabla blockbuster_db.movies_users_cart
 CREATE TABLE IF NOT EXISTS `movies_users_cart` (
@@ -97,7 +103,7 @@ CREATE TABLE IF NOT EXISTS `movies_users_cart` (
   CONSTRAINT `users_cart_id_user_fk` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- La exportación de datos fue deseleccionada.
+-- Volcando datos para la tabla blockbuster_db.movies_users_cart: ~0 rows (aproximadamente)
 
 -- Volcando estructura para tabla blockbuster_db.movies_users_rentals
 CREATE TABLE IF NOT EXISTS `movies_users_rentals` (
@@ -111,7 +117,7 @@ CREATE TABLE IF NOT EXISTS `movies_users_rentals` (
   CONSTRAINT `users_rentals_id_user_fk` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- La exportación de datos fue deseleccionada.
+-- Volcando datos para la tabla blockbuster_db.movies_users_rentals: ~0 rows (aproximadamente)
 
 -- Volcando estructura para tabla blockbuster_db.movies_users_wishlist
 CREATE TABLE IF NOT EXISTS `movies_users_wishlist` (
@@ -125,7 +131,7 @@ CREATE TABLE IF NOT EXISTS `movies_users_wishlist` (
   CONSTRAINT `users_wishlist_id_user_fk` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- La exportación de datos fue deseleccionada.
+-- Volcando datos para la tabla blockbuster_db.movies_users_wishlist: ~0 rows (aproximadamente)
 
 -- Volcando estructura para tabla blockbuster_db.users
 CREATE TABLE IF NOT EXISTS `users` (
@@ -143,7 +149,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   CONSTRAINT `id_favorite_genre_genre_fk` FOREIGN KEY (`id_favorite_genre`) REFERENCES `genres` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- La exportación de datos fue deseleccionada.
+-- Volcando datos para la tabla blockbuster_db.users: ~0 rows (aproximadamente)
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

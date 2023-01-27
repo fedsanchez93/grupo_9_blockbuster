@@ -22,5 +22,15 @@ module.exports = (sequelize, dataTypes)=>{
     }
     const Genre = sequelize.define(alias, cols, config);
     
+    Genre.associate = (modelos)=>{
+        Genre.belongsToMany(modelos.Movie, {
+            as:'movies',
+            through:'movies_genres',
+            foreignKey:'id_genre',
+            otherKey:'id_movie',
+            timestamps:false
+        })
+    }
+
     return Genre;
 }
