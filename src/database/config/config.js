@@ -1,6 +1,6 @@
 module.exports={
   "development": {
-    "username": "root",
+    "username": "root", 
     "password": '',
     "database": "blockbuster_db",
     "host": "127.0.0.1",

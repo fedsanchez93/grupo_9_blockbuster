@@ -70,6 +70,15 @@ module.exports = (sequelize, dataTypes)=>{
             otherKey:'id_genre',
             timestamps:false
         })
+
+        Movie.belongsToMany(modelos.Language, {
+            as:'languages',
+            through:'movies_languages',
+            foreignKey:'id_movie',
+            otherKey:'id_language',
+            timestamps:false
+        })
+
     }
 
     return Movie;

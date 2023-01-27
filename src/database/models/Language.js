@@ -22,5 +22,17 @@ module.exports = (sequelize, dataTypes)=>{
     }
     const Language = sequelize.define(alias, cols, config);
     
+
+    Language.associate = (modelos)=>{
+        Language.belongsToMany(modelos.Movie, {
+            as:'movies',
+            through:'movies_languages',
+            foreignKey:'id_language',
+            otherKey:'id_movie',
+            timestamps:false
+        })
+    }
+
+
     return Language;
 }
