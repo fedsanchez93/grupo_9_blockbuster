@@ -48,18 +48,21 @@ CREATE TABLE IF NOT EXISTS `movies` (
   `length` int(10) unsigned NOT NULL,
   `release_year` int(10) unsigned DEFAULT NULL,
   `price` decimal(5,2) unsigned NOT NULL DEFAULT 0.00,
-  `trailer` int(11) DEFAULT NULL,
+  `trailer` varchar(100) DEFAULT NULL,
   `is_active` tinyint(4) NOT NULL DEFAULT 0,
   `movie_url` varchar(100) DEFAULT NULL,
   `blockbuster_rating` decimal(2,1) unsigned DEFAULT NULL,
   `imdb_rating` decimal(2,1) unsigned DEFAULT NULL,
   `rotten_tomatoes_rating` decimal(2,1) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Volcando datos para la tabla blockbuster_db.movies: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla blockbuster_db.movies: ~4 rows (aproximadamente)
 REPLACE INTO `movies` (`id`, `title`, `image_url`, `description`, `length`, `release_year`, `price`, `trailer`, `is_active`, `movie_url`, `blockbuster_rating`, `imdb_rating`, `rotten_tomatoes_rating`) VALUES
-	(1, 'Titulo_test', '', 'Descripcion de prueba', 120, NULL, 0.00, NULL, 1, NULL, NULL, NULL, NULL);
+	(1, 'Titulo_test', '', 'Descripcion de prueba', 120, NULL, 0.00, NULL, 1, NULL, NULL, NULL, NULL),
+	(2, 'Test pelicula 2', 'http://sarasaimagen', 'Esto es una descripcion de prueba', 150, 2023, 223.25, '10', 1, 'http://sarasamovie', 5.0, 3.0, 8.0),
+	(3, 'Test pelicula 2', 'http://sarasaimagen', 'Esto es una descripcion de prueba', 150, 2023, 223.25, '10', 1, 'http://sarasamovie', 5.0, 3.0, 8.0),
+	(4, 'Test pelicula 3', 'http://sarasaimagen', 'Esto es una descripcion de prueba', 150, 2023, 999.99, '10', 1, 'http://sarasamovie', 5.0, 3.0, 8.0);
 
 -- Volcando estructura para tabla blockbuster_db.movies_genres
 CREATE TABLE IF NOT EXISTS `movies_genres` (
@@ -71,11 +74,13 @@ CREATE TABLE IF NOT EXISTS `movies_genres` (
   KEY `id_genre` (`id_genre`),
   CONSTRAINT `genres_id_genre_fk` FOREIGN KEY (`id_genre`) REFERENCES `genres` (`id`),
   CONSTRAINT `genres_id_movie_fk` FOREIGN KEY (`id_movie`) REFERENCES `movies` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Volcando datos para la tabla blockbuster_db.movies_genres: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla blockbuster_db.movies_genres: ~1 rows (aproximadamente)
 REPLACE INTO `movies_genres` (`id`, `id_movie`, `id_genre`) VALUES
-	(1, 1, 1);
+	(1, 1, 1),
+	(2, 3, 1),
+	(3, 4, 1);
 
 -- Volcando estructura para tabla blockbuster_db.movies_languages
 CREATE TABLE IF NOT EXISTS `movies_languages` (

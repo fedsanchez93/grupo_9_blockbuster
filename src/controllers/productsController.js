@@ -1,5 +1,6 @@
 const path = require('path')
 const fs = require('fs');
+const db = require('../database/models');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const listaPeliculas = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -85,7 +86,24 @@ const productsController = {
 
     guardarNuevoProducto:(req,res)=>{
         
-        let newPelicula = {
+        db.Movie.create({
+            title: "Test pelicula 3",
+            image_url: "http://sarasaimagen",
+            description: "Esto es una descripcion de prueba",
+            length: 150,
+            release_year: 2023,
+            price: 22300.25,
+            trailer: 10,
+            is_active: 1,
+            movie_url: "http://sarasamovie",
+            blockbuster_rating: 5,
+            imdb_rating: 3,
+            rotten_tomatoes_rating: 8
+        })
+            .then(movie => movie.setGenres(1))
+            .then(movie => res.json(movie));
+
+        /*let newPelicula = {
             id: listaPeliculas[listaPeliculas.length-1].id+1,
             titulo:req.body.titulo || '',
             imagen:req.body.imagen || "/images/MaquinasMortales.jpg",
@@ -101,9 +119,9 @@ const productsController = {
             CalificacionRottenTomatoes:req.body.CalificacionRottenTomatoes,
         }
         listaPeliculas.push(newPelicula)
-        fs.writeFileSync(productsFilePath, JSON.stringify(listaPeliculas,null, '\t' ))
+        fs.writeFileSync(productsFilePath, JSON.stringify(listaPeliculas,null, '\t' ))*/
 
-        res.redirect('/products/administrarProductos')
+        //res.redirect('/products/administrarProductos')
     },
 
     eliminarProducto:(req,res)=>{
