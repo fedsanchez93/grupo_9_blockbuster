@@ -19,7 +19,7 @@ const mainController = {
     home: (req,res)=>{
         //res.render('home', {masBuscadas, recomendadas, listaPersonajes, user: req.session.userLogged})
         db.Movie.findAll({
-            include: [{association: "genres"}]
+            include: [{association: "genres"},{association: "languages"}]
         })
             .then(movies => res.json(movies));
     },

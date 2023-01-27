@@ -87,7 +87,7 @@ const productsController = {
     guardarNuevoProducto:(req,res)=>{
         
         db.Movie.create({
-            title: "Test pelicula 4",
+            title: "Test pelicula 5",
             image_url: "http://sarasaimagen",
             description: "Esto es una descripcion de prueba",
             length: 150,
@@ -101,7 +101,7 @@ const productsController = {
             rotten_tomatoes_rating: 8
         })
             // .then(movie => movie.setGenres(1))
-            .then(movie => movie.setLanguages(1,2))
+            .then(movie => movie.setLanguages([1,2]))
             .then(movie => res.json(movie));
 
         /*let newPelicula = {
