@@ -72,12 +72,12 @@ const productsController = {
         db.Movie.update(
             {
                 title: req.body.titulo,
-                image_url: "https://i.pinimg.com/564x/f8/28/73/f828738fc037b66f2bdb74deaf36ad3d.jpg", 
+                image_url: req.body.imagen, // || "https://i.pinimg.com/564x/f8/28/73/f828738fc037b66f2bdb74deaf36ad3d.jpg", 
                 description: req.body.descripcion,
                 length: req.body.duracion,
                 release_year: req.body.release_year,
                 price: req.body.precio,
-                trailer: "https://www.youtube.com/embed/LDXYRzerjzU",
+                trailer: req.body.trailer, // || "https://www.youtube.com/embed/LDXYRzerjzU",
                 is_active: req.body.is_active,
                 movie_url: "https://www.youtube.com/embed/LDXYRzerjzU",
                 blockbuster_rating: req.body.CalificacionBlockbuster,
@@ -137,12 +137,12 @@ const productsController = {
     guardarNuevoProducto:(req,res)=>{
         db.Movie.create({
             title: req.body.titulo,
-            image_url: "https://i.pinimg.com/564x/f8/28/73/f828738fc037b66f2bdb74deaf36ad3d.jpg", 
+            image_url: req.body.imagen || "https://i.pinimg.com/564x/f8/28/73/f828738fc037b66f2bdb74deaf36ad3d.jpg", 
             description: req.body.descripcion,
             length: req.body.duracion,
             release_year: req.body.release_year,
             price: req.body.precio,
-            trailer: "https://www.youtube.com/embed/LDXYRzerjzU",
+            trailer: req.body.trailer || "https://www.youtube.com/embed/LDXYRzerjzU",
             is_active: req.body.is_active,
             movie_url: "https://www.youtube.com/embed/LDXYRzerjzU",
             blockbuster_rating: 5,
@@ -154,6 +154,8 @@ const productsController = {
                 movie.setGenres(req.body.genres)
                 movie.setLanguages(req.body.languages)
                 console.log(movie)
+                res.redirect('/products/administrarProductos')
+
             })
             .catch(errors=>{
                 res.send(errors)
@@ -178,7 +180,6 @@ const productsController = {
         listaPeliculas.push(newPelicula)
         fs.writeFileSync(productsFilePath, JSON.stringify(listaPeliculas,null, '\t' ))*/
 
-        res.redirect('/products/administrarProductos')
     },
 
     eliminarProducto:(req,res)=>{
