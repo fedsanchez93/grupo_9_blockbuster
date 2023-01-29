@@ -20,10 +20,20 @@ module.exports = (sequelize, dataTypes)=>{
     }
 
     let config = {
-        tableName : 'moviesUsersRentals',
+        tableName : 'movies_users_rentals',
         timestamps: false
     }
     const MovieUserRental = sequelize.define(alias, cols, config)
     
+    MovieUserRental.associate= modelos=>{
+
+        MovieUserRental.belongsTo(modelos.Movie,{
+            foreignKey:'id_movie'
+        })
+        MovieUserRental.belongsTo(modelos.User,{
+            foreignKey:'id_user'
+        })
+    }
+
     return MovieUserRental
 }

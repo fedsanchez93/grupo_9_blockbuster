@@ -30,6 +30,13 @@ module.exports = (sequelize, dataTypes)=>{
             otherKey:'id_movie',
             timestamps:false
         })
+        /*
+        Genre.hasMany(modelos.User,{
+            as:'users',
+            foreignKey:'id_favorite_genre'
+        })*/
+   
+        
     }
 
     return Genre;

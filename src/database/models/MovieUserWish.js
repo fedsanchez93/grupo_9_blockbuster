@@ -2,7 +2,7 @@
 
 module.exports = (sequelize, dataTypes)=>{
 
-    let alias = 'MovieUserWishe'
+    let alias = 'MovieUserWish'
 
     let cols = {
         id: {
@@ -20,10 +20,20 @@ module.exports = (sequelize, dataTypes)=>{
     }
 
     let config = {
-        tableName : 'moviesUsersWishes',
+        tableName : 'movies_users_wishlist',
         timestamps: false
     }
-    const MovieUserWishe = sequelize.define(alias, cols, config)
+    const MovieUserWish = sequelize.define(alias, cols, config)
     
-    return MovieUserWishe
+    MovieUserWish.associate= modelos=>{
+
+        MovieUserWish.belongsTo(modelos.Movie,{
+            foreignKey:'id_movie'
+        })
+        MovieUserWish.belongsTo(modelos.User,{
+            foreignKey:'id_user'
+        })
+    }
+
+    return MovieUserWish
 }

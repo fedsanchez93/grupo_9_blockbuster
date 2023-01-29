@@ -20,11 +20,21 @@ module.exports = (sequelize, dataTypes)=>{
     }
 
     let config = {
-        tableName : 'moviesUsersCart',
+        tableName : 'movies_users_cart',
         timestamps: true,
         updatedAt: false
     }
     const MovieUserCart = sequelize.define(alias, cols, config)
     
+    MovieUserCart.associate= modelos=>{
+
+        MovieUserCart.belongsTo(modelos.Movie,{
+            foreignKey:'id_movie'
+        })
+        MovieUserCart.belongsTo(modelos.User,{
+            foreignKey:'id_user'
+        })
+    }
+
     return MovieUserCart
 }

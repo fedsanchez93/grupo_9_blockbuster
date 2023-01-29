@@ -64,7 +64,7 @@ const controller = {
 			id_favorite_genre:1,
 			is_active:1
 		})
-		.then(res.redirect('/login'))
+		.then(res.redirect('/login'));
 	},
     
     loginProcess: (req, res) => {

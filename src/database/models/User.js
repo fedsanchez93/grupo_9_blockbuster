@@ -44,5 +44,37 @@ module.exports = (sequelize, dataTypes)=>{
     }
     const User = sequelize.define(alias, cols, config);
     
+    User.associate = (modelos) => {
+
+        User.belongsTo(modelos.Genre,{
+            as: 'genres',
+            foreignKey: 'id_favorite_genre'
+        })
+        /*
+        User.belongsToMany(modelos.Movie,{
+            as:'movies',
+            through:'movies_users_wishlist',
+            foreignKey:'id_user',
+            otherKey:'id_movie',
+            timestamps:false
+        })
+
+        User.belongsToMany(modelos.Movie,{
+            as:'movies',
+            through:'movies_users_cart',
+            foreignKey:'id_user',
+            otherKey:'id_movie',
+            timestamps:false
+        })
+
+        User.belongsToMany(modelos.Movie,{
+            as:'movies',
+            through:'movies_users_rentals',
+            foreignKey:'id_user',
+            otherKey:'id_movie',
+            timestamps:false
+        }) */
+    }
+
     return User;
 }
