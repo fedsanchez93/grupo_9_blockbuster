@@ -12,6 +12,21 @@
     <div class="video">
 
     </div>
+
+    <p class="titulos">Todas las pelis!!</p>
+
+    <section class="section-card">
+        <% movies.forEach(element => { %>       
+            <a href="/products/productDetail?id=<%= element.id %> " class="botonVer">
+            <article class="card">
+                <img class="img-pelicula" src="<%= element.image_url %>">
+                <h2 class="btn-neon"><%= element.title %></h2>         
+            </article>
+            </a>
+        <% }); %> 
+    </section>
+
+
     <p class="titulos">Más Buscados</p>
 
     <section class="section-card">

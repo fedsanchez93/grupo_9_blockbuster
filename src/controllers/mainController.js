@@ -21,7 +21,7 @@ const mainController = {
         db.Movie.findAll({
             include: [{association: "genres"},{association: "languages"}]
         })
-            .then(movies => res.json(movies));
+            .then(movies => res.render('home', {masBuscadas, recomendadas, listaPersonajes, user: req.session.userLogged, movies}));
     },
     login: (req,res)=>{
         res.render('login')

@@ -22,9 +22,9 @@
 
         <form class="form-ingreso-peli" action="/products/guardarNuevoProducto" method="POST">
             <div class="txt_field">
-                <input type="text" name="titulo" placeholder="2012" >
+                <input type="text" name="titulo" >
                 <span></span>
-                <label> Nombre de pelicula: 2012</label>
+                <label> Nombre de pelicula:</label>
             </div>
 
             <div class="txt_field">
@@ -48,15 +48,15 @@
                 <label>Duracion</label>
             </div>
             <div class="txt_field">
-                <input type="text" name="anio" >
+                <input type="text" name="release_year" >
                 <span></span>
                 <label>Año</label>
             </div>
-            <div class="txt_field">
+            <!-- <div class="txt_field">
                 <input type="text" name="origen">
                 <span></span>
                 <label>Origen</label>
-            </div>
+            </div> -->
             <div class="txt_field">
                 <input type="text" name="precio" >
                 <span></span>
@@ -79,7 +79,7 @@
             </div>
  
  
-            <div class="txt_field">
+            <!-- <div class="txt_field">
  
             <select class="select" name="genero" id="">
                 <option value="">Seleccionar</option>
@@ -92,12 +92,11 @@
                 <option value="Terror">Terror</option>
             </select>
 
-            <!-- <input type="text" > -->
             <span></span>
             <label>Genero</label>
-        </div>
+        </div> -->
 
-        <div class="txt_field">
+        <!-- <div class="txt_field">
  
             <select class="select" name="idioma" id="">
                 <option value="">Seleccionar</option>
@@ -107,13 +106,30 @@
                 
             </select>
 
-            <!-- <input type="text" > -->
+            <input type="text" >
             <span></span>
             <label>Idioma</label>
+        </div> -->
+
+
+        <div class="lista-check">
+            <h5>Generos</h5>
+            <% Genres.forEach(element => { %>
+                <div>
+                    <input type="checkbox" name="genres" id="<%= element.id %>" value="<%= element.id %>">
+             <label for="<%= element.id %>"><%= element.genre %> </label>
+            </div>
+            <% }) %>
         </div>
-
-
-
+        <div class="lista-check">
+            <h5>Idiomas</h5>
+            <% Languages.forEach(element => { %>
+                <div>
+                    <input type="checkbox" name="languages" id="<%= element.language %>" value="<%= element.id %>">
+             <label for="<%= element.language %>"><%= element.language %> </label>
+            </div>
+            <% }) %>
+        </div>
         
         
 
@@ -124,10 +140,10 @@
             <!-- on/off -->
             <div class="switch-holder">
                 <div class="switch-label">
-                    <span>Destacada</span>
+                    <span>Activa</span>
                 </div>
                 <div class="switch-toggle">
-                    <input type="checkbox" name="categoria" id="bluetooth">
+                    <input type="checkbox" name="is_active" value="1" id="bluetooth">
                     <label for="bluetooth"></label>
                 </div>
             </div>
@@ -140,6 +156,7 @@
                 <input id="file-input" type="file" />
             </div>
 
+            
             
             <input class="pass" type="submit" value="Subir Pelicula" >
             

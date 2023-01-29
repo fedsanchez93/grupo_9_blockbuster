@@ -46,63 +46,113 @@ const productsController = {
     editarProducto:(req,res)=>{
         let idProducto = req.query.id 
 
+        let MovieToEdit = db.Movie.findByPk(req.query.id,{include: [{association: "genres"},{association: "languages"}]})
+        let Languages = db.Language.findAll()
+        let Genres = db.Genre.findAll()
+
+        Promise.all([MovieToEdit, Languages,Genres])
+
+        .then(([MovieToEdit, Languages, Genres])=>{
+            //res.json(MovieToEdit)
+            //console.log(MovieToEdit)
+            res.render('editarProducto',{idProducto, listaPeliculas, user: req.session.userLogged, Languages, Genres, MovieToEdit})
+        })
+
         // console.log(idProducto, 'editarproducto')
-        res.render('editarProducto',{idProducto, listaPeliculas, user: req.session.userLogged})
     },
 
     guardarProductoEditado:(req,res)=>{
-        // let idProducto = req.query.id
-        let newPelicula = {
-            id: req.body.id || 1,
-            titulo:req.body.titulo,
-            imagen:req.body.imagen,
-            descripcion:req.body.descripcion,
-            genero:req.body.genero || '',
-            idioma:req.body.idioma || '',
-            duracion:req.body.duracion,
-            precio:req.body.precio,
-            trailer:req.body.trailer,
-            categoria:req.body.categoria || '',
-            CalificacionBlockbuster:req.body.CalificacionBlockbuster,
-            CalificacionIMDb:req.body.CalificacionIMDb,
-            CalificacionRottenTomatoes:req.body.CalificacionRottenTomatoes,
-        }
-        
-        // console.log(newPelicula, idProducto)
-        let newlistaPeliculas = listaPeliculas.map(element => {
-			if(newPelicula.id == element.id){return element = newPelicula}
-			return element
-		})
 
-        fs.writeFileSync(productsFilePath, JSON.stringify(newlistaPeliculas,null, '\t' ))
+        db.Movie.update(
+            {
+                title: req.body.titulo,
+                image_url: "https://i.pinimg.com/564x/f8/28/73/f828738fc037b66f2bdb74deaf36ad3d.jpg", 
+                description: req.body.descripcion,
+                length: req.body.duracion,
+                release_year: req.body.release_year,
+                price: req.body.precio,
+                trailer: "https://www.youtube.com/embed/LDXYRzerjzU",
+                is_active: req.body.is_active,
+                movie_url: "https://www.youtube.com/embed/LDXYRzerjzU",
+                blockbuster_rating: req.body.CalificacionBlockbuster,
+                imdb_rating: req.body.CalificacionIMDb,
+                rotten_tomatoes_rating: req.body.CalificacionRottenTomatoes
+
+            },{
+                where:{id:req.body.id}
+            }
+        )
+        db.Movie.findByPk(req.body.id)
+        .then(movie=>{
+            movie.setGenres(req.body.genres)
+            movie.setLanguages(req.body.languages)
+            res.redirect('/products/administrarProductos') 
+        })
+
+        // let idProducto = req.query.id  
+        // let newPelicula = {
+        //     id: req.body.id || 1,
+        //     titulo:req.body.titulo,
+        //     imagen:req.body.imagen,
+        //     descripcion:req.body.descripcion,
+        //     genero:req.body.genero || '',
+        //     idioma:req.body.idioma || '',
+        //     duracion:req.body.duracion,
+        //     precio:req.body.precio,
+        //     trailer:req.body.trailer,
+        //     categoria:req.body.categoria || '',
+        //     CalificacionBlockbuster:req.body.CalificacionBlockbuster,
+        //     CalificacionIMDb:req.body.CalificacionIMDb,
+        //     CalificacionRottenTomatoes:req.body.CalificacionRottenTomatoes,
+        // }
         
-        res.redirect('/products/administrarProductos')
+        // // console.log(newPelicula, idProducto)
+        // let newlistaPeliculas = listaPeliculas.map(element => {
+		// 	if(newPelicula.id == element.id){return element = newPelicula}
+		// 	return element
+		// })
+
+        // fs.writeFileSync(productsFilePath, JSON.stringify(newlistaPeliculas,null, '\t' ))
+        
+        
     },
 
     crearNuevoProducto:(req,res)=>{
-        let idProducto = req.query.id
-        res.render('crearNuevoProducto', {idProducto, user: req.session.userLogged})
+        let Languages = db.Language.findAll()
+        let Genres = db.Genre.findAll()
+
+        Promise.all([Languages,Genres])
+
+        .then(([Languages,Genres])=>{
+            res.render('crearNuevoProducto', {user: req.session.userLogged, Languages, Genres})
+        })
     },
 
     guardarNuevoProducto:(req,res)=>{
-        
         db.Movie.create({
-            title: "Test pelicula 5",
-            image_url: "http://sarasaimagen",
-            description: "Esto es una descripcion de prueba",
-            length: 150,
-            release_year: 2023,
-            price: 223.25,
-            trailer: 10,
-            is_active: 1,
-            movie_url: "http://sarasamovie",
+            title: req.body.titulo,
+            image_url: "https://i.pinimg.com/564x/f8/28/73/f828738fc037b66f2bdb74deaf36ad3d.jpg", 
+            description: req.body.descripcion,
+            length: req.body.duracion,
+            release_year: req.body.release_year,
+            price: req.body.precio,
+            trailer: "https://www.youtube.com/embed/LDXYRzerjzU",
+            is_active: req.body.is_active,
+            movie_url: "https://www.youtube.com/embed/LDXYRzerjzU",
             blockbuster_rating: 5,
             imdb_rating: 3,
             rotten_tomatoes_rating: 8
         })
             // .then(movie => movie.setGenres(1))
-            .then(movie => movie.setLanguages([1,2]))
-            .then(movie => res.json(movie));
+            .then(movie => {
+                movie.setGenres(req.body.genres)
+                movie.setLanguages(req.body.languages)
+                console.log(movie)
+            })
+            .catch(errors=>{
+                res.send(errors)
+            })
+            
 
         /*let newPelicula = {
             id: listaPeliculas[listaPeliculas.length-1].id+1,
@@ -122,7 +172,7 @@ const productsController = {
         listaPeliculas.push(newPelicula)
         fs.writeFileSync(productsFilePath, JSON.stringify(listaPeliculas,null, '\t' ))*/
 
-        //res.redirect('/products/administrarProductos')
+        res.redirect('/products/administrarProductos')
     },
 
     eliminarProducto:(req,res)=>{

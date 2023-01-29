@@ -148,8 +148,8 @@ input[type="submit"]:hover {
 /* on/off */
 .switch-holder {
     margin: auto;
-    width: 40%;
-    min-width: 8cm;
+    width: 6cm;
+    /* min-width: 4cm; */
     display: flex;
     padding: 10px 20px;
     border-radius: 10px;
@@ -232,7 +232,7 @@ input[type="submit"]:hover {
 
   /* estrellas */
   
-  .form-estrellas {
+  /* .form-estrellas {
     width: 250px;
     height: 50px;
     text-align: center;
@@ -266,7 +266,7 @@ input[type="submit"]:hover {
   
   input[type="radio"]:checked ~ label {
     color: orange;
-  }
+  } */
   /* fin estrellas */
 
 
@@ -300,4 +300,10 @@ input[type="submit"]:hover {
 }
 .div-subir-foto p{
   margin: auto;
+}
+
+/* checkbocks de generos e idiomas */
+.lista-check{
+  color: white;
+  margin: 10px;
 }

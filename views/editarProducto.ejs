@@ -57,11 +57,11 @@
                 <span></span>
                 <label>Año</label>
             </div>
-            <div class="txt_field">
+            <!-- <div class="txt_field">
                 <input type="text" name="origen"  value="<%= listaPeliculas[idProducto-1].origen %>" placeholder="<%= listaPeliculas[idProducto-1].origen %>" >
                 <span></span>
                 <label>Origen</label>
-            </div>
+            </div> -->
             <div class="txt_field">
                 <input type="text" name="precio"  value="<%= listaPeliculas[idProducto-1].precio %>" placeholder="<%= listaPeliculas[idProducto-1].precio %>">
                 <span></span>
@@ -84,7 +84,7 @@
             </div>
  
  
-            <div class="txt_field">
+            <!-- <div class="txt_field">
  
             <select class="select" name="genero" id="">
                 <option value="" <%= listaPeliculas[idProducto-1].genero == "" ?  "selected" : null %>  >Seleccionar</option>
@@ -97,7 +97,6 @@
                 <option value="Terror" <%= listaPeliculas[idProducto-1].genero == "Terror" ?  "selected" : null %> >Terror</option>
             </select>
 
-            <!-- <input type="text" > -->
             <span></span>
             <label>Genero</label>
         </div>
@@ -112,10 +111,9 @@
                 
             </select>
 
-            <!-- <input type="text" > -->
             <span></span>
             <label for="idioma">Idioma</label>
-        </div>
+        </div> -->
 
 
 
@@ -138,17 +136,48 @@
         </form>
     </div> -->
 
-          
+    <div class="lista-check">
+        <h5>Generos</h5>
+        <% Genres.forEach(element => { %>
+            <div>
+                <input type="checkbox" name="genres" id="<%= element.id %>" value="<%= element.id %>" 
+                <% if ( MovieToEdit.genres.length > 0) { %>
+                 <% MovieToEdit.genres.forEach(genero => { %>
+                  <%= genero.id == element.id ? 'checked' : null %> 
+                 <% }) %>
+                <% } %>
+                >
+
+         <label for="<%= element.id %>"><%= element.genre %> </label>
+        </div>
+        <% }) %>
+    </div>
+    <div class="lista-check">
+        <h5>Idiomas</h5>
+        <% Languages.forEach(element => { %>
+            <div>
+                <input type="checkbox" name="languages" id="<%= element.language %>" value="<%= element.id %>"
+                <% if ( MovieToEdit.languages.length > 0) { %>
+                    <% MovieToEdit.languages.forEach(idioma => { %>
+                     <%= idioma.id == element.id ? 'checked' : null %> 
+                    <% }) %>
+                   <% } %>
+                >
+         <label for="<%= element.language %>"><%= element.language %> </label>
+        </div>
+        <% }) %>
+    </div>
+    
           
 
 
             <!-- on/off -->
             <div class="switch-holder">
                 <div class="switch-label">
-                    <span>Destacada</span>
+                    <span>Activa</span>
                 </div>
                 <div class="switch-toggle">
-                    <input type="checkbox" id="bluetooth">
+                    <input type="checkbox" id="bluetooth" name="is_active" value="1" <%= MovieToEdit.is_active == 1 ? 'checked' : null %> >
                     <label for="bluetooth"></label>
                 </div>
             </div>
