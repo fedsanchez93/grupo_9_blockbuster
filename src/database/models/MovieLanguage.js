@@ -20,7 +20,7 @@ module.exports = (sequelize, dataTypes)=>{
     }
 
     let config = {
-        tableName : 'moviesLanguages',
+        tableName : 'movies_languages',
         timestamps: false
     }
     const MovieLanguage = sequelize.define(alias, cols, config)

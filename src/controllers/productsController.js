@@ -16,9 +16,12 @@ const productsController = {
     },
     productDetail: (req,res)=>{
         let id = req.query.id || 4
-        let anterior = id-1 || listaPeliculas.length
-        let siguiente = listaPeliculas.length>=( parseInt(id)+1) ? ( parseInt(id)+1) : 1
-        res.render('productDetail', {listaPeliculas, id, anterior, siguiente, user: req.session.userLogged})
+        let anterior = id-1 || id
+        let siguiente = (parseInt(id)+1) || 1 // listaPeliculas.length>=( parseInt(id)+1) ? ( parseInt(id)+1) : 1
+        db.Movie.findByPk(id,{include: [{association: "genres"},{association: "languages"}]})
+        .then(movie=>{
+            res.render('productDetail', {listaPeliculas, id, anterior, siguiente, user: req.session.userLogged, movie})
+        })
     },
     administrarProductos: (req,res)=>{
         let palabraBuscada = req.query.filtrar || ''
@@ -28,7 +31,10 @@ const productsController = {
                 peliculasFiltradas.push(listaPeliculas[i])
             }
         }
-        res.render('administrarProductos', {listaPeliculas, peliculasFiltradas, user: req.session.userLogged})
+        db.Movie.findAll()
+        .then(movies=>{
+            res.render('administrarProductos', {listaPeliculas, peliculasFiltradas, user: req.session.userLogged, movies})
+        })
     },
     listadoDeseos: (req,res)=>{
         res.render('listadoDeseos', {listaPeliculas, user: req.session.userLogged})
@@ -177,15 +183,18 @@ const productsController = {
 
     eliminarProducto:(req,res)=>{
         let idProducto = req.params.id
-        let newProducts =[]
+        // let newProducts =[]
 
-		listaPeliculas.forEach(element => {
-			if(idProducto != element.id){newProducts.push(element)}
-		});
-		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts,null, '\t'))
-
-
-        res.redirect('/products/administrarProductos')
+		// listaPeliculas.forEach(element => {
+		// 	if(idProducto != element.id){newProducts.push(element)}
+		// });
+		// fs.writeFileSync(productsFilePath, JSON.stringify(newProducts,null, '\t'))
+        db.MovieLanguage.destroy(   {where: {id_movie: idProducto}})
+        db.MovieGenre.destroy(  {where: {id_movie: idProducto}})
+        db.Movie.destroy(  {where:  {id:idProducto}  }  )
+        .then(luego=>{
+            res.redirect('/products/administrarProductos')
+        })
     },
     video:(req,res)=>{
         let idProducto = req.params.id || 1

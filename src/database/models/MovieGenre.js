@@ -20,7 +20,7 @@ module.exports = (sequelize, dataTypes)=>{
     }
 
     let config = {
-        tableName : 'moviesGenres',
+        tableName : 'movies_genres',
         timestamps: false
     }
     const MovieGenre = sequelize.define(alias, cols, config)

@@ -45,35 +45,40 @@
     <main>
 
         <h2 class="titulo">
-            <%= listaPeliculas[id-1].titulo %> 
+            <%= movie.title %> 
         </h2>
 
         <section class="xxxx">
 
             <div class="bloque1">
                 <div class="div-imagen">
-                    <img class="imagen" src="<%= listaPeliculas[id-1].imagen%> ">
+                    <img class="imagen" src="<%= movie.image_url%> ">
                 </div>
                 <div class="caracteristicas">
-                    <p>Idioma: <%= listaPeliculas[id-1].idioma%></p>
-                    <p>Duracion: <%= listaPeliculas[id-1].duracion%></p>
-                    <p>Año: <%= listaPeliculas[id-1].año%></p>
-                    <p>Genero: <%= listaPeliculas[id-1].genero%></p>
+                    <p>Idioma/s: <ul><% movie.languages.forEach(element => { %>
+                     <li><%= element.language %> </li>
+                    <% }) %></ul></p>
+
+                    <p>Duracion: <%= movie.length %></p>
+                    <p>Año: <%= movie.release_year %></p>
+                    <p>Generos: <ul><% movie.genres.forEach(element => { %>
+                        <li><%= element.genre %> </li>
+                       <% }) %></ul></p>
                 </div>
             </div>
 
             <div class="bloque2">
                 
                 <div class="sinopsis">
-                    <%= listaPeliculas[id-1].descripcion %>
+                    <%= movie.description %>
                 </div>
-                <iframe class="trailer" width="100%" height="350" src="<%= listaPeliculas[id-1].trailer %> " title="YouTube video player" frameborder="0" ></iframe>
+                <iframe class="trailer" width="100%" height="350" src="<%= movie.trailer %> " title="YouTube video player" frameborder="0" ></iframe>
                 <div class="botones">
                     <!-- <div class="boton trailer">
                         <a href="#">Ver trailer</a>
                     </div> -->
                     <div class="boton alquiler">
-                        <a href="/carrito/<%= listaPeliculas[id-1].id%>">Alquilar/Ver</a>   
+                        <a href="/carrito/<%= movie.id %>">Alquilar/Ver</a>   
                     </div>
                 </div>
             </div>
@@ -82,9 +87,9 @@
                 <div class="calificaciones">
                     <ul></a>
                         <li><a class="botonNav" href="/products/productDetail?id=<%= anterior %> "> <= Anterior </a>    <a class="botonNav" href="/products/productDetail?id=<%= siguiente %>"> Siguiente =></a></li>
-                        <li><a href="#">Calificación Blockbuster</a><div class="calificacion"><%= listaPeliculas[id-1].CalificacionBlockbuster %></div></li>
-                        <li><a href="#">Calificación IMDb</a> <div class="calificacion"><%= listaPeliculas[id-1].CalificacionIMDb %></div></li>
-                        <li><a href="#">Calificación Rotten Tomatoes </a><div class="calificacion"><%= listaPeliculas[id-1].CalificacionRottenTomatoes %></div></li>
+                        <li><a href="#">Calificación Blockbuster</a><div class="calificacion"><%= movie.blockbuster_rating %></div></li>
+                        <li><a href="#">Calificación IMDb</a> <div class="calificacion"><%= movie.imdb_rating %></div></li>
+                        <li><a href="#">Calificación Rotten Tomatoes </a><div class="calificacion"><%= movie.rotten_tomatoes_rating %></div></li>
                         <li><a class="botonNav" href="#"> <i class="fa-solid fa-heart-circle-plus"></i> Agregar a Mis Deseos</a></li>
                         <li><a class="botonNav" href="#"> <i class="fa-solid fa-cart-plus"></i> Agregar al Carrito</a></li>
                     </ul>

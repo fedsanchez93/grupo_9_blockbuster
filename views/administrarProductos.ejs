@@ -17,7 +17,26 @@
             <input class="inputBuscar" type="submit" value="Buscar pelicula">
         </form>
         <section class="section-cards">
-            <% peliculasFiltradas.forEach(element => { %>
+
+            <% movies.forEach(element => { %>
+                <article class="card">
+                    <div class="div-img-video">
+                        <img class="img-pelicula" src="<%= element.image_url %> ">
+                        <iframe class="trailer" src="<%= element.trailer %> " title="YouTube video player" frameborder="0" ></iframe>
+                    </div>
+                    <h2 class="texto">"<%= element.title %>" </h2>
+                    <div class="div-botones">
+                        <a href="/products/editarProducto?id=<%= element.id %>" class="botonFormBusc">Editar</a>
+                        <a href="/products/productDetail?id=<%= element.id %>" class="botonFormBusc">Ver</a>
+    
+                        <form action="/products/eliminarProducto/<%= element.id %>/?_method=DELETE" method="POST">
+                            <input class="botonFormDelete" type="submit" value="Eliminar">
+                        </form>
+                    </div>
+                </article>
+                <% }); %> 
+
+            <!-- <% peliculasFiltradas.forEach(element => { %>
             <article class="card">
                 <div class="div-img-video">
                     <img class="img-pelicula" src="<%= element.imagen %> ">
@@ -33,7 +52,7 @@
                     </form>
                 </div>
             </article>
-            <% }); %> 
+            <% }); %>  -->
         </section>
 
     </main>
