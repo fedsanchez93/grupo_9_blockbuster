@@ -3,6 +3,7 @@ const fs = require('fs');
 const bcrypt = require('bcryptjs')
 const User = require('../../models/User');
 const { validationResult } = require('express-validator');
+const db = require('../database/models');
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const listaUsers = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -51,6 +52,19 @@ const controller = {
 		let userCreated = User.create(userToCreate);
         console.log(userCreated)
 		return res.redirect('/login');
+	},
+	crear: (req,res)=>{
+		db.User.create({
+			name: req.body.name,
+			username:req.body.usuario,
+			email:req.body.email,
+			password: bcrypt.hashSync(req.body.password, 10),
+			image_url: req.file ? req.file.filename : '/userFoto.jpeg',
+			is_admin:1,
+			id_favorite_genre:1,
+			is_active:1
+		})
+		.then(res.redirect('/login'))
 	},
     
     loginProcess: (req, res) => {

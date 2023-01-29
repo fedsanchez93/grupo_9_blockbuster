@@ -25,7 +25,7 @@ const storage = multer.diskStorage({
 app.use(express.static(path.resolve(__dirname,'./public')));
 
 router.get('/perfil/', authMiddleware, usersController.perfil)
-router.post('/guardarRegistro', uploadFile.single('imageUser'), validations, usersController.processRegister)
+router.post('/guardarRegistro', uploadFile.single('imageUser'), validations, usersController.crear)
 router.get('/editarPerfil', usersController.editarPerfil)
 router.post('/login',guestMiddleware, usersController.loginProcess)
 router.get('/logout/', usersController.logout);
