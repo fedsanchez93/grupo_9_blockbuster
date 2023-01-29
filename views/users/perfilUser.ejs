@@ -13,10 +13,10 @@
     <section class="main-info">
         <article class="info-perfil">
             <p>Nombre y apellido: <%= user.name %></p>
-            <p>Usuario: <%= user.usuario %></p>
+            <p>Usuario: <%= user.username %></p>
             <p>Email: <%= user.email %></p>
             <p>Categoría:
-            <% if (user.category == 'admin') { %>
+            <% if (user.is_admin == 1) { %>
                 Administrador
                 <%} else { %>  
                 Visitante
@@ -24,7 +24,7 @@
             </p>
             <p>Imágen de perfil:</p>
             <div class="div-img">
-                <img src="/images/users/<%= user.image %>" alt="img">
+                <img src="/images/users/<%= user.image_url%>" alt="img">
             </div>
             <div class="buttons">
                 <a href="/users/editarPerfil" class="button">Editar</a>

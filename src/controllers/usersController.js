@@ -1,7 +1,8 @@
 const path = require('path')
 const fs = require('fs');
 const bcrypt = require('bcryptjs')
-const User = require('../../models/User');
+//const User = require('../../models/User');
+const User = require('../database/models/User');
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
 
@@ -9,10 +10,15 @@ const usersFilePath = path.join(__dirname, '../data/users.json');
 const listaUsers = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const controller = {
-    perfil:(req,res)=>{
+/*    perfil:(req,res)=>{
         let id = req.params.id
         res.render('users/perfilUser',{listaUsers, id, user: req.session.userLogged})
-    },
+    }*/
+	perfil: (req, res) => {
+		db.User.findByPk(3,{include: [{association: "genres"}]})
+			.then(user => res.json(user));//res.render('users/perfilUser',{user, user: req.session.userLogged}))
+
+	},
     editarPerfil:(req,res)=>{
         res.render('users/editarPerfilUser',{listaUsers, user: req.session.userLogged})
     },
@@ -119,10 +125,8 @@ const controller = {
 
 	editarUsuario:(req,res)=>{
 		if(req.session.userLogged.category == "admin") { 
-			//let userToEdit = listaUsers.find(user => user.id == req.params.id);
 			db.User.findByPk(req.params.id,{include: [{association: "genres"}]})
 				.then(userToEdit => res.render('users/editarPerfilAdmin',{user:req.session.userLogged, userToEdit}));
-			//res.render('users/editarPerfilAdmin',{user:req.session.userLogged, userToEdit});
 		} else {
 			res.redirect('/');
 		}
@@ -130,7 +134,6 @@ const controller = {
 
 	guardarUsuario:(req,res)=> {
 
-		//let userToEdit = listaUsers.find(user => user.id == req.params.id);
 		db.User.findByPk(req.params.id,{include: [{association: "genres"}]})
 			.then(userToEdit => userToEdit = {
 				"id": userToEdit.id,
@@ -156,14 +159,6 @@ const controller = {
 				where: {id: req.params.id}
 			})
 			.then(res.redirect('/'));
-		/*
-		let newListaUsers= listaUsers.map(element => {
-			if(userToEdit.id == element.id){return element = userToEdit}
-			return element
-		})
-
-        fs.writeFileSync(usersFilePath, JSON.stringify(newListaUsers,null, '\t' ))
-		res.redirect('/'); */
 	},
 
 	confirmarBorrado: (req,res)=> {
