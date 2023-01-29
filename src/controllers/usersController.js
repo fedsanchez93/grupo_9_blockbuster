@@ -130,25 +130,40 @@ const controller = {
 
 	guardarUsuario:(req,res)=> {
 
-		let userToEdit = listaUsers.find(user => user.id == req.params.id);
+		//let userToEdit = listaUsers.find(user => user.id == req.params.id);
+		db.User.findByPk(req.params.id,{include: [{association: "genres"}]})
+			.then(userToEdit => userToEdit = {
+				"id": userToEdit.id,
+				"name": userToEdit.name,
+				"usuario": userToEdit.username,
+				"email": userToEdit.email,
+				password: bcrypt.hashSync(req.body.password, 10),
+				"image": userToEdit.image,
+				"category": req.body.category
+			})
 
-		userToEdit = {
-			"id": userToEdit.id,
-			"name": userToEdit.name,
-			"usuario": userToEdit.usuario,
-			"email": userToEdit.email,
-			password: bcrypt.hashSync(req.body.password, 10),
-			"image": userToEdit.image,
-			"category": req.body.category
-		};
-
+		db.User.update(
+			{
+				"id": req.body.id,
+				"name": req.body.name,
+				"usuario": req.body.username,
+				"email": req.body.email,
+				password: bcrypt.hashSync(req.body.password, 10),
+				"image": req.body.image,
+				"category": req.body.category
+			},
+			{
+				where: {id: req.params.id}
+			})
+			.then(res.redirect('/'));
+		/*
 		let newListaUsers= listaUsers.map(element => {
 			if(userToEdit.id == element.id){return element = userToEdit}
 			return element
 		})
 
         fs.writeFileSync(usersFilePath, JSON.stringify(newListaUsers,null, '\t' ))
-		res.redirect('/');
+		res.redirect('/'); */
 	},
 
 	confirmarBorrado: (req,res)=> {
