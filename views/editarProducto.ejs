@@ -24,36 +24,22 @@
 
         <form class="form-ingreso-peli" action="/products/editarProducto?_method=PUT" method="POST">
 
-            <input class="input-id" type="text" name="id" value="<%= idProducto %>">
+            <input class="input-id" type="text" name="id" value="<%= idProducto %>"> <!-- input oculto para q llegue en el body! -->
 
             <div class="txt_field">
-                <input type="text" name="titulo" value="<%= listaPeliculas[idProducto-1].titulo %>"  placeholder="<%= listaPeliculas[idProducto-1].titulo %>" >
+                <input type="text" name="titulo" value="<%= MovieToEdit.title %>"  placeholder="<%= MovieToEdit.title %>"  >
                 <span></span>
-                <label> Nombre de pelicula: <%= listaPeliculas[idProducto-1].titulo %>  ID: <%= listaPeliculas[idProducto-1].id %> </label>
+                <label> Nombre de la pelicula</label>
             </div>
 
+           
             <div class="txt_field">
-                <input type="text" name="descripcion"  value="<%= listaPeliculas[idProducto-1].descripcion %>" placeholder="<%= listaPeliculas[idProducto-1].descripcion %>" >
-                <span></span>
-                <label>Descripcion</label>
-            </div>
-            <div class="txt_field">
-                <input type="text" name="imagen"  value="<%= listaPeliculas[idProducto-1].imagen %>" placeholder="<%= listaPeliculas[idProducto-1].imagen %> ">
-                <span></span>
-                <label>URL imagen</label>
-            </div>
-            <div class="txt_field">
-                <input type="text" name="trailer"  value="<%= listaPeliculas[idProducto-1].trailer %>"  placeholder="<%= listaPeliculas[idProducto-1].trailer %>">
-                <span></span>
-                <label>URL Trailer</label>
-            </div>
-            <div class="txt_field">
-                <input type="text" name="duracion"  value="<%= listaPeliculas[idProducto-1].duracion %>" placeholder="<%= listaPeliculas[idProducto-1].duracion %>">
+                <input type="text" name="duracion"  value="<%= MovieToEdit.length %>" placeholder="<%= MovieToEdit.length %>">
                 <span></span>
                 <label>Duracion</label>
             </div>
             <div class="txt_field">
-                <input type="text" name="anio"  value="<%= listaPeliculas[idProducto-1].anio %>" placeholder="<%= listaPeliculas[idProducto-1].anio %>">
+                <input type="text" name="anio"  value="<%= MovieToEdit.release_year %>" placeholder="<%= MovieToEdit.release_year %>">
                 <span></span>
                 <label>Año</label>
             </div>
@@ -63,27 +49,49 @@
                 <label>Origen</label>
             </div> -->
             <div class="txt_field">
-                <input type="text" name="precio"  value="<%= listaPeliculas[idProducto-1].precio %>" placeholder="<%= listaPeliculas[idProducto-1].precio %>">
+                <input type="text" name="precio"  value="<%= MovieToEdit.price %>" placeholder="<%= MovieToEdit.price %>">
                 <span></span>
                 <label>Precio</label>
             </div>
             <div class="txt_field">
-                <input type="text" name="CalificacionBlockbuster" value="<%= listaPeliculas[idProducto-1].CalificacionBlockbuster %>"  placeholder="<%= listaPeliculas[idProducto-1].CalificacionBlockbuster %>" >
+                <input type="text" name="CalificacionBlockbuster" value="<%= MovieToEdit.blockbuster_rating %>"  placeholder="<%= MovieToEdit.blockbuster_rating %>" >
                 <span></span>
                 <label>Calificacion Blockbuster</label>
             </div>
             <div class="txt_field">
-                <input type="text" name="CalificacionIMDb" value="<%= listaPeliculas[idProducto-1].CalificacionIMDb %>"  placeholder="<%= listaPeliculas[idProducto-1].CalificacionIMDb %>">
+                <input type="text" name="CalificacionIMDb" value="<%= MovieToEdit.imdb_rating %>"  placeholder="<%= MovieToEdit.imdb_rating %>">
                 <span></span>
                 <label>Calificacion IMDb</label>
             </div>
             <div class="txt_field">
-                <input type="text" name="CalificacionRottenTomatoes" value="<%= listaPeliculas[idProducto-1].CalificacionRottenTomatoes %>"  placeholder="<%= listaPeliculas[idProducto-1].CalificacionRottenTomatoes %>">
+                <input type="text" name="CalificacionRottenTomatoes" value="<%= MovieToEdit.rotten_tomatoes_rating %>"  placeholder="<%= MovieToEdit.rotten_tomatoes_rating %>">
                 <span></span>
                 <label>Calificacion Rotten Tomatoes</label>
             </div>
  
+
+            <!-- <div class="txt_field">
+                <input type="text" name="descripcion"  value="<%= MovieToEdit.description %>" placeholder="<%= MovieToEdit.description %>" >
+                <span></span>
+                <label>Descripcion</label>
+            </div> -->
+            <div class="txt_field">
+                <input type="text" name="imagen"  value="<%= MovieToEdit.image_url %>" placeholder="<%= MovieToEdit.image_url %> ">
+                <span></span>
+                <label>URL imagen</label>
+            </div>
+            <div class="txt_field">
+                <input type="text" name="trailer"  value="<%= MovieToEdit.trailer %>"  placeholder="<%= MovieToEdit.trailer %>">
+                <span></span>
+                <label>URL Trailer</label>
+            </div>
  
+            <article>
+            <div class="text-area">
+                <h5>Descripcion</h5>
+                <textarea name="descripcion" cols="50" rows="5" placeholder="<%= MovieToEdit.description %>"><%= MovieToEdit.description %></textarea>
+            </div>
+        </article>
             <!-- <div class="txt_field">
  
             <select class="select" name="genero" id="">
