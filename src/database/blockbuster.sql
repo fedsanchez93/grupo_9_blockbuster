@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `genres` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Volcando datos para la tabla blockbuster_db.genres: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla blockbuster_db.genres: ~0 rows (aproximadamente)
 REPLACE INTO `genres` (`id`, `genre`) VALUES
 	(1, 'Acción');
 
@@ -57,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `movies` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Volcando datos para la tabla blockbuster_db.movies: ~4 rows (aproximadamente)
+-- Volcando datos para la tabla blockbuster_db.movies: ~3 rows (aproximadamente)
 REPLACE INTO `movies` (`id`, `title`, `image_url`, `description`, `length`, `release_year`, `price`, `trailer`, `is_active`, `movie_url`, `blockbuster_rating`, `imdb_rating`, `rotten_tomatoes_rating`) VALUES
 	(1, 'Titulo_test', '', 'Descripcion de prueba', 120, NULL, 0.00, NULL, 1, NULL, NULL, NULL, NULL),
 	(2, 'Test pelicula 2', 'http://sarasaimagen', 'Esto es una descripcion de prueba', 150, 2023, 223.25, '10', 1, 'http://sarasamovie', 5.0, 3.0, 8.0),
@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS `movies_genres` (
   CONSTRAINT `genres_id_movie_fk` FOREIGN KEY (`id_movie`) REFERENCES `movies` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Volcando datos para la tabla blockbuster_db.movies_genres: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla blockbuster_db.movies_genres: ~3 rows (aproximadamente)
 REPLACE INTO `movies_genres` (`id`, `id_movie`, `id_genre`) VALUES
 	(1, 1, 1),
 	(2, 3, 1),
@@ -152,9 +152,14 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`),
   KEY `id_favorite_genre` (`id_favorite_genre`),
   CONSTRAINT `id_favorite_genre_genre_fk` FOREIGN KEY (`id_favorite_genre`) REFERENCES `genres` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Volcando datos para la tabla blockbuster_db.users: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla blockbuster_db.users: ~4 rows (aproximadamente)
+REPLACE INTO `users` (`id`, `name`, `username`, `email`, `password`, `image_url`, `is_admin`, `id_favorite_genre`, `is_active`) VALUES
+	(1, 'Test test uno', 'test uno', 'test@test.com', '$2a$10$uFkSkWAT2pczqqa4ZuSB9uG748A9VqEls10kJl5DVx2WtPJcFYdjm', '/userFoto.jpeg', 0, 1, 1),
+	(2, 'Test test 2', 'test2', 'test2@test.com', '$2a$10$TzdBzqXJOjPaKN9kT0eEEenvDic37k1gEIA.bv.XChSBdyDqAOPBS', '/userFoto.jpeg', 1, 1, 1),
+	(3, 'Federico Sanchez', 'fedsanchez', 'feddrsanchez@gmail.com', '$2a$10$Wek894WKlaHSD6OjBp5GJ.1Yhp9URzlA6w/WP2VST2KxeOh0e9px6', '/userFoto.jpeg', 1, 1, 1),
+	(4, 'admin', 'admin', 'admin@admin.com', '$2a$10$DWLQecg8/VsWmnqAZVij0.cUyzE8TZoVpkqOnPI7koUXpKle23B2O', '/userFoto.jpeg', 1, 1, 1);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

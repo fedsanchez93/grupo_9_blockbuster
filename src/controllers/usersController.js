@@ -16,7 +16,7 @@ const controller = {
     }*/
 	perfil: (req, res) => {
 		db.User.findByPk(3,{include: [{association: "genres"}]})
-			.then(user => res.json(user));//res.render('users/perfilUser',{user, user: req.session.userLogged}))
+			.then(user => res.render('users/perfilUser',{user, user: req.session.userLogged}))
 
 	},
     editarPerfil:(req,res)=>{
@@ -74,39 +74,44 @@ const controller = {
 	},
     
     loginProcess: (req, res) => {
-		let userToLogin = User.findByField('email', req.body.email);
-		
-		if(userToLogin) {
-			let isOkThePassword = bcrypt.compareSync(req.body.password, userToLogin.password);
-			if (isOkThePassword) {
-				delete userToLogin.password;
-				req.session.userLogged = userToLogin;
-
-				if(req.body.remember_user) {
-					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 * 24 * 10}) //dura 10 dias
+		//let userToLogin = db.User.findByField('email', req.body.email);	
+		db.User.findAll({
+			where:{"email":req.body.email}
+		})
+			//.then(userToLogin => console.log(userToLogin));
+			.then(userToLogin => {
+				let isOkThePassword = bcrypt.compareSync(req.body.password, '$10$DWLQecg8/VsWmnqAZVij0.cUyzE8TZoVpkqOnPI7koUXpKle23B2O');
+				if (isOkThePassword) {
+					delete userToLogin.password;
+					req.session.userLogged = userToLogin;
+	
+					if(req.body.remember_user) {
+						res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 * 24 * 10}) //dura 10 dias
+					}
+	
+					return res.redirect('/users/perfil/');
 				}
-
-				return res.redirect('/users/perfil/');
-			} 
-
+			})
+			/*	
+				return res.render('login', {
+					errors: {
+						email: {
+							msg: 'Las credenciales son inválidas'
+						}
+					},
+					oldData: req.body
+				});
+			}
+	
 			return res.render('login', {
 				errors: {
 					email: {
-						msg: 'Las credenciales son inválidas'
+						msg: 'No se encuentra este email en nuestra base de datos'
 					}
 				},
 				oldData: req.body
 			});
-		}
-
-		return res.render('login', {
-			errors: {
-				email: {
-					msg: 'No se encuentra este email en nuestra base de datos'
-				}
-			},
-			oldData: req.body
-		});
+		})*/
 	},
     logout: (req, res) => {
 		res.clearCookie('userEmail');
