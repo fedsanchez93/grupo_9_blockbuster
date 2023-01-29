@@ -78,7 +78,7 @@ module.exports = (sequelize, dataTypes)=>{
             otherKey:'id_language',
             timestamps:false
         })
-        /*
+        
         Movie.belongsToMany(modelos.User, {
             as:'users',
             through:'movies_users_wishlist',
@@ -86,7 +86,7 @@ module.exports = (sequelize, dataTypes)=>{
             otherKey:'id_user',
             timestamps:false
         })
-
+        /*
         Movie.belongsToMany(modelos.User, {
             as:'users',
             through:'movies_users_cart',
@@ -94,14 +94,14 @@ module.exports = (sequelize, dataTypes)=>{
             otherKey:'id_user',
             timestamps:false
         })
-
+        
         Movie.belongsToMany(modelos.User, {
             as:'users',
             through:'movies_users_rentals',
             foreignKey:'id_movie',
             otherKey:'id_user',
             timestamps:false
-        })*/
+        }) */
 
     }
 

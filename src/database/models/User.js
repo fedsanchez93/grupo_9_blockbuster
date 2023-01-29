@@ -50,15 +50,15 @@ module.exports = (sequelize, dataTypes)=>{
             as: 'genres',
             foreignKey: 'id_favorite_genre'
         })
-        /*
+        
         User.belongsToMany(modelos.Movie,{
             as:'movies',
-            through:'movies_users_wishlist',
+            through:'movies_wishlist',
             foreignKey:'id_user',
             otherKey:'id_movie',
             timestamps:false
         })
-
+        /*
         User.belongsToMany(modelos.Movie,{
             as:'movies',
             through:'movies_users_cart',
@@ -66,7 +66,7 @@ module.exports = (sequelize, dataTypes)=>{
             otherKey:'id_movie',
             timestamps:false
         })
-
+        
         User.belongsToMany(modelos.Movie,{
             as:'movies',
             through:'movies_users_rentals',
