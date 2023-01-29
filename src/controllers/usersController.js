@@ -60,7 +60,7 @@ const controller = {
 			email:req.body.email,
 			password: bcrypt.hashSync(req.body.password, 10),
 			image_url: req.file ? req.file.filename : '/userFoto.jpeg',
-			is_admin:1,
+			is_admin:0,
 			id_favorite_genre:1,
 			is_active:1
 		})
@@ -112,15 +112,17 @@ const controller = {
 		res.redirect('/products/listadoDeseos')
 	},
 	listaUsuarios:(req,res)=>{
-		res.render('users/listaUsuarios',{listaUsers,user: req.session.userLogged})
+		db.User.findAll()
+			.then(users => res.render('users/listaUsuarios',{users,user: req.session.userLogged}));
 		
 	},
 
 	editarUsuario:(req,res)=>{
 		if(req.session.userLogged.category == "admin") { 
-			let userToEdit = listaUsers.find(user => user.id == req.params.id);
-
-			res.render('users/editarPerfilAdmin',{user:req.session.userLogged, userToEdit});
+			//let userToEdit = listaUsers.find(user => user.id == req.params.id);
+			db.User.findByPk(req.params.id,{include: [{association: "genres"}]})
+				.then(userToEdit => res.render('users/editarPerfilAdmin',{user:req.session.userLogged, userToEdit}));
+			//res.render('users/editarPerfilAdmin',{user:req.session.userLogged, userToEdit});
 		} else {
 			res.redirect('/');
 		}
