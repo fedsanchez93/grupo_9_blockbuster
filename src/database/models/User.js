@@ -52,15 +52,15 @@ module.exports = (sequelize, dataTypes)=>{
         })
         
         User.belongsToMany(modelos.Movie,{
-            as:'movies',
+            as:'movies_wishlist_',
             through:'movies_wishlist',
             foreignKey:'id_user',
             otherKey:'id_movie',
             timestamps:false
         })
-        /*
+        
         User.belongsToMany(modelos.Movie,{
-            as:'movies',
+            as:'movies_cart',
             through:'movies_users_cart',
             foreignKey:'id_user',
             otherKey:'id_movie',
@@ -68,12 +68,12 @@ module.exports = (sequelize, dataTypes)=>{
         })
         
         User.belongsToMany(modelos.Movie,{
-            as:'movies',
+            as:'movies_rentals',
             through:'movies_users_rentals',
             foreignKey:'id_user',
             otherKey:'id_movie',
             timestamps:false
-        }) */
+        }) 
     }
 
     return User;
