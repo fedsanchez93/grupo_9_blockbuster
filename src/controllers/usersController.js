@@ -135,22 +135,22 @@ const controller = {
 			.then(userToEdit => userToEdit = {
 				"id": userToEdit.id,
 				"name": userToEdit.name,
-				"usuario": userToEdit.username,
+				"username": userToEdit.username,
 				"email": userToEdit.email,
 				password: bcrypt.hashSync(req.body.password, 10),
 				"image": userToEdit.image,
-				"category": req.body.category
+				"is_admin": userToEdit.is_admin
 			})
 
 		db.User.update(
 			{
 				"id": req.body.id,
 				"name": req.body.name,
-				"usuario": req.body.username,
+				"username": req.body.username,
 				"email": req.body.email,
 				password: bcrypt.hashSync(req.body.password, 10),
 				"image": req.body.image,
-				"category": req.body.category
+				"is_admin": req.body.is_admin
 			},
 			{
 				where: {id: req.params.id}

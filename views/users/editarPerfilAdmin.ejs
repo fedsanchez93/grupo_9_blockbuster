@@ -24,7 +24,7 @@
             </div>
             <div class="info-perfil">
                 <label for="usuario">Usuario:</label>
-                <input type="text" name="usuario" id="" value="<%= userToEdit.username %>">
+                <input type="text" name="username" id="" value="<%= userToEdit.username %>">
             </div>
             <div class="info-perfil">
                 <label for="usuario">Contraseña Nueva:</label>
@@ -32,7 +32,7 @@
             </div>
             <div class="info-perfil">
                 <label for="usuario">Categoría actual:</label>
-                <% if(userToEdit.category == "admin") { %>
+                <% if(userToEdit.is_admin == 1) { %>
                     <label for="usuario">Administrador</label>
                 <% } else { %>
                     <label for="usuario">Visitante</label>
@@ -40,8 +40,8 @@
             </div>
             <div class="info-perfil">
                 <label for="usuario">Cambiar categoría:</label>
-                <input type="radio" name="category" id="" value="admin"> Administrador 
-                <input type="radio" name="category" id="" value="visitor"> Visitante
+                <input type="radio" name="is_admin" id="" value="1"> Administrador 
+                <input type="radio" name="is_admin" id="" value="0"> Visitante
             </div>
                          
             <div class="botones">
