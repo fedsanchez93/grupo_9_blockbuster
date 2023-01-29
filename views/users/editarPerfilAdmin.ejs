@@ -31,8 +31,17 @@
                 <input type="password" name="password" id="" value="" placeholder="Nueva contraseña">
             </div>
             <div class="info-perfil">
-                <label for="usuario">Categoria:</label>
-                <input type="text" name="category" id="" value="<%= userToEdit.category %>">
+                <label for="usuario">Categoría actual:</label>
+                <% if(userToEdit.category == "admin") { %>
+                    <label for="usuario">Administrador</label>
+                <% } else { %>
+                    <label for="usuario">Visitante</label>
+                <% } %>             
+            </div>
+            <div class="info-perfil">
+                <label for="usuario">Cambiar categoría:</label>
+                <input type="radio" name="category" id="" value="admin"> Administrador 
+                <input type="radio" name="category" id="" value="visitor"> Visitante
             </div>
                          
             <div class="botones">

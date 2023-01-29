@@ -318,7 +318,7 @@
 		"name": "TEST TEST",
 		"usuario": "Test",
 		"email": "test@blockbuster.com",
-		"password": "$2a$10$jZNo8ezI0AvOtlIbOyeq3Oju24mHG3wAR0Rba18qdDJ29TI6.VDLi",
+		"password": "$2a$10$SwDNvrbVFvo5JV4llTV3uuFVqPcCLi3zvi0uH00GsDHhB5EcDdzIS",
 		"image": "/userFoto.jpeg",
 		"category": "visitor"
 	},
@@ -327,7 +327,7 @@
 		"name": "FEDERICO SANCHEZ",
 		"usuario": "fsanchez3",
 		"email": "feddrsanchez3@gmail.com",
-		"password": "$2a$10$C8okgPiR.Xu84LZhd946X.SWfGVgc2tfo5aDvNpSFOf5HzCAzVbdu",
+		"password": "$2a$10$zQXJpYyuO1oryQuKi505POqqQp.9xj1kmU3jydatmU4oW.bEfsCn6",
 		"image": "/userFoto.jpeg",
 		"category": "visitor"
 	},
