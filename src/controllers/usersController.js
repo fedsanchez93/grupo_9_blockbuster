@@ -33,46 +33,37 @@ const controller = {
 			});
 		}
 
-		let userInDB = User.findByField('email', req.body.email);
-
-		if (userInDB) {
-			return res.render('register', {
-				errors: {
-					email: {
-						msg: 'Este email ya está registrado'
-					}
-				},
-				oldData: req.body
-			});
-            
-		}
-
-		let userToCreate = {
-			...req.body,
-			name:req.body.name.toUpperCase(),
-			password: bcrypt.hashSync(req.body.password, 10),
-			image: req.file ? req.file.filename : '/userFoto.jpeg',
-			category: "visitor"
-		}
-
-		let userCreated = User.create(userToCreate);
-        console.log(userCreated)
-		return res.redirect('/login');
-	},
-	crear: (req,res)=>{
-		db.User.create({
-			name: req.body.name,
-			username:req.body.usuario,
-			email:req.body.email,
-			password: bcrypt.hashSync(req.body.password, 10),
-			image_url: req.file ? req.file.filename : '/userFoto.jpeg',
-			is_admin:0,
-			id_favorite_genre:1,
-			is_active:1
+		db.User.findAll({
+			where:{"email":req.body.email}
 		})
-		.then(res.redirect('/login'));
+			.then(userInDB => {
+
+				if (userInDB.length > 0) { 
+				res.render('register', {
+						errors: {
+							email: {
+								msg: 'Este email ya está registrado'
+							}
+						},
+						oldData: req.body
+					});	
+				
+				} else {
+					db.User.create({
+						name: req.body.name,
+						username:req.body.usuario,
+						email:req.body.email,
+						password: bcrypt.hashSync(req.body.password, 10),
+						image_url: req.file ? req.file.filename : '/userFoto.jpeg',
+						is_admin:0,
+						id_favorite_genre:1,
+						is_active:1
+					})
+						.then(res.redirect('/login'));
+				}
+			})
 	},
-    
+   
     loginProcess: (req, res) => {
 		//let userToLogin = db.User.findByField('email', req.body.email);	
 		db.User.findAll({
@@ -80,7 +71,7 @@ const controller = {
 		})
 			//.then(userToLogin => console.log(userToLogin));
 			.then(userToLogin => {
-				let isOkThePassword = bcrypt.compareSync(req.body.password, '$10$DWLQecg8/VsWmnqAZVij0.cUyzE8TZoVpkqOnPI7koUXpKle23B2O');
+				let isOkThePassword = userToLogin.length > 0 ? bcrypt.compareSync(req.body.password, userToLogin[0].password) : null;
 				if (isOkThePassword) {
 					delete userToLogin.password;
 					req.session.userLogged = userToLogin;
@@ -90,28 +81,26 @@ const controller = {
 					}
 	
 					return res.redirect('/users/perfil/');
-				}
-			})
-			/*	
-				return res.render('login', {
-					errors: {
-						email: {
-							msg: 'Las credenciales son inválidas'
-						}
-					},
-					oldData: req.body
-				});
-			}
-	
-			return res.render('login', {
-				errors: {
-					email: {
-						msg: 'No se encuentra este email en nuestra base de datos'
-					}
-				},
-				oldData: req.body
-			});
-		})*/
+				} else if(!isOkThePassword && userToLogin.length > 0  && userToLogin[0].email == req.body.email) {
+					return res.render('login', {
+						errors: {
+							email: {
+								msg: 'Las credenciales son inválidas '
+							}
+						},
+						oldData: req.body
+					})
+				} else {
+					res.render('login', {
+						errors: {
+							email: {
+								msg: 'No se encuentra este email en nuestra base de datos'
+							}
+						},
+						oldData: req.body
+					});
+				}		
+			})		
 	},
     logout: (req, res) => {
 		res.clearCookie('userEmail');
