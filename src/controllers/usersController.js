@@ -80,7 +80,8 @@ const controller = {
 						res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 * 24 * 10}) //dura 10 dias
 					}
 	
-					return res.redirect('/users/perfil/');
+					//return res.redirect('/users/perfil/');
+					res.render('users/perfilUser',{user:req.session.userLogged, userToLogin})
 				} else if(!isOkThePassword && userToLogin.length > 0  && userToLogin[0].email == req.body.email) {
 					return res.render('login', {
 						errors: {
