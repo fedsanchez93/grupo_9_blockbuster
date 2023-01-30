@@ -38,7 +38,20 @@ const productsController = {
         })
     },
     listadoDeseos: (req,res)=>{
-        res.render('listadoDeseos', {listaPeliculas, user: req.session.userLogged})
+        db.Movie.findAll({include: [ {association:'users_wishlist'} ] } ) //,where:{ users_wishlist.movies_users_wishlist.id_user: req.session.userLogged.id }
+        .then(results => {
+            let wishList = []
+            results.forEach(pelicula => {
+                //pelicula.users_wishlist.length > 0 ? wishList.push(pelicula) : null
+                if (pelicula.users_wishlist.length > 0) {
+                    pelicula.users_wishlist.forEach(element => {
+                        element.id == req.session.userLogged.id ? wishList.push(pelicula) : null
+                    });
+                }
+            });
+            //res.json( wishList)
+            res.render('listadoDeseos', {listaPeliculas, user: req.session.userLogged, wishList})
+        })
     },
     buscarProductos: (req,res)=>{
         let palabraBuscada = req.query.filtrar || ''

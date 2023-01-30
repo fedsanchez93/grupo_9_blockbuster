@@ -11,6 +11,23 @@
     <%- include('partials/header') %>  
     <h1 class="titulo">Listado De Deseos</h1>
     <section class="section-cards">
+        <% wishList.forEach(element => { %>
+            <article class="card">
+                <div>
+                    <img class="img-pelicula" src="<%= element.image_url %> ">
+                    <h2 class="tituloPeli texto"><%= element.title %></h2>
+                    <h3 class="texto">$<%= element.price %></h3>
+                </div>
+                <!-- <a href="/carrito/<%= element.id %> " class="botonFormBusc">Comprar</a>
+                <a href="/products/productDetail?id=<%= element.id %> " class="botonFormBusc">Quitar</a> -->
+                <div class="iconos-nav">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    <i class="fa-regular fa-trash-can"></i>
+                </div>
+            </article>
+        <% }); %> 
+    </section>
+    <section class="section-cards" style="display: none;">
         <% listaPeliculas.forEach(element => { %>
             <article class="card">
                 <div>
