@@ -21,7 +21,7 @@ const productsController = {
         db.Movie.findByPk(id,{include: [{association: "genres"},{association: "languages"}]})
         .then(movie=>{
             res.render('productDetail', {listaPeliculas, id, anterior, siguiente, user: req.session.userLogged, movie})
-            console.log('hola!!!!!!!',req.session.userLogged)
+            //console.log('hola!!!!!!!',req.session.userLogged)
         })
     },
     administrarProductos: (req,res)=>{
@@ -154,7 +154,7 @@ const productsController = {
             .then(movie => {
                 movie.setGenres(req.body.genres)
                 movie.setLanguages(req.body.languages)
-                console.log(movie)
+                //console.log(movie)
                 res.redirect('/products/administrarProductos')
 
             })

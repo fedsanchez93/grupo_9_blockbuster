@@ -91,8 +91,11 @@
                         <li><a href="#">Calificación IMDb</a> <div class="calificacion"><%= movie.imdb_rating %></div></li>
                         <li><a href="#">Calificación Rotten Tomatoes </a><div class="calificacion"><%= movie.rotten_tomatoes_rating %></div></li>
                         <li><a class="botonNav" href="#"> <i class="fa-solid fa-heart-circle-plus"></i> Agregar a Mis Deseos</a></li>
-                        <li><form action="/users/wishes/add/<%= user[0].id %>/<%= movie.id %>/" method="post"><input class="botonNav" type="submit" value="AGREGAR A MIS DESEOS!!!"></form></li>
-                        <li><form action="/users/wishes/delete/<%= user[0].id %>/<%= movie.id %>/" method="post"><input class="botonNav" type="submit" value="QUITAR DE MIS DESEOS!!!"></form></li>
+                        <li><form action="/users/wishes/add/<%= user.id %>/<%= movie.id %>/" method="post"><input class="botonNav" type="submit" value="AGREGAR A MIS DESEOS!!!"></form></li>
+                        <li><form action="/users/wishes/delete/<%= user.id %>/<%= movie.id %>/" method="post"><input class="botonNav" type="submit" value="QUITAR DE MIS DESEOS!!!"></form></li>
+
+                        <li><form action="/users/cart/add/<%= user.id %>/<%= movie.id %>/" method="post"><input class="botonNav" type="submit" value="AGREGAR AL CARRITO!!!"></form></li>
+                        <li><form action="/users/cart/delete/<%= user.id %>/<%= movie.id %>/" method="post"><input class="botonNav" type="submit" value="QUITAR DEL CARRITO!!!"></form></li>
 
                         <li><a class="botonNav" href="#"> <i class="fa-solid fa-cart-plus"></i> Agregar al Carrito</a></li> 
                     </ul>

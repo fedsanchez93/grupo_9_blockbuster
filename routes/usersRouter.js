@@ -43,5 +43,10 @@ router.delete('/eliminarUsuario/:id/', usersController.borrarUsuario);
 router.post('/wishes/add/:id_user/:id_movie', usersController.addWishes)
 router.post('/wishes/delete/:id_user/:id_movie', usersController.deleteWishes)
 
+router.post('/cart/add/:id_user/:id_movie', usersController.addCart)
+router.post('/cart/delete/:id_user/:id_movie', usersController.deleteCart)
+
+router.post('/rental/add/:id_user/:id_movie', usersController.addRental)
+router.post('/rental/delete/:id_user/:id_movie', usersController.deleteRental)
 
 module.exports = router;

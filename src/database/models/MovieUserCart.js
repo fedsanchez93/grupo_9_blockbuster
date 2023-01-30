@@ -21,10 +21,9 @@ module.exports = (sequelize, dataTypes)=>{
 
     let config = {
         tableName : 'movies_users_cart',
-        timestamps: true,
-        updatedAt: false
+        timestamps: false,
     }
-    const MovieUserCart = sequelize.define(alias, cols, config)
+    const MovieUserCart = sequelize.define(alias, cols, config) 
     
     MovieUserCart.associate= modelos=>{
 

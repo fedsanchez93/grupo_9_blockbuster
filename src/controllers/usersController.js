@@ -197,7 +197,52 @@ const controller = {
 		})
 		.then(result=>res.json(result))
 	},
-
+	addCart:(req,res)=>{
+		let id_user = req.params.id_user
+		let id_movie = req.params.id_movie
+		
+		db.MovieUserCart.create({
+			id_movie:id_movie,
+			id_user:id_user
+		})
+		.then(result=>res.json(result)) 
+	},
+	deleteCart:(req,res)=>{
+		let id_user = req.params.id_user
+		let id_movie = req.params.id_movie
+		
+		db.MovieUserCart.destroy({ 
+			where:{
+				id_movie:id_movie,
+				id_user:id_user
+			}
+			
+		})
+		.then(result=>res.json(result))
+	},
+	addRental:(req,res)=>{
+		let id_user = req.params.id_user
+		let id_movie = req.params.id_movie
+		
+		db.MovieUserRental.create({
+			id_movie:id_movie,
+			id_user:id_user
+		})
+		.then(result=>res.json(result)) 
+	},
+	deleteRental:(req,res)=>{
+		let id_user = req.params.id_user
+		let id_movie = req.params.id_movie
+		
+		db.MovieUserRental.destroy({ 
+			where:{
+				id_movie:id_movie,
+				id_user:id_user
+			}
+			
+		})
+		.then(result=>res.json(result))
+	},
 }
 
 module.exports = controller

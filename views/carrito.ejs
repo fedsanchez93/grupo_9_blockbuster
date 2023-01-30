@@ -82,13 +82,18 @@
                         <a href="/carrito/<%= listaPeliculas[id-1].id%>">Alquilar/Ver</a>   
                     </div> -->
                     <article class="middle-menu">
-                        <form action="/products/misAlquileres" method="GET">
+                        <form action="/products/misAlquileres" method="POST">
                             <div class="buttons">
-                                <button type="submit" class="btn">Pagar</button>
+                                <button type="submit" class="btn">Pagar (este no...)</button>
+                                
                             </div>
                         </form>
                     </article>
                 </div>
+                        
+                        <li><form action="/users/rental/add/<%= user.id %>/<%= id %>/" method="post"><input class="botonNav" type="submit" value="AGREGAR AL CARRITO!!!"></form></li>
+                        <li><form action="/users/rental/delete/<%= user.id %>/<%= id %>/" method="post"><input class="botonNav" type="submit" value="QUITAR DEL CARRITO!!!"></form></li>
+                    
             </div>
 
             <div class="bloque3">

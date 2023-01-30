@@ -17,11 +17,11 @@
         <nav class="right-menu-buttons">
             <% if(locals.user) { %>
                 <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-                <img class="img-user-nav-bar" src="/images/users/<%= user.image %>" alt="image" >
+                <img class="img-user-nav-bar" src="/images/users/<%= user.image_url %>" alt="image" >
             <% } else { %>
                 <a href="/login"><i class="fa-solid fa-circle-user"></i></a>
             <% } %>
-            <% if(locals.user && user.category == "admin") { %>
+            <% if(locals.user && user.is_admin == 1) { %>
                 <a href="/products/administrarProductos"><i class="fa-solid fa-user-gear"></i></a>
             <% } %>
         </nav>
@@ -42,17 +42,17 @@
             <ul>
                 <a href="/login">
                     <% if(locals.user) { %>                        
-                        <img class="img-user-nav-bar" src="/images/users/<%= user.image %>" alt="image" >
+                        <img class="img-user-nav-bar" src="/images/users/<%= user.image_url %>" alt="image" >
                     <% } %>
                 </a>
             </ul>      
         </nav> 
         <nav class="admin-options">
-            <% if(locals.user && user.category == "admin") { %>
+            <% if(locals.user && user.is_admin == 1) { %>
             <ul>
                 <a href="/products/administrarProductos"><i class="fa-solid fa-user-gear"></i></a>
             </ul>
-            <% } %>
+            <% } %> 
         </nav>
     </div>
 </header>
