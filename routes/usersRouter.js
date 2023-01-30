@@ -40,5 +40,8 @@ router.put('/editarUsuario/:id/', usersController.guardarUsuario);
 router.get('/eliminarUsuario/:id/', usersController.confirmarBorrado);
 router.delete('/eliminarUsuario/:id/', usersController.borrarUsuario);
 
+router.post('/wishes/add/:id_user/:id_movie', usersController.addWishes)
+router.post('/wishes/delete/:id_user/:id_movie', usersController.deleteWishes)
+
 
 module.exports = router;

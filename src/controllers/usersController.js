@@ -173,7 +173,30 @@ const controller = {
 		} else {
 			res.redirect('/');
 		}
-	} 
+	},
+	addWishes:(req,res)=>{
+		let id_user = req.params.id_user
+		let id_movie = req.params.id_movie
+		
+		db.MovieUserWish.create({
+			id_movie:id_movie,
+			id_user:id_user
+		})
+		.then(result=>res.json(result)) 
+	},
+	deleteWishes:(req,res)=>{
+		let id_user = req.params.id_user
+		let id_movie = req.params.id_movie
+		
+		db.MovieUserWish.destroy({
+			where:{
+				id_movie:id_movie,
+				id_user:id_user
+			}
+			
+		})
+		.then(result=>res.json(result))
+	},
 
 }
 
