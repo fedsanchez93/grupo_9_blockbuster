@@ -11,7 +11,23 @@
     
     <%- include('partials/header') %>  
     <h1 class="titulo">Mis Alquileres</h1>
-<section class="section-cards">
+
+
+    <section class="section-cards">
+        <% rentalList.forEach(element => { %>
+    
+            <article class="card">
+                <img class="img-pelicula" src="<%= element.image_url %> ">
+                <h2 class="tituloPeli"><%= element.title %></h2>
+               
+                <a href="/products/video/<%= element.id %> " class="botonFormBusc">VER AHORA</a>
+                <a href="/products/productDetail?id=<%= element.id %> " class="botonFormBusc">COMPARTIR</a>
+    
+            </article>
+        <% }); %> 
+    </section>
+
+    <section class="section-cards" style="display: none;">
     <% listaPeliculas.forEach(element => { %>
 
         <article class="card">
