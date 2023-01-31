@@ -182,7 +182,7 @@ const controller = {
 			id_movie:id_movie,
 			id_user:id_user
 		})
-		.then(result=>res.redirect('/products/productDetail?id='+id_movie)) //res.json(result)
+		.then(result=>res.redirect('/products/productDetail?id='+id_movie)) //res.json(result) '/products/productDetail?id='+id_movie
 	},
 	deleteWishes:(req,res)=>{
 		let id_user = req.params.id_user
