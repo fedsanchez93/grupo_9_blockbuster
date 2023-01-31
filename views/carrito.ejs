@@ -24,6 +24,27 @@
         </section>
 
         <section class="section-cards">
+            <% cartList.forEach(element => { %>
+        
+                
+        
+                <article class="card">
+                    <div>
+                        <img class="img-pelicula" src="<%= element.image_url %> ">
+                        <h2 class="tituloPeli texto"><%= element.title %></h2>
+                        <h3 class="texto"><%= element.price %></h3>
+                    </div>
+                    <!-- <a href="/carrito/<%= element.id %> " class="botonFormBusc">Comprar</a>
+                    <a href="/products/productDetail?id=<%= element.id %> " class="botonFormBusc">Quitar</a> -->
+                    <div class="iconos-nav">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                        <i class="fa-regular fa-trash-can"></i>
+                    </div>
+                </article>
+            <% }); %> 
+        </section>
+
+        <section class="section-cards" style="display: none;">
             <% listaPeliculas.forEach(element => { %>
         
                 
@@ -53,6 +74,7 @@
 
         <section class="xxxx">
 
+            
             <div class="bloque1">
                 <div class="div-imagen">
                     <img class="imagen" src="<%= listaPeliculas[id-1].imagen%> ">
@@ -91,8 +113,8 @@
                     </article>
                 </div>
                         
-                        <li><form action="/users/rental/add/<%= user.id %>/<%= id %>/" method="post"><input class="botonNav" type="submit" value="AGREGAR AL CARRITO!!!"></form></li>
-                        <li><form action="/users/rental/delete/<%= user.id %>/<%= id %>/" method="post"><input class="botonNav" type="submit" value="QUITAR DEL CARRITO!!!"></form></li>
+                        <li><form action="/users/rental/add/<%= user.id %>/<%= id %>/" method="post"><input class="botonNav" type="submit" value="ALQUILAR!!!"></form></li>
+                        <li><form action="/users/rental/delete/<%= user.id %>/<%= id %>/" method="post"><input class="botonNav" type="submit" value="DEVOLVER!!!"></form></li>
                     
             </div>
 
