@@ -182,7 +182,7 @@ const controller = {
 			id_movie:id_movie,
 			id_user:id_user
 		})
-		.then(result=>res.json(result)) 
+		.then(result=>res.redirect('/products/productDetail?id='+id_movie)) //res.json(result)
 	},
 	deleteWishes:(req,res)=>{
 		let id_user = req.params.id_user
@@ -195,7 +195,7 @@ const controller = {
 			}
 			
 		})
-		.then(result=>res.json(result))
+		.then(result=>res.redirect('/products/productDetail?id='+id_movie))
 	},
 	addCart:(req,res)=>{
 		let id_user = req.params.id_user
@@ -205,7 +205,7 @@ const controller = {
 			id_movie:id_movie,
 			id_user:id_user
 		})
-		.then(result=>res.json(result)) 
+		.then(result=>res.redirect('/products/productDetail?id='+id_movie)) 
 	},
 	deleteCart:(req,res)=>{
 		let id_user = req.params.id_user
@@ -218,7 +218,7 @@ const controller = {
 			}
 			
 		})
-		.then(result=>res.json(result))
+		.then(result=>res.redirect('/products/productDetail?id='+id_movie))
 	},
 	addRental:(req,res)=>{
 		let id_user = req.params.id_user
@@ -228,7 +228,7 @@ const controller = {
 			id_movie:id_movie,
 			id_user:id_user
 		})
-		.then(result=>res.json(result)) 
+		.then(result=>res.redirect('/carrito/'+id_movie)) 
 	},
 	deleteRental:(req,res)=>{
 		let id_user = req.params.id_user
@@ -241,7 +241,7 @@ const controller = {
 			}
 			
 		})
-		.then(result=>res.json(result))
+		.then(result=>res.redirect('/carrito/'+id_movie))
 	},
 }
 
