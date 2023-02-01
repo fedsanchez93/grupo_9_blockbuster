@@ -16,10 +16,10 @@ module.exports = (sequelize, dataTypes)=>{
             allowNull: false
         },
         image_url: {
-            type: dataTypes.STRING(100)
+            type: dataTypes.STRING(200)
         },
         description: {
-            type: dataTypes.STRING(300) //en realidad TEXT
+            type: dataTypes.STRING(500) //en realidad TEXT
         },
         length: {
             type: dataTypes.INTEGER
@@ -31,13 +31,13 @@ module.exports = (sequelize, dataTypes)=>{
             type: dataTypes.DECIMAL(5,2)
         },
         trailer: {
-            type: dataTypes.STRING(300)
+            type: dataTypes.STRING(200)
         },
         is_active: {
             type: dataTypes.TINYINT
         },
         movie_url: {
-            type: dataTypes.STRING(100)
+            type: dataTypes.STRING(200)
         },
         blockbuster_rating: {
             type: dataTypes.DECIMAL(2,1)
