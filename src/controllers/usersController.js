@@ -10,14 +10,10 @@ const usersFilePath = path.join(__dirname, '../data/users.json');
 const listaUsers = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const controller = {
-/*    perfil:(req,res)=>{
-        let id = req.params.id
-        res.render('users/perfilUser',{listaUsers, id, user: req.session.userLogged})
-    }*/
-	perfil: (req, res) => {
-		db.User.findByPk(3,{include: [{association: "genres"}]})
-			.then(user => res.render('users/perfilUser',{user, user: req.session.userLogged}))
 
+	perfil: (req, res) => {
+		db.User.findByPk(req.session.userLogged[0].id,{include: [{association: "genres"}]})
+			.then(user => res.render('users/perfilUser',{user: req.session.userLogged[0]}))
 	},
     editarPerfil:(req,res)=>{
         res.render('users/editarPerfilUser',{listaUsers, user: req.session.userLogged})
@@ -81,7 +77,8 @@ const controller = {
 					}
 	
 					//return res.redirect('/users/perfil/');
-					res.render('users/perfilUser',{user:req.session.userLogged, userToLogin})
+					res.render('users/perfilUser',{user: userToLogin[0]})
+					//res.json(userToLogin);
 				} else if(!isOkThePassword && userToLogin.length > 0  && userToLogin[0].email == req.body.email) {
 					return res.render('login', {
 						errors: {
