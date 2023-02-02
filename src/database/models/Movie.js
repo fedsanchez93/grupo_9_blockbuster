@@ -28,7 +28,7 @@ module.exports = (sequelize, dataTypes)=>{
             type: dataTypes.INTEGER
         },
         price: {
-            type: dataTypes.DECIMAL(5,2)
+            type: dataTypes.DECIMAL(8,2)
         },
         trailer: {
             type: dataTypes.STRING(200)
@@ -40,13 +40,13 @@ module.exports = (sequelize, dataTypes)=>{
             type: dataTypes.STRING(200)
         },
         blockbuster_rating: {
-            type: dataTypes.DECIMAL(2,1)
+            type: dataTypes.DECIMAL(3,1)
         },
         imdb_rating: {
-            type: dataTypes.DECIMAL(2,1)
+            type: dataTypes.DECIMAL(3,1)
         },
         rotten_tomatoes_rating: {
-            type: dataTypes.DECIMAL(2,1)
+            type: dataTypes.DECIMAL(3,1)
         }
     }
 

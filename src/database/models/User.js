@@ -25,7 +25,7 @@ module.exports = (sequelize, dataTypes)=>{
             type: dataTypes.STRING(500)
         },
         image_url: {
-            type: dataTypes.STRING(100)
+            type: dataTypes.STRING(200)
         },
         is_admin: {
             type: dataTypes.TINYINT

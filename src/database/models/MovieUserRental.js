@@ -16,6 +16,14 @@ module.exports = (sequelize, dataTypes)=>{
         },
         id_user: {
             type: dataTypes.INTEGER,
+        },
+        created_at: {
+            type: dataTypes.DATE,
+            allowNull: false
+        },
+        expired_at: {
+            type: dataTypes.DATE,
+            allowNull: false
         }
     }
 
