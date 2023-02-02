@@ -19,7 +19,7 @@ module.exports = (sequelize, dataTypes)=>{
             type: dataTypes.STRING(200)
         },
         description: {
-            type: dataTypes.STRING(500) //en realidad TEXT
+            type: dataTypes.STRING(600) //en realidad TEXT 
         },
         length: {
             type: dataTypes.INTEGER

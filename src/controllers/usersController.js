@@ -246,3 +246,35 @@ const controller = {
 }
 
 module.exports = controller
+
+
+
+
+// window.onload = function(){
+
+// 	let data = {
+// 		image_id:'sf2',
+// 		sub_id:'2',
+// 		value:1
+// 	}
+// 	let settings = {
+// 		method:'POST',
+// 		headers:{
+// 			'Content-Type':'application/json',
+// 			'x-api...':'sssclave'
+// 		},
+// 		body:JSON.stringify(data)
+// 	}
+
+// fetch("https://restcountries.eu/rest/v2/", settings)
+// .then(function(response){
+// 	return response.json();
+// })
+// .then(function(data){
+// 	console.log(data)
+// })
+// .catch(function(error){
+// 	console.error(error)
+// })
+
+// }
