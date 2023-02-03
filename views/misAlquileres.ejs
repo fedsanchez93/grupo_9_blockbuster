@@ -22,7 +22,8 @@
                
                 <a href="/products/video/<%= element.id %> " class="botonFormBusc">VER AHORA</a>
                 <a href="/products/productDetail?id=<%= element.id %> " class="botonFormBusc">COMPARTIR</a>
-    
+                <li><form action="/users/rental/delete/<%= user.id %>/<%= element.id %>/" method="post"><input class="botonNav" type="submit" value="DEVOLVER!!!"></form></li>
+
             </article>
         <% }); %> 
     </section>

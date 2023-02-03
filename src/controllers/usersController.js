@@ -222,7 +222,6 @@ const controller = {
 				id_movie:id_movie,
 				id_user:id_user
 			}
-			
 		})
 		.then(result=>res.redirect('/carrito'))
 	},
@@ -236,6 +235,14 @@ const controller = {
 			expired_at: '2023-02-03T19:23:08.183Z' 
 		})
 		.then(result=>res.redirect('/products/misAlquileres')) 
+		
+		db.MovieUserCart.destroy({ 
+			where:{
+				id_movie:id_movie,
+				id_user:id_user
+			}
+		})
+
 	},
 	deleteRental:(req,res)=>{
 		let id_user = req.params.id_user

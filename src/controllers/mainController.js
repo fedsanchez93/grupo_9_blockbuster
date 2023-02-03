@@ -55,7 +55,7 @@ const mainController = {
             let menos20porciento = Math.round(PrecioTotal / 1.2)
             let menos30porciento = Math.round(PrecioTotal / 1.3)
 
-            console.log('PrecioTotal',PrecioTotal, menos5porciento, menos10porciento, menos20porciento, menos30porciento)
+            //console.log('PrecioTotal',PrecioTotal, menos5porciento, menos10porciento, menos20porciento, menos30porciento)
             
             //res.json(cartList)
             res.render('carrito', {listaPeliculas, id, anterior, siguiente, user: req.session.userLogged[0], cartList, movie, menos5porciento, menos10porciento, menos20porciento, menos30porciento})
