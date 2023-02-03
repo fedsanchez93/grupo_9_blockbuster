@@ -23,18 +23,18 @@ const productsController = {
                 }
             });
             //res.json( rentalList)
-            res.render('misAlquileres', {listaPeliculas, user: req.session.userLogged, rentalList})
+            res.render('misAlquileres', {listaPeliculas, user: req.session.userLogged[0], rentalList})
         })
 
         //res.render('misAlquileres', {listaPeliculas, user: req.session.userLogged})
     },
     productDetail: (req,res)=>{
-        let id = req.query.id || 4
+        let id = req.query.id || 1
         let anterior = id-1 || id
-        let siguiente = (parseInt(id)+1) || 1 // listaPeliculas.length>=( parseInt(id)+1) ? ( parseInt(id)+1) : 1
+        let siguiente = (parseInt(id)+1) ||(parseInt(id)+2)||(parseInt(id)+3) || 1 // listaPeliculas.length>=( parseInt(id)+1) ? ( parseInt(id)+1) : 1
         db.Movie.findByPk(id,{include: [{association: "genres"},{association: "languages"}]})
         .then(movie=>{
-            res.render('productDetail', {listaPeliculas, id, anterior, siguiente, user: req.session.userLogged, movie})
+            res.render('productDetail', {listaPeliculas, id, anterior, siguiente, user: req.session.userLogged[0], movie})
             //console.log('hola!!!!!!!',req.session.userLogged)
         })
     },
@@ -48,7 +48,7 @@ const productsController = {
         }
         db.Movie.findAll()
         .then(movies=>{
-            res.render('administrarProductos', {listaPeliculas, peliculasFiltradas, user: req.session.userLogged, movies})
+            res.render('administrarProductos', {listaPeliculas, peliculasFiltradas, user: req.session.userLogged[0], movies})
         })
     },
     listadoDeseos: (req,res)=>{
@@ -64,7 +64,7 @@ const productsController = {
                 }
             });
             //res.json( wishList)
-            res.render('listadoDeseos', {listaPeliculas, user: req.session.userLogged, wishList})
+            res.render('listadoDeseos', {listaPeliculas, user: req.session.userLogged[0], wishList})
         })
     },
     buscarProductos: (req,res)=>{
@@ -75,7 +75,7 @@ const productsController = {
                 peliculasFiltradas.push(listaPeliculas[i])
             }
         }
-        res.render('buscarProductos', {listaPeliculas, peliculasFiltradas,palabraBuscada, user: req.session.userLogged})
+        res.render('buscarProductos', {listaPeliculas, peliculasFiltradas,palabraBuscada, user: req.session.userLogged[0]})
     },
     editarProducto:(req,res)=>{
         let idProducto = req.query.id 
@@ -89,7 +89,7 @@ const productsController = {
         .then(([MovieToEdit, Languages, Genres])=>{
             //res.json(MovieToEdit)
             //console.log(MovieToEdit)
-            res.render('editarProducto',{idProducto, listaPeliculas, user: req.session.userLogged, Languages, Genres, MovieToEdit})
+            res.render('editarProducto',{idProducto, listaPeliculas, user: req.session.userLogged[0], Languages, Genres, MovieToEdit})
         })
 
         // console.log(idProducto, 'editarproducto')
@@ -158,7 +158,7 @@ const productsController = {
         Promise.all([Languages,Genres])
 
         .then(([Languages,Genres])=>{
-            res.render('crearNuevoProducto', {user: req.session.userLogged, Languages, Genres})
+            res.render('crearNuevoProducto', {user: req.session.userLogged[0], Languages, Genres})
         })
     },
 
@@ -227,7 +227,7 @@ const productsController = {
     },
     video:(req,res)=>{
         let idProducto = req.params.id || 1
-        res.render('video', {listaPeliculas, idProducto, user: req.session.userLogged})
+        res.render('video', {listaPeliculas, idProducto, user: req.session.userLogged[0]})
     },
     
 }

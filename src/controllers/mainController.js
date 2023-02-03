@@ -21,7 +21,7 @@ const mainController = {
         db.Movie.findAll({
             include: [{association: "genres"},{association: "languages"}]
         })
-        .then(movies => res.render('home', {masBuscadas, recomendadas, listaPersonajes, user: req.session.userLogged, movies}));
+        .then(movies => res.render('home', {masBuscadas, recomendadas, listaPersonajes, user: req.session.userLogged[0], movies}));
     },
     login: (req,res)=>{
         res.render('login')
@@ -31,9 +31,9 @@ const mainController = {
     },
     carrito: (req,res)=>{
 
-        let id = req.params.id || 4 
-        let anterior = id-1 || listaPeliculas.length
-        let siguiente = listaPeliculas.length>=( parseInt(id)+1) ? ( parseInt(id)+1) : 1
+        let id = req.params.id || 1
+        let anterior = id-1 || id
+        let siguiente = ( (parseInt(id)+1) || 1 )
 
         let movie = db.Movie.findByPk(id,{include: [{association: "genres"},{association: "languages"}]})
         let movies = db.Movie.findAll({include: [ {association:'users_cart'} ] } ) 
@@ -49,7 +49,7 @@ const mainController = {
                 }
             });
             //res.json(cartList)
-            res.render('carrito', {listaPeliculas, id, anterior, siguiente, user: req.session.userLogged, cartList, movie})
+            res.render('carrito', {listaPeliculas, id, anterior, siguiente, user: req.session.userLogged[0], cartList, movie})
         })
     },
     carrito2: (req,res)=>{

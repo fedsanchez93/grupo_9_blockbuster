@@ -40,9 +40,15 @@ app.use((req,res,next)=>{
 })
 
 
+const fs = require('fs');
 
-
-
+const rutaPeliculas = path.join(__dirname, './src/data/products2.json');
+const listaPeliculas = JSON.parse(fs.readFileSync(rutaPeliculas, 'utf-8'));
+//console.log(listaPeliculas)
+const db = require('./src/database/models');
+// db.Movie.bulkCreate(
+//     listaPeliculas
+// )
   
 
   

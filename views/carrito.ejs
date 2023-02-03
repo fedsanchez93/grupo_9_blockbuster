@@ -106,7 +106,7 @@
                         <a href="#">Ver trailer</a>
                     </div> -->
                     <!-- <div class="boton alquiler">
-                        <a href="/carrito/<%= listaPeliculas[id-1].id%>">Alquilar/Ver</a>   
+                        <a href="/carrito/...">Alquilar/Ver</a>   
                     </div> -->
                     <article class="middle-menu">
                         <form action="/products/misAlquileres" method="POST">
@@ -127,9 +127,9 @@
                 <div class="calificaciones">
                     <ul></a>
                         <li><a class="botonNav" href="/carrito/<%= anterior %> "> <= Anterior </a>    <a class="botonNav" href="/carrito/<%= siguiente %>"> Siguiente =></a></li>
-                        <li><a href="#">Calificación Blockbuster</a><div class="calificacion"><%= listaPeliculas[id-1].CalificacionBlockbuster %></div></li>
-                        <li><a href="#">Calificación IMDb</a> <div class="calificacion"><%= listaPeliculas[id-1].CalificacionIMDb %></div></li>
-                        <li><a href="#">Calificación Rotten Tomatoes </a><div class="calificacion"><%= listaPeliculas[id-1].CalificacionRottenTomatoes %></div></li>
+                        <li><a href="#">Calificación Blockbuster</a><div class="calificacion"><%= movie.blockbuster_rating %></div></li>
+                        <li><a href="#">Calificación IMDb</a> <div class="calificacion"><%= movie.imdb_rating %></div></li>
+                        <li><a href="#">Calificación Rotten Tomatoes </a><div class="calificacion"><%= movie.rotten_tomatoes_rating %></div></li>
                     </ul>
                 </div>
             </div>

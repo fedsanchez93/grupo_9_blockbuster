@@ -1,0 +1,227 @@
+[
+	{
+		
+		"title": "2012",
+		"image_url": "/images/2012.jpg",
+		"description": "Un escritor frustrado lucha por mantener a su familia con vida cuando una serie de catástrofes mundiales amenaza con aniquilar a la humanidad.",
+		
+		"length": "158",
+		"release_year": 2009,
+		"price": 1000,
+		"trailer": "https://www.youtube.com/embed/9ooDeS4Ep5Q",
+		
+		"blockbuster_rating": "9",
+		"imdb_rating": "8",
+		"rotten_tomatoes_rating": "9.5"
+	},
+	{
+		
+		"title": "1917",
+		"image_url": "/images/197.jpg",
+		"description": "Dos jóvenes soldados ingleses tienen una misión imposible durante la Primera Guerra Mundial: entregar un mensaje tras las líneas enemigas para evitar que sus compañeros caigan en una trampa.",
+		
+		"length": "119",
+		"release_year": 2019,
+		"price": 1000,
+		"trailer": "https://www.youtube.com/embed/YrbdN5zaouU",
+		
+		"blockbuster_rating": "9",
+		"imdb_rating": "8",
+		"rotten_tomatoes_rating": "9.5"
+	},
+	{
+		
+		"title": "El Guason",
+		"image_url": "/images/El Guason.jpg",
+		"description": "En Gotham, Arthur Fleck, un comediante con problemas de salud mental, es marginado y maltratado por la sociedad. Se adentra en una espiral de crimen que resulta revolucionaria. Pronto conoce a su alter-ego, el Joker.",
+		
+		"length": "122",
+		"release_year": 2019,
+		"price": 1000,
+		"trailer": "https://www.youtube.com/embed/TobNCFMK_bs",
+		
+		"blockbuster_rating": "9",
+		"imdb_rating": "8",
+		"rotten_tomatoes_rating": "9.5"
+	},
+	{
+		
+		"title": "Los Vengadores: End Game",
+		"image_url": "/images/LosVengadores.jpg",
+		"description": "Cuando un enemigo inesperado surge como una gran amenaza para la seguridad mundial, Nick Fury, director de la Agencia SHIELD, decide reclutar a un equipo para salvar al mundo de un desastre casi seguro. Adaptación del cómic de Marvel 'Los Vengadores', el legendario grupo de superhéroes formado por Ironman, Hulk, Thor y el Capitán América entre otros.",
+		
+		"length": "181",
+		"release_year": 2019,
+		"price": 1000,
+		"trailer": "https://www.youtube.com/embed/HQIiYqOVTWo",
+		
+		"blockbuster_rating": "9",
+		"imdb_rating": "8",
+		"rotten_tomatoes_rating": "9.5"
+	},
+	{
+		
+		"title": "Smile",
+		"image_url": "/images/smile.jpg",
+		"description": "descripcion",
+		
+		"length": "115",
+		"release_year": 2022,
+		"price": 1000,
+		"trailer": "https://www.youtube.com/embed/yhKiQGJop_8",
+		
+		"blockbuster_rating": "9",
+		"imdb_rating": "8",
+		"rotten_tomatoes_rating": "9.5"
+	},
+	{
+		
+		"title": "Maquinas Mortales",
+		"image_url": "/images/MaquinasMortales.jpg",
+		"description": "Una misteriosa joven llamada Hester Shaw une sus fuerzas a las de Anna Fang, una peligrosa forajida con una recompensa en mente, y Tom Natsworthy, un paria de Londres, para liderar la lucha contra una gigante ciudad depredadora sobre ruedas.",
+		
+		"length": "128",
+		"release_year": 2018,
+		"price": 1000,
+		"trailer": "https://www.youtube.com/embed/zDABDg7vwsk",
+		
+		"blockbuster_rating": "9",
+		"imdb_rating": "8",
+		"rotten_tomatoes_rating": "9.5"
+	},
+	{
+		
+		"title": "Tonto y Retonto",
+		"image_url": "/images/Tonto_y_retonto.jpg",
+		"description": "Después de que una mujer deje un maletín en la terminal del aeropuerto, un tonto conductor de limusina y su amigo todavía más tonto emprenden un viaje por carretera a través del país hasta Aspen para devolverlo.",
+		
+		"length": "107",
+		"release_year": 1994,
+		"price": 1000,
+		"trailer": "https://www.youtube.com/embed/Yl5LO5ATfNM",
+		
+		"blockbuster_rating": "8",
+		"imdb_rating": "7.3",
+		"rotten_tomatoes_rating": "8"
+	},
+	{
+		
+		"title": "Mas barato por docena",
+		"image_url": "/images/mas_barato_por_docena.jpg",
+		"description": "Un padre debe adaptarse a su nuevo trabajo y cuidar de su inmensa e inestable progenie mientras su mujer va de gira con su libro.",
+		
+		"length": "98",
+		"release_year": 2003,
+		"price": 1000,
+		"trailer": "https://www.youtube.com/embed/jw2mjK5tdcM",
+		
+		"blockbuster_rating": "7",
+		"imdb_rating": "6.9",
+		"rotten_tomatoes_rating": "7"
+	},
+	{
+		
+		"title": "La Roca",
+		"image_url": "/images/La_roca.jpg",
+		"description": "Un químico y un exconvicto deben liderar el contraataque cuando un grupo de militares renegados amenaza con un ataque con gas nervioso desde Alcatraz contra San Francisco.",
+		
+		"length": "136",
+		"release_year": 1996,
+		"price": 1000,
+		"trailer": "https://www.youtube.com/embed/pxQ0ThcH7tE",
+		
+		"blockbuster_rating": "7.5",
+		"imdb_rating": "7.4",
+		"rotten_tomatoes_rating": "8"
+	},
+	{
+		
+		"title": "En Busca de la felicidad",
+		"image_url": "/images/en_busca_de_la_felicidad.jpg",
+		"description": "Un vendedor en apuros se queda con la custodia de su hijo cuando está a punto de comenzar una carrera profesional que le cambiará la vida.",
+		
+		"length": "117",
+		"release_year": 2006,
+		"price": 1000,
+		"trailer": "https://www.youtube.com/embed/2McKB-uOE5E",
+		
+		"blockbuster_rating": "8.5",
+		"imdb_rating": "8",
+		"rotten_tomatoes_rating": "9"
+	},
+	{
+		
+		"title": "Harry Potter y el cáliz de fuego",
+		"image_url": "/images/Harry_Potter_Caliz_De_fuego.jpg",
+		"description": "Harry Potter se encuentra compitiendo en un peligroso torneo entre escuelas de magia rivales, pero está distraído por pesadillas recurrentes.",
+		
+		"length": "157",
+		"release_year": 2005,
+		"price": 1000,
+		"trailer": "https://www.youtube.com/embed/2C_2wAY4PkE",
+		
+		"blockbuster_rating": "8",
+		"imdb_rating": "7.7",
+		"rotten_tomatoes_rating": "8.1"
+	},
+	{
+		
+		"title": "Fuego contra fuego",
+		"image_url": "/images/Fuego_contra_fuego.jpg",
+		"description": "Un grupo de ladrones profesionales de alto nivel empieza a sentir a la policía de Los Ángeles en los talones cuando, sin saberlo, deja una pista en su último atraco.",
+		
+		"length": "170",
+		"release_year": 1995,
+		"price": 1000,
+		"trailer": "https://www.youtube.com/embed/2GfZl4kuVNI",
+		
+		"blockbuster_rating": "9",
+		"imdb_rating": "8.3",
+		"rotten_tomatoes_rating": "8.5"
+	},
+	{
+		
+		"title": "El rey león",
+		"image_url": "/images/El_rey_leon.jpg",
+		"description": "El pequeño león Simba, príncipe heredero, es engañado por su malvado tío, quien desea el trono para sí mismo.",
+		
+		"length": "88",
+		"release_year": 1994,
+		"price": 1000,
+		"trailer": "https://www.youtube.com/embed/G5fgUzyaGqk?start=6",
+		
+		"blockbuster_rating": "9",
+		"imdb_rating": "8.5",
+		"rotten_tomatoes_rating": "9.2"
+	},
+	{
+		
+		"title": "Toy Story 2",
+		"image_url": "/images/Toy_Story_2.jpg",
+		"description": "Cuando Woody es secuestrado por un coleccionista de juguetes, Buzz y sus amigos emprenden una misión de rescate, pero Woody encuentra tentadora la idea de ser inmortalizado en un museo.",
+		
+		"length": "92",
+		"release_year": 1999,
+		"price": 1000,
+		"trailer": "https://www.youtube.com/embed/0RRvNHZG0kM",
+		
+		"blockbuster_rating": "8.3",
+		"imdb_rating": "7.9",
+		"rotten_tomatoes_rating": "8"
+	},
+	{
+		
+		"title": "Forrest Gump",
+		"image_url": "/images/Forrest_Gump.jpg",
+		"description": "Las presidencias de Kennedy y Johnson, los acontecimientos de Vietnam, el Watergate y otros eventos históricos se desarrollan a través de la perspectiva de un hombre de Alabama con un coeficiente intelectual de 75.",
+		
+		"length": "144",
+		"release_year": 1994,
+		"price": 1000,
+		"trailer": "https://www.youtube.com/embed/GIs2gpWpBiQ",
+		
+		"blockbuster_rating": "9.2",
+		"imdb_rating": "8.8",
+		"rotten_tomatoes_rating": "9.5"
+	}
+]
