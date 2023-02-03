@@ -13,7 +13,7 @@ function userLoggedMiddleware(req, res, next) {
 		.then(result=>{
 			
 			if (result.length > 0) {
-				req.session.userLogged = result[0];
+				req.session.userLogged = result;
 			}
 		
 			if (req.session.userLogged) {

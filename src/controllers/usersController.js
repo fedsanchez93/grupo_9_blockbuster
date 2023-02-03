@@ -16,7 +16,7 @@ const controller = {
 			.then(user => res.render('users/perfilUser',{user: req.session.userLogged[0]}))
 	},
     editarPerfil:(req,res)=>{
-        res.render('users/editarPerfilUser',{listaUsers, user: req.session.userLogged})
+        res.render('users/editarPerfilUser',{user: req.session.userLogged[0]})
     },
     
     processRegister: (req, res) => {
@@ -111,14 +111,14 @@ const controller = {
 	},
 	listaUsuarios:(req,res)=>{
 		db.User.findAll()
-			.then(users => res.render('users/listaUsuarios',{users,user: req.session.userLogged}));
+			.then(users => res.render('users/listaUsuarios',{users,user: req.session.userLogged[0]}));
 		
 	},
 
 	editarUsuario:(req,res)=>{
-		if(req.session.userLogged.category == "admin") { 
+		if(req.session.userLogged[0].is_admin == 1) { 
 			db.User.findByPk(req.params.id,{include: [{association: "genres"}]})
-				.then(userToEdit => res.render('users/editarPerfilAdmin',{user:req.session.userLogged, userToEdit}));
+				.then(userToEdit => res.render('users/editarPerfilAdmin',{user: req.session.userLogged[0], userToEdit}));
 		} else {
 			res.redirect('/');
 		}
@@ -154,18 +154,21 @@ const controller = {
 	},
 
 	confirmarBorrado: (req,res)=> {
-		if(req.session.userLogged.category == "admin") { 
-			let userToDelete = listaUsers.find(user => user.id == req.params.id);
-			res.render('users/eliminarUsuario',{user:req.session.userLogged, userToDelete});
+		if(req.session.userLogged[0].is_admin == 1) { 
+			//let userToDelete = listaUsers.find(user => user.id == req.params.id);
+			db.User.findByPk(req.params.id,{include: [{association: "genres"}]})
+			.then(userToDelete => res.render('users/eliminarUsuario',{user:req.session.userLogged[0], userToDelete})) 
+	
 		} else {
 			res.redirect('/');
 		}
 	},
 
 	borrarUsuario: (req,res)=> {
-		if(req.session.userLogged.category == "admin") { 
-			let userDelete = listaUsers.filter(user => user.id != req.params.id);
-			fs.writeFileSync(usersFilePath, JSON.stringify(userDelete,null, '\t'));
+		if(req.session.userLogged[0].is_admin == 1) { 
+			//let userDelete = listaUsers.filter(user => user.id != req.params.id);
+			//db.User.
+			//fs.writeFileSync(usersFilePath, JSON.stringify(userDelete,null, '\t'));
 			res.redirect('/');
 		} else {
 			res.redirect('/');
