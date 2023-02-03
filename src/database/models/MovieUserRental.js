@@ -29,7 +29,9 @@ module.exports = (sequelize, dataTypes)=>{
 
     let config = {
         tableName : 'movies_users_rentals',
-        timestamps: false
+        timestamps: true,
+        createdAt:'created_at',
+        updatedAt:false
     }
     const MovieUserRental = sequelize.define(alias, cols, config)
     

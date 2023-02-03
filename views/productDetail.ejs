@@ -90,14 +90,14 @@
                         <li><a href="#">Calificación Blockbuster</a><div class="calificacion"><%= movie.blockbuster_rating %></div></li>
                         <li><a href="#">Calificación IMDb</a> <div class="calificacion"><%= movie.imdb_rating %></div></li>
                         <li><a href="#">Calificación Rotten Tomatoes </a><div class="calificacion"><%= movie.rotten_tomatoes_rating %></div></li>
-                        <li><a class="botonNav" href="#"> <i class="fa-solid fa-heart-circle-plus"></i> Agregar a Mis Deseos</a></li>
-                        <li><form action="/users/wishes/add/<%= user.id %>/<%= movie.id %>/" method="post"><input class="botonNav" type="submit" value="AGREGAR A MIS DESEOS!!!"></form></li>
-                        <li><form action="/users/wishes/delete/<%= user.id %>/<%= movie.id %>/" method="post"><input class="botonNav" type="submit" value="QUITAR DE MIS DESEOS!!!"></form></li>
+                        <!-- <li><a class="botonNav" href="#"> <i class="fa-solid fa-heart-circle-plus"></i> Agregar a Mis Deseos</a></li> -->
+                        <li><form action="/users/wishes/add/<%= user.id %>/<%= movie.id %>/" method="post"><button type="submit" class="botonNav2"><i class="fa-solid fa-heart-circle-plus"></i> Agregar a Mis Deseos</button></form></li>
+                        <li><form action="/users/wishes/delete/<%= user.id %>/<%= movie.id %>/" method="post"><button type="submit" class="botonNav2"><i class="fa-solid fa-heart-circle-minus"></i> Quitar de Mis Deseos</button></form></li>
 
-                        <li><form action="/users/cart/add/<%= user.id %>/<%= movie.id %>/" method="post"><input class="botonNav" type="submit" value="AGREGAR AL CARRITO!!!"></form></li>
-                        <li><form action="/users/cart/delete/<%= user.id %>/<%= movie.id %>/" method="post"><input class="botonNav" type="submit" value="QUITAR DEL CARRITO!!!"></form></li>
+                        <li><form action="/users/cart/add/<%= user.id %>/<%= movie.id %>/" method="post"><button type="submit" class="botonNav2"><i class="fa-solid fa-cart-plus"></i> Agregar al Carrito</button></form></li>
+                        <li><form action="/users/cart/delete/<%= user.id %>/<%= movie.id %>/" method="post"><button type="submit" class="botonNav2"><i class="fa-solid fa-trash"></i> Quitar del carrito</button></form></li>
 
-                        <li><a class="botonNav" href="#"> <i class="fa-solid fa-cart-plus"></i> Agregar al Carrito</a></li> 
+                        <!-- <li><a class="botonNav" href="#"> <i class="fa-solid fa-cart-plus"></i> Agregar al Carrito</a></li>  -->
                     </ul>
                 </div>
             </div>

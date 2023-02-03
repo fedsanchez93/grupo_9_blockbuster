@@ -16,10 +16,10 @@
         <section class="compras-ofertas">
             <h1 class="titulo">Carrito On Line</h1>
             <ul>
-                <li class="item-oferta">Alquilar 1 Pelicula con 5% descuento</li>
-                <li class="item-oferta">Alquilar 5 Peliculas con 10% descuento</li>
-                <li class="item-oferta">Alquilar 10 Peliculas con 20% descuento</li>
-                <li class="item-oferta">Alquilar 20 Peliculas con 30% descuento</li>
+                <li class="item-oferta">Alquilar Pelicula/s por 24hs con 5% descuento  <br>Precio total con el descuento: $<%= menos5porciento %> Ars.</li>
+                <li class="item-oferta">Alquilar Pelicula/s por 48hs con 10% descuento  <br>Precio total con el descuento: $<%= menos10porciento %> Ars.</li>
+                <li class="item-oferta">Alquilar Pelicula/s por 72hs con 20% descuento  <br>Precio total con el descuento: $<%= menos20porciento %> Ars.</li>
+                <li class="item-oferta">Alquilar Pelicula/s por 10 dias con 30% descuento  <br>Precio total con el descuento: $<%= menos30porciento %> Ars.</li>
             </ul>
         </section>
 
@@ -32,13 +32,14 @@
                     <div>
                         <img class="img-pelicula" src="<%= element.image_url %> ">
                         <h2 class="tituloPeli texto"><%= element.title %></h2>
-                        <h3 class="texto"><%= element.price %></h3>
+                        <h3 class="texto">$<%= element.price %></h3>
                     </div>
                     <!-- <a href="/carrito/<%= element.id %> " class="botonFormBusc">Comprar</a>
                     <a href="/products/productDetail?id=<%= element.id %> " class="botonFormBusc">Quitar</a> -->
                     <div class="iconos-nav">
-                        <i class="fa-solid fa-dollar-sign"></i>
-                        <i class="fa-regular fa-trash-can"></i>
+                        <li class="QuitarDelCarrito"><form action="/users/cart/delete/<%= user.id %>/<%= element.id %>/" method="post"><button type="submit" class="boton"><i class="fa-regular fa-trash-can"></i></button></form></li>
+
+                        <!-- <i class="fa-solid fa-dollar-sign"></i> -->
                     </div>
                 </article>
             <% }); %> 
@@ -58,6 +59,7 @@
                     <!-- <a href="/carrito/<%= element.id %> " class="botonFormBusc">Comprar</a>
                     <a href="/products/productDetail?id=<%= element.id %> " class="botonFormBusc">Quitar</a> -->
                     <div class="iconos-nav">
+
                         <i class="fa-solid fa-dollar-sign"></i>
                         <i class="fa-regular fa-trash-can"></i>
                     </div>

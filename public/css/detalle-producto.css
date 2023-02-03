@@ -216,6 +216,15 @@ body{
     padding: 5px;
     border-radius: 10px;
 }
+.botonNav2{
+    border: #FCC139 solid 1px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    background: #000;
+    color: #FCC139;
+    cursor: pointer;
+}
 .div-trailer{
     width: 90%;
     margin: 30px auto;

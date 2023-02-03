@@ -5,6 +5,7 @@ const bcrypt = require('bcryptjs')
 const User = require('../database/models/User');
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
+//const { now } = require('sequelize/types/utils');
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const listaUsers = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -182,7 +183,7 @@ const controller = {
 			id_movie:id_movie,
 			id_user:id_user
 		})
-		.then(result=>res.redirect('/products/productDetail?id='+id_movie)) //res.json(result) '/products/productDetail?id='+id_movie
+		.then(result=>res.redirect('/products/listadoDeseos')) //res.json(result) '/products/productDetail?id='+id_movie
 	},
 	deleteWishes:(req,res)=>{
 		let id_user = req.params.id_user
@@ -193,9 +194,8 @@ const controller = {
 				id_movie:id_movie,
 				id_user:id_user
 			}
-			
 		})
-		.then(result=>res.redirect('/products/productDetail?id='+id_movie))
+		.then(result=>res.redirect('/products/listadoDeseos'))
 	},
 	addCart:(req,res)=>{
 		let id_user = req.params.id_user
@@ -205,7 +205,13 @@ const controller = {
 			id_movie:id_movie,
 			id_user:id_user
 		})
-		.then(result=>res.redirect('/products/productDetail?id='+id_movie)) 
+		.then(result=>res.redirect('/carrito')) 
+		db.MovieUserWish.destroy({
+			where:{
+				id_movie:id_movie,
+				id_user:id_user
+			}
+		})
 	},
 	deleteCart:(req,res)=>{
 		let id_user = req.params.id_user
@@ -218,7 +224,7 @@ const controller = {
 			}
 			
 		})
-		.then(result=>res.redirect('/products/productDetail?id='+id_movie))
+		.then(result=>res.redirect('/carrito'))
 	},
 	addRental:(req,res)=>{
 		let id_user = req.params.id_user
@@ -226,9 +232,10 @@ const controller = {
 		
 		db.MovieUserRental.create({
 			id_movie:id_movie,
-			id_user:id_user
+			id_user:id_user,
+			expired_at: '2023-02-03T19:23:08.183Z' 
 		})
-		.then(result=>res.redirect('/carrito/'+id_movie)) 
+		.then(result=>res.redirect('/products/misAlquileres')) 
 	},
 	deleteRental:(req,res)=>{
 		let id_user = req.params.id_user
@@ -241,7 +248,7 @@ const controller = {
 			}
 			
 		})
-		.then(result=>res.redirect('/carrito/'+id_movie))
+		.then(result=>res.redirect('/products/misAlquileres'))
 	},
 }
 

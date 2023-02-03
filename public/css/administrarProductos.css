@@ -212,7 +212,7 @@ h2.texto{
 
 }
 
-.iconos-nav i{
+/* .iconos-nav i{
     color: white;
     border: solid white 2px;
     border-radius: 15px;
@@ -221,9 +221,31 @@ h2.texto{
     font-size: 20px;
     cursor: pointer;
     transition: 100ms ease-in-out 0s; 
+} */
+.iconos-nav li{
+    color: white;
+    border: solid white 2px;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 100ms ease-in-out 0s; 
+    display: inline-block;
+}
+.iconos-nav i{
+    color: white;
+
+    background:none;
+    cursor: pointer;
+}
+.iconos-nav .boton{
+    background: none;
+    border: 0;
+    background-color: none;
 }
 
-.fa-cart-plus:hover {
+.agregarAlCarrito:hover {
     color:#8ac926;   
     border: solid #8ac926 2px; 
     text-decoration:solid;
@@ -231,7 +253,7 @@ h2.texto{
     transition: 100ms;
 } 
 
-.fa-trash-can:hover {
+.QuitarDeMisDeseos:hover {
     color:red;   
     border: solid red 2px; 
     text-decoration:solid;

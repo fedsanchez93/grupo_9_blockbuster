@@ -40,16 +40,25 @@ const mainController = {
         Promise.all([movie, movies])
         .then(([movie, movies]) => {
             let cartList = []
-            
+            let PrecioTotal =0
             movies.forEach(pelicula => {
                 if (pelicula.users_cart.length > 0) {
                     pelicula.users_cart.forEach(element => {
-                        element.id == req.session.userLogged.id ? cartList.push(pelicula) : null
+                        element.id == req.session.userLogged[0].id ? cartList.push(pelicula) : null
+                        element.id == req.session.userLogged[0].id ? PrecioTotal += parseInt(pelicula.price)  : null
+
                     });
                 }
             });
+            let menos5porciento = Math.round(PrecioTotal / 1.05) 
+            let menos10porciento = Math.round(PrecioTotal / 1.1)
+            let menos20porciento = Math.round(PrecioTotal / 1.2)
+            let menos30porciento = Math.round(PrecioTotal / 1.3)
+
+            console.log('PrecioTotal',PrecioTotal, menos5porciento, menos10porciento, menos20porciento, menos30porciento)
+            
             //res.json(cartList)
-            res.render('carrito', {listaPeliculas, id, anterior, siguiente, user: req.session.userLogged[0], cartList, movie})
+            res.render('carrito', {listaPeliculas, id, anterior, siguiente, user: req.session.userLogged[0], cartList, movie, menos5porciento, menos10porciento, menos20porciento, menos30porciento})
         })
     },
     carrito2: (req,res)=>{

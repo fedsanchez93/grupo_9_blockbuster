@@ -106,7 +106,7 @@ li {
 } 
 
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     transition: 100ms;
 }
 
@@ -131,14 +131,38 @@ li {
 
 .iconos-nav i{
     color: white;
-    border: solid white 2px;
     border-radius: 15px;
-    padding: 10px;
+    padding: 5px;
     margin: 10px;
     font-size: 20px;
     cursor: pointer;
     transition: 100ms ease-in-out 0s; 
 }
+
+
+.iconos-nav li{
+    color: white;
+    border: solid white 2px;
+    border-radius: 15px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 100ms ease-in-out 0s; 
+    display: inline-block;
+}
+/* .iconos-nav i{
+    color: white;
+    background:none;
+    cursor: pointer;
+} */
+.iconos-nav .boton{
+    background: none;
+    border: 0;
+    background-color: none;
+}
+
+
 
 .fa-dollar-sign:hover {
     color:#8ac926;   
@@ -148,14 +172,20 @@ li {
     transition: 100ms;
 }
 
-.fa-trash-can:hover {
+/* .fa-trash-can:hover {
     color:red;   
     border: solid red 2px; 
     text-decoration:solid;
     transform: scale(1.1);
     transition: 100ms;
+} */
+.QuitarDelCarrito:hover {
+    color:red;   
+    border: solid red 2px; 
+    text-decoration:solid;
+    transform: scale(1.01);
+    transition: 100ms;
 }
-
 
 /* = = = = = MAIN BODY = = = = = */
 

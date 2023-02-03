@@ -18,7 +18,7 @@ const productsController = {
             results.forEach(pelicula => {
                 if (pelicula.users_rentals.length > 0) {
                     pelicula.users_rentals.forEach(element => {
-                        element.id == req.session.userLogged.id ? rentalList.push(pelicula) : null
+                        element.id == req.session.userLogged[0].id ? rentalList.push(pelicula) : null
                     });
                 }
             });
@@ -59,7 +59,7 @@ const productsController = {
                 //pelicula.users_wishlist.length > 0 ? wishList.push(pelicula) : null
                 if (pelicula.users_wishlist.length > 0) {
                     pelicula.users_wishlist.forEach(element => {
-                        element.id == req.session.userLogged.id ? wishList.push(pelicula) : null
+                        element.id == req.session.userLogged[0].id ? wishList.push(pelicula) : null
                     });
                 }
             });
