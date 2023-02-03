@@ -27,7 +27,11 @@ const mainController = {
         res.render('login')
     },
     register: (req,res)=>{
-        res.render('register')
+        db.Genre.findAll()
+        .then(genres => {
+            //res.json(genres)
+            res.render('register', {genres})
+        })
     },
     carrito: (req,res)=>{
 

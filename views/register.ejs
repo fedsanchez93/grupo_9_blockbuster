@@ -50,6 +50,18 @@
                         <div class=" verificador"> <%= errors.password.msg %></div>
                     <% } %>
                 </article>
+                <article>
+                    <label  class="label-form" for="id_favorite_genre">Genero de pelicula Favorito</label> <br>
+                    <!-- <input type="password" name="id_favorite_genre" id="id_favorite_genre" placeholder="Contraseña" > -->
+                    <select name="id_favorite_genre" id="id_favorite_genre">
+                        <option value="0" selected disabled>seleccionar</option>
+                        <% genres.forEach(element => { %>
+                            <option value="<%= element.id %>"><%= element.genre %> </option>
+                        <% }) %>
+                    </select>
+                    
+                    
+                </article>
 
                 <div class="iconos-foto-google">
                     <div class="div-subir-foto">

@@ -53,7 +53,7 @@ const controller = {
 						password: bcrypt.hashSync(req.body.password, 10),
 						image_url: req.file ? req.file.filename : '/userFoto.jpeg',
 						is_admin:0,
-						id_favorite_genre:1,
+						id_favorite_genre:req.body.id_favorite_genre,
 						is_active:1
 					})
 						.then(res.redirect('/login'));
