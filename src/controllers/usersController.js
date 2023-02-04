@@ -167,10 +167,9 @@ const controller = {
 
 	borrarUsuario: (req,res)=> {
 		if(req.session.userLogged[0].is_admin == 1) { 
-			//let userDelete = listaUsers.filter(user => user.id != req.params.id);
-			//db.User.
-			//fs.writeFileSync(usersFilePath, JSON.stringify(userDelete,null, '\t'));
-			res.redirect('/');
+			db.User.destroy({where : {id: req.params.id},force : true})
+				.then(()=>{return res.redirect('/')})
+					.catch(error => res.send(error)); 
 		} else {
 			res.redirect('/');
 		}
