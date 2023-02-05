@@ -134,7 +134,7 @@ const controller = {
 				"username": userToEdit.username,
 				"email": userToEdit.email,
 				password: bcrypt.hashSync(req.body.password, 10),
-				"image": userToEdit.image,
+				"image_url": userToEdit.image_url,
 				"is_admin": userToEdit.is_admin
 			})
 
@@ -145,13 +145,13 @@ const controller = {
 				"username": req.body.username,
 				"email": req.body.email,
 				password: bcrypt.hashSync(req.body.password, 10),
-				"image": req.body.image,
+				"image_url": req.body.image_url,
 				"is_admin": req.body.is_admin
 			},
 			{
 				where: {id: req.params.id}
 			})
-			.then(res.redirect('/'));
+			.then(res.redirect('/perfil'));
 	},
 
 	confirmarBorrado: (req,res)=> {
