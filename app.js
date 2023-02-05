@@ -50,7 +50,36 @@ const db = require('./src/database/models');
 //     listaPeliculas
 // )
   
+// db.Genre.bulkCreate([
+//     {genre:'Ciencia Ficción'},
+//     {genre:'Terror'},
+//     {genre:'Amor'},
+//     {genre:'Comedia'},
+//     {genre:'Policial'},
+//     {genre:'Aventura'},
+//     {genre:'Bélico'},
+//     {genre:'Drama'},
+//     {genre:'Suspenso'},
+//     {genre:'Misterio'},
+//     {genre:'Fantasía'},
+//     {genre:'Infantil'},
+//     {genre:'Familiar'},
+//     {genre:'Biografía'},
+//     {genre:'Animación'},
+//     {genre:'Romance'},
+//     {genre:'Crimen'},
+//     {genre:'Documental'},
 
+// ])
+
+// db.Language.bulkCreate([
+//     {language:'Español'},
+//     {language:'Inglés'},
+//     {language:'Portugués'},
+//     {language:'Francés'},
+//     {language:'Italiano'},
+
+// ])
   
   
 

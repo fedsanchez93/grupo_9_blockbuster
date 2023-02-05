@@ -31,7 +31,7 @@ const controller = {
 		}
 
 		db.User.findAll({
-			where:{"email":req.body.email}
+			where:{"email":req.body.email}  
 		})
 			.then(userInDB => {
 
