@@ -20,7 +20,7 @@
         <!-- <div class="center"></div> -->
         <h1 class="tituloPag">Subir Nueva Pelicula</h1>
 
-        <form class="form-ingreso-peli" action="/products/guardarNuevoProducto" method="POST">
+        <form class="form-ingreso-peli" action="/products/guardarNuevoProducto" method="POST"  enctype="multipart/form-data">
             <div class="txt_field">
                 <input type="text" name="titulo" >
                 <span></span>
@@ -160,7 +160,7 @@
                     <p>Subir foto</p>
                     <i class="fa-solid fa-cloud-arrow-up"></i>
                 </label>
-                <input id="file-input" type="file" />
+                <input id="file-input" type="file" name="imageMovie" />
             </div>
 
             

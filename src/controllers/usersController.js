@@ -30,10 +30,15 @@ const controller = {
     processRegister: (req, res) => {
 		const resultValidation = validationResult(req);
 
+		db.Genre.findAll()
+		.then(genres=>{
+
+		
 		if (resultValidation.errors.length > 0) {
 			return res.render('register', {
 				errors: resultValidation.mapped(),
-				oldData: req.body
+				oldData: req.body,
+				genres
 			});
 		}
 
@@ -49,7 +54,8 @@ const controller = {
 								msg: 'Este email ya está registrado'
 							}
 						},
-						oldData: req.body
+						oldData: req.body,
+						genres
 					});	
 				
 				} else {
@@ -66,6 +72,8 @@ const controller = {
 						.then(res.redirect('/login'));
 				}
 			})
+
+		})
 	},
    
     loginProcess: (req, res) => {

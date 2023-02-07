@@ -165,12 +165,12 @@ const productsController = {
     guardarNuevoProducto:(req,res)=>{
         db.Movie.create({
             title: req.body.titulo,
-            image_url: req.body.imagen || "https://i.pinimg.com/564x/f8/28/73/f828738fc037b66f2bdb74deaf36ad3d.jpg", 
+            image_url: req.body.imagen || req.file ? '/images/img-movies/'+req.file.filename : "https://i.pinimg.com/564x/f8/28/73/f828738fc037b66f2bdb74deaf36ad3d.jpg", 
             description: req.body.descripcion,
             length: req.body.duracion,
             release_year: req.body.release_year,
             price: req.body.precio,
-            trailer: req.body.trailer || "https://www.youtube.com/embed/LDXYRzerjzU",
+            trailer: req.body.trailer ||  "https://www.youtube.com/embed/LDXYRzerjzU",
             is_active: req.body.is_active,
             movie_url: "https://www.youtube.com/embed/LDXYRzerjzU",
             blockbuster_rating: 5,
@@ -182,7 +182,7 @@ const productsController = {
                 movie.setGenres(req.body.genres)
                 movie.setLanguages(req.body.languages)
                 //console.log(movie)
-                res.redirect('/products/administrarProductos')
+                res.redirect('/products/administrarProductos') 
 
             })
             .catch(errors=>{
