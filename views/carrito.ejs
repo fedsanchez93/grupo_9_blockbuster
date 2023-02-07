@@ -32,7 +32,7 @@
                     <!-- <a href="/carrito/<%= element.id %> " class="botonFormBusc">Comprar</a>
                     <a href="/products/productDetail?id=<%= element.id %> " class="botonFormBusc">Quitar</a> -->
                     <div class="iconos-nav">
-                        <li><form action="/users/rental/add/<%= user.id %>/<%= element.id %>/" method="post"><button type="submit" class="boton"><i class="fa-solid fa-dollar-sign"></i></button></form></li>
+                        <li><form action="/users/rental/add/<%= user.id %>/<%= element.id %>/" method="post"><input type="hidden" name="dias" value="0"><button type="submit" class="boton"><i class="fa-solid fa-dollar-sign"></i></button></form></li>
                         <li class="QuitarDelCarrito"><form action="/users/cart/delete/<%= user.id %>/<%= element.id %>/" method="post"><button type="submit" class="boton"><i class="fa-regular fa-trash-can"></i></button></form></li>
 
                         <!-- <i class="fa-solid fa-dollar-sign"></i> -->
@@ -43,7 +43,10 @@
 
         <section class="compras-ofertas">
             <ul>
-                <li class="item-oferta">Alquilar Pelicula/s por 24hs con 5% descuento  <br>Precio total con el descuento: $<%= menos5porciento %> Ars.</li>
+                <form action="/users/rental/add/<%= user.id %>/2/" method="post"><input type="hidden" name="dias" value="0"><button type="submit" class="boton">
+                <li class="item-oferta">NO FUNCA-ARMANDO---Alquilar Pelicula/s por 24hs con 5% descuento  <br>Precio total con el descuento: $<%= menos5porciento %> Ars.</li>
+            </button></form> 
+
                 <li class="item-oferta">Alquilar Pelicula/s por 48hs con 10% descuento  <br>Precio total con el descuento: $<%= menos10porciento %> Ars.</li>
                 <li class="item-oferta">Alquilar Pelicula/s por 72hs con 20% descuento  <br>Precio total con el descuento: $<%= menos20porciento %> Ars.</li>
                 <li class="item-oferta">Alquilar Pelicula/s por 10 dias con 30% descuento  <br>Precio total con el descuento: $<%= menos30porciento %> Ars.</li>

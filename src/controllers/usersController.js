@@ -5,10 +5,17 @@ const bcrypt = require('bcryptjs')
 const User = require('../database/models/User');
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
-//const { now } = require('sequelize/types/utils');
+
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const listaUsers = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
+/* Función que suma o resta días a una fecha, si el parámetro
+   días es negativo restará los días*/
+   function sumarDias(fecha, dias){
+	fecha.setDate(fecha.getDate() + dias);
+	return fecha;
+  }
 
 const controller = {
 
@@ -182,7 +189,9 @@ const controller = {
 			id_movie:id_movie,
 			id_user:id_user
 		})
-		.then(result=>res.redirect('/products/listadoDeseos')) //res.json(result) '/products/productDetail?id='+id_movie
+		.then(result=>{
+			res.redirect('/products/listadoDeseos')
+		}) 
 	},
 	deleteWishes:(req,res)=>{
 		let id_user = req.params.id_user
@@ -227,17 +236,19 @@ const controller = {
 	addRental:(req,res)=>{
 		let id_user = req.params.id_user
 		let id_movie = req.params.id_movie
+		let d = new Date();
+		console.log('now:',d,'+1:',sumarDias(d, 1));
 		
 		db.MovieUserRental.create({
 			id_movie:id_movie,
 			id_user:id_user,
-			expired_at: '2023-02-03T19:23:08.183Z' 
+			expired_at: sumarDias(d, req.body.dias) //suma un dia con 0  //'2023-02-03T19:23:08.183Z'   
 		})
-		.then(result=>res.redirect('/products/misAlquileres')) 
+		.then(result=>{console.log('body:',req.body.dias); res.redirect('/products/misAlquileres'); }) 
 		
 		db.MovieUserCart.destroy({ 
 			where:{
-				id_movie:id_movie,
+				id_movie:id_movie,  
 				id_user:id_user
 			}
 		})
