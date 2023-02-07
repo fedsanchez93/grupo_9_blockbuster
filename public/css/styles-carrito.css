@@ -156,7 +156,7 @@ li {
     background:none;
     cursor: pointer;
 } */
-.iconos-nav .boton{
+.iconos-nav .boton, .compras-ofertas .boton{
     background: none;
     border: 0;
     background-color: none;
