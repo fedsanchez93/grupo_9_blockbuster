@@ -24,7 +24,10 @@ const controller = {
 			.then(user => res.render('users/perfilUser',{user: req.session.userLogged[0]}))
 	},
     editarPerfil:(req,res)=>{
-        res.render('users/editarPerfilUser',{user: req.session.userLogged[0]})
+		db.Genre.findAll()
+		.then(genres=>{
+			res.render('users/editarPerfilUser',{user: req.session.userLogged[0], genres})
+		})
     },
     
     processRegister: (req, res) => {
@@ -150,7 +153,8 @@ const controller = {
 				"email": userToEdit.email,
 				password: bcrypt.hashSync(req.body.password, 10),
 				"image_url": userToEdit.image_url,
-				"is_admin": userToEdit.is_admin
+				"is_admin": userToEdit.is_admin,
+				//"id_favorite_genre":userToEdit.id_favorite_genre
 			})
 
 		db.User.update(
@@ -161,12 +165,13 @@ const controller = {
 				"email": req.body.email,
 				password: bcrypt.hashSync(req.body.password, 10),
 				"image_url": req.body.image_url,
-				"is_admin": req.body.is_admin
+				"is_admin": req.body.is_admin,
+				id_favorite_genre: req.body.id_favorite_genre
 			},
 			{
 				where: {id: req.params.id}
 			})
-			.then(res.redirect('/perfil'));
+			.then(user => {res.redirect('/perfil'); console.log(req.body)});
 	},
 
 	confirmarBorrado: (req,res)=> {

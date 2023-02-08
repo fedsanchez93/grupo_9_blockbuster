@@ -13,31 +13,31 @@
 
         <h1>Editar perfil del usuario:</h1>
     
-    <section>
+    <section class="section-editar-user">
         <form action="/guardarEdicionUser" method="POST">
             <div class="info-perfil">
                 <label for="email">e-mail:</label>
-                <input type="email" name="email" id="" value="<%= user.email %> ">
+                <input type="email" name="email"  value="<%= user.email %> ">
             </div>
             <div class="info-perfil">
                 <label for="name">Nombre y apellido:</label>
-                <input type="text" name="name" id="" value="<%= user.name %> ">
+                <input type="text" name="name"  value="<%= user.name %> ">
             </div>
             <div class="info-perfil">
                 <label for="usuario">Usuario:</label>
-                <input type="text" name="username" id="" value="<%= user.username %> ">
+                <input type="text" name="username"  value="<%= user.username %> ">
             </div>
             <div class="info-perfil">
                 <label for="usuario">Contraseña Actual:</label>
-                <input type="password" name="password" id="" value="" placeholder="*******">
+                <input type="password" name="password"   placeholder="*******" required>
             </div>
             <div class="info-perfil">
                 <label for="usuario">Contraseña Nueva:</label>
-                <input type="text" name="newPassword" id="" value="" placeholder="Nueva contraseña">
+                <input type="text" name="newPassword"   placeholder="Nueva contraseña" required>
             </div>
             <div class="info-perfil">
                 <label for="usuario">Contraseña Nueva:</label>
-                <input type="text" name="newPassword" id="" value="" placeholder="Repita Nueva contraseña">
+                <input type="text" name="newPassword"   placeholder="Repita Nueva contraseña" required>
             </div>
               
             <div class="info-perfil">
@@ -52,7 +52,22 @@
                     <img src="/images/users/<%= user.image_url %>" alt="img">
                 </div>
             </div>
-           
+
+            <div>
+            <article>
+                <label  class="label-form" for="id_favorite_genre">Genero de pelicula Favorito</label> <br>
+                <!-- <input type="password" name="id_favorite_genre" id="id_favorite_genre" placeholder="Contraseña" > -->
+                <select name="id_favorite_genre" id="id_favorite_genre">
+                    <option value="0">seleccionar</option>
+                    <% genres.forEach(element => { %>
+                        <option value="<%= element.id %>"
+                            <%= user.id_favorite_genre == element.id ? 'selected' : null %> 
+                            ><%= element.genre %></option>
+                    <% }) %>
+                </select>
+            </div> 
+                
+            </article>
             <div class="botones">
                 <h2 class="button"><a href="/users/perfil">Volver</a></h2>
                 <!-- Hacer boton de actualizar datos de usuario --><h2 class="button"><a href="/users/logout">Guardar</a></h2>
