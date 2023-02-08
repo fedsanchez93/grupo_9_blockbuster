@@ -5,7 +5,7 @@ const app = express();
 const prodctsController = require('../src/controllers/productsController');
 
 const authMiddleware = require('../src/middlewares/authMiddleware');
-
+const validationsNewMovie = require('../src/middlewares/validateNewMovie')
 const uploadFile = require('../src/middlewares/multerMovie')
 
 // Atencion que todas las rutas de este router empiezan con /products/
@@ -25,7 +25,7 @@ router.get('/video/:id?',prodctsController.video);
 
 router.get('/crearNuevoProducto',prodctsController.crearNuevoProducto);
 
-router.post('/guardarNuevoProducto',uploadFile.single('imageMovie'), prodctsController.guardarNuevoProducto);
+router.post('/guardarNuevoProducto',uploadFile.single('imageMovie'), validationsNewMovie, prodctsController.guardarNuevoProducto);
 router.put('/editarProducto/:id?/',prodctsController.guardarProductoEditado);
 router.delete('/eliminarProducto/:id?/',prodctsController.eliminarProducto);
 

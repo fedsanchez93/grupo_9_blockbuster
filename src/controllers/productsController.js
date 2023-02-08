@@ -2,6 +2,8 @@ const path = require('path')
 const fs = require('fs');
 const db = require('../database/models');
 
+const { validationResult } = require('express-validator');
+
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const listaPeliculas = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
@@ -163,6 +165,9 @@ const productsController = {
     },
 
     guardarNuevoProducto:(req,res)=>{
+        let resultadoValidacion = validationResult(req);
+
+        if(resultadoValidacion.errors.length <= 0){
         db.Movie.create({
             title: req.body.titulo,
             image_url: req.body.imagen || req.file ? '/images/img-movies/'+req.file.filename : "https://i.pinimg.com/564x/f8/28/73/f828738fc037b66f2bdb74deaf36ad3d.jpg", 
@@ -173,9 +178,9 @@ const productsController = {
             trailer: req.body.trailer ||  "https://www.youtube.com/embed/LDXYRzerjzU",
             is_active: req.body.is_active,
             movie_url: "https://www.youtube.com/embed/LDXYRzerjzU",
-            blockbuster_rating: 5,
-            imdb_rating: 3,
-            rotten_tomatoes_rating: 8
+            blockbuster_rating: req.body.CalificacionBlockbuster,
+            imdb_rating: req.body.CalificacionIMDb,
+            rotten_tomatoes_rating: req.body.CalificacionRottenTomatoes
         })
             // .then(movie => movie.setGenres(1))
             .then(movie => {
@@ -188,12 +193,20 @@ const productsController = {
             .catch(errors=>{
                 res.send(errors)
             })
-            
+        }else{
+            let Languages = db.Language.findAll()
+            let Genres = db.Genre.findAll()
+            Promise.all([Languages,Genres])
+                .then(([Languages,Genres])=>{
+                    console.log(resultadoValidacion.errors)
+                    res.render('crearNuevoProducto', {user: req.session.userLogged[0], Languages, Genres, errors: resultadoValidacion.mapped(), oldData:req.body })
+                })
+        }
 
         /*let newPelicula = {
             id: listaPeliculas[listaPeliculas.length-1].id+1,
             titulo:req.body.titulo || '',
-            imagen:req.body.imagen || "/images/MaquinasMortales.jpg",
+            imagen:req.body.imagen || "/images/MaquinasMortales.jpg", 
             descripcion:req.body.descripcion,
             genero:req.body.genero || '',
             idioma:req.body.idioma || '',
