@@ -18,6 +18,9 @@ https://www.figma.com/file/HYI7WKGyxuvuJsVl9TA7ac/proyecto?node-id=0%3A1
 ### Tablero de trabajo Trello
 https://trello.com/b/tncZd58N/grupo9blockbuster
 
+### DER Diagrama de la Data Base
+https://lucid.app/lucidchart/a1f77ae1-3364-4698-bb5f-185c48ee607c/edit?invitationId=inv_585f5222-3057-4079-ba8a-b746f9ad510b
+
 Integrantes del equipo:
 ======================
 - Mi nombre es Laura Belén Córdoba

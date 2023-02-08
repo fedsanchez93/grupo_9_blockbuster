@@ -3,7 +3,6 @@ const db = require('../database/models');
 
 function userLoggedMiddleware(req, res, next) {
 	res.locals.isLogged = false;
-
 	let emailInCookie = req.cookies.userEmail ? req.cookies.userEmail : '' ;
 	//locals.req.cookies.userEmail ? emailInCookie = req.cookies.userEmail : null
 	//let userFromCookie = User.findByField('email', emailInCookie);

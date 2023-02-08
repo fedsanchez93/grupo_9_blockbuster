@@ -34,7 +34,6 @@ const mainController = {
         })
     },
     carrito: (req,res)=>{
-
         let id = req.params.id || 1
         let anterior = id-1 || id
         let siguiente = ( (parseInt(id)+1) || 1 )
