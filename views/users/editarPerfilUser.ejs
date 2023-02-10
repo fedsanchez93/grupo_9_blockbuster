@@ -14,7 +14,7 @@
         <h1>Editar perfil del usuario:</h1>
     
     <section class="section-editar-user">
-        <form action="/guardarEdicionUser" method="POST">
+        <form action="/users/editarUsuario/<%=user.id%>?_method=PUT" method="POST">            
             <div class="info-perfil">
                 <label for="email">e-mail:</label>
                 <input type="email" name="email"  value="<%= user.email %> ">
@@ -70,7 +70,10 @@
             </article>
             <div class="botones">
                 <h2 class="button"><a href="/users/perfil">Volver</a></h2>
-                <!-- Hacer boton de actualizar datos de usuario --><h2 class="button"><a href="/users/logout">Guardar</a></h2>
+                <!-- Hacer boton de actualizar datos de usuario -->
+                <button type="submit">
+                    <h2 class="button">Guardar</h2>
+                </button>
             </div>
             
         </form>

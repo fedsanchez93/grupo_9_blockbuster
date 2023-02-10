@@ -129,7 +129,7 @@ const controller = {
 		res.redirect('/products/listadoDeseos')
 	},
 	listaUsuarios:(req,res)=>{
-		db.User.findAll()
+		db.User.findAll() 
 			.then(users => res.render('users/listaUsuarios',{users,user: req.session.userLogged[0]}));
 		
 	},
@@ -171,7 +171,7 @@ const controller = {
 			{
 				where: {id: req.params.id}
 			})
-			.then(user => {res.redirect('/perfil'); console.log(req.body)});
+			.then(user => {res.redirect('/users/perfil'); console.log(req.body)});
 	},
 
 	confirmarBorrado: (req,res)=> {
