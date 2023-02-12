@@ -43,7 +43,7 @@
 
 form .txt_field {
     position: relative;
-    border-bottom: 2px solid #adadad;
+    /* border-bottom: 2px solid #adadad; */
     margin: 30px auto;
     max-width: 400px;
     min-width: 300px;
@@ -311,4 +311,10 @@ input[type="submit"]:hover {
 .text-area{
   color: white;
   margin: 10px;
+}
+
+.radio-foto{
+  width: 1cm;
+  display: none;
+
 }

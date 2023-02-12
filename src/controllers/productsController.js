@@ -98,7 +98,9 @@ const productsController = {
     },
 
     guardarProductoEditado:(req,res)=>{
+        let resultadoValidacion = validationResult(req);
 
+        if(resultadoValidacion.errors.length <= 0){
         db.Movie.update(
             {
                 title: req.body.titulo,
@@ -124,32 +126,22 @@ const productsController = {
             movie.setLanguages(req.body.languages)
             res.redirect('/products/administrarProductos') 
         })
+    }else{
+        let idProducto = req.query.id 
 
-        // let idProducto = req.query.id  
-        // let newPelicula = {
-        //     id: req.body.id || 1,
-        //     titulo:req.body.titulo,
-        //     imagen:req.body.imagen,
-        //     descripcion:req.body.descripcion,
-        //     genero:req.body.genero || '',
-        //     idioma:req.body.idioma || '',
-        //     duracion:req.body.duracion,
-        //     precio:req.body.precio,
-        //     trailer:req.body.trailer,
-        //     categoria:req.body.categoria || '',
-        //     CalificacionBlockbuster:req.body.CalificacionBlockbuster,
-        //     CalificacionIMDb:req.body.CalificacionIMDb,
-        //     CalificacionRottenTomatoes:req.body.CalificacionRottenTomatoes,
-        // }
-        
-        // // console.log(newPelicula, idProducto)
-        // let newlistaPeliculas = listaPeliculas.map(element => {
-		// 	if(newPelicula.id == element.id){return element = newPelicula}
-		// 	return element
-		// })
+        let MovieToEdit = db.Movie.findByPk(req.query.id,{include: [{association: "genres"},{association: "languages"}]})
+        let Languages = db.Language.findAll()
+        let Genres = db.Genre.findAll()
 
-        // fs.writeFileSync(productsFilePath, JSON.stringify(newlistaPeliculas,null, '\t' ))
-        
+        Promise.all([MovieToEdit, Languages,Genres])
+
+        .then(([MovieToEdit, Languages, Genres])=>{
+            //res.json(MovieToEdit)
+            // console.log(MovieToEdit)
+            res.render('editarProducto',{idProducto, user: req.session.userLogged[0], Languages, Genres, MovieToEdit, errors: resultadoValidacion.mapped(), oldData:req.body})
+        })
+    }
+    
         
     },
 
@@ -203,24 +195,7 @@ const productsController = {
                 })
         }
 
-        /*let newPelicula = {
-            id: listaPeliculas[listaPeliculas.length-1].id+1,
-            titulo:req.body.titulo || '',
-            imagen:req.body.imagen || "/images/MaquinasMortales.jpg", 
-            descripcion:req.body.descripcion,
-            genero:req.body.genero || '',
-            idioma:req.body.idioma || '',
-            duracion:req.body.duracion,
-            precio:req.body.precio,
-            trailer:req.body.trailer || "https://www.youtube.com/embed/zDABDg7vwsk",
-            categoria:req.body.categoria || '',
-            CalificacionBlockbuster:req.body.CalificacionBlockbuster,
-            CalificacionIMDb:req.body.CalificacionIMDb,
-            CalificacionRottenTomatoes:req.body.CalificacionRottenTomatoes,
-        }
-        listaPeliculas.push(newPelicula)
-        fs.writeFileSync(productsFilePath, JSON.stringify(listaPeliculas,null, '\t' ))*/
-
+        
     },
 
     eliminarProducto:(req,res)=>{
