@@ -93,16 +93,7 @@
             </div>
  
            
-            <div class="txt_field" >
-                <input  value="<%= locals.oldData ? oldData.imagen : null %>"  type="text" name="imagen">
-                <span></span>
-                <label>URL imagen</label>
-                <% if (locals.errors && errors.imagen) { %>
-                    <span style="color: rgb(255, 149, 0);"><%= errors.imagen.msg %></span>
-                <% }else{ %>
-                <span style="color: green;">✓</span>
-                <% } %>
-            </div>
+           
             <div class="txt_field">
                 <input  value="<%= locals.oldData ? oldData.trailer : null %>"  type="text" name="trailer" >
                 <span></span>
@@ -125,37 +116,7 @@
                 <span style="color: green;">✓</span>
                 <% } %>
             </article>
-            <!-- <div class="txt_field">
- 
-            <select class="select" name="genero" id="">
-                <option value="">Seleccionar</option>
-                <option value="Dramatico">Dramatico</option>
-                <option value="Ficcion">Ficcion</option>
-                <option value="Comedia">Comedia</option>
-                <option value="Romantica">Romantica</option>
-                <option value="Accion">Accion</option>
-                <option value="Suspenso">Suspenso</option>
-                <option value="Terror">Terror</option>
-            </select>
-
-            <span></span>
-            <label>Genero</label>
-        </div> -->
-
-        <!-- <div class="txt_field">
- 
-            <select class="select" name="idioma" id="">
-                <option value="">Seleccionar</option>
-                <option value="Español">Español</option>
-                <option value="English">English</option>
-                <option value="Portugues">Portugues</option>
-                
-            </select>
-
-            <input type="text" >
-            <span></span>
-            <label>Idioma</label>
-        </div> -->
+        
 
 
         <div class="lista-check">
@@ -194,6 +155,8 @@
                 </div>
             </div>
 
+            
+            <input type="radio" name="radio-foto" id="subir-foto"  class="radio-foto">
             <div class="image-upload">
                 <label for="file-input" class="div-subir-foto">
                     <p>Subir foto</p>
@@ -206,8 +169,19 @@
                 <span style="color: green;">✓</span>
                 <% } %>
             </div>
-
             
+            <input type="radio" name="radio-foto" id="url-foto" class="radio-foto">
+            <div class="txt_field" >
+                <input  value="<%= locals.oldData ? oldData.imagen : null %>"  type="text" name="imagen">
+                <span></span>
+                <label>ó URL imagen</label>
+                <% if (locals.errors && errors.imagen) { %>
+                    <span style="color: rgb(255, 149, 0);"><%= errors.imagen.msg %></span>
+                <% }else{ %>
+                <span style="color: green;">✓</span>
+                <% } %>
+            </div>
+        
             
             <input class="pass" type="submit" value="Subir Pelicula" >
             

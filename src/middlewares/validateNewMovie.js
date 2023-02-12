@@ -5,14 +5,15 @@ module.exports = [
     check('duracion')                   .isDecimal().withMessage('Debe ser un numero valido (puede ser decimal con . )')
                                         .isLength({min: 1, max: 6}).withMessage('Debes completar la duracion, 1.00 min a 999.00 min'),
 
-    check('release_year')               .isInt().withMessage('Debe ser un numero entero valido')
+    check('release_year')               .isInt({ min: 1 }).withMessage('Debe ser un numero entero valido')
                                         .isLength({min: 4, max: 4}).withMessage('Debes completar el año de creación (4 digitos)'),
 
-    check('precio')                     .isDecimal().withMessage('Debe ser un numero valido (puede ser decimal con . )')
-                                        .isLength({min: 1, max: 6}).withMessage('Debes completar el precio'),
-    check('CalificacionBlockbuster')    .isLength({min: 1, max: 2}).withMessage('Debes completar la Calificacion Blockbuster, con un valor del 0 al 10'),
-    check('CalificacionIMDb')           .isLength({min: 1, max: 2}).withMessage('Debes completar la Calificacion IMDb, con un valor del 0 al 10'),
-    check('CalificacionRottenTomatoes') .isLength({min: 1, max: 2}).withMessage('Debes completar la Calificacion Rotten Tomatoes, con un valor del 0 al 10'),
+    check('precio')                     .isDecimal().withMessage('Debe ser un decimal valido (9.5)')
+                                        .isLength({min: 1, max: 10}).withMessage('Debes completar el precio'),
+    check('CalificacionBlockbuster')    .isLength({min: 1, max: 3}).withMessage('Debes completar la Calificacion Blockbuster, con un valor del 0 al 10')
+                                        .isDecimal().withMessage('Debe ser un decimal valido (9.5)'),
+    check('CalificacionIMDb')           .isLength({min: 1, max: 3}).withMessage('Debes completar la Calificacion IMDb, con un valor del 0 al 10').isDecimal().withMessage('Debe ser un decimal valido (9.5)'),
+    check('CalificacionRottenTomatoes') .isLength({min: 1, max: 3}).withMessage('Debes completar la Calificacion Rotten Tomatoes, con un valor del 0 al 10').isDecimal().withMessage('Debe ser un decimal valido (9.5)'),
     
     check('imagen'), //es la url_imagen
     check('trailer'), //es url
