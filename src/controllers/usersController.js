@@ -7,8 +7,8 @@ const { validationResult } = require('express-validator');
 const db = require('../database/models');
 
 
-const usersFilePath = path.join(__dirname, '../data/users.json');
-const listaUsers = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+//const usersFilePath = path.join(__dirname, '../data/users.json');
+//const listaUsers = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 /* Función que suma o resta días a una fecha, si el parámetro
    días es negativo restará los días*/
@@ -29,7 +29,20 @@ const controller = {
 			res.render('users/editarPerfilUser',{user: req.session.userLogged[0], genres})
 		})
     },
-    
+	guardarPerfil:(req,res)=>{
+		db.User.update({
+			"name": req.body.name,
+			"username": req.body.username,
+			"email": req.body.email,
+			password: bcrypt.hashSync(req.body.newPassword, 10),
+			"image_url": req.body.image_url,
+			id_favorite_genre: req.body.id_favorite_genre
+		},
+		{
+			where: {id: req.session.userLogged[0].id}
+		})
+			.then(() => {res.redirect('/users/perfil'); console.log(req.body)});
+	},
     processRegister: (req, res) => {
 		const resultValidation = validationResult(req);
 
@@ -80,11 +93,11 @@ const controller = {
 	},
    
     loginProcess: (req, res) => {
-		//let userToLogin = db.User.findByField('email', req.body.email);	
+
 		db.User.findAll({
 			where:{"email":req.body.email}
 		})
-			//.then(userToLogin => console.log(userToLogin));
+
 			.then(userToLogin => {
 				let isOkThePassword = userToLogin.length > 0 ? bcrypt.compareSync(req.body.password, userToLogin[0].password) : null;
 				if (isOkThePassword) {

@@ -14,7 +14,7 @@
         <h1>Editar perfil del usuario:</h1>
     
     <section class="section-editar-user">
-        <form action="/users/editarUsuario/<%=user.id%>?_method=PUT" method="POST">            
+        <form action="/users/editarPerfil/<%=user.id%>?_method=PUT" method="POST">        
             <div class="info-perfil">
                 <label for="email">e-mail:</label>
                 <input type="email" name="email"  value="<%= user.email %> ">
@@ -33,11 +33,7 @@
             </div>
             <div class="info-perfil">
                 <label for="usuario">Contraseña Nueva:</label>
-                <input type="text" name="newPassword"   placeholder="Nueva contraseña" required>
-            </div>
-            <div class="info-perfil">
-                <label for="usuario">Contraseña Nueva:</label>
-                <input type="text" name="newPassword"   placeholder="Repita Nueva contraseña" required>
+                <input type="password" name="newPassword"   placeholder="Nueva contraseña" required>
             </div>
               
             <div class="info-perfil">
