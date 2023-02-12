@@ -24,7 +24,7 @@
             <div class="txt_field">
                 <input value="<%= locals.oldData ? oldData.titulo : null %>" type="text" name="titulo" class="titulo">
                 <label> Nombre de pelicula:</label>
-                <span class="errorTitulo" style="color: rgb(255, 149, 0);">
+                <span class="error_titulo" style="color: rgb(255, 149, 0);">
                 <% if (locals.errors && errors.titulo) { %>
                     <%= errors.titulo.msg %></p>
                 <% } %>
@@ -36,61 +36,61 @@
             <div class="txt_field">
                 <input  value="<%= locals.oldData ? oldData.duracion : null %>"  type="text" name="duracion" class="duracion">
                 <label>Duracion</label>
+                <span class="error_duracion" style="color: rgb(255, 149, 0);">
                 <% if (locals.errors && errors.duracion) { %>
-                    <span style="color: rgb(255, 149, 0);"><%= errors.duracion.msg %></span>
-                <% }else{ %>
-                <span style="color: green;">✓</span>
+                    <%= errors.duracion.msg %></p>
                 <% } %>
+                </span>
             </div>
             <div class="txt_field">
                 <input  value="<%= locals.oldData ? oldData.release_year : null %>"  type="text" name="release_year" class="release_year">
                 <span></span>
                 <label>Año</label>
+                <span class="error_release_year" style="color: rgb(255, 149, 0);">
                 <% if (locals.errors && errors.release_year) { %>
-                    <span style="color: rgb(255, 149, 0);"><%= errors.release_year.msg %></span>
-                <% }else{ %>
-                <span style="color: green;">✓</span>
+                    <%= errors.release_year.msg %></p>
                 <% } %>
+                </span>
             </div>
             
             <div class="txt_field">
                 <input  value="<%= locals.oldData ? oldData.precio : null %>"  type="text" name="precio" class="precio">
                 <label>Precio</label>
+                <span class="error_precio" style="color: rgb(255, 149, 0);">
                 <% if (locals.errors && errors.precio) { %>
-                    <span style="color: rgb(255, 149, 0);"><%= errors.precio.msg %></span>
-                <% }else{ %>
-                <span style="color: green;">✓</span>
+                    <%= errors.precio.msg %></p>
                 <% } %>
+                </span>
             </div>
             <div class="txt_field">
                 <input  value="<%= locals.oldData ? oldData.CalificacionBlockbuster : null %>"  type="text" name="CalificacionBlockbuster" class="CalificacionBlockbuster">
                 <span></span>
                 <label>Calificacion Blockbuster</label>
+                <span class="error_CalificacionBlockbuster" style="color: rgb(255, 149, 0);">
                 <% if (locals.errors && errors.CalificacionBlockbuster) { %>
-                    <span style="color: rgb(255, 149, 0);"><%= errors.CalificacionBlockbuster.msg %></span>
-                <% }else{ %>
-                <span style="color: green;">✓</span>
+                    <%= errors.CalificacionBlockbuster.msg %></p>
                 <% } %>
+                </span>
             </div>
             <div class="txt_field">
                 <input  value="<%= locals.oldData ? oldData.CalificacionIMDb : null %>"  type="text" name="CalificacionIMDb" class="CalificacionIMDb">
                 <span></span>
                 <label>Calificacion IMDb</label>
+                <span class="error_CalificacionIMDb" style="color: rgb(255, 149, 0);">
                 <% if (locals.errors && errors.CalificacionIMDb) { %>
-                    <span style="color: rgb(255, 149, 0);"><%= errors.CalificacionIMDb.msg %></span>
-                <% }else{ %>
-                <span style="color: green;">✓</span>
+                    <%= errors.CalificacionIMDb.msg %></p>
                 <% } %>
+                </span>
             </div>
             <div class="txt_field">
                 <input  value="<%= locals.oldData ? oldData.CalificacionRottenTomatoes : null %>"  type="text" name="CalificacionRottenTomatoes" class="CalificacionRottenTomatoes">
                 <span></span>
                 <label>Calificacion Rotten Tomatoes</label>
+                <span class="error_CalificacionRottenTomatoes" style="color: rgb(255, 149, 0);">
                 <% if (locals.errors && errors.CalificacionRottenTomatoes) { %>
-                    <span style="color: rgb(255, 149, 0);"><%= errors.CalificacionRottenTomatoes.msg %></span>
-                <% }else{ %>
-                <span style="color: green;">✓</span>
+                    <%= errors.CalificacionRottenTomatoes.msg %></p>
                 <% } %>
+                </span>
             </div>
  
            
@@ -99,11 +99,11 @@
                 <input  value="<%= locals.oldData ? oldData.trailer : null %>"  type="text" name="trailer" class="trailer">
                 <span></span>
                 <label>URL Trailer</label>
+                <span class="error_trailer" style="color: rgb(255, 149, 0);">
                 <% if (locals.errors && errors.trailer) { %>
-                    <span style="color: rgb(255, 149, 0);"><%= errors.trailer.msg %></span>
-                <% }else{ %>
-                <span style="color: green;">✓</span>
+                    <%= errors.trailer.msg %></p>
                 <% } %>
+                </span>
             </div>
 
             <article>
@@ -111,11 +111,11 @@
                     <h5>Descripcion</h5>
                     <textarea name="descripcion" class="descripcion" cols="50" rows="5" placeholder="En los caminos hacia el bosque..."><%= locals.oldData ? oldData.descripcion : null %></textarea>
                 </div>
+                <span class="error_descripcion" style="color: rgb(255, 149, 0);">
                 <% if (locals.errors && errors.descripcion) { %>
-                    <span style="color: rgb(255, 149, 0);"><%= errors.descripcion.msg %></span>
-                <% }else{ %>
-                <span style="color: green;">✓</span>
+                    <%= errors.descripcion.msg %></p>
                 <% } %>
+                </span>
             </article>
         
 
@@ -164,11 +164,11 @@
                     <i class="fa-solid fa-cloud-arrow-up"></i>
                 </label>
                 <input id="file-input" type="file" name="imageMovie" class="imageMovie" />
+                <span class="error_imageMovie" style="color: rgb(255, 149, 0);">
                 <% if (locals.errors && errors.imageMovie) { %>
-                    <span style="color: rgb(255, 149, 0);"><%= errors.imageMovie.msg %></span>
-                <% }else{ %>
-                <span style="color: green;">✓</span>
+                    <%= errors.imageMovie.msg %></p>
                 <% } %>
+                </span>
             </div>
             
             <input type="radio" name="radio-foto" id="url-foto" class="radio-foto">
@@ -176,11 +176,11 @@
                 <input  value="<%= locals.oldData ? oldData.imagen : null %>"  type="text" name="imagen" class="urlImage">
                 <span></span>
                 <label>ó URL imagen</label>
+                <span class="error_urlImage" style="color: rgb(255, 149, 0);">
                 <% if (locals.errors && errors.imagen) { %>
-                    <span style="color: rgb(255, 149, 0);"><%= errors.imagen.msg %></span>
-                <% }else{ %>
-                <span style="color: green;">✓</span>
+                    <%= errors.imagen.msg %></p>
                 <% } %>
+                </span>
             </div>
         
             

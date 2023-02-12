@@ -1,7 +1,7 @@
 const { check } = require('express-validator');
 
 module.exports = [
-    check('titulo')                     .isLength({min: 1, max: 100}).withMessage('Debes completar el titulo, maximo 100 caracteres'),
+    check('titulo')                     .isLength({min: 2, max: 100}).withMessage('Debes completar el titulo, maximo 100 caracteres'),
     check('duracion')                   .isDecimal().withMessage('Debe ser un numero valido (puede ser decimal con . )')
                                         .isLength({min: 1, max: 6}).withMessage('Debes completar la duracion, 1.00 min a 999.00 min'),
 
