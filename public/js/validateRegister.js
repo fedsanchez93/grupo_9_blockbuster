@@ -6,17 +6,25 @@ window.addEventListener('load', function() {
     let image = document.querySelector('#file-input');
     let form = document.querySelector('form.form-registro');
 
-    let errorName = document.querySelector()
+    let errorName = document.querySelector('.error_name');
+    let errorUser = document.querySelector('.error_user');
 
 
 
     form.addEventListener('',function(e){
         e.preventDefault();
 
+        //Validación del nombre
         if (name.value.length < 2){
-            error_name.innerHTML = "El nombre debe contener al menos 2 caracteres";
+            errorName.innerHTML = "El nombre debe contener al menos 2 caracteres";
         } else {
-            error_name.innerHTML = "Nombre aceptable";
+            errorName.innerHTML = "Nombres aceptables";
+        };
+        //Validación del usuario
+        if (user.value.length < 2){
+            errorUser.innerHTML = "El usuario debe contener al menos 2 caracteres";
+        } else {
+            errorUser.innerHTML = "Nombre de usuario aceptable";
         };
     })
 

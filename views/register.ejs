@@ -29,6 +29,7 @@
                     <label class="label-form" for="usuario">Nombre de Usuario</label> <br>
                     <input type="text" name="usuario" id="usuario" placeholder="Usuario"  value="<%= locals.oldData ? oldData.usuario : null %>">
                     <br>
+                    <div class="error_user"></div>
                     <!-- <span class="feedback verificador">Minimo 5 caracteres</span> -->
                     <% if (locals.errors && errors.usuario) { %>
                         <div class=" verificador"> <%= errors.usuario.msg %></div>
