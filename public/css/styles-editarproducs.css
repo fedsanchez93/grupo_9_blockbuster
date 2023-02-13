@@ -36,16 +36,17 @@
     box-sizing: border-box;
 } */
 
-.form-ingreso-peli{
+.flex-wrap{
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 form .txt_field {
     position: relative;
     /* border-bottom: 2px solid #adadad; */
     margin: 30px auto;
-    max-width: 400px;
+    max-width: 300px;
     min-width: 300px;
 }
 
@@ -99,7 +100,7 @@ form .txt_field {
     color: #a6a6a6;
     cursor: pointer;
     transition: 0.5s;
-    margin: 20px;
+    margin: 20px 10px;
     border-radius: 30px;
 }
 
@@ -230,44 +231,7 @@ input[type="submit"]:hover {
     text-align: center;
 }
 
-  /* estrellas */
-  
-  /* .form-estrellas {
-    width: 250px;
-    height: 50px;
-    text-align: center;
-  }
-  
-  .form-estrellas p {
-    text-align: center;
-  }
-  
-  .form-estrellas label {
-    font-size: 60px;
-    
-  }
-  .label-estrella{
-    color: rgb(180, 164, 164);
-    font-size: 30px;
-  }
-  input[type="radio"] {
-    display: none;
-  }
-  
-  .clasificacion {
-    direction: rtl;
-    unicode-bidi: bidi-override;
-  }
-  
-  .form-estrellas label:hover,
-   label:hover ~ label {
-    color: orange;
-  }
-  
-  input[type="radio"]:checked ~ label {
-    color: orange;
-  } */
-  /* fin estrellas */
+
 
 
 
