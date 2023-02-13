@@ -19,6 +19,7 @@
                     <label class="label-form" for="name">Nombre y Apellido</label> <br>
                     <input type="text" name="name" id="name" placeholder="Nombre y Apellido"  value="<%= locals.oldData ? oldData.name : null %>">
                     <br>
+                    <div class="error_name"></div>
                     <!-- <span class="feedback verificador">Este campo no puede estar vacio</span> -->
                     <% if (locals.errors && errors.name) { %>
                         <div class=" verificador"> <%= errors.name.msg %></div>
