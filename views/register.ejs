@@ -49,6 +49,11 @@
                     <label  class="label-form" for="password">Contraseña</label> <br>
                     <input type="password" name="password" id="password" placeholder="Contraseña" >
                     <br>
+                    <div class="error_password">
+                        <ul>
+
+                        </ul>
+                    </div>
                     <!-- <span class="feedback verificador">Minimo 6 caracteres</span> -->
                     <% if (locals.errors && errors.password) { %>
                         <div class=" verificador"> <%= errors.password.msg %></div>
