@@ -60,7 +60,8 @@ window.addEventListener('load', function() {
             erroresDePassword.push = "La contraseña debe contener al menos un número";
         };
 
-         /*if(password.value.match(".*[*.!@#$%^&(){}[]:";'<>,.?/~`_+-=|\\].*")){
+         /*if(password.value.match(".*[*.!@#$%^&(){}[]:";'<>,.?/~`_+-=|\\].*")){  --> REVISAR POR QUÉ
+             NO FUNCIONA
             errorDePassword.push = "La contraseña debe contener al menos una minúscula";
             };*/
 
@@ -73,12 +74,12 @@ window.addEventListener('load', function() {
         };
    
         
-        //Validación de confirmación de password
-        if(password.value != rePassword.value) {
+        //Validación de confirmación de password --> HAY QUE AGREGAR CONFIRMACIÓN DE PASSWORD A LA VISTA PARA SER CONSISTENTE CON EL EDITAR USUARIO
+        /*if(password.value != rePassword.value) {
             errorUser.innerHTML = "Las contraseñas no coinciden";
         } else {
             errorUser.innerHTML = "Password confirmada";
-        };
+        };*/ 
 
 
 
