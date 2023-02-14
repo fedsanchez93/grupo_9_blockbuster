@@ -72,6 +72,16 @@ window.addEventListener('load', function() {
             errorPassword.innerHTML = "La contraseña ingresada es válida" //Revisar si debe ir como <li>
         };
    
+        
+        //Validación de confirmación de password
+        if(password.value != rePassword.value) {
+            errorUser.innerHTML = "Las contraseñas no coinciden";
+        } else {
+            errorUser.innerHTML = "Password confirmada";
+        };
+
+
+
         //Validación de imagen
 
     
