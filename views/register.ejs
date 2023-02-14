@@ -39,6 +39,7 @@
                     <label  class="label-form" for="email">Email</label> <br>
                     <input type="email" name="email" id="email"  placeholder="name@blockbuster.com"  value="<%= locals.oldData ? oldData.email : null %>">
                     <br>
+                    <div class="error_email"></div>
                     <!-- <span class="feedback verificador">name@blockbuster.com</span> -->
                     <% if (locals.errors && errors.email) { %>
                         <div class=" verificador"> <%= errors.email.msg %></div>
