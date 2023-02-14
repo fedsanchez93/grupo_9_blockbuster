@@ -13,7 +13,7 @@ window.addEventListener('load', function() {
 
 
 
-    form.addEventListener('',function(e){
+    form.addEventListener('submit',function(e){
         e.preventDefault();
 
         //Validación del nombre
@@ -39,35 +39,44 @@ window.addEventListener('load', function() {
         };
 
         //Validación del password
-        let errorDePassword = [];
+        let erroresDePassword = [];
         let lowerCaseLetters = /[a-z]/g;
         let upperCaseLetters = /[A-Z]/g;
         let numbers = /[0-9]/g;
         
         if(password.value.length < 5){
-            errorDePassword.push = "La contraseña debe contener al menos 5 caracteres";
+            erroresDePassword.push = "La contraseña debe contener al menos 5 caracteres";
         } 
 
         if(password.value.match(lowerCaseLetters)){
-            errorDePassword.push = "La contraseña debe contener al menos una minúscula";
+            erroresDePassword.push = "La contraseña debe contener al menos una minúscula";
         };
 
        if(password.value.match(upperCaseLetters)){
-            errorDePassword.push = "La contraseña debe contener al menos una mayúscula";
+            erroresDePassword.push = "La contraseña debe contener al menos una mayúscula";
         };
+
+        if(password.value.match(numbers)){
+            erroresDePassword.push = "La contraseña debe contener al menos un número";
+        };
+
+         /*if(password.value.match(".*[*.!@#$%^&(){}[]:";'<>,.?/~`_+-=|\\].*")){
+            errorDePassword.push = "La contraseña debe contener al menos una minúscula";
+            };*/
 
         if(erroresDePassword.length > 0){
             for (let i=0; i < erroresDePassword.length; i++){
-                errorPassword.innerHTML += "<li>" + errorDePassword[i] + "</li>";
+                errorPassword.innerHTML += "<li>" + erroresDePassword[i] + "</li>";
             };
+        } else {
+            errorPassword.innerHTML = "La contraseña ingresada es válida" //Revisar si debe ir como <li>
         };
+   
+        //Validación de imagen
 
     
 
-        /*if(password.value.match(".*[*.!@#$%^&(){}[]:";'<>,.?/~`_+-=|\\].*")){
-            errorDePassword.push = "La contraseña debe contener al menos una minúscula";
-            };*/
-    })
+    });
 
 
-})
+});
