@@ -4,38 +4,48 @@ window.addEventListener('load', function() {
     let email = document.querySelector('#email');
     let password = document.querySelector('#password');
     let image = document.querySelector('#file-input');
-    let form = document.querySelector('form.form-registro');
+    let form = document.querySelector('.form-registro');
+    let submit = document.querySelector('#crear-cuenta');
+    
 
     let errorName = document.querySelector('.error_name');
     let errorUser = document.querySelector('.error_user');
+    let errorMail = document.querySelector('.error_email');
     let errorPassword = document.querySelector('.error_password ul');
-    <div class="error_user"></div>
+  
 
 
 
-    form.addEventListener('submit',function(e){
-        e.preventDefault();
+    submit.addEventListener('click', function(event){
+        event.preventDefault();
 
         //Validación del nombre
         if(name.value.length < 2){
             errorName.innerHTML = "El nombre debe contener al menos 2 caracteres";
+            errorName.style.color = "red"
+        
         } else {
             errorName.innerHTML = "Nombres aceptables";
+            errorName.style.color = "green"
         };
 
         //Validación del usuario
         if(user.value.length < 2){
             errorUser.innerHTML = "El usuario debe contener al menos 2 caracteres";
+            errorUser.style.color = "red"
         } else {
             errorUser.innerHTML = "Nombre de usuario aceptable";
+            errorUser.style.color = "green"
         };
 
         //Validación del email
         let mailformat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/
         if(email.value.match(mailformat)){
-            errorEmail.innerHTML = "El email no es válido";
+            errorMail.innerHTML = "Email aceptable";
+            errorMail.style.color = "green"
         } else {
-            errorEmail.innerHTML = "Email aceptable";
+            errorMail.innerHTML = "El email no es válido";
+            errorMail.style.color = "red"
         };
 
         //Validación del password
@@ -45,19 +55,19 @@ window.addEventListener('load', function() {
         let numbers = /[0-9]/g;
         
         if(password.value.length < 5){
-            erroresDePassword.push = "La contraseña debe contener al menos 5 caracteres";
-        } 
+            erroresDePassword.push("La contraseña debe contener al menos 5 caracteres");
+        }; 
 
         if(password.value.match(lowerCaseLetters)){
-            erroresDePassword.push = "La contraseña debe contener al menos una minúscula";
+            erroresDePassword.push("La contraseña debe contener al menos una minúscula");
         };
 
        if(password.value.match(upperCaseLetters)){
-            erroresDePassword.push = "La contraseña debe contener al menos una mayúscula";
+            erroresDePassword.push("La contraseña debe contener al menos una mayúscula");
         };
 
         if(password.value.match(numbers)){
-            erroresDePassword.push = "La contraseña debe contener al menos un número";
+            erroresDePassword.push("La contraseña debe contener al menos un número");
         };
 
          /*if(password.value.match(".*[*.!@#$%^&(){}[]:";'<>,.?/~`_+-=|\\].*")){  --> REVISAR POR QUÉ
@@ -68,10 +78,11 @@ window.addEventListener('load', function() {
         if(erroresDePassword.length > 0){
             for (let i=0; i < erroresDePassword.length; i++){
                 errorPassword.innerHTML += "<li>" + erroresDePassword[i] + "</li>";
-            };
-        } else {
-            errorPassword.innerHTML = "La contraseña ingresada es válida" //Revisar si debe ir como <li>
-        };
+                errorPassword.style.color="red"
+            }};
+        // } else {
+        //     errorPassword.innerHTML = "La contraseña ingresada es válida" //Revisar si debe ir como <li>
+        // };
    
         
         //Validación de confirmación de password --> HAY QUE AGREGAR CONFIRMACIÓN DE PASSWORD A LA VISTA PARA SER CONSISTENTE CON EL EDITAR USUARIO
@@ -89,5 +100,5 @@ window.addEventListener('load', function() {
 
     });
 
+})
 
-});
