@@ -5,7 +5,7 @@
     <title>BLOCKBUSTER</title>
     <!-- <link rel="stylesheet" href="css/styles-home.css"> -->
     <link rel="stylesheet" href="/css/styles-register.css">
-    <script src="/public/js/validateRegister.js"></script>
+
 </head>
 <body>
     <%- include('partials/header') %> 
@@ -19,6 +19,7 @@
                     <label class="label-form" for="name">Nombre y Apellido</label> <br>
                     <input type="text" name="name" id="name" placeholder="Nombre y Apellido"  value="<%= locals.oldData ? oldData.name : null %>">
                     <br>
+                    <div class="error_name"></div>
                     <!-- <span class="feedback verificador">Este campo no puede estar vacio</span> -->
                     <% if (locals.errors && errors.name) { %>
                         <div class=" verificador"> <%= errors.name.msg %></div>
@@ -28,6 +29,7 @@
                     <label class="label-form" for="usuario">Nombre de Usuario</label> <br>
                     <input type="text" name="usuario" id="usuario" placeholder="Usuario"  value="<%= locals.oldData ? oldData.usuario : null %>">
                     <br>
+                    <div class="error_user"></div>
                     <!-- <span class="feedback verificador">Minimo 5 caracteres</span> -->
                     <% if (locals.errors && errors.usuario) { %>
                         <div class=" verificador"> <%= errors.usuario.msg %></div>
@@ -37,6 +39,7 @@
                     <label  class="label-form" for="email">Email</label> <br>
                     <input type="email" name="email" id="email"  placeholder="name@blockbuster.com"  value="<%= locals.oldData ? oldData.email : null %>">
                     <br>
+                    <div class="error_email"></div>
                     <!-- <span class="feedback verificador">name@blockbuster.com</span> -->
                     <% if (locals.errors && errors.email) { %>
                         <div class=" verificador"> <%= errors.email.msg %></div>
@@ -46,6 +49,11 @@
                     <label  class="label-form" for="password">Contraseña</label> <br>
                     <input type="password" name="password" id="password" placeholder="Contraseña" >
                     <br>
+                    <div class="error_password">
+                        <ul>
+
+                        </ul>
+                    </div>
                     <!-- <span class="feedback verificador">Minimo 6 caracteres</span> -->
                     <% if (locals.errors && errors.password) { %>
                         <div class=" verificador"> <%= errors.password.msg %></div>
@@ -114,6 +122,7 @@
 
     </main>
 
-    <%- include('partials/footer') %>  
+    <%- include('partials/footer') %> 
+    <script src="/js/validateRegister.js"></script> 
 </body>
 </html>

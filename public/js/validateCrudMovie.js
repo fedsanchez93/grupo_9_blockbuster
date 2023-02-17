@@ -121,7 +121,7 @@ CalificacionRottenTomatoes.addEventListener('keyup',(e)=>{
     }
 })
 trailer.addEventListener('keyup',(e)=>{
-    if(trailer.value.length < 2 || trailer.value == ''){
+    if((trailer.value.length > 2 && trailer.value.length < 10 ) ){
         error_trailer.innerHTML = 'Debes completar el trailer'
         error_trailer.style.color = 'rgb(255, 149, 0)'
     }else if(trailer.value.length >= 300){

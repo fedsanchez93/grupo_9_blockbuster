@@ -39,112 +39,103 @@
             <div class="flex-wrap">
                 <section>             <!-- separado en dos secciones -->
             <div class="txt_field">
-                <input type="text" name="titulo" value="<%= MovieToEdit.title %>"  placeholder="<%= MovieToEdit.title %>"  >
-                <span></span>
+                <input type="text" name="titulo" class="titulo" value="<%= MovieToEdit.title %>"  placeholder="<%= MovieToEdit.title %>"  >
                 <label> Nombre de la pelicula</label>
-                <% if (locals.errors && errors.titulo) { %>
-                    <span style="color: rgb(255, 149, 0);"><%= errors.titulo.msg %></span>
-                <% }else{ %>
-                <span style="color: green;">✓</span>
-                <% } %>
+                <span class="error_titulo" style="color: rgb(255, 149, 0);">
+                    <% if (locals.errors && errors.titulo) { %>
+                        <%= errors.titulo.msg %></p>
+                    <% } %>
+                </span>
             </div>
 
            
             <div class="txt_field">
-                <input type="text" name="duracion"  value="<%= MovieToEdit.length %>" placeholder="<%= MovieToEdit.length %>">
-                <span></span>
+                <input type="text" name="duracion" class="duracion" value="<%= MovieToEdit.length %>" placeholder="<%= MovieToEdit.length %>">
                 <label>Duracion</label>
-                <% if (locals.errors && errors.duracion) { %>
-                    <span style="color: rgb(255, 149, 0);"><%= errors.duracion.msg %></span>
-                <% }else{ %>
-                <span style="color: green;">✓</span>
-                <% } %>
+                <span class="error_duracion" style="color: rgb(255, 149, 0);">
+                    <% if (locals.errors && errors.duracion) { %>
+                        <%= errors.duracion.msg %></p>
+                    <% } %>
+                </span>
             </div>
             <div class="txt_field">
-                <input type="text" name="release_year"  value="<%= MovieToEdit.release_year %>" placeholder="<%= MovieToEdit.release_year %>">
-                <span></span>
+                <input type="text" name="release_year" class="release_year"  value="<%= MovieToEdit.release_year %>" placeholder="<%= MovieToEdit.release_year %>">
                 <label>Año</label>
-                <% if (locals.errors && errors.release_year) { %>
-                    <span style="color: rgb(255, 149, 0);"><%= errors.release_year.msg %></span>
-                <% }else{ %>
-                <span style="color: green;">✓</span>
-                <% } %>
+                <span class="error_release_year" style="color: rgb(255, 149, 0);">
+                    <% if (locals.errors && errors.release_year) { %>
+                        <%= errors.release_year.msg %></p>
+                    <% } %>
+                </span>
             </div>
            
             <div class="txt_field">
-                <input type="text" name="precio"  value="<%= MovieToEdit.price %>" placeholder="<%= MovieToEdit.price %>">
-                <span></span>
+                <input type="text" name="precio" class="precio" value="<%= MovieToEdit.price %>" placeholder="<%= MovieToEdit.price %>">
                 <label>Precio</label>
-                <% if (locals.errors && errors.precio) { %>
-                    <span style="color: rgb(255, 149, 0);"><%= errors.precio.msg %></span>
-                <% }else{ %>
-                <span style="color: green;">✓</span>
-                <% } %>
+                <span class="error_precio" style="color: rgb(255, 149, 0);">
+                    <% if (locals.errors && errors.precio) { %>
+                        <%= errors.precio.msg %></p>
+                    <% } %>
+                </span>
             </div>
             <div class="txt_field">
-                <input type="text" name="CalificacionBlockbuster" value="<%= MovieToEdit.blockbuster_rating %>"  placeholder="<%= MovieToEdit.blockbuster_rating %>" >
-                <span></span>
+                <input type="text" name="CalificacionBlockbuster" class="CalificacionBlockbuster" value="<%= MovieToEdit.blockbuster_rating %>"  placeholder="<%= MovieToEdit.blockbuster_rating %>" >
                 <label>Calificacion Blockbuster</label>
-                <% if (locals.errors && errors.CalificacionBlockbuster) { %>
-                    <span style="color: rgb(255, 149, 0);"><%= errors.CalificacionBlockbuster.msg %></span>
-                <% }else{ %>
-                <span style="color: green;">✓</span>
-                <% } %>
+                <span class="error_CalificacionBlockbuster" style="color: rgb(255, 149, 0);">
+                    <% if (locals.errors && errors.CalificacionBlockbuster) { %>
+                        <%= errors.CalificacionBlockbuster.msg %></p>
+                    <% } %>
+                </span>
             </div>
             <div class="txt_field">
-                <input type="text" name="CalificacionIMDb" value="<%= MovieToEdit.imdb_rating %>"  placeholder="<%= MovieToEdit.imdb_rating %>">
-                <span></span>
+                <input type="text" name="CalificacionIMDb" class="CalificacionIMDb" value="<%= MovieToEdit.imdb_rating %>"  placeholder="<%= MovieToEdit.imdb_rating %>">
                 <label>Calificacion IMDb</label>
-                <% if (locals.errors && errors.CalificacionIMDb) { %>
-                    <span style="color: rgb(255, 149, 0);"><%= errors.CalificacionIMDb.msg %></span>
-                <% }else{ %>
-                <span style="color: green;">✓</span>
-                <% } %>
+                <span class="error_CalificacionIMDb" style="color: rgb(255, 149, 0);">
+                    <% if (locals.errors && errors.CalificacionIMDb) { %>
+                        <%= errors.CalificacionIMDb.msg %></p>
+                    <% } %>
+                </span>
             </div>
             <div class="txt_field">
-                <input type="text" name="CalificacionRottenTomatoes" value="<%= MovieToEdit.rotten_tomatoes_rating %>"  placeholder="<%= MovieToEdit.rotten_tomatoes_rating %>">
-                <span></span>
+                <input type="text" name="CalificacionRottenTomatoes" class="CalificacionRottenTomatoes" value="<%= MovieToEdit.rotten_tomatoes_rating %>"  placeholder="<%= MovieToEdit.rotten_tomatoes_rating %>">
                 <label>Calificacion Rotten Tomatoes</label>
-                <% if (locals.errors && errors.CalificacionRottenTomatoes) { %>
-                    <span style="color: rgb(255, 149, 0);"><%= errors.CalificacionRottenTomatoes.msg %></span>
-                <% }else{ %>
-                <span style="color: green;">✓</span>
-                <% } %>
+                <span class="error_CalificacionRottenTomatoes" style="color: rgb(255, 149, 0);">
+                    <% if (locals.errors && errors.CalificacionRottenTomatoes) { %>
+                        <%= errors.CalificacionRottenTomatoes.msg %></p>
+                    <% } %>
+                </span>
             </div>
  
 
            
             <div class="txt_field">
-                <input type="text" name="imagen"  value="<%= MovieToEdit.image_url %>" placeholder="<%= MovieToEdit.image_url %> ">
-                <span></span>
+                <input type="text" name="imagen" class="urlImage" value="<%= MovieToEdit.image_url %>" placeholder="<%= MovieToEdit.image_url %> ">
                 <label>URL imagen</label>
-                <% if (locals.errors && errors.imagen) { %>
-                    <span style="color: rgb(255, 149, 0);"><%= errors.imagen.msg %></span>
-                <% }else{ %>
-                <span style="color: green;">✓</span>
-                <% } %>
+                <span class="error_urlImage" style="color: rgb(255, 149, 0);">
+                    <% if (locals.errors && errors.imagen) { %>
+                        <%= errors.imagen.msg %></p>
+                    <% } %>
+                </span>
             </div>
             <div class="txt_field">
-                <input type="text" name="trailer"  value="<%= MovieToEdit.trailer %>"  placeholder="<%= MovieToEdit.trailer %>">
-                <span></span>
+                <input type="text" name="trailer" class="trailer" value="<%= MovieToEdit.trailer %>"  placeholder="<%= MovieToEdit.trailer %>">
                 <label>URL Trailer</label>
-                <% if (locals.errors && errors.trailer) { %>
-                    <span style="color: rgb(255, 149, 0);"><%= errors.trailer.msg %></span>
-                <% }else{ %>
-                <span style="color: green;">✓</span>
-                <% } %>
+                <span class="error_trailer" style="color: rgb(255, 149, 0);">
+                    <% if (locals.errors && errors.trailer) { %>
+                        <%= errors.trailer.msg %></p>
+                    <% } %>
+                </span>
             </div>
             <div class="image-upload">
                 <label for="file-input" class="div-subir-foto">
                     <p>Subir foto</p>
                     <i class="fa-solid fa-cloud-arrow-up"></i>
                 </label>
-                <input id="file-input" type="file"  name="imageMovie"/>
-                <% if (locals.errors && errors.imageMovie) { %>
-                    <span style="color: rgb(255, 149, 0);"><%= errors.imageMovie.msg %></span>
-                <% }else{ %>
-                <span style="color: green;">✓</span>
-                <% } %>
+                <input id="file-input" type="file"  name="imageMovie" class="imageMovie"/>
+                <span class="error_imageMovie" style="color: rgb(255, 149, 0);">
+                    <% if (locals.errors && errors.imageMovie) { %>
+                        <%= errors.imageMovie.msg %></p>
+                    <% } %>
+                </span>
             </div>
 
         </section>
@@ -153,12 +144,12 @@
             <article>
             <div class="text-area">
                 <h5>Descripcion</h5>
-                <textarea name="descripcion" cols="40" rows="5" placeholder="<%= MovieToEdit.description %>"><%= MovieToEdit.description %></textarea>
-                <% if (locals.errors && errors.descripcion) { %>
-                    <span style="color: rgb(255, 149, 0);"><%= errors.descripcion.msg %></span>
-                <% }else{ %>
-                <span style="color: green;">✓</span>
-                <% } %>
+                <textarea name="descripcion" class="descripcion" cols="40" rows="8" placeholder="<%= MovieToEdit.description %>"><%= MovieToEdit.description %></textarea>
+                <span class="error_descripcion" style="color: rgb(255, 149, 0);">
+                    <% if (locals.errors && errors.descripcion) { %>
+                        <%= errors.descripcion.msg %></p>
+                    <% } %>
+                </span>
             </div>
         </article>
             
@@ -219,6 +210,7 @@
 
 
     <%- include('partials/footer') %> 
+    <script src="/js/validateCrudMovie.js" type="text/javascript"></script>
 
 </body>
 </html>
