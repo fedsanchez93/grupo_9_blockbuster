@@ -47,7 +47,7 @@ window.addEventListener('load', function() {
             errorMail.innerHTML = "El email no es válido";
             errorMail.style.color = "red"
         };
-        
+       
         //Validación del password
         let erroresDePassword = [];
         let lowerCaseLetters = /[a-z]/g;
@@ -68,7 +68,7 @@ window.addEventListener('load', function() {
 
         if(password.value.match(numbers)){
             erroresDePassword.push("La contraseña debe contener al menos un número");
-        };
+        }; 
 
          /*if(password.value.match(".*[*.!@#$%^&(){}[]:";'<>,.?/~`_+-=|\\].*")){  --> REVISAR POR QUÉ
              NO FUNCIONA
@@ -79,7 +79,7 @@ window.addEventListener('load', function() {
             for (let i=0; i < erroresDePassword.length; i++){
                 errorPassword.innerHTML += "<li>" + erroresDePassword[i] + "</li>";
                 errorPassword.style.color="red"
-            }};
+            }}; 
         // } else {
         //     errorPassword.innerHTML = "La contraseña ingresada es válida" //Revisar si debe ir como <li>
         // };
