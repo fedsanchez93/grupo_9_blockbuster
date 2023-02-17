@@ -47,7 +47,7 @@ window.addEventListener('load', function() {
             errorMail.innerHTML = "El email no es válido";
             errorMail.style.color = "red"
         };
-
+        
         //Validación del password
         let erroresDePassword = [];
         let lowerCaseLetters = /[a-z]/g;
@@ -61,7 +61,7 @@ window.addEventListener('load', function() {
         if(password.value.match(lowerCaseLetters)){
             erroresDePassword.push("La contraseña debe contener al menos una minúscula");
         };
-
+        
        if(password.value.match(upperCaseLetters)){
             erroresDePassword.push("La contraseña debe contener al menos una mayúscula");
         };

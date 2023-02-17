@@ -39,9 +39,9 @@ const controller = {
 			id_favorite_genre: req.body.id_favorite_genre
 		},
 		{
-			where: {id: req.session.userLogged[0].id}
+			where: {id: req.params.id}
 		})
-			.then(() => {res.redirect('/users/perfil'); console.log(req.body)});
+			.then(() => {res.redirect('/users/perfil');});
 	},
     processRegister: (req, res) => {
 		const resultValidation = validationResult(req);
