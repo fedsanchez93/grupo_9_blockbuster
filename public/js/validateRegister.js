@@ -12,6 +12,11 @@ window.addEventListener('load', function() {
     let errorUser = document.querySelector('.error_user');
     let errorMail = document.querySelector('.error_email');
     let errorPassword = document.querySelector('.error_password ul');
+    let cantidad = document.querySelector('.error_password .cantidad');
+    let mayusculas = document.querySelector('.error_password .mayusculas');
+    let minusculas = document.querySelector('.error_password .minusculas');
+    let numeros = document.querySelector('.error_password .numeros');
+
   
 
 
@@ -23,9 +28,8 @@ window.addEventListener('load', function() {
         //Validación del nombre
         if(name.value.length < 2){
             errorName.innerHTML = "El nombre debe contener al menos 2 caracteres";
-            errorName.style.color = "red"
-            totalErrores.push("lala")
-        
+            errorName.style.color = "red";
+            totalErrores.push(1);
         } else {
             errorName.innerHTML = "Nombres aceptables";
             errorName.style.color = "green"
@@ -35,6 +39,7 @@ window.addEventListener('load', function() {
         if(user.value.length < 2){
             errorUser.innerHTML = "El usuario debe contener al menos 2 caracteres";
             errorUser.style.color = "red"
+            totalErrores.push(1);
         } else {
             errorUser.innerHTML = "Nombre de usuario aceptable";
             errorUser.style.color = "green"
@@ -48,29 +53,50 @@ window.addEventListener('load', function() {
         } else {
             errorMail.innerHTML = "El email no es válido";
             errorMail.style.color = "red"
+            totalErrores.push(1);
         };
        
         //Validación del password
-    //     let erroresDePassword = [];
-    //     let lowerCaseLetters = /[a-z]/g;
-    //     let upperCaseLetters = /[A-Z]/g;
-    //     let numbers = /[0-9]/g;
+        //let erroresDePassword = [];
+        let lowerCaseLetters = /[a-z]/g;
+        let upperCaseLetters = /[A-Z]/g;
+        let numbers = /[0-9]/g;
         
-    //     if(password.value.length < 5){
-    //         erroresDePassword.push("La contraseña debe contener al menos 5 caracteres");
-    //     }; 
+        if(password.value.length < 5){
+            cantidad.innerHTML ="La contraseña debe contener al menos 5 caracteres";
+            cantidad.style.color="red"
+            totalErrores.push(1);
+        } else {
+            cantidad.innerHTML = "La contraseña tiene al menos 5 caracteres";
+            cantidad.style.color = "green"
+        }; 
 
-    //     if(password.value.match(lowerCaseLetters)){
-    //         erroresDePassword.push("La contraseña debe contener al menos una minúscula");
-    //     };
+        if(password.value.match(lowerCaseLetters)){
+            minusculas.innerHTML = "La contraseña tiene minúsculas";
+            minusculas.style.color = "green"
+        } else {
+            minusculas.innerHTML ="La contraseña debe contener al menos una minúscula";
+            minusculas.style.color="red"
+            totalErrores.push(1);
+        }
         
-    //    if(password.value.match(upperCaseLetters)){
-    //         erroresDePassword.push("La contraseña debe contener al menos una mayúscula");
-    //     };
+       if(password.value.match(upperCaseLetters)){
+            mayusculas.innerHTML = "La contraseña tiene mayúsculas";
+            mayusculas.style.color = "green"
+        } else {
+            mayusculas.innerHTML = "La contraseña debe contener al menos una mayúscula";
+            mayusculas.style.color="red"
+            totalErrores.push(1);
+        }
 
-    //     if(password.value.match(numbers)){
-    //         erroresDePassword.push("La contraseña debe contener al menos un número");
-    //     }; 
+        // if(password.value.match(numbers)){
+        //     numeros.innerHTML = "La contraseña tiene números";
+        //     numeros.style.color = "green"        
+        // };
+        //     numeros.innerHTML="La contraseña debe contener al menos un número";
+        //     numeros.style.color="red"
+        //     totalErrores.push(1);
+        
 
          /*if(password.value.match(".*[*.!@#$%^&(){}[]:";'<>,.?/~`_+-=|\\].*")){  --> REVISAR POR QUÉ
              NO FUNCIONA
@@ -78,10 +104,12 @@ window.addEventListener('load', function() {
             };*/
 
         // if(erroresDePassword.length > 0){
+        //     totalErrores.push(1);    
         //     for (let i=0; i < erroresDePassword.length; i++){
         //         errorPassword.innerHTML += "<li>" + erroresDePassword[i] + "</li>";
-        //         errorPassword.style.color="red"
-        //     }}; 
+        //         //errorPassword.innerHTML = erroresDePassword
+        //         errorPassword.style.color="red"};
+             
         // } else {
         //     errorPassword.innerHTML = "La contraseña ingresada es válida" //Revisar si debe ir como <li>
         // };
@@ -97,6 +125,8 @@ window.addEventListener('load', function() {
 
 
         //Validación de imagen
+
+
 
         if(totalErrores.length > 0){
             event.preventDefault();
