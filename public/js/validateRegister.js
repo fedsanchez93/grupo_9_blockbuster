@@ -7,6 +7,7 @@ window.addEventListener('load', function() {
     let form = document.querySelector('.form-registro');
     let submit = document.querySelector('#crear-cuenta');
     
+    
 
     let errorName = document.querySelector('.error_name');
     let errorUser = document.querySelector('.error_user');
@@ -16,7 +17,7 @@ window.addEventListener('load', function() {
     let mayusculas = document.querySelector('.error_password .mayusculas');
     let minusculas = document.querySelector('.error_password .minusculas');
     let numeros = document.querySelector('.error_password .numeros');
-
+    let errorImage = document.querySelector('.error_image');
   
 
 
@@ -57,7 +58,7 @@ window.addEventListener('load', function() {
         };
        
         //Validación del password
-        //let erroresDePassword = [];
+        let erroresDePassword = [];
         let lowerCaseLetters = /[a-z]/g;
         let upperCaseLetters = /[A-Z]/g;
         let numbers = /[0-9]/g;
@@ -125,6 +126,33 @@ window.addEventListener('load', function() {
 
 
         //Validación de imagen
+        // profile.addEventListener('change', (e) => {
+        // const filename = e.target.files[0].name;
+        
+        // let extension = filename.split('.').pop();
+        // const allowedExtensions = ['jpg', 'jpeg', 'png'];
+        // if (allowedExtensions.includes(extension)) {
+        //     errorImage.innerHTML = "formato correcto"
+        // } else {
+        //     errorImage.innerHTML = "el formato aceptado es .JPEG";
+        //     errorImage.style.color="red";
+        //     totalErrores.push(1);}
+        //     console.log(filename)
+        // });
+
+        // var a = image.split(".");
+    //     if( a.length === 1 || ( a[0] === "" && a.length === 2 ) ) {
+    //         return "";
+    //     }
+    //    return image.substring(image.lastIndexOf('.')+1, image.length) || image;
+
+    //    if(image.match(/jpg.*/)){
+    //     errorImage.innerHTML = "formato correcto"
+    //    } else {
+    //     errorImage.innerHTML = "el formato aceptado es .JPEG";
+    //     errorImage.style.color="red";
+    //     totalErrores.push(1);
+    //    };
 
 
 
