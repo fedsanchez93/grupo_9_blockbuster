@@ -98,10 +98,10 @@ window.addEventListener('load', function() {
             totalErrores.push(1);
         };
 
-         /*if(password.value.match(".*[*.!@#$%^&(){}[]:";'<>,.?/~`_+-=|\\].*")){  --> REVISAR POR QUÉ
-             NO FUNCIONA
-            errorDePassword.push = "La contraseña debe contener al menos una minúscula";
-            };*/
+        //  if(password.value.match(".*[*.!@#$%^&(){}[]:";'<>,.?/~`_+-=|\\].*")){  --> REVISAR POR QUÉ
+        //      NO FUNCIONA
+        //     errorDePassword.push = "La contraseña debe contener al menos una minúscula";
+        //     };
 
         // if(erroresDePassword.length > 0){
         //     totalErrores.push(1);    
