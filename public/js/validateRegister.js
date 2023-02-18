@@ -17,12 +17,14 @@ window.addEventListener('load', function() {
 
 
     submit.addEventListener('click', function(event){
-        event.preventDefault();
 
+        let totalErrores = []
+       
         //Validación del nombre
         if(name.value.length < 2){
             errorName.innerHTML = "El nombre debe contener al menos 2 caracteres";
             errorName.style.color = "red"
+            totalErrores.push("lala")
         
         } else {
             errorName.innerHTML = "Nombres aceptables";
@@ -49,37 +51,37 @@ window.addEventListener('load', function() {
         };
        
         //Validación del password
-        let erroresDePassword = [];
-        let lowerCaseLetters = /[a-z]/g;
-        let upperCaseLetters = /[A-Z]/g;
-        let numbers = /[0-9]/g;
+    //     let erroresDePassword = [];
+    //     let lowerCaseLetters = /[a-z]/g;
+    //     let upperCaseLetters = /[A-Z]/g;
+    //     let numbers = /[0-9]/g;
         
-        if(password.value.length < 5){
-            erroresDePassword.push("La contraseña debe contener al menos 5 caracteres");
-        }; 
+    //     if(password.value.length < 5){
+    //         erroresDePassword.push("La contraseña debe contener al menos 5 caracteres");
+    //     }; 
 
-        if(password.value.match(lowerCaseLetters)){
-            erroresDePassword.push("La contraseña debe contener al menos una minúscula");
-        };
+    //     if(password.value.match(lowerCaseLetters)){
+    //         erroresDePassword.push("La contraseña debe contener al menos una minúscula");
+    //     };
         
-       if(password.value.match(upperCaseLetters)){
-            erroresDePassword.push("La contraseña debe contener al menos una mayúscula");
-        };
+    //    if(password.value.match(upperCaseLetters)){
+    //         erroresDePassword.push("La contraseña debe contener al menos una mayúscula");
+    //     };
 
-        if(password.value.match(numbers)){
-            erroresDePassword.push("La contraseña debe contener al menos un número");
-        }; 
+    //     if(password.value.match(numbers)){
+    //         erroresDePassword.push("La contraseña debe contener al menos un número");
+    //     }; 
 
          /*if(password.value.match(".*[*.!@#$%^&(){}[]:";'<>,.?/~`_+-=|\\].*")){  --> REVISAR POR QUÉ
              NO FUNCIONA
             errorDePassword.push = "La contraseña debe contener al menos una minúscula";
             };*/
 
-        if(erroresDePassword.length > 0){
-            for (let i=0; i < erroresDePassword.length; i++){
-                errorPassword.innerHTML += "<li>" + erroresDePassword[i] + "</li>";
-                errorPassword.style.color="red"
-            }}; 
+        // if(erroresDePassword.length > 0){
+        //     for (let i=0; i < erroresDePassword.length; i++){
+        //         errorPassword.innerHTML += "<li>" + erroresDePassword[i] + "</li>";
+        //         errorPassword.style.color="red"
+        //     }}; 
         // } else {
         //     errorPassword.innerHTML = "La contraseña ingresada es válida" //Revisar si debe ir como <li>
         // };
@@ -96,7 +98,11 @@ window.addEventListener('load', function() {
 
         //Validación de imagen
 
-    
+        if(totalErrores.length > 0){
+            event.preventDefault();
+        }
+
+        console.log(totalErrores)
 
     });
 
