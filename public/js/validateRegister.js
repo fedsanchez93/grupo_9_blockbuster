@@ -89,14 +89,14 @@ window.addEventListener('load', function() {
             totalErrores.push(1);
         }
 
-        // if(password.value.match(numbers)){
-        //     numeros.innerHTML = "La contraseña tiene números";
-        //     numeros.style.color = "green"        
-        // };
-        //     numeros.innerHTML="La contraseña debe contener al menos un número";
-        //     numeros.style.color="red"
-        //     totalErrores.push(1);
-        
+        if(password.value.match(numbers)){
+            numeros.innerHTML = "La contraseña tiene números";
+            numeros.style.color = "green"        
+        } else {
+            numeros.innerHTML="La contraseña debe contener al menos un número";
+            numeros.style.color="red";
+            totalErrores.push(1);
+        };
 
          /*if(password.value.match(".*[*.!@#$%^&(){}[]:";'<>,.?/~`_+-=|\\].*")){  --> REVISAR POR QUÉ
              NO FUNCIONA
