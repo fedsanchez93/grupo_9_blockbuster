@@ -14,7 +14,7 @@
         <h1>Editar perfil del usuario:</h1>
     
     <section class="section-editar-user">
-        <form action="/users/editarPerfil/<%=user.id%>?_method=PUT" method="POST">        
+        <form action="/users/editarPerfil/<%=user.id%>?_method=PUT" method="POST" enctype="multipart/form-data">        
             <div class="info-perfil">
                 <label for="email">e-mail:</label>
                 <input type="email" name="email"  value="<%= user.email %> ">
