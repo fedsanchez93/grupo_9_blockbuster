@@ -1,7 +1,5 @@
 window.addEventListener('load',()=>{
 
-
-
 let titulo = document.querySelector('.titulo')
 let duracion = document.querySelector('.duracion')
 let release_year = document.querySelector('.release_year')
@@ -14,6 +12,7 @@ let descripcion = document.querySelector('.descripcion')
 let radioFoto = document.querySelector('.radioFoto')
 let imageMovie = document.querySelector('.imageMovie')
 let urlImage = document.querySelector('.urlImage')
+let imageUpload = document.querySelector('.image-upload')
 
 let error_titulo = document.querySelector('.error_titulo')
 let error_duracion = document.querySelector('.error_duracion')
@@ -27,6 +26,14 @@ let error_descripcion = document.querySelector('.error_descripcion')
 let error_radioFoto = document.querySelector('.error_radioFoto')
 let error_imageMovie = document.querySelector('.error_imageMovie')
 let error_urlImage = document.querySelector('.error_urlImage')
+
+imageMovie.addEventListener('change',(e)=>{ //para visualizar la imagen antes de subirla
+    if(!imageMovie.files.length) return // Verificamos si existe una imagen seleccionada
+    $imgPreview = document.querySelector('#imgPreview'); //Recuperamos la etiqueta img donde cargaremos la imagen
+    file = imageMovie.files[0]; //Recuperamos el archivo subido
+    objectURL = URL.createObjectURL(file);//Creamos la url
+    $imgPreview.src = objectURL; 	//Modificamos el atributo src de la etiqueta img
+})
 
 titulo.addEventListener('keyup',(e)=>{
     if(titulo.value.length < 2 || titulo.value == ''){
