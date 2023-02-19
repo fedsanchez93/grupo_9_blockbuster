@@ -35,7 +35,7 @@ const controller = {
 			"username": req.body.username,
 			"email": req.body.email,
 			password: bcrypt.hashSync(req.body.newPassword, 10),
-			image_url: req.file ? req.file.filename : '/userFoto.jpeg',
+			image_url: req.file ? req.file.filename : req.body.imagenAnterior,
 			id_favorite_genre: req.body.id_favorite_genre
 		},
 		{

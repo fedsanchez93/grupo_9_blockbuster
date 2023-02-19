@@ -122,9 +122,13 @@
          </div> <!--fin div flex-wrap -->
 
          <div class="flex-wrap">
-             
+             <select name="selectFoto" id="selectFoto">
+                <option value="null">IMAGEN (subir foto o usar url)</option>
+                <option value="subir-foto">Subir foto</option>
+                <option value="ingresar-url">Ingresar Url</option>
+            </select>
             <!-- <input type="radio" name="radio-foto" id="subir-foto"  class="radio-foto"> -->
-            <div class="image-upload">
+            <div class="image-upload" style="display: none;">
                 <label for="file-input" class="div-subir-foto">
                     <p>Subir foto</p>
                     <i class="fa-solid fa-cloud-arrow-up"></i>
@@ -139,7 +143,7 @@
             </div>
             
             <!-- <input type="radio" name="radio-foto" id="url-foto" class="radio-foto"> -->
-            <div class="txt_field" >
+            <div id="divUrlImagen" class="txt_field" style="display: none;">
                 <input  value="<%= locals.oldData ? oldData.imagen : null %>"  type="text" name="imagen" class="urlImage">
                 <span></span>
                 <label> ó URL imagen</label>

@@ -17,15 +17,15 @@
         <form action="/users/editarPerfil/<%=user.id%>?_method=PUT" method="POST" enctype="multipart/form-data">        
             <div class="info-perfil">
                 <label for="email">e-mail:</label>
-                <input type="email" name="email"  value="<%= user.email %> ">
+                <input type="email" name="email"  value="<%= user.email %>">
             </div>
             <div class="info-perfil">
                 <label for="name">Nombre y apellido:</label>
-                <input type="text" name="name"  value="<%= user.name %> ">
+                <input type="text" name="name"  value="<%= user.name %>">
             </div>
             <div class="info-perfil">
                 <label for="usuario">Usuario:</label>
-                <input type="text" name="username"  value="<%= user.username %> ">
+                <input type="text" name="username"  value="<%= user.username %>">
             </div>
             <div class="info-perfil">
                 <label for="usuario">Contraseña Actual:</label>
@@ -42,6 +42,7 @@
                         <p>Subir foto</p>
                     </label>
                     <input id="file-input" name="imageUser" type="file" />
+                    <input type="hidden" name="imagenAnterior" value="<%= user.image_url %>">
                 </div>
                 
                 <div class="div-img">

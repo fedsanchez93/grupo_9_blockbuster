@@ -13,6 +13,8 @@ let radioFoto = document.querySelector('.radioFoto')
 let imageMovie = document.querySelector('.imageMovie')
 let urlImage = document.querySelector('.urlImage')
 let imageUpload = document.querySelector('.image-upload')
+let selectFoto = document.querySelector('#selectFoto')
+let divUrlImagen = document.querySelector('#divUrlImagen')
 
 let error_titulo = document.querySelector('.error_titulo')
 let error_duracion = document.querySelector('.error_duracion')
@@ -26,6 +28,18 @@ let error_descripcion = document.querySelector('.error_descripcion')
 let error_radioFoto = document.querySelector('.error_radioFoto')
 let error_imageMovie = document.querySelector('.error_imageMovie')
 let error_urlImage = document.querySelector('.error_urlImage')
+
+
+selectFoto.addEventListener('change',(e)=>{
+    if(selectFoto.value == 'subir-foto'){
+        divUrlImagen.style.display = 'none'
+        imageUpload.style.display = 'block'        
+    }else if(selectFoto.value == 'ingresar-url'){
+        divUrlImagen.style.display = 'block'
+        imageUpload.style.display = 'none' 
+    }
+
+})
 
 imageMovie.addEventListener('change',(e)=>{ //para visualizar la imagen antes de subirla
     if(!imageMovie.files.length) return // Verificamos si existe una imagen seleccionada
