@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../assets/images/logo-DH.png";
+import image from "../assets/images/blockbuster- 1.png.png";
 import  { Link } from 'react-router-dom'
 function SideBar() {
     return (

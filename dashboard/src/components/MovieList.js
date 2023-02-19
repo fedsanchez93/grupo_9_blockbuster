@@ -8,7 +8,7 @@ export default class MovieList extends React.Component {
     }
 
     async fetchMovies() {
-        const response = await fetch("http://localhost:3001/api/movies");
+        const response = await fetch("http://localhost:5000/api/products");
         const result = await response.json();
         this.setState({ movies: result.data });
     }
@@ -22,7 +22,7 @@ export default class MovieList extends React.Component {
             <>
                 {/*<!-- PRODUCTS LIST -->*/}
                 <h1 className="h3 mb-2 text-gray-800">
-                    All the movies in the Database
+                    Lista de Peliculas
                 </h1>
 
                 {/*<!-- DataTales Example -->*/}
@@ -39,17 +39,21 @@ export default class MovieList extends React.Component {
                                     <tr>
                                         <th>Id</th>
                                         <th>Titulo</th>
-                                        <th>Calificación</th>
-                                        <th>Premios</th>
+                                        <th>Calificación Blockbuster</th>
+                                        <th>Calificación Imdb</th>
+                                        <th>Calificación Rotten Tomatoes</th>
+                                        <th>Año Lanzamiento</th>
                                         <th>Duración</th>
                                     </tr>
                                 </thead>
                                 <tfoot>
-                                    <tr>
+                                <tr>
                                         <th>Id</th>
                                         <th>Titulo</th>
-                                        <th>Calificación</th>
-                                        <th>Premios</th>
+                                        <th>Calificación Blockbuster</th>
+                                        <th>Calificación Imdb</th>
+                                        <th>Calificación Rotten Tomatoes</th>
+                                        <th>Año Lanzamiento</th>
                                         <th>Duración</th>
                                     </tr>
                                 </tfoot>

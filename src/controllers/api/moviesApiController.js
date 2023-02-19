@@ -7,14 +7,28 @@ const moment = require("moment");
 
 const moviesApiController = {
     list: (req, res) => {
-        db.Movie.findAll(
+        let generos = db.Genre.findAll({include:[{association:"movies"}]})
+        let movies = db.Movie.findAll(
             {include: [{association: "genres"},{association: "languages"},{association:'users_rentals'},{association:'users_wishlist'},{association:'users_cart'}]}
-        ).then((movies) => {
+        )
+        Promise.all([movies, generos])
+        .then(([movies, generos]) => {
+
+            generos = generos.map((genero)=>{
+                return{
+                    //...generos,
+                    "genre":genero.genre,
+                    totalMovies:genero.movies.length
+                }
+            })
+
             let respuesta = {
                 meta: {
                     status: 200,
-                    total: movies.length,
+                    totalMovies: movies.length,
                     url: "api/products",
+                    totalGeneros:generos.length,
+                    countByCategory: generos
                 },
                 data: movies,
             };

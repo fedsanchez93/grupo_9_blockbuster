@@ -5,8 +5,10 @@ export default function Movie({ movie }) {
         <tr>
             <td>{movie.id}</td>
             <td>{movie.title}</td>
-            <td>{movie.rating}</td>
-            <td>{movie.awards}</td>
+            <td>{movie.blockbuster_rating}</td>
+            <td>{movie.imdb_rating}</td>
+            <td>{movie.rotten_tomatoes_rating}</td>
+            <td>{movie.release_year}</td>
             <td>{movie.length}</td>
         </tr>
     );
