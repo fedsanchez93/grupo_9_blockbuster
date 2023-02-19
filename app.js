@@ -35,6 +35,9 @@ app.use('/products', rutasProducts)
 const rutasUsers = require('./routes/usersRouter');
 app.use('/users',rutasUsers)
 
+const rutasApi = require('./routes/api/apiRoutes')
+app.use('/api', rutasApi)
+
 app.use((req,res,next)=>{
     res.status(404).render('not-found')
 })

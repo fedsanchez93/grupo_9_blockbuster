@@ -10,7 +10,7 @@ function userLoggedMiddleware(req, res, next) {
 			where:{email:emailInCookie}
 		})
 		.then(result=>{
-			
+
 			if (result.length > 0) {
 				req.session.userLogged = result;
 			}
