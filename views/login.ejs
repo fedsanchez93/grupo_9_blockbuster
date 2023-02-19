@@ -14,12 +14,16 @@
                 <div class="credenciales">
                     <h1 class="titulo">Iniciar sesión</h1>
                     <label for="email"></label>
-                    <input class="text-box" type="text" placeholder="E-mail" name="email" value="<%= locals.oldData ? oldData.email : null %>">
-                    <% if (locals.errors && errors.email) { %>
-                        <div class="verificador"> <%= errors.email.msg %> </div>
-                    <% } %>
+                    <input id="email" class="text-box" type="text" placeholder="E-mail" name="email" value="<%= locals.oldData ? oldData.email : null %>">
+                    <div class="verificador errorEmail">
+                        <% if (locals.errors && errors.email) { %>
+                            <%= errors.email.msg %>
+                        <% } %>
+                    </div>
                     <label for="password"></label>
-                    <input class="text-box" type="password" placeholder="Contraseña" name="password" required>
+                    <input id="password" class="text-box" type="password" placeholder="Contraseña" name="password" required>
+                    <div class="verificador errorPassword"></div>
+
                 </div>
                     
                 
@@ -47,6 +51,7 @@
         <div class="sector">Donde quieras, cuando quieras</div>
     </section>
 
+    <script src="/js/validateLogin.js"></script>
     <%- include('partials/footer') %>   
 </body>
 </html>
