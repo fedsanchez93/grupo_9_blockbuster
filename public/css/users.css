@@ -39,7 +39,22 @@ h2.button{
     justify-content: center;
 
 }
-
+.boton-guardar{ 
+    border-radius: 15px;
+    background-color: var(--yellow) !important;
+    height: 60px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    border-color: greenyellow;
+    transition: 1s;
+}
+.boton-guardar:hover{
+    transform: scale(1.1);
+}
 h3, label{
     font-size: 22px;
     text-align: left;
