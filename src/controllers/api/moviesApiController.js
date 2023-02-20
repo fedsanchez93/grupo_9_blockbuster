@@ -16,12 +16,15 @@ const moviesApiController = {
         let paginaAnterior = queryPage >= 1 ? queryPage -1 : 0
 
         //console.log(queryLimit, queryOffset)
+        // let queryPage = req.query.page ? Number(req.query.page) : 0
+        // let next 
+        // let previous 
 
         let generos = db.Genre.findAll({include:[{association:"movies"}]})
         let movies = db.Movie.findAll(
             {limit: queryLimit,
-                offset: offset},  
-            {include: [{association: "genres"},{association: "languages"},{association:'users_rentals'},{association:'users_wishlist'},{association:'users_cart'}]}
+                offset: offset,  
+            include: [{association: "genres"},{association: "languages"},{association:'users_rentals'},{association:'users_wishlist'},{association:'users_cart'}]}
         )
         Promise.all([movies, generos])
         .then(([movies, generos]) => {

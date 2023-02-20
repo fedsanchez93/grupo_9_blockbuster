@@ -12,7 +12,7 @@ function SideBar() {
                 {/*<!-- Sidebar - Brand -->*/}
                 <Link
                     className="sidebar-brand d-flex align-items-center justify-content-center"
-                    to="/resumen"
+                    to="/"
                 >
                     <div className="sidebar-brand-icon">
                         <img
@@ -28,7 +28,7 @@ function SideBar() {
 
                 {/*<!-- Nav Item - Dashboard -->*/}
                 <li className="nav-item active">
-                    <Link className="nav-link" to="/resumen">
+                    <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
                         <span>Dashboard - DH movies</span>
                     </Link>
@@ -50,9 +50,9 @@ function SideBar() {
 
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link" to="/resumen/charts">
+                    <Link className="nav-link" to="/metricas">
                         <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Charts</span>
+                        <span>Metricas</span>
                     </Link>
                 </li>
 
@@ -60,20 +60,20 @@ function SideBar() {
                 <li className="nav-item">
                     <Link className="nav-link" to="/moviesList">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Tables</span>
+                        <span>Tabla de peliculas</span>
                     </Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block" />
                 <li className="nav-item">
-                    <Link className="nav-link" to="/resumen/lastMovie">
+                    <Link className="nav-link" to="/lastMovie">
                         <i className="fas fa-fw fa-table"></i>
                         <span>Last Movie in Db</span>
                     </Link>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link" to="/resumen/genres">
+                    <Link className="nav-link" to="/genres">
                         <i className="fas fa-fw fa-table"></i>
                         <span>Genres in Db</span>
                     </Link>
