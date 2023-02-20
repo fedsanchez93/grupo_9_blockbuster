@@ -1,16 +1,17 @@
 import React from "react";
 import Movie from "./Movie";
+import  { Link } from 'react-router-dom'
 
 export default class MovieList extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { movies: [] };
+        this.state = { movies: [], meta:'' };
     }
 
     async fetchMovies() {
         const response = await fetch("http://localhost:5000/api/products");
         const result = await response.json();
-        this.setState({ movies: result.data });
+        this.setState({ movies: result.data, meta: result.meta });
     }
 
     componentDidMount() {
@@ -24,6 +25,7 @@ export default class MovieList extends React.Component {
                 <h1 className="h3 mb-2 text-gray-800">
                     Lista de Peliculas
                 </h1>
+                {/* <Link to="{this.state.meta.paginaSiguiente}">Siguiente</Link> */}
 
                 {/*<!-- DataTales Example -->*/}
                 <div className="card shadow mb-4">

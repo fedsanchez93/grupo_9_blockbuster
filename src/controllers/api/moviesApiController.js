@@ -7,14 +7,26 @@ const moment = require("moment");
 
 const moviesApiController = {
     list: (req, res) => {
+
+        let queryLimit = req.query.limit ? Number(req.query.limit) : 100
+        //let queryOffset = req.query.offset ? Number(req.query.offset) : 0
+        let queryPage = req.query.page ? Number(req.query.page) : 0
+        let offset =  queryPage >=1 ? (queryPage) * queryLimit : 0
+        let paginaSiguiente =  Number(queryPage+1)
+        let paginaAnterior = queryPage >= 1 ? queryPage -1 : 0
+
+        //console.log(queryLimit, queryOffset)
+
         let generos = db.Genre.findAll({include:[{association:"movies"}]})
         let movies = db.Movie.findAll(
+            {limit: queryLimit,
+                offset: offset},  
             {include: [{association: "genres"},{association: "languages"},{association:'users_rentals'},{association:'users_wishlist'},{association:'users_cart'}]}
         )
         Promise.all([movies, generos])
         .then(([movies, generos]) => {
 
-            generos = generos.map((genero)=>{
+            generos = generos.map((genero)=>{ 
                 return{
                     //...generos,
                     "genre":genero.genre,
@@ -28,7 +40,9 @@ const moviesApiController = {
                     totalMovies: movies.length,
                     url: "/api/products",
                     totalGeneros:generos.length,
-                    countByCategory: generos
+                    countByCategory: generos,
+                    paginaSiguiente: `/api/products?limit=${queryLimit}&page=${paginaSiguiente}`,
+                    paginaAnterior: `/api/products?limit=${queryLimit}&page=${paginaAnterior}`
                 },
                 data: movies,
             };
