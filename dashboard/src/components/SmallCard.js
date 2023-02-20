@@ -20,6 +20,7 @@ function SmallCard(props) {
                                     {props.moneda
                                         ? "$" + props.valor
                                         : props.valor}
+                                        {/* {props.totalUsers} */}
                                 </div>
                             </div>
                             <div className="col-auto">

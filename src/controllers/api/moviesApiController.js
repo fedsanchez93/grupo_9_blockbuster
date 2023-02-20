@@ -26,7 +26,7 @@ const moviesApiController = {
                 meta: {
                     status: 200,
                     totalMovies: movies.length,
-                    url: "api/products",
+                    url: "/api/products",
                     totalGeneros:generos.length,
                     countByCategory: generos
                 },
@@ -44,7 +44,7 @@ const moviesApiController = {
                 meta: {
                     status: 200,
                     //total: movie.length,
-                    url: "/api/products"+req.params.id,
+                    url: "/api/products/"+req.params.id,
                 },
                 data: movie,
             };

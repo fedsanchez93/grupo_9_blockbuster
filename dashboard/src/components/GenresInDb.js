@@ -13,13 +13,13 @@ export default class GenresInDb extends React.Component {
         const result = await response.json();
         //console.log(result)
         this.setState({ listaGeneros: result.meta.countByCategory });
-        console.log(this.state.listaGeneros)
+        //console.log(this.state.listaGeneros)
 
     }
 
     componentDidMount() {
         this.fetchMovies();
-        console.log(this.state.listaGeneros)
+        //console.log(this.state.listaGeneros)
     }
 
     render() {
