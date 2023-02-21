@@ -1,8 +1,10 @@
 import React from "react";
 import Movie from "./Movie";
 import  { Link } from 'react-router-dom'
+// import {useEffect, useState} from 'react';
 
 export default class MovieList extends React.Component {
+    
     constructor(props) {
         super(props);
         this.state = { movies: [], meta:'' };
@@ -19,6 +21,7 @@ export default class MovieList extends React.Component {
     }
 
     render() {
+
         return (
             <>
                 {/*<!-- PRODUCTS LIST -->*/}
