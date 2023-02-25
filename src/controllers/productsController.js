@@ -24,7 +24,11 @@ const productsController = {
                     });
                 }
             });
-            //res.json( rentalList)
+            
+            db.MovieUserRental.findAll({where : {"id_user" : req.session.userLogged[0].id}})
+                .then(results => console.log(results));
+
+
             res.render('misAlquileres', {listaPeliculas, user: req.session.userLogged[0], rentalList})
         })
 
