@@ -49,40 +49,40 @@ const rutaPeliculas = path.join(__dirname, './src/data/products2.json');
 const listaPeliculas = JSON.parse(fs.readFileSync(rutaPeliculas, 'utf-8'));
 //console.log(listaPeliculas)
 const db = require('./src/database/models');
-// db.Movie.bulkCreate(
-//     listaPeliculas
-// )
-  
-// db.Genre.bulkCreate([
-//     {genre:'Ciencia Ficción'},
-//     {genre:'Terror'},
-//     {genre:'Amor'},
-//     {genre:'Comedia'},
-//     {genre:'Policial'},
-//     {genre:'Aventura'},
-//     {genre:'Bélico'},
-//     {genre:'Drama'},
-//     {genre:'Suspenso'},
-//     {genre:'Misterio'},
-//     {genre:'Fantasía'},
-//     {genre:'Infantil'},
-//     {genre:'Familiar'},
-//     {genre:'Biografía'},
-//     {genre:'Animación'},
-//     {genre:'Romance'},
-//     {genre:'Crimen'},
-//     {genre:'Documental'},
+/*db.Movie.bulkCreate(
+     listaPeliculas
+)*/
+/*  
+db.Genre.bulkCreate([
+     {genre:'Ciencia Ficción'},
+     {genre:'Terror'},
+     {genre:'Amor'},
+     {genre:'Comedia'},
+     {genre:'Policial'},
+    {genre:'Aventura'},
+    {genre:'Bélico'},
+    {genre:'Drama'},
+    {genre:'Suspenso'},
+    {genre:'Misterio'},
+    {genre:'Fantasía'},
+    {genre:'Infantil'},
+    {genre:'Familiar'},
+    {genre:'Biografía'},
+    {genre:'Animación'},
+    {genre:'Romance'},
+    {genre:'Crimen'},
+    {genre:'Documental'},
 
-// ])
+])*/
+/*
+db.Language.bulkCreate([
+    {language:'Español'},
+    {language:'Inglés'},
+    {language:'Portugués'},
+    {language:'Francés'},
+    {language:'Italiano'},
 
-// db.Language.bulkCreate([
-//     {language:'Español'},
-//     {language:'Inglés'},
-//     {language:'Portugués'},
-//     {language:'Francés'},
-//     {language:'Italiano'},
-
-// ])
+])*/
   
   
 
