@@ -38,12 +38,12 @@
                         <!-- <i class="fa-solid fa-dollar-sign"></i> -->
                     </div>
                 </article>
-            <% }); %> 
+            
         </section>
 
         <section class="compras-ofertas">
             <ul>
-                <form action="/users/rental/add/<%= user.id %>/10/" method="post"><input type="hidden" name="dias" value="0"><button type="submit" class="boton">
+                <form action="/users/rental/add/<%= user.id %>/<%= element.id %>/" method="post"><input type="hidden" name="dias" value="0"><button type="submit" class="boton">
                 <li class="item-oferta">Alquilar Pelicula/s por 24hs con 5% descuento  <br>Precio total con el descuento: $<%= menos5porciento %> Ars.</li>
             </button></form>  
 
@@ -52,7 +52,7 @@
                 <li class="item-oferta">Alquilar Pelicula/s por 10 dias con 30% descuento  <br>Precio total con el descuento: $<%= menos30porciento %> Ars.</li>
             </ul>
         </section>
-
+             <% }); %> 
     </div>
     
     <%- include('partials/footer') %> 
