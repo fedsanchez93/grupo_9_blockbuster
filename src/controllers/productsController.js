@@ -39,8 +39,6 @@ const productsController = {
             res.render('misAlquileres', {listaPeliculas, user: req.session.userLogged[0], rentalList})
         })
  
-
-        
     },
     productDetail: (req,res)=>{
         let id = req.query.id || 1
