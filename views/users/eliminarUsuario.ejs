@@ -24,11 +24,15 @@
             </div>
             <div class="info-perfil">
                 <label for="usuario">Usuario:</label>
-                <input type="text" name="usuario" id="" value="<%= userToDelete.usuario %> ">
+                <input type="text" name="usuario" id="" value="<%= userToDelete.username %> ">
             </div>
             <div class="info-perfil">
-                <label for="usuario">Categoria:</label>
-                <input type="text" name="category" id="" value="<%= userToDelete.category %> ">
+                <label for="usuario">Categoria: </label>
+                <% if(userToDelete.is_admin == 1) { %>
+                    <label for="usuario">Administrador</label>
+                <% } else { %>
+                    <label for="usuario">Visitante</label>
+                <% } %>
             </div>
                          
             <div class="botones">
