@@ -49,6 +49,16 @@
                     <input type="radio" name="is_admin" id="" value="0" checked> Visitante 
                 <% } %>
             </div>
+            <div class="info-perfil">
+                <label for="usuario">Actividad:</label>
+                <% if(userToEdit.is_active == 1) { %>
+                    <input type="radio" name="is_active" id="" value="1" checked> Activo
+                    <input type="radio" name="is_active" id="" value="0"> Inactivo 
+                <% } else {%>       
+                    <input type="radio" name="is_active" id="" value="1"> Activo
+                    <input type="radio" name="is_active" id="" value="0" checked> Inactivo
+                <% } %>
+            </div>
                          
             <div class="botones">
                 <h2 class="button"><a href="/users/listaUsuarios">Volver</a></h2>
