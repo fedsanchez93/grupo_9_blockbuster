@@ -100,7 +100,7 @@ const controller = {
 
 			.then(userToLogin => {
 				let isOkThePassword = userToLogin.length > 0 ? bcrypt.compareSync(req.body.password, userToLogin[0].password) : null;
-				if (isOkThePassword) {
+				if (isOkThePassword && userToLogin[0].is_active == 1) {
 					delete userToLogin.password;
 					req.session.userLogged = userToLogin;
 	
@@ -116,6 +116,15 @@ const controller = {
 						errors: {
 							email: {
 								msg: 'Las credenciales son inválidas '
+							}
+						},
+						oldData: req.body
+					})
+				} else if(userToLogin[0].is_active == 0){
+					return res.render('login', {
+						errors: {
+							email: {
+								msg: 'El usuario se encuentra temporalmente deshabilitado '
 							}
 						},
 						oldData: req.body
@@ -179,7 +188,8 @@ const controller = {
 				password: bcrypt.hashSync(req.body.password, 10),
 				"image_url": req.body.image_url,
 				"is_admin": req.body.is_admin,
-				id_favorite_genre: req.body.id_favorite_genre
+				id_favorite_genre: req.body.id_favorite_genre,
+				"is_active": req.body.is_active
 			},
 			{
 				where: {id: req.params.id}
