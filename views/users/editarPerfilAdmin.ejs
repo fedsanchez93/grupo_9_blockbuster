@@ -40,8 +40,14 @@
             </div>
             <div class="info-perfil">
                 <label for="usuario">Cambiar categoría:</label>
-                <input type="radio" name="is_admin" id="" value="1"> Administrador 
-                <input type="radio" name="is_admin" id="" value="0"> Visitante
+                <% if(userToEdit.is_admin == 1) { %>
+                    <input type="radio" name="is_admin" id="" value="1" checked> Administrador
+                    <input type="radio" name="is_admin" id="" value="0"> Visitante 
+                <% } else {%>  
+             
+                    <input type="radio" name="is_admin" id="" value="1"> Administrador
+                    <input type="radio" name="is_admin" id="" value="0" checked> Visitante 
+                <% } %>
             </div>
                          
             <div class="botones">
