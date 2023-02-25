@@ -37,8 +37,6 @@ const productsController = {
             })
             movies_expired.forEach(movie => db.MovieUserRental.destroy({where : {"id_movie" : movie.id_movie}})
                 .then(movie => console.log(movie)));
-            
-            
         })
 
         res.render('misAlquileres', {listaPeliculas, user: req.session.userLogged[0], rentalList})
