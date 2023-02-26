@@ -1,5 +1,6 @@
 const { check } = require('express-validator');
-
+const path = require('path')
+let acceptedExtensions = ['.jpg', '.png', '.gif','.jpeg','.webp'];
 module.exports = [
     check('titulo')                     .isLength({min: 2, max: 100}).withMessage('Debes completar el titulo, maximo 100 caracteres'),
     check('duracion')                   .isDecimal().withMessage('Debe ser un numero valido (puede ser decimal con . )')
@@ -19,5 +20,20 @@ module.exports = [
     check('trailer')                    .isLength({ max: 300}).withMessage('Debes completar con una url valida'), //es url
     check('descripcion')    .notEmpty().withMessage('Debes completar la descripción')
                             .isLength({max: 300}).withMessage('Es demaciado largo, max. 300 caracteres'),
-    check('imageMovie'), //imagen cargada del usuario
+    check('imageMovie').custom((value, { req }) => {
+		let file = req.file;
+		let acceptedExtensions = ['.jpg', '.png', '.gif','.jpeg','.webp'];
+
+		// if (!file) {
+		// 	throw new Error('Tienes que subir una imagen');
+		// } else 
+		if(file){
+			let fileExtension = path.extname(file.originalname);
+			if (!acceptedExtensions.includes(fileExtension)) {
+				throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+			}
+		}
+
+		return true;
+	}).withMessage(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`), //imagen cargada del usuario
 ] 

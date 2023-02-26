@@ -18,6 +18,13 @@
     <main class="all-form">
         <!-- register form -->
         <!-- <div class="center"></div> -->
+
+        <span class="error_imageMovie" style="color: rgb(255, 149, 0);"> aca!!
+            <% if (locals.errors && errors.imageMovie) { %>
+                <%= errors.imageMovie.msg %></p>
+            <% } %>
+            </span>
+
         <h1 class="tituloPag">Subir Nueva Pelicula</h1>
 
         <form action="/products/guardarNuevoProducto" method="POST"  enctype="multipart/form-data">

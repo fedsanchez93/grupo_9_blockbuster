@@ -1,5 +1,6 @@
 const path = require('path');
 const { body } = require('express-validator');
+let acceptedExtensions = ['.jpg', '.png', '.gif','.jpeg','.webp'];
 
 module.exports = [
 	body('name').notEmpty().withMessage('Tienes que escribir un nombre'),
@@ -12,7 +13,7 @@ module.exports = [
 	//body('country').notEmpty().withMessage('Tienes que elegir un país'),
 	body('imageUser').custom((value, { req }) => {
 		let file = req.file;
-		let acceptedExtensions = ['.jpg', '.png', '.gif','.jpeg'];
+		let acceptedExtensions = ['.jpg', '.png', '.gif','.jpeg','.webp'];
 
 		// if (!file) {
 		// 	throw new Error('Tienes que subir una imagen');
@@ -25,5 +26,5 @@ module.exports = [
 		}
 
 		return true;
-	})
+	}).withMessage(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`)
 ]
