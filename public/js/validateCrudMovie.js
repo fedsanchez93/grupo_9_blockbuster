@@ -173,8 +173,8 @@ descripcion.addEventListener('keyup',(e)=>{
     if(descripcion.value.length < 20 || descripcion.value == ''){
         error_descripcion.innerHTML = 'Debes completar la descripcion'
         error_descripcion.style.color = 'rgb(255, 149, 0)'
-    }else if(descripcion.value.length >= 300){
-        error_descripcion.innerHTML = 'Maximo 300 caracteres'
+    }else if(descripcion.value.length >= 400){
+        error_descripcion.innerHTML = 'Maximo 400 caracteres'
         error_descripcion.style.color = 'rgb(255, 149, 0)'
     }else{
         error_descripcion.innerHTML = '✓'

@@ -1,6 +1,7 @@
 const path = require('path')
 const fs = require('fs');
 const db = require('../database/models');
+const Op = db.Sequelize.Op;
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const charactersFilePath = path.join(__dirname, '../data/characters.json')
@@ -18,10 +19,32 @@ const recomendadas = listaPeliculas.filter(function(product){
 const mainController = {
     home: (req,res)=>{
         //res.render('home', {masBuscadas, recomendadas, listaPersonajes, user: req.session.userLogged})
-        db.Movie.findAll({
-            include: [{association: "genres"},{association: "languages"}]
+        let masBuscadas2 = db.Movie.findAll({
+            order: [
+                ['blockbuster_rating', 'DESC'],
+            ], limit: 6
         })
-        .then(movies => res.render('home', {masBuscadas, recomendadas, listaPersonajes, user: req.session.userLogged[0], movies}));
+        let moviesFavoriteGenre = []
+        // db.Movie.findAll({
+        //     include: [{ association: "genres" }],
+        //     // where:{ genres: {[Op.like]:'%1%'}  }
+        // })
+        let movies = db.Movie.findAll({ include: [{ association: "genres" }, { association: "languages" }] })
+        
+        Promise.all([movies, masBuscadas2, moviesFavoriteGenre])
+        .then(([movies, masBuscadas2, moviesFavoriteGenre]) => {
+            //console.log(moviesFavoriteGenre)
+            movies.forEach((movie)=>{
+                if(movie.genres.length > 0 && moviesFavoriteGenre.length < 6){
+                    movie.genres.forEach(genre=>{
+                        genre.id == req.session.userLogged[0].id_favorite_genre ?  moviesFavoriteGenre.push(movie) : null
+                    })
+                    
+                }
+            })
+            res.render('home', { masBuscadas2, recomendadas, moviesFavoriteGenre, user: req.session.userLogged[0], movies })
+            //res.json(moviesFavoriteGenre)
+            });
     },
     login: (req,res)=>{
         res.render('login')
