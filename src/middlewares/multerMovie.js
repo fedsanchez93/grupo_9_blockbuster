@@ -27,13 +27,10 @@ const fileFilter = (req, file, cb)=> {
          console.log(path.extname(file.originalname))
    }else{
       cb(null, false)
-      {errors: {
-         imageMovie: {
-            msg: 'No es correcta la extencion'
-         }
-      }}
+      
       // Siempre puedes pasar un error en caso de que algo salga mal:
       //cb(new Error('No tengo la menor idea!'))
+      
 
    }
 } 

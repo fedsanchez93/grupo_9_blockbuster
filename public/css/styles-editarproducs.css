@@ -258,14 +258,24 @@ input[type="submit"]:hover {
   padding: 10px;
   text-align: center;
   align-items: center;
-  justify-content: center;
+  justify-content:center;
   cursor: pointer;
   color: white;
 }
 .div-subir-foto p{
-  margin: auto;
+  margin: auto 0;
 }
-
+.div-url-con-subir-file{
+  border: #00b33c solid 2px;
+  align-items: center;
+  justify-content: center !important;
+}
+.content-div-image-upload{
+  width: 55%;
+}
+#form-switch{
+  color: white;
+}
 /* checkbocks de generos e idiomas */
 .lista-check{
   color: white;
@@ -282,3 +292,6 @@ input[type="submit"]:hover {
   display: none;
 
 }
+
+
+

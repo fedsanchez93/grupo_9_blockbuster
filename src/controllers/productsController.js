@@ -109,11 +109,11 @@ const productsController = {
     guardarProductoEditado:(req,res)=>{
         let resultadoValidacion = validationResult(req);
 
-        if(resultadoValidacion.errors.length <= 0){
+        if(resultadoValidacion.errors.length <= 0){ 
         db.Movie.update(
             {
                 title: req.body.titulo,
-                image_url: req.body.imagen, // || "https://i.pinimg.com/564x/f8/28/73/f828738fc037b66f2bdb74deaf36ad3d.jpg", 
+                image_url: req.body.switchUrlImg == 'on' ? req.body.imagen : req.file ? '/images/img-movies/'+req.file.filename : "https://i.pinimg.com/564x/f8/28/73/f828738fc037b66f2bdb74deaf36ad3d.jpg", 
                 description: req.body.descripcion,
                 length: req.body.duracion,
                 release_year: req.body.release_year,
@@ -167,11 +167,10 @@ const productsController = {
 
     guardarNuevoProducto:(req,res)=>{
         let resultadoValidacion = validationResult(req);
-
         if(resultadoValidacion.errors.length <= 0){
         db.Movie.create({
             title: req.body.titulo,
-            image_url: req.body.imagen || req.file ? '/images/img-movies/'+req.file.filename : "https://i.pinimg.com/564x/f8/28/73/f828738fc037b66f2bdb74deaf36ad3d.jpg", 
+            image_url: req.body.switchUrlImg == 'on' ? req.body.imagen : req.file ? '/images/img-movies/'+req.file.filename :"https://i.pinimg.com/564x/f8/28/73/f828738fc037b66f2bdb74deaf36ad3d.jpg", //req.body.imagen || req.file ? '/images/img-movies/'+req.file.filename : "https://i.pinimg.com/564x/f8/28/73/f828738fc037b66f2bdb74deaf36ad3d.jpg", 
             description: req.body.descripcion,
             length: req.body.duracion,
             release_year: req.body.release_year,
@@ -195,6 +194,7 @@ const productsController = {
                 res.send(errors)
             })
         }else{
+
             let Languages = db.Language.findAll()
             let Genres = db.Genre.findAll()
             Promise.all([Languages,Genres])
@@ -215,7 +215,7 @@ const productsController = {
 		// 	if(idProducto != element.id){newProducts.push(element)}
 		// });
 		// fs.writeFileSync(productsFilePath, JSON.stringify(newProducts,null, '\t'))
-        db.MovieLanguage.destroy(   {where: {id_movie: idProducto}})
+        db.MovieLanguage.destroy(  {where: {id_movie: idProducto}}) 
         db.MovieGenre.destroy(  {where: {id_movie: idProducto}})
         db.Movie.destroy(  {where:  {id:idProducto}  }  )
         .then(luego=>{

@@ -26,7 +26,7 @@ router.get('/video/:id?',prodctsController.video);
 router.get('/crearNuevoProducto',prodctsController.crearNuevoProducto);
 
 router.post('/guardarNuevoProducto',uploadFile.single('imageMovie'), validationsNewMovie, prodctsController.guardarNuevoProducto);
-router.put('/editarProducto/:id?/', validationsNewMovie, prodctsController.guardarProductoEditado);
+router.put('/editarProducto/:id?/',uploadFile.single('imageMovie'), validationsNewMovie, prodctsController.guardarProductoEditado);
 router.delete('/eliminarProducto/:id?/',prodctsController.eliminarProducto);
 
 module.exports = router;

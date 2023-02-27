@@ -14,7 +14,10 @@ let imageMovie = document.querySelector('.imageMovie')
 let urlImage = document.querySelector('.urlImage')
 let imageUpload = document.querySelector('.image-upload')
 let selectFoto = document.querySelector('#selectFoto')
+let form_switch = document.querySelector('#form-switch')
 let divUrlImagen = document.querySelector('#divUrlImagen')
+let flexSwitchCheckDefault = document.querySelector('#flexSwitchCheckDefault')
+let form_check_label = document.querySelector('#form-check-label')
 
 let error_titulo = document.querySelector('.error_titulo')
 let error_duracion = document.querySelector('.error_duracion')
@@ -30,15 +33,27 @@ let error_imageMovie = document.querySelector('.error_imageMovie')
 let error_urlImage = document.querySelector('.error_urlImage')
 
 
-selectFoto.addEventListener('change',(e)=>{
-    if(selectFoto.value == 'subir-foto'){
-        divUrlImagen.style.display = 'none'
-        imageUpload.style.display = 'block'        
-    }else if(selectFoto.value == 'ingresar-url'){
-        divUrlImagen.style.display = 'block'
-        imageUpload.style.display = 'none' 
-    }
+// selectFoto.addEventListener('change',(e)=>{
+//     if(selectFoto.value == 'subir-foto'){
+//         divUrlImagen.style.display = 'none'
+//         imageUpload.style.display = 'block'        
+//     }else if(selectFoto.value == 'ingresar-url'){
+//         divUrlImagen.style.display = 'block'
+//         imageUpload.style.display = 'none' 
+//     }
 
+// })
+form_switch.addEventListener('change',(e)=>{
+    console.log(flexSwitchCheckDefault.checked)
+    if(flexSwitchCheckDefault.checked){
+        form_check_label.innerHTML = 'Usar Url imagen'
+        urlImage.disabled = false
+        imageMovie.disabled = true
+    }else{
+        form_check_label.innerHTML = ' Subir Imagen '
+        urlImage.disabled = true
+        imageMovie.disabled = false
+    }
 })
 
 imageMovie.addEventListener('change',(e)=>{ //para visualizar la imagen antes de subirla
@@ -47,6 +62,7 @@ imageMovie.addEventListener('change',(e)=>{ //para visualizar la imagen antes de
     file = imageMovie.files[0]; //Recuperamos el archivo subido
     objectURL = URL.createObjectURL(file);//Creamos la url
     $imgPreview.src = objectURL; 	//Modificamos el atributo src de la etiqueta img
+    console.log(imageMovie.files)
 })
 
 titulo.addEventListener('keyup',(e)=>{
