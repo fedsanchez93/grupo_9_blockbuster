@@ -121,6 +121,17 @@
                 <% } %>
                 </span>
             </div>
+
+            <div class="txt_field">
+                <input  value="<%= locals.oldData ? oldData.movieUrl : null %>"  type="text" name="movieUrl" class="movieUrl">
+                <span></span>
+                <label>URL Pelicula</label>
+                <span class="error_movieUrl" style="color: rgb(255, 149, 0);">
+                <% if (locals.errors && errors.movieUrl) { %>
+                    <%= errors.movieUrl.msg %></p>
+                <% } %>
+                </span>
+            </div>
          </div> <!--fin div flex-wrap -->
 
          <div class="flex-wrap div-url-con-subir-file">

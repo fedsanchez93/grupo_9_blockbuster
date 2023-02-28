@@ -122,9 +122,9 @@ const productsController = {
                 length: req.body.duracion,
                 release_year: req.body.release_year,
                 price: req.body.precio,
-                trailer: req.body.trailer, // || "https://www.youtube.com/embed/LDXYRzerjzU",
+                trailer: req.body.trailer || "https://www.youtube.com/embed/LDXYRzerjzU",
                 is_active: req.body.is_active,
-                movie_url: "https://www.youtube.com/embed/LDXYRzerjzU",
+                movie_url: req.body.movieUrl || "https://www.youtube.com/embed/LDXYRzerjzU",
                 blockbuster_rating: req.body.CalificacionBlockbuster,
                 imdb_rating: req.body.CalificacionIMDb,
                 rotten_tomatoes_rating: req.body.CalificacionRottenTomatoes
@@ -181,7 +181,7 @@ const productsController = {
             price: req.body.precio,
             trailer: req.body.trailer ||  "https://www.youtube.com/embed/LDXYRzerjzU",
             is_active: req.body.is_active,
-            movie_url: "https://www.youtube.com/embed/LDXYRzerjzU",
+            movie_url: req.body.movieUrl || "https://www.youtube.com/embed/LDXYRzerjzU",
             blockbuster_rating: req.body.CalificacionBlockbuster,
             imdb_rating: req.body.CalificacionIMDb,
             rotten_tomatoes_rating: req.body.CalificacionRottenTomatoes

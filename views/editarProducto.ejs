@@ -114,6 +114,15 @@
                     <% } %>
                 </span>
             </div>
+            <div class="txt_field">
+                <input type="text" name="movieUrl" class="movieUrl" value="<%= MovieToEdit.movie_url %>"  placeholder="<%= MovieToEdit.movie_url %>">
+                <label>URL Pelicula</label>
+                <span class="error_movieUrl" style="color: rgb(255, 149, 0);">
+                    <% if (locals.errors && errors.movieUrl) { %>
+                        <%= errors.movieUrl.msg %></p>
+                    <% } %>
+                </span>
+            </div>
 
             <!-- <select name="selectFoto" id="selectFoto">
                 <option value="null">IMAGEN (subir foto o usar url)</option>

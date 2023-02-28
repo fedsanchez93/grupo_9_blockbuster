@@ -18,6 +18,7 @@ module.exports = [
     
     check('imagen')                     .isLength({max: 200}).withMessage('Es demaciado largo, max. 200 caracteres'), //es la url_imagen
     check('trailer')                    .isLength({ max: 300}).withMessage('Debes completar con una url valida'), //es url
+    check('movieUrl')                    .isLength({ max: 300}).withMessage('Debes completar con una url valida'),
     check('descripcion')    .notEmpty().withMessage('Debes completar la descripción')
                             .isLength({max: 400}).withMessage('Es demaciado largo, max. 400 caracteres'),
     check('imageMovie').custom((value, { req }) => {

@@ -8,6 +8,7 @@ let CalificacionBlockbuster = document.querySelector('.CalificacionBlockbuster')
 let CalificacionIMDb = document.querySelector('.CalificacionIMDb')
 let CalificacionRottenTomatoes = document.querySelector('.CalificacionRottenTomatoes')
 let trailer = document.querySelector('.trailer')
+let movieUrl = document.querySelector('.movieUrl')
 let descripcion = document.querySelector('.descripcion')
 let radioFoto = document.querySelector('.radioFoto')
 let imageMovie = document.querySelector('.imageMovie')
@@ -27,6 +28,7 @@ let error_CalificacionBlockbuster = document.querySelector('.error_CalificacionB
 let error_CalificacionIMDb = document.querySelector('.error_CalificacionIMDb')
 let error_CalificacionRottenTomatoes = document.querySelector('.error_CalificacionRottenTomatoes')
 let error_trailer = document.querySelector('.error_trailer')
+let error_movieUrl = document.querySelector('.error_movieUrl')
 let error_descripcion = document.querySelector('.error_descripcion')
 let error_radioFoto = document.querySelector('.error_radioFoto')
 let error_imageMovie = document.querySelector('.error_imageMovie')
@@ -167,6 +169,18 @@ trailer.addEventListener('keyup',(e)=>{
     }else{
         error_trailer.innerHTML = '✓'
         error_trailer.style.color = 'green'
+    }
+})
+movieUrl.addEventListener('keyup',(e)=>{
+    if((movieUrl.value.length > 2 && movieUrl.value.length < 10 ) ){
+        error_movieUrl.innerHTML = 'Debes completar la Url movie'
+        error_movieUrl.style.color = 'rgb(255, 149, 0)'
+    }else if(movieUrl.value.length >= 300){
+        error_movieUrl.innerHTML = 'Maximo 300 caracteres'
+        error_movieUrl.style.color = 'rgb(255, 149, 0)'
+    }else{
+        error_movieUrl.innerHTML = '✓'
+        error_movieUrl.style.color = 'green'
     }
 })
 descripcion.addEventListener('keyup',(e)=>{
