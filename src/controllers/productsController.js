@@ -80,13 +80,17 @@ const productsController = {
     },
     buscarProductos: (req,res)=>{
         let palabraBuscada = req.query.filtrar || ''
-        let peliculasFiltradas = []
-        for(let i = 0 ;  i< listaPeliculas.length ;i++){
-            if(listaPeliculas[i].titulo.toLowerCase().includes(palabraBuscada.toLowerCase())){
-                peliculasFiltradas.push(listaPeliculas[i])
+        db.Movie.findAll()
+        .then(listaPeliculas => {
+            let peliculasFiltradas = []
+
+            for(let i = 0 ;  i< listaPeliculas.length ;i++){
+                if(listaPeliculas[i].title.toLowerCase().includes(palabraBuscada.toLowerCase())){
+                    peliculasFiltradas.push(listaPeliculas[i])
+                }
             }
-        }
-        res.render('buscarProductos', {listaPeliculas, peliculasFiltradas,palabraBuscada, user: req.session.userLogged[0]})
+            res.render('buscarProductos', {listaPeliculas, peliculasFiltradas,palabraBuscada, user: req.session.userLogged[0]})
+        })
     },
     editarProducto:(req,res)=>{
         let idProducto = req.query.id 

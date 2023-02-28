@@ -76,7 +76,9 @@ main{
     margin: auto;
 }
 
-.card{
+.card-movie{
+    background: rgba(31,68,137,1);
+
     width: 6cm;
     height: 10cm; 
     text-align: center;
@@ -86,7 +88,7 @@ main{
     background: rgba(195, 180, 180, 0.3);
     transition: 500ms;
 }
-.card:hover{
+.card-movie:hover{
     transform: scale(1.1);
 }
 
@@ -125,7 +127,7 @@ a.botonVer {
     padding: 15px;
     text-decoration: none;
     font-size: medium;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .btn-neon:hover{
@@ -314,3 +316,5 @@ section article{
     }
 
 }
+
+
