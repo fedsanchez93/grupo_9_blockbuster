@@ -11,11 +11,11 @@
     <%- include('partials/header') %> 
   
 <main>
-    <h1 class="titulo"><%= listaPeliculas[idProducto-1].titulo %></h1>
-    <p class="sinopsis"><%= listaPeliculas[idProducto-1].descripcion %></p>
+    <h1 class="titulo"><%= movie.title %></h1>
+    <p class="sinopsis"><%= movie.description %></p>
 
     <div class="div-trailer">
-        <iframe class="trailer" width="100%" height="500px" src="<%= listaPeliculas[idProducto-1].trailer %> " title="YouTube video player" frameborder="0" ></iframe>
+        <iframe class="trailer" width="100%" height="500px" src="<%= movie.movie_url %> " title="YouTube video player" frameborder="0" ></iframe>
     </div>
 
 </main>

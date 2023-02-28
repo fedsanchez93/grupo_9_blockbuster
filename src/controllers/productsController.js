@@ -228,7 +228,11 @@ const productsController = {
     },
     video:(req,res)=>{
         let idProducto = req.params.id || 1
-        res.render('video', {listaPeliculas, idProducto, user: req.session.userLogged[0]})
+        db.Movie.findByPk(idProducto)
+        .then(movie=>{
+
+            res.render('video', {movie,listaPeliculas, idProducto, user: req.session.userLogged[0]})
+        })
     },
     
 }
