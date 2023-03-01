@@ -38,21 +38,18 @@
                         <!-- <i class="fa-solid fa-dollar-sign"></i> -->
                     </div>
                 </article>
-            
+            <% }); %>     
         </section>
 
+        <% if(cartList.length > 1) {  %>
         <section class="compras-ofertas">
             <ul>
-                <form action="/users/rental/add/<%= user.id %>/<%= element.id %>/" method="post"><input type="hidden" name="dias" value="0"><button type="submit" class="boton">
-                <li class="item-oferta">Alquilar Pelicula/s por 24hs con 5% descuento  <br>Precio total con el descuento: $<%= menos5porciento %> Ars.</li>
+                <form action="/users/rental/add/<%= user.id %>/<%= idList %>/" method="post"><input type="hidden" name="dias" value="0"><button type="submit" class="boton">
+                <li class="item-oferta">Alquilar Peliculas con 10% descuento  <br>Precio total con el descuento: $<%= menos10porciento %> Ars.</li>
             </button></form>  
-
-                <li class="item-oferta">Alquilar Pelicula/s por 48hs con 10% descuento  <br>Precio total con el descuento: $<%= menos10porciento %> Ars.</li>
-                <li class="item-oferta">Alquilar Pelicula/s por 72hs con 20% descuento  <br>Precio total con el descuento: $<%= menos20porciento %> Ars.</li>
-                <li class="item-oferta">Alquilar Pelicula/s por 10 dias con 30% descuento  <br>Precio total con el descuento: $<%= menos30porciento %> Ars.</li>
             </ul>
         </section>
-             <% }); %> 
+        <% } %>
     </div>
     
     <%- include('partials/footer') %> 
