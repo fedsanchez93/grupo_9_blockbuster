@@ -5,25 +5,39 @@
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 
 <script>
-    function emailInFetchUsuarios(email){
-      let existEmail
-      fetch('http://localhost:5000/api/users')
-      .then((resp) => resp.json())
-      .then(data=>{
-        existEmail = data.data.filter(element => {
-          return element.email == email
-        })
-        if(existEmail.length >0 ){
-          existEmail = true
-          document.cookie = `userEmail=${email}; SameSite=None; Secure`
-          //('userEmail', email, { maxAge: (1000 * 60) * 60 * 24 * 10}) //dura 10 dias
-          window.location.href = '/'
-        }else{
-          existEmail = false
-        }
-        console.log('desde arriba',existEmail)
-        //return existEmail
-      })
+    // function emailInFetchUsuarios(email){
+    //   let existEmail
+    //   fetch('http://localhost:5000/api/users')
+    //   .then((resp) => resp.json())
+    //   .then(data=>{
+    //     existEmail = data.data.filter(element => {
+    //       return element.email == email
+    //     })
+    //     if(existEmail.length >0 ){
+    //       existEmail = true
+    //       document.cookie = `userEmail=${email}; SameSite=None; Secure`
+    //       //('userEmail', email, { maxAge: (1000 * 60) * 60 * 24 * 10}) //dura 10 dias
+    //       window.location.href = '/'
+    //     }else{
+    //       existEmail = false
+    //     }
+    //     console.log('desde arriba',existEmail)
+    //     //return existEmail
+    //   })
+    // }
+
+
+    function autocompletarRegistro(data){
+        let nombreCompleto = document.querySelector('.name')
+        let usuario = document.querySelector('.usuario')
+        let email = document.querySelector('.email')
+        let imagen = document.querySelector('.imageUser')
+
+        nombreCompleto.value = data.name
+        usuario.value = data.given_name
+        email.value = data.email
+        imagen.filename = data.picture
+        console.log('(imagen.value): '+imagen.filename)
     }
 
     function parseJwt(token) {
@@ -35,17 +49,14 @@
 
             return JSON.parse(jsonPayload);
         }
-    async function handleCredentialResponse(response) {
-      //console.log("Encoded JWT ID token: " + response.credential);
-      let userObjet = parseJwt(response.credential)
-        //console.log(userObjet.email, userObjet.name, userObjet.picture, userObjet)
-        emailInFetchUsuarios(userObjet.email)
-        //let existEmail = await (emailInFetchUsuarios(userObjet.email))
-        
 
-          //console.log(existEmail)
-        
+    async function handleCredentialResponse(response) {
+      let userObjet = parseJwt(response.credential)
+        console.log(userObjet.email, userObjet.name, userObjet.picture, userObjet)
+        //emailInFetchUsuarios(userObjet.email)
+        autocompletarRegistro(userObjet)
     }
+
     window.onload = function () {
       google.accounts.id.initialize({
         client_id: "1661949923-ivj66g50o9lbcvndg6n6rhra6laq84kk.apps.googleusercontent.com",
@@ -58,15 +69,9 @@
       google.accounts.id.prompt(); // also display the One Tap dialog
     }
 </script>
-<!-- <div id="buttonDiv"
-     data-client_id="1661949923-ivj66g50o9lbcvndg6n6rhra6laq84kk.apps.googleusercontent.com"
-     data-context="signin"
-     data-login_uri="http://localhost:3000"
-     data-itp_support="true">
-</div> -->
 
 
-<div id="g_id_onload"
+<div id="buttonDiv"
      data-client_id="1661949923-ivj66g50o9lbcvndg6n6rhra6laq84kk.apps.googleusercontent.com"
      data-context="signin"
      data-ux_mode="popup"
@@ -74,11 +79,11 @@
      data-itp_support="true">
 </div>
 
-<div class="g_id_signin"
+<div class="buttonDiv"
      data-type="standard"
      data-shape="pill"
      data-theme="filled_blue"
-     data-text="signin_with"
+     data-text="signup_with"
      data-size="large"
      data-logo_alignment="left">
 </div>

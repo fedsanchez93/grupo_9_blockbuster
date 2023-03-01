@@ -391,3 +391,11 @@ li {
         margin-left: 40px;
     }
 }
+
+
+#boton-loguearse-google{
+width: 50%;
+margin: 20px auto;
+border-top: white solid 2px;
+border-radius: 20px;
+}

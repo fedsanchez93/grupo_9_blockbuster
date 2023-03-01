@@ -17,7 +17,7 @@
             <form class="form-registro" action="/users/guardarRegistro" method="POST" enctype="multipart/form-data">
                 <article>
                     <label class="label-form" for="name">Nombre y Apellido</label> <br>
-                    <input type="text" name="name" id="name" placeholder="Nombre y Apellido"  value="<%= locals.oldData ? oldData.name : null %>">
+                    <input type="text" name="name" id="name" class="name" placeholder="Nombre y Apellido"  value="<%= locals.oldData ? oldData.name : null %>">
                     <br>
                     <div class="error_name"></div>
                     <!-- <span class="feedback verificador">Este campo no puede estar vacio</span> -->
@@ -27,7 +27,7 @@
                 </article>
                 <article>
                     <label class="label-form" for="usuario">Nombre de Usuario</label> <br>
-                    <input type="text" name="usuario" id="usuario" placeholder="Usuario"  value="<%= locals.oldData ? oldData.usuario : null %>">
+                    <input type="text" name="usuario" class="usuario" id="usuario" placeholder="Usuario"  value="<%= locals.oldData ? oldData.usuario : null %>">
                     <br>
                     <div class="error_user"></div>
                     <!-- <span class="feedback verificador">Minimo 5 caracteres</span> -->
@@ -37,7 +37,7 @@
                 </article>
                 <article>
                     <label  class="label-form" for="email">Email</label> <br>
-                    <input type="email" name="email" id="email"  placeholder="name@blockbuster.com"  value="<%= locals.oldData ? oldData.email : null %>">
+                    <input type="email" name="email" class="email" id="email"  placeholder="name@blockbuster.com"  value="<%= locals.oldData ? oldData.email : null %>">
                     <br>
                     <div class="error_email"></div>
                     <!-- <span class="feedback verificador">name@blockbuster.com</span> -->
@@ -47,7 +47,7 @@
                 </article>
                 <article>
                     <label  class="label-form" for="password">Contraseña</label> <br>
-                    <input type="password" name="password" id="password" placeholder="Contraseña" >
+                    <input type="password" class="password" name="password" id="password" placeholder="Contraseña" >
                     <br>
                     <div class="error_password">
                         <ul>
@@ -84,7 +84,7 @@
                                 
                                 <i class="fa-solid fa-user"></i>
                             </label>
-                            <input id="file-input" name="imageUser" type="file" />
+                            <input id="file-input" class="imageUser" name="imageUser" type="file" />
                         </div>
                         <img id="imgPreview" width="60px">
                     </div>
@@ -92,8 +92,10 @@
                     
 
                     <div class="div-google">
-                        <p>Continuar con Google</p>
-                        <img src="/images/logo-google.jpeg" alt="logo-google" class="logo-google">
+                        <%- include('partials/RegisterWithGoogle') %>
+
+                        <!-- <p>Continuar con Google</p>
+                        <img src="/images/logo-google.jpeg" alt="logo-google" class="logo-google"> -->
                     </div>
                 </div>
                 <% if (locals.errors && errors.imageUser) { %>

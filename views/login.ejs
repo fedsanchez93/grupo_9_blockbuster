@@ -26,7 +26,6 @@
 
                 </div>
                     
-                <%- include('partials/AuthGoogle') %>
                         
                 <label class="lista-recordar"><input class="lista-recordar" type="checkbox" name="remember_user" value="recordarme">Recordarme</label><br>
                         
@@ -38,6 +37,11 @@
                 <div class="olvidaste">
                     <a class="barra2" href="#">¿Olvidaste tu contraseña?</a>
                 </div>
+                <div id="boton-loguearse-google">
+                    <%- include('partials/AuthGoogle') %>
+                </div>
+
+
                 <div class="cliente">
                     <a class="barra2" href="/register">¿No sos cliente?</a>
                 </div> 
