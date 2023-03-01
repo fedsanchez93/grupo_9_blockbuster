@@ -272,22 +272,25 @@ const controller = {
 	addRental:(req,res)=>{
 		let id_user = req.params.id_user
 		let id_movie = req.params.id_movie
+		let idList = id_movie.split(',')
 		let date = new Date();
 		let exp_days = 7; // Una semana
 		//console.log('now:',d,'+1:',sumarDias(d, 1));
 		let arrayMoviesToBuy = []
-		console.log(req.body.cartList)
-
-		db.MovieUserRental.bulkCreate([{
-			id_movie:id_movie,
+		idList.forEach(id => arrayMoviesToBuy.push({
+			id_movie:id,
 			id_user:id_user,
-			expired_at: sumarDias(date, exp_days) //suma un dia con 0  //'2023-02-03T19:23:08.183Z'   
-		}])
+			expired_at: sumarDias(date, exp_days)
+		}))
+		console.log(idList);
+		//console.log(req.body.cartList)
+
+		db.MovieUserRental.bulkCreate(arrayMoviesToBuy)
 		.then(result=>{console.log('body:',exp_days); res.redirect('/products/misAlquileres'); }) 
 		
 		db.MovieUserCart.destroy({ 
 			where:{
-				id_movie:id_movie,  
+				id_movie:idList,  
 				id_user:id_user 
 			}
 		})
