@@ -3,27 +3,37 @@
 
 <!-- googleapis -->
 <script src="https://accounts.google.com/gsi/client" async defer></script>
-<script>
-window.addEventListener('load',()=>{
-        
 
-    /* global google */
-    google.accounts.id.initialize({
-            client_id: "1661949923-jtc7t07b1qnru913m7s734btc5cd9d51.apps.googleusercontent.com",
-            callback: handleCredentialResponse
-        });
-        
-        google.accounts.id.renderButton(
-            document.getElementById("buttonDiv"),
-            { theme: "outline", size: "large" }  // customization attributes
-            )
-            if(!user.aud ){
-            google.accounts.id.prompt(); // also display the One Tap dialog
-            }
-        })
+<script>
+    
+    function parseJwt(token) {
+            var base64Url = token.split('.')[1];
+            var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+            var jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function (c) {
+                return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+            }).join(''));
+
+            return JSON.parse(jsonPayload);
+        }
+    function handleCredentialResponse(response) {
+      console.log("Encoded JWT ID token: " + response.credential);
+      let userObjet = parseJwt(response.credential)
+        console.log(userObjet)
+    }
+    window.onload = function () {
+      google.accounts.id.initialize({
+        client_id: "1661949923-ivj66g50o9lbcvndg6n6rhra6laq84kk.apps.googleusercontent.com",
+        callback: handleCredentialResponse
+      });
+      google.accounts.id.renderButton(
+        document.getElementById("buttonDiv"),
+        { theme: "outline", size: "large" }  // customization attributes
+      );
+      google.accounts.id.prompt(); // also display the One Tap dialog
+    }
 </script>
 <div id="buttonDiv"
-     data-client_id="1661949923-jtc7t07b1qnru913m7s734btc5cd9d51.apps.googleusercontent.com"
+     data-client_id="1661949923-ivj66g50o9lbcvndg6n6rhra6laq84kk.apps.googleusercontent.com"
      data-context="signin"
      data-login_uri="http://localhost:3000"
      data-itp_support="true">
