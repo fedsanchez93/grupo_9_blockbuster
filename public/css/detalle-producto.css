@@ -193,15 +193,15 @@ body{
     margin: 20px;
 }
 
-.bloque2 .boton{
+/* .bloque2 .boton-alquiler{
     background-color: var(--yellow);
     height: 100%;
-    width: 100px;
+    width: 200px;
     max-width: 40%;
     border-radius: 8px;
     text-align: center;
     line-height: 50px
-}
+} */
 .bloque2 .botones a{
     height: 100%;
     margin:auto;

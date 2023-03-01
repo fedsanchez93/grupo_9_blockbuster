@@ -9,37 +9,6 @@
     <header>
         <%- include('partials/header') %>  
 
-        <!-- <div class="main-header logo">
-            <img src="/images/blockbuster-logo.svg" class="logo-header">
-        </div>
-
-        <nav class="main-header navegador celular izquierda">
-            <a href="#" class="burger-menu">
-                <i class="fa-sharp fa-solid fa-bars"></i>  
-            </a>
-        </nav>
-
-        <nav class="main-header navegador celular derecha">
-            <ul>
-                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></i></li>
-                <li><a href="#"><i class="fa-solid fa-circle-user"></i></a></li>
-            </ul>             
-        </nav>
-                           
-        <nav class="main-header navegador tablet-pc izquierda">
-            <ul>
-                <li><a href="#"></a>BUSCAR</li>
-                <li><a href="#"></a>LISTA DE DESEOS</li>
-            </ul>
-        </nav>
-        <nav class="main-header navegador tablet-pc derecha">
-        <ul>
-            <li><a href="#"></a>MIS ALQUILERES</li>
-            <li><a href="#">CARRITO</a></li>
-            <li><a href="#">U</a></li>
-        </ul> 
-            
-        </nav> -->
     </header>
     
     <main>
@@ -77,8 +46,10 @@
                     <!-- <div class="boton trailer">
                         <a href="#">Ver trailer</a>
                     </div> -->
-                    <div class="boton alquiler">
-                        <a href="/carrito/<%= movie.id %>">Alquilar/Ver</a>   
+                    <div class="boton-alquiler">
+                        <!-- <a href="/carrito/<%= movie.id %>">Alquilar/Ver</a>    -->
+                        <%- include('partials/ventanaEmergente1') %> 
+
                     </div>
                 </div>
             </div>

@@ -21,7 +21,7 @@
         }else{
           existEmail = false
         }
-        console.log('desde arriba',existEmail)
+        //console.log('desde arriba',existEmail)
         //return existEmail
       })
     }
@@ -51,10 +51,10 @@
         client_id: "1661949923-ivj66g50o9lbcvndg6n6rhra6laq84kk.apps.googleusercontent.com",
         callback: handleCredentialResponse
       });
-      google.accounts.id.renderButton(
-        document.getElementById("buttonDiv"),
-        { theme: "outline", size: "large" }  // customization attributes
-      );
+      // google.accounts.id.renderButton(
+      //   document.getElementById("g_id_onload"),
+      //   { theme: "outline", size: "large" }  // customization attributes
+      // );
       google.accounts.id.prompt(); // also display the One Tap dialog
     }
 </script>

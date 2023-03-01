@@ -33,7 +33,7 @@ router.put('/editarPerfil/:id/', uploadFile.single('imageUser'),usersController.
 router.post('/login',guestMiddleware, usersController.loginProcess)
 router.get('/logout/', usersController.logout);
 
-router.get('/listadoDeseos/:id?/', usersController.deseos)
+router.get('/listadoDeseos/:id?/', usersController.deseos) 
 
 router.get('/listaUsuarios', usersController.listaUsuarios);
 

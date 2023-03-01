@@ -26,6 +26,10 @@
     //   })
     // }
 
+// imagen.addEventListener('change',(e)=>{
+//     console.log('e',e)
+//     console.log('HTMLInputElement.files',imagen.files)
+// })
 
     function autocompletarRegistro(data){
         let nombreCompleto = document.querySelector('.name')
@@ -36,9 +40,11 @@
         nombreCompleto.value = data.name
         usuario.value = data.given_name
         email.value = data.email
-        imagen.filename = data.picture
-        console.log('(imagen.value): '+imagen.filename)
+        // imagen.filename = data.picture
+        // console.log('(imagen.value): '+imagen.filename)
+        // console.log()
     }
+
 
     function parseJwt(token) {
             var base64Url = token.split('.')[1];
@@ -46,14 +52,12 @@
             var jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function (c) {
                 return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
             }).join(''));
-
             return JSON.parse(jsonPayload);
         }
 
     async function handleCredentialResponse(response) {
       let userObjet = parseJwt(response.credential)
-        console.log(userObjet.email, userObjet.name, userObjet.picture, userObjet)
-        //emailInFetchUsuarios(userObjet.email)
+        //console.log(userObjet.email, userObjet.name, userObjet.picture, userObjet)
         autocompletarRegistro(userObjet)
     }
 
@@ -62,28 +66,25 @@
         client_id: "1661949923-ivj66g50o9lbcvndg6n6rhra6laq84kk.apps.googleusercontent.com",
         callback: handleCredentialResponse
       });
-      google.accounts.id.renderButton(
-        document.getElementById("buttonDiv"),
-        { theme: "outline", size: "large" }  // customization attributes
-      );
       google.accounts.id.prompt(); // also display the One Tap dialog
     }
+    
 </script>
 
 
-<div id="buttonDiv"
+<div id="g_id_onload"
      data-client_id="1661949923-ivj66g50o9lbcvndg6n6rhra6laq84kk.apps.googleusercontent.com"
      data-context="signin"
      data-ux_mode="popup"
-     data-login_uri="http://localhost:5000"
+     data-login_uri="http://localhost:5000/register"
      data-itp_support="true">
 </div>
 
-<div class="buttonDiv"
+<div class="g_id_signin"
      data-type="standard"
      data-shape="pill"
      data-theme="filled_blue"
-     data-text="signup_with"
+     data-text="continue_with"
      data-size="large"
      data-logo_alignment="left">
 </div>

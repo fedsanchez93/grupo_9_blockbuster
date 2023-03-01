@@ -17,7 +17,7 @@
             <form class="form-registro" action="/users/guardarRegistro" method="POST" enctype="multipart/form-data">
                 <article>
                     <label class="label-form" for="name">Nombre y Apellido</label> <br>
-                    <input type="text" name="name" id="name" class="name" placeholder="Nombre y Apellido"  value="<%= locals.oldData ? oldData.name : null %>">
+                    <input required type="text" name="name" id="name" class="name" placeholder="Nombre y Apellido"  value="<%= locals.oldData ? oldData.name : null %>">
                     <br>
                     <div class="error_name"></div>
                     <!-- <span class="feedback verificador">Este campo no puede estar vacio</span> -->
@@ -66,8 +66,8 @@
                 <article>
                     <label  class="label-form" for="id_favorite_genre">Genero de pelicula Favorito</label> <br>
                     <!-- <input type="password" name="id_favorite_genre" id="id_favorite_genre" placeholder="Contraseña" > -->
-                    <select name="id_favorite_genre" id="id_favorite_genre">
-                        <option value="0" selected disabled>seleccionar</option>
+                    <select required name="id_favorite_genre" id="id_favorite_genre">
+                        <option value=""  disabled>seleccionar</option>
                         <% genres.forEach(element => { %>
                             <option value="<%= element.id %>"><%= element.genre %> </option>
                         <% }) %>
@@ -84,7 +84,7 @@
                                 
                                 <i class="fa-solid fa-user"></i>
                             </label>
-                            <input id="file-input" class="imageUser" name="imageUser" type="file" />
+                            <input id="file-input" class="imageUser" name="imageUser" type="file" accept=".jpg, .jpeg, .png, .gif, .webp" />
                         </div>
                         <img id="imgPreview" width="60px">
                     </div>
