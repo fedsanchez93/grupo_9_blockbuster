@@ -18,26 +18,28 @@ const productsController = {
         let movies_expired = [];
         let rentalList = [];
 
-        db.MovieUserRental.findAll({where : {"id_user" : req.session.userLogged[0].id}})   
-        .then(results => {
-            results.forEach( movie => {
+        let movieUserClear = db.MovieUserRental.findAll({where : {"id_user" : req.session.userLogged[0].id}})   
+
+        let movies = db.Movie.findAll({include: [ {association:'users_rentals'} ] } ) 
+        Promise.all([movieUserClear, movies])
+
+        .then(([movieUserClear,movies]) => {
+
+            movieUserClear.forEach( movie => {
                 movie.expired_at < today ? movies_expired.push(movie) : null;
             })
-            movies_expired.forEach(movie => db.MovieUserRental.destroy({where : {"id_movie" : movie.id_movie}})
-                .then(movie => console.log(movie)));
-        })
-
-        db.Movie.findAll({include: [ {association:'users_rentals'} ] } ) 
-        .then(results => {
-            results.forEach(pelicula => {
+            movies_expired.forEach(movie => db.MovieUserRental.destroy({where : {"id_movie" : movie.id_movie}}))
+            
+            movies.forEach(pelicula => {
                 if (pelicula.users_rentals.length > 0) {
                     pelicula.users_rentals.forEach(element => {
                         (element.id == req.session.userLogged[0].id) ? rentalList.push(pelicula) : null
                     });
                 }
             });
-            res.render('misAlquileres', {listaPeliculas, user: req.session.userLogged[0], rentalList})
+            //res.render('misAlquileres', {listaPeliculas, user: req.session.userLogged[0], rentalList})
         })
+        .then(() => res.render('misAlquileres', {listaPeliculas, user: req.session.userLogged[0], rentalList}))
  
     },
     productDetail: (req,res)=>{
