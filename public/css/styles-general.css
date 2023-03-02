@@ -90,8 +90,8 @@ ul a:hover {
 }
 
 a{
-    text-decoration: none;
-    color: white;
+    text-decoration: none !important;
+    color: white !important;
 }
 
 .img-user-nav-bar{

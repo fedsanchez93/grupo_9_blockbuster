@@ -22,8 +22,8 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-primary">Pagar</button>
-          <li><form action="/users/rental/add/<%= user.id %>/<%= movie.id %>/" method="post"><input type="hidden" name="dias" value="0"><button type="submit" class="boton"><i class="fa-solid fa-dollar-sign"></i></button></form></li>
+          <!-- <button type="button" class="btn btn-primary">Pagar</button> -->
+          <li><form action="/users/rental/add/<%= user.id %>/<%= movie.id %>/" method="post"><input type="hidden" name="dias" value="0"><button type="submit" class="btn btn-primary" class="boton"><i class="fa-solid fa-dollar-sign">  Pagar</i></button></form></li>
 
         </div>
       </div>
