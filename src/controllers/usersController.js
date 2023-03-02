@@ -31,9 +31,9 @@ const controller = {
     },
 	guardarPerfil:(req,res)=>{
 
-		bcrypt.compare(req.body.password,req.session.userLogged[0].password, function(err, res) {
+		bcrypt.compare(req.body.password,req.session.userLogged[0].password, function(err, ok) {
 		
-			if(res) {
+			if(ok) {
 				db.User.update({
 					"name": req.body.name,
 					"username": req.body.username,
@@ -45,17 +45,20 @@ const controller = {
 				{
 					where: {id: req.params.id}
 				})
-				.then(console.log("La contraseña fue modificada con exito"));
+				.then(res.redirect('/users/perfil'))
 			}
 			else {
-				console.log('las contraseñas NO coinciden');
-
+				db.Genre.findAll()
+					.then(genres=>{
+					res.render('users/editarPerfilUser',{user: req.session.userLogged[0], genres, errors: {
+						password: {
+							msg: 'Las contraseñas no coinciden'
+						}
+					}})
+				})
 			}
-
-		}) 		
-
-		res.redirect('/users/perfil');
-		
+		}) 
+			
 	},
     processRegister: (req, res) => {
 		const resultValidation = validationResult(req);

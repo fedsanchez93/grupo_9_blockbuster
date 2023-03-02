@@ -14,7 +14,12 @@
         <h1>Editar perfil del usuario:</h1>
     
     <section class="section-editar-user">
-        <form action="/users/editarPerfil/<%=user.id%>?_method=PUT" method="POST" enctype="multipart/form-data">        
+        <form action="/users/editarPerfil/<%=user.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class="error_user"></div>
+            <!-- <span class="feedback verificador">Minimo 5 caracteres</span> -->
+            <% if (locals.errors) { %>
+                <div class=" verificador"> <%= errors.password.msg %></div>
+            <% } %>          
             <div class="info-perfil">
                 <label for="email">e-mail:</label>
                 <input type="email" name="email"  value="<%= user.email %>">
@@ -64,8 +69,7 @@
                             ><%= element.genre %></option>
                     <% }) %>
                 </select>
-            </div> 
-                
+            </div>   
             </article>
             <div class="botones">
                 <h2 class="button"><a href="/users/perfil">Volver</a></h2>
