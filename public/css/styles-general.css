@@ -33,7 +33,7 @@ ul a {
 
 ul a:hover {
     text-decoration: none;
-    color: rgb(252,193,57);
+    color: rgb(252,193,57) !important;
     transform: scale(1.05);
     transition: 500ms;
 }
