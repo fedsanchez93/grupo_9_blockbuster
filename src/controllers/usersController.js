@@ -30,18 +30,32 @@ const controller = {
 		})
     },
 	guardarPerfil:(req,res)=>{
-		db.User.update({
-			"name": req.body.name,
-			"username": req.body.username,
-			"email": req.body.email,
-			password: bcrypt.hashSync(req.body.newPassword, 10),
-			image_url: req.file ? req.file.filename : req.body.imagenAnterior,
-			id_favorite_genre: req.body.id_favorite_genre
-		},
-		{
-			where: {id: req.params.id}
-		})
-			.then(() => {res.redirect('/users/perfil');});
+
+		bcrypt.compare(req.body.password,req.session.userLogged[0].password, function(err, res) {
+		
+			if(res) {
+				db.User.update({
+					"name": req.body.name,
+					"username": req.body.username,
+					"email": req.body.email,
+					password: bcrypt.hashSync(req.body.newPassword, 10),
+					image_url: req.file ? req.file.filename : req.body.imagenAnterior,
+					id_favorite_genre: req.body.id_favorite_genre
+				},
+				{
+					where: {id: req.params.id}
+				})
+				.then(console.log("La contraseña fue modificada con exito"));
+			}
+			else {
+				console.log('las contraseñas NO coinciden');
+
+			}
+
+		}) 		
+
+		res.redirect('/users/perfil');
+		
 	},
     processRegister: (req, res) => {
 		const resultValidation = validationResult(req);
