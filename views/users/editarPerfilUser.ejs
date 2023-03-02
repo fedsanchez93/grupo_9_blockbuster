@@ -16,7 +16,6 @@
     <section class="section-editar-user">
         <form action="/users/editarPerfil/<%=user.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
             <div class="error_user"></div>
-            <!-- <span class="feedback verificador">Minimo 5 caracteres</span> -->
             <% if (locals.errors) { %>
                 <div class=" verificador"> <%= errors.password.msg %></div>
             <% } %>          
