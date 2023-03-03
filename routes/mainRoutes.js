@@ -16,6 +16,6 @@ router.get('/login',guestMiddleware, mainController.login);
 router.get('/register',guestMiddleware, mainController.register);
 router.get('/carrito/:id?/', authMiddleware, mainController.carrito);
 router.get('/carrito2/:id?/',mainController.carrito2);
-
+ 
 module.exports = router;
 

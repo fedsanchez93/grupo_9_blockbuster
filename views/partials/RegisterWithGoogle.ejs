@@ -66,6 +66,10 @@
         client_id: "1661949923-ivj66g50o9lbcvndg6n6rhra6laq84kk.apps.googleusercontent.com",
         callback: handleCredentialResponse
       });
+      google.accounts.id.renderButton(
+        document.getElementById("g_id_onload"),
+        { theme: "outline", size: "large" }  // customization attributes
+      );
       google.accounts.id.prompt(); // also display the One Tap dialog
     }
     
@@ -80,11 +84,11 @@
      data-itp_support="true">
 </div>
 
-<div class="g_id_signin"
+<!-- <div class="g_id_signin"
      data-type="standard"
      data-shape="pill"
      data-theme="filled_blue"
      data-text="continue_with"
      data-size="large"
      data-logo_alignment="left">
-</div>
+</div> -->
