@@ -14,7 +14,7 @@
                 <div class="credenciales">
                     <h1 class="titulo">Iniciar sesión</h1>
                     <label for="email"></label>
-                    <input id="email" class="text-box" type="text" placeholder="E-mail" name="email" value="<%= locals.oldData ? oldData.email : null %>">
+                    <input id="email" class="text-box email" type="text" placeholder="E-mail" name="email" value="<%= locals.oldData ? oldData.email : null %>">
                     <div class="verificador errorEmail">
                         <% if (locals.errors && errors.email) { %>
                             <%= errors.email.msg %>

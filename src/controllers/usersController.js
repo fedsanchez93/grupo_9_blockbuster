@@ -114,9 +114,9 @@ const controller = {
 		db.User.findAll({
 			where:{"email":req.body.email}
 		})
-
-			.then(userToLogin => {
-				let isOkThePassword = userToLogin.length > 0 ? bcrypt.compareSync(req.body.password, userToLogin[0].password) : null;
+			.then(userToLogin => { 
+				console.log('userToLogin',userToLogin)
+				let isOkThePassword = userToLogin.length > 0 ? bcrypt.compareSync(req.body.password, userToLogin[0].password) : false;
 				if (isOkThePassword && userToLogin[0].is_active == 1) {
 					delete userToLogin.password;
 					req.session.userLogged = userToLogin;
@@ -125,8 +125,8 @@ const controller = {
 						res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 * 24 * 10}) //dura 10 dias
 					}
 	
-					//return res.redirect('/users/perfil/');
-					res.render('users/perfilUser',{user: userToLogin[0]})
+					return res.redirect('/users/perfil/');
+					//res.render('users/perfilUser',{user: userToLogin[0]})
 					//res.json(userToLogin);
 				} else if(!isOkThePassword && userToLogin.length > 0  && userToLogin[0].email == req.body.email) {
 					return res.render('login', {
@@ -137,7 +137,7 @@ const controller = {
 						},
 						oldData: req.body
 					})
-				} else if(userToLogin[0].is_active == 0){
+				} else if(userToLogin[0] && userToLogin[0].is_active == 0){
 					return res.render('login', {
 						errors: {
 							email: {
@@ -227,7 +227,10 @@ const controller = {
 
 	borrarUsuario: (req,res)=> {
 		if(req.session.userLogged[0].is_admin == 1) { 
-			db.User.destroy({where : {id: req.params.id},force : true})
+			db.MovieUserWish.destroy({where : {id_user: req.params.id},force : true})
+			db.MovieUserRental.destroy({where : {id_user: req.params.id},force : true})
+			db.MovieUserCart.destroy({where : {id_user: req.params.id},force : true})
+			db.User.destroy({where : {id: req.params.id},force : true}) 
 				.then(()=>{return res.redirect('/')})
 					.catch(error => res.send(error)); 
 		} else {

@@ -20,6 +20,9 @@
           window.location.href = '/'
         }else{
           existEmail = false
+          console.log(email)
+          document.querySelector('.email').value = email 
+          document.querySelector('.errorEmail').innerHTML = 'Este email no se encuentra registrado en nuestra base de datos.'
         }
         //console.log('desde arriba',existEmail)
         //return existEmail
@@ -71,7 +74,7 @@
      data-context="signin"
      data-ux_mode="popup"
      data-login_uri="http://localhost:5000"
-     data-itp_support="true">
+     data-itp_support="false">
 </div>
 
 <!-- <div class="g_id_signin"
