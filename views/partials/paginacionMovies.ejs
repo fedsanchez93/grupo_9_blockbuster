@@ -1,0 +1,154 @@
+
+<!-- boostrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+
+<section>
+    <p class="titulos">Todas las pelis!!</p>
+
+    <!-- Lugar donde generaremos todos los articulos por página -->
+    <div class="section-card" id="plantilla-articulo2"></div>
+
+<div id="allMovies" style="display: none;"><%= movies %></div>
+    
+<nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center mt-4">
+            <li class="page-item page-link" id="atras">Anterior</li>
+            <ul class="pagination" id="divPaginacion"></ul>
+            <li class="page-item page-link" id="siguiente">Siguiente</li>
+        </ul>
+    </nav>
+</section>
+
+<style>
+   
+    .pagination {
+        cursor: pointer;
+    }
+
+    section {
+        color: white;
+    }
+</style>
+
+<script>
+
+ const botonAtrasDOM = document.querySelector("#atras");
+ const informacionPaginaDOM = document.querySelector("#informacion-pagina");
+ const botonSiguienteDOM = document.querySelector("#siguiente");
+ const plantillaArticulo2 = document.querySelector("#plantilla-articulo2");
+ const elementosPorPagina = 5;
+ let paginaActual = 1;
+ let baseDeDatos
+ fetch('http://localhost:5000/api/products')
+      .then((resp) => resp.json())
+      .then(data=>{
+        baseDeDatos = data.data
+        renderizar()
+        })
+
+ 
+ function avanzarPagina() {
+     // Incrementar "paginaActual"
+     paginaActual = paginaActual + 1;
+     // Redibujar
+     renderizar();
+ }
+
+
+ function retrocederPagina() {
+     // Disminuye "paginaActual"
+     paginaActual = paginaActual - 1;
+     // Redibujar
+     renderizar();
+ }
+
+ function seleccionarPagina(pagina) {
+     // Disminuye "paginaActual"
+     paginaActual = pagina;
+     // Redibujar
+     renderizar();
+ }
+ /**
+  * Función que devuelve los datos de la página deseada
+  */
+ function obtenerRebanadaDeBaseDeDatos(pagina = 1) {
+     const corteDeInicio = (paginaActual - 1) * elementosPorPagina;
+     const corteDeFinal = corteDeInicio + elementosPorPagina;
+     return baseDeDatos.slice(corteDeInicio, corteDeFinal);
+ }
+
+ /**
+  * Función que devuelve el número total de páginas disponibles
+  */
+ function obtenerPaginasTotales() {
+     return Math.ceil(baseDeDatos.length / elementosPorPagina);
+ }
+
+ /**
+  * Función que gestiona los botones del paginador habilitando o
+  * desactivando dependiendo de si nos encontramos en la primera
+  * página o en la última.
+  * @return void
+  */
+ function gestionarBotones() {
+     if (paginaActual === 1) {
+     botonAtrasDOM.classList.add("disabled");
+     } else {
+        botonAtrasDOM.classList.remove("disabled");
+     }
+     if (paginaActual === obtenerPaginasTotales()) {
+     botonSiguienteDOM.classList.add("disabled");
+     } else {
+     botonSiguienteDOM.classList.remove("disabled");
+     }
+ }
+
+ /**
+  * Función que se encarga de dibujar el nuevo DOM a partir de las variables
+  */
+ function renderizar() {
+
+     plantillaArticulo2.innerHTML = ''
+
+     const rebanadaDatos = obtenerRebanadaDeBaseDeDatos(paginaActual);
+     
+     gestionarBotones();
+     // Informar de página actual y páginas disponibles
+     document.querySelector('#divPaginacion').innerHTML = ''
+      for( let i = 1; i <= obtenerPaginasTotales(); i++ ) { 
+        document.querySelector('#divPaginacion').innerHTML += 
+        `<li class="page-item page-link ${i==paginaActual?'active':null}" onclick="seleccionarPagina(${i})">${i}</li>`
+      } 
+     // Crear un artículo para cada elemento que se encuentre en la página actual
+     rebanadaDatos.forEach(function (datosArticulo) {
+
+       plantillaArticulo2.innerHTML +=  `<div>
+                        <a href="/products/productDetail?id=${ datosArticulo.id } " class="botonVer">
+                            <article class="card-movie">
+                                <img class="img-pelicula" src="${ datosArticulo.image_url }">
+                                <h2 class="btn-neon">
+                                    ${ datosArticulo.title }
+                                </h2>
+                            </article>
+                        </a>
+                    </div>`
+
+     });
+ }
+
+ // --
+ // Eventos
+ // --
+ botonAtrasDOM.addEventListener("click",()=>{
+     botonAtrasDOM.classList.contains('disabled') ? null:
+    retrocederPagina()
+ } );
+ botonSiguienteDOM.addEventListener("click",()=>{
+    botonSiguienteDOM.classList.contains('disabled') ? null:
+    avanzarPagina()
+ } );
+
+
+</script>
