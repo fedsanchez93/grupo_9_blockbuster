@@ -1,8 +1,14 @@
 window.addEventListener('load', function() {
-
+    let name = document.querySelector('#name');
+    let user = document.querySelector('#usuario');
+    let email = document.querySelector('#email');
     let password = document.querySelector('#newPassword');
     let submit = document.querySelector('.boton-guardar');
 
+
+    let errorName = document.querySelector('.error_name');
+    let errorUser = document.querySelector('.error_user');
+    let errorMail = document.querySelector('.error_email');
     let errorPassword = document.querySelector('.error_password');
     let cantidad = document.querySelector('.error_password .cantidad');
     let mayusculas = document.querySelector('.error_password .mayusculas');
@@ -21,6 +27,37 @@ window.addEventListener('load', function() {
     submit.addEventListener('click', function(event){
 
         let totalErrores = []
+
+        //Validación del nombre
+        if(name.value.length < 2){
+            errorName.innerHTML = "El nombre debe contener al menos 2 caracteres";
+            errorName.style.color = "red";
+            totalErrores.push(1);
+        } else {
+            errorName.innerHTML = "Nombres aceptables";
+            errorName.style.color = "green"
+        };
+
+        //Validación del usuario
+        if(user.value.length < 2){
+            errorUser.innerHTML = "El usuario debe contener al menos 2 caracteres";
+            errorUser.style.color = "red"
+            totalErrores.push(1);
+        } else {
+            errorUser.innerHTML = "Nombre de usuario aceptable";
+            errorUser.style.color = "green"
+        };
+
+        //Validación del email
+        let mailformat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/
+        if(email.value.match(mailformat)){
+            errorMail.innerHTML = "Email aceptable";
+            errorMail.style.color = "green"
+        } else {
+            errorMail.innerHTML = "El email no es válido";
+            errorMail.style.color = "red"
+            totalErrores.push(1);
+        };
        
         //Validación del password
         let erroresDePassword = [];
