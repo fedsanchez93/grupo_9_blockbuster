@@ -121,7 +121,7 @@ window.addEventListener('load', function() {
             totalErrores.push(1);
         };
 
-        if(!password.value.match(specCharacters)){  //--> REVISAR POR QUÉ NO FUNCIONA
+        if(!password.value.match(specCharacters)){  
    
             caracteres.innerHTML = "-> La contraseña debe contener al menos un caracter especial";
             caracteres.style.color="red";
