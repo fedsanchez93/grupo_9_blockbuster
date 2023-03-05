@@ -21,9 +21,9 @@
                 <img class="img-pelicula" src="<%= element.image_url %> ">
                 <h2 class="tituloPeli"><%= element.title %></h2>
                
-                <a href="/products/video/<%= element.id %> " class="botonFormBusc">VER AHORA</a>
-                <a href="/products/productDetail?id=<%= element.id %> " class="botonFormBusc">COMPARTIR</a>
-                <li><form action="/users/rental/delete/<%= user.id %>/<%= element.id %>/" method="post"><input class="botonFormBusc" type="submit" value="DEVOLVER"></form></li>
+                <a href="/products/video/<%= element.id %> " class="botonFormBusc">Ver ahora</a>
+                <!-- <a href="/products/productDetail?id=<%= element.id %> " class="botonFormBusc">Compartir</a> -->
+                <li><form action="/users/rental/delete/<%= user.id %>/<%= element.id %>/" method="post"><input class="botonFormBusc" type="submit" value="Devolver"></form></li>
 
             </article>
         <% }); %> 
@@ -37,8 +37,8 @@
             <h2 class="tituloPeli"><%= element.titulo %></h2>
             <!-- <h3 class="texto"><%= element.descripcion %></h3> -->
             <!-- <h3 class="texto"><%= element.precio %></h3> -->
-            <a href="/products/video/<%= element.id %> " class="botonFormBusc">VER AHORA</a>
-            <a href="/products/productDetail?id=<%= element.id %> " class="botonFormBusc">COMPARTIR</a>
+            <a href="/products/video/<%= element.id %> " class="botonFormBusc">Ver ahora</a>
+            <!-- <a href="/products/productDetail?id=<%= element.id %> " class="botonFormBusc">COMPARTIR</a> -->
 
         </article>
     <% }); %> 

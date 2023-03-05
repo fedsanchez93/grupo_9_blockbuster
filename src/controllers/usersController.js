@@ -190,7 +190,6 @@ const controller = {
 				"name": userToEdit.name,
 				"username": userToEdit.username,
 				"email": userToEdit.email,
-				password: bcrypt.hashSync(req.body.password, 10),
 				"image_url": userToEdit.image_url,
 				"is_admin": userToEdit.is_admin,
 				//"id_favorite_genre":userToEdit.id_favorite_genre
