@@ -17,13 +17,13 @@
     <section class="section-cards">
         <% rentalList.forEach(element => { %>
     
-            <article class="card">
+            <article class="card"  style="background-color:rgba(195, 180, 180, 0.3)">
                 <img class="img-pelicula" src="<%= element.image_url %> ">
                 <h2 class="tituloPeli"><%= element.title %></h2>
                
                 <a href="/products/video/<%= element.id %> " class="botonFormBusc">VER AHORA</a>
                 <a href="/products/productDetail?id=<%= element.id %> " class="botonFormBusc">COMPARTIR</a>
-                <li><form action="/users/rental/delete/<%= user.id %>/<%= element.id %>/" method="post"><input class="botonFormBusc" type="submit" value="DEVOLVER!!!"></form></li>
+                <li><form action="/users/rental/delete/<%= user.id %>/<%= element.id %>/" method="post"><input class="botonFormBusc" type="submit" value="DEVOLVER"></form></li>
 
             </article>
         <% }); %> 
