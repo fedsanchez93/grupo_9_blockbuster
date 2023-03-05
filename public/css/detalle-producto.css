@@ -190,6 +190,11 @@ body{
     margin: 20px;
 }
 
+.botones .boton-alquiler:hover { 
+    transform: scale(1.5) !important;
+    transition: 150ms !important;
+}
+
 /* .bloque2 .boton-alquiler{
     background-color: var(--yellow);
     height: 100%;
