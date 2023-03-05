@@ -60,6 +60,27 @@ h2.button{
     transition: 100ms;
 }
 
+.delete-button {
+    border-radius: 15px;
+    background-color: var(--yellow);
+    border-color: rgb(252,193,57);
+    height: 60px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 8px;
+    padding: 0px 0px 0px 0px;
+}
+
+.delete-button:hover{
+    color:red;
+    transform: scale(1.05);
+    transition: 100ms;
+}
+
 .boton-guardar{ 
     border-radius: 15px;
     background-color: var(--yellow) !important;
