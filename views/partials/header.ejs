@@ -1,7 +1,24 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+   
 <header class="main-header">
     <div class="top-bar">
         <nav class="left-menu-button">
-            <i class="fa-solid fa-bars"></i>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <ul class="dropdown-menu bg-white">
+                  <li><a class="dropdown-item text-primary" href="/users/perfil">Perfil</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item text-primary" href="/products/buscarProductos">Buscar</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item text-primary" href="/products/listadoDeseos">Lista de Deseos</a></li>
+                  <li><a class="dropdown-item text-primary" href="/carrito">Carrito</a></li>
+                  <li><a class="dropdown-item text-primary" href="/products/misAlquileres">Mis Alquileres</a></li>
+                </ul>
+              </div>
         </nav>
         <nav class="left-menu">
             <% if(locals.user) { %>
@@ -16,8 +33,8 @@
         </nav></a>
         <nav class="right-menu-buttons">
             <% if(locals.user) { %>
-                <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-                <img class="img-user-nav-bar" src="/images/users/<%= user.image_url %>" alt="image" >
+                <!-- <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+                <img class="img-user-nav-bar" src="/images/users/<%= user.image_url %>" alt="image" > -->
             <% } else { %>
                 <a href="/login"><i class="fa-solid fa-circle-user"></i></a>
             <% } %>
