@@ -28,8 +28,8 @@ export default class MovieList extends React.Component {
                 <h1 className="h3 mb-2 text-gray-800">
                     Lista de Peliculas
                 </h1>
-                <Link className="btn btn-primary mr-10" rel="nofollow" to="/"> Pagina Anterior</Link>
-                <Link className="btn btn-primary" rel="nofollow" to="/"> Pagina Siguiente</Link>
+                <Link className="btn btn-primary mr-10 d-none" rel="nofollow" to="/"> Pagina Anterior</Link>
+                <Link className="btn btn-primary d-none" rel="nofollow" to="/"> Pagina Siguiente</Link>
                 {/* <Link to="{this.state.meta.paginaSiguiente}">Siguiente</Link> */}
 
                 {/*<!-- DataTales Example -->*/}

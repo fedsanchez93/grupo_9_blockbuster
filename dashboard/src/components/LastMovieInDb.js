@@ -33,7 +33,7 @@ export default class LastMovieInDb extends React.Component {
                             <div className="text-center">
                                 <img
                                     className="img-fluid px-3 px-sm-4 mt-3 mb-4"
-                                    style={{ width: 40 + "rem" }}
+                                    style={{ maxWidth: 20 + "rem" }}
                                     src={this.state.lastMovieInDb.image_url}
                                     alt=" Star Wars - Mandalorian "
                                 />
@@ -42,7 +42,7 @@ export default class LastMovieInDb extends React.Component {
                                 {this.state.lastMovieInDb.description}
                             </p>
                             <a
-                                className="btn btn-danger"
+                                className="btn btn-danger d-none"
                                 target="_blank"
                                 rel="nofollow"
                                 href="/"
