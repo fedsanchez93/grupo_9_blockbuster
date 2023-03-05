@@ -189,6 +189,7 @@ main{
 
 h2.texto{
     font-size: 26px;
+    height: 25px;
 }
 
 .trailer{
@@ -209,7 +210,8 @@ h2.texto{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 /* .iconos-nav i{

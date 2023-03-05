@@ -222,6 +222,12 @@ body{
     color: #FCC139;
     cursor: pointer;
 }
+
+.botonNav2:hover{
+    transform: scale(1.1);
+    transition: 100ms;
+}
+
 .div-trailer{
     width: 90%;
     margin: 30px auto;
