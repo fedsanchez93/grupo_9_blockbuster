@@ -17,6 +17,7 @@
 
     </div>
 
+    <%- include('partials/bienvenida') %>
     <%- include('partials/paginacionMovies') %>
 
     <p class="titulos" style="display: none;">Todas las pelis!!</p>
@@ -42,7 +43,8 @@
 
     <p class="titulos">Más Buscados</p>
 
-    <section class="section-card">
+    <!-- section-card -->
+    <section class="d-flex flex-row justify-content-start overflow-x-scroll flex-nowrap">
         <% masBuscadas2.forEach(element => { %>       
             <article class="card-movie">
                 <img class="img-pelicula" src="<%= element.image_url %>">
