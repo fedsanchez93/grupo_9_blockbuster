@@ -80,6 +80,15 @@ li {
     cursor: pointer;
     text-align: center;
 }
+
+.item-oferta:hover {
+    color:#8ac926;   
+    /*border: solid #8ac926 2px;*/ 
+    text-decoration:solid;
+    transform: scale(1.1);
+    transition: 100ms;
+}
+
 /* cards carrito */
 
 .section-cards{
