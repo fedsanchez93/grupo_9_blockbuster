@@ -103,6 +103,7 @@ li {
     margin: 10px auto ;
     background: rgba(195, 180, 180, 0.3);
     transition: 100ms ease-in-out 0s; 
+
 } 
 
 .card:hover {

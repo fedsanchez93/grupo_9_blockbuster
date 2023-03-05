@@ -23,7 +23,7 @@
         
                 
         
-                <article class="card">
+                <article class="card" style="background-color:rgba(195, 180, 180, 0.3)">
                     <div>
                         <img class="img-pelicula" src="<%= element.image_url %> ">
                         <h2 class="tituloPeli texto"><%= element.title %></h2>
@@ -52,6 +52,6 @@
         <% } %>
     </div>
     
-    <%- include('partials/footer') %> 
+    <div class="navbar fixed-bottom"><%- include('partials/footer') %> </div>
 </body>
 </html>
