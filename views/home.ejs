@@ -17,8 +17,28 @@
 
     </div>
 
-    <%- include('partials/bienvenida') %>
-    <%- include('partials/paginacionMovies') %>
+    <div data-aos="fade-right"
+    data-aos-offset="100"
+    data-aos-delay="50"
+    data-aos-duration="500"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-center">
+        <%- include('partials/bienvenida') %>
+    </div>
+    <div
+    data-aos="fade-left"
+    data-aos-offset="200"
+    data-aos-delay="50"
+    data-aos-duration="500"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-center">
+
+        <%- include('partials/paginacionMovies') %>
+    </div>
 
     <p class="titulos" style="display: none;">Todas las pelis!!</p>
 
@@ -44,7 +64,15 @@
     <p class="titulos">Más Buscados</p>
 
     <!-- section-card -->
-    <section class="d-flex flex-row justify-content-start overflow-x-scroll flex-nowrap">
+    <section class="d-flex flex-row justify-content-start overflow-x-scroll flex-nowrap" 
+    data-aos="fade-right"
+    data-aos-offset="200"
+    data-aos-delay="50"
+    data-aos-duration="500"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-center">
         <% masBuscadas2.forEach(element => { %>       
             <article class="card-movie">
                 <img class="img-pelicula" src="<%= element.image_url %>">
@@ -57,7 +85,16 @@
        
 
     <p class="titulos">Recomendados Para Vos</p>
-    <section class="section-card">
+    <section class="section-card"
+    data-aos="fade-left"
+    data-aos-offset="200"
+    data-aos-delay="50"
+    data-aos-duration="500"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-center"
+    >
         <% moviesFavoriteGenre.forEach(element => { %>       
             <a href="/products/productDetail?id=<%= element.id %> " class="botonVer">
             <article class="card-movie">
@@ -71,7 +108,13 @@
     <section class="frase">
         <div>Historias únicas, estrellas icónicas y mucho más..</div>
     </section>
-    
+   
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
     <%- include('partials/footer') %> 
 </body>
 </html>
