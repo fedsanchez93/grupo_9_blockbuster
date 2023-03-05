@@ -128,10 +128,13 @@ li {
     border-radius: 20px;
 }
 
+.iconos-nav {
 
+    padding-bottom: 20px;
+}
 
 .iconos-nav i{
-    color: white;
+    color: rgb(252,193,57);
     border-radius: 15px;
     padding: 5px;
     margin: 10px;
@@ -142,8 +145,8 @@ li {
 
 
 .iconos-nav li{
-    color: white;
-    border: solid white 2px;
+    color: rgb(252,193,57);
+    border: 2px solid rgb(252,193,57);
     border-radius: 15px;
     padding: 0px;
     margin: 0px;
@@ -167,26 +170,27 @@ li {
 
 .fa-dollar-sign:hover {
     color:#8ac926;   
-    border: solid #8ac926 2px; 
+    /*border: solid #8ac926 2px;*/ 
     text-decoration:solid;
     transform: scale(1.1);
     transition: 100ms;
 }
 
-/* .fa-trash-can:hover {
+.fa-trash-can:hover {
     color:red;   
-    border: solid red 2px; 
     text-decoration:solid;
     transform: scale(1.1);
     transition: 100ms;
-} */
+} 
+
+/*
 .QuitarDelCarrito:hover {
     color:red;   
     border: solid red 2px; 
     text-decoration:solid;
     transform: scale(1.01);
     transition: 100ms;
-}
+}*/
 
 /* = = = = = MAIN BODY = = = = = */
 
