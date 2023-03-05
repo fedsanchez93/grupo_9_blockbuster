@@ -33,12 +33,12 @@ const controller = {
 
 		bcrypt.compare(req.body.password,req.session.userLogged[0].password, function(err, ok) {
 		
-			if(ok) {
+			if(ok && req.body.password == '') {
 				db.User.update({
 					"name": req.body.name,
 					"username": req.body.username,
 					"email": req.body.email,
-					password: bcrypt.hashSync(req.body.newPassword, 10),
+					//password: bcrypt.hashSync(req.body.newPassword, 10),
 					image_url: req.file ? req.file.filename : req.body.imagenAnterior,
 					id_favorite_genre: req.body.id_favorite_genre
 				},
@@ -46,8 +46,15 @@ const controller = {
 					where: {id: req.params.id}
 				})
 				.then(res.redirect('/users/perfil'))
-			}
-			else {
+			} else if (ok && req.body.password != '') {
+				db.User.update({
+					password: bcrypt.hashSync(req.body.newPassword, 10),
+				},
+				{
+					where: {id: req.params.id}
+				})
+				.then(res.redirect('/users/perfil'))
+			} else {
 				db.Genre.findAll()
 					.then(genres=>{
 					res.render('users/editarPerfilUser',{user: req.session.userLogged[0], genres, errors: {
@@ -194,23 +201,33 @@ const controller = {
 				"is_admin": userToEdit.is_admin,
 				//"id_favorite_genre":userToEdit.id_favorite_genre
 			})
-
-		db.User.update(
-			{
-				"id": req.body.id,
-				"name": req.body.name,
-				"username": req.body.username,
-				"email": req.body.email,
-				password: bcrypt.hashSync(req.body.password, 10),
-				"image_url": req.body.image_url,
-				"is_admin": req.body.is_admin,
-				id_favorite_genre: req.body.id_favorite_genre,
-				"is_active": req.body.is_active
-			},
-			{
-				where: {id: req.params.id}
-			})
-			.then(user => {res.redirect('/users/perfil'); console.log(req.body)});
+		
+		if(req.body.password == '') {		
+			db.User.update(
+				{
+					"id": req.body.id,
+					"name": req.body.name,
+					"username": req.body.username,
+					"email": req.body.email,
+					"image_url": req.body.image_url,
+					"is_admin": req.body.is_admin,
+					id_favorite_genre: req.body.id_favorite_genre,
+					"is_active": req.body.is_active
+				},
+				{
+					where: {id: req.params.id}
+				})
+				.then(user => {res.redirect('/users/perfil'); console.log(req.body)});
+		} else {
+			db.User.update(
+				{
+					password: bcrypt.hashSync(req.body.password, 10)
+				},
+				{
+					where: {id: req.params.id}
+				})			
+				.then(user => {res.redirect('/users/perfil'); console.log(req.body)});
+		}
 	},
 
 	confirmarBorrado: (req,res)=> {
