@@ -16,14 +16,25 @@
           <h5 class="modal-title " id="exampleModalLabel">Confirmar Pago</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body text-info">
+        <!-- <div class="modal-body text-info">
           ...
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem sed, dolorem atque fuga accusamus, reiciendis aliquid voluptas magnam, dolor iusto neque? Reiciendis illo omnis modi suscipit sed nam exercitationem numquam!
+        </div> style="width: 18rem;" -->
+        <div class="card" >
+          <img src="<%= movie.image_url%>" class="card-img-top" alt="img" style="width: 18rem; margin: auto;">
+          <div class="card-body" style="color: black;">
+            <h5 class="card-title"><%= movie.title%></h5>
+            <p class="card-text"><%= movie.description%></p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Precio:</li>
+            <li class="list-group-item"><%= movie.price%></li>
+          </ul>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
           <!-- <button type="button" class="btn btn-primary">Pagar</button> -->
-          <li><form action="/users/rental/add/<%= user.id %>/<%= movie.id %>/" method="post"><input type="hidden" name="dias" value="0"><button type="submit" class="btn btn-primary" class="boton"><i class="fa-solid fa-dollar-sign">  Pagar</i></button></form></li>
+          <li><form action="/users/rental/add/<%= user.id %>/<%= movie.id %>/" method="post"><input type="hidden" name="dias" value="0"><button type="submit" class="btn btn-primary" class="boton">Pagar</button></form></li>
 
         </div>
       </div>
