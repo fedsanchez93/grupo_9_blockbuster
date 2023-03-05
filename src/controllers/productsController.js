@@ -52,17 +52,20 @@ const productsController = {
         })
     },
     administrarProductos: (req,res)=>{
+        
         let palabraBuscada = req.query.filtrar || ''
-        let peliculasFiltradas = []
-        for(let i = 0 ;  i< listaPeliculas.length ;i++){
-            if(listaPeliculas[i].titulo.toLowerCase().includes(palabraBuscada.toLowerCase())){
-                peliculasFiltradas.push(listaPeliculas[i])
-            }
-        }
         db.Movie.findAll()
-        .then(movies=>{
-            res.render('administrarProductos', {listaPeliculas, peliculasFiltradas, user: req.session.userLogged[0], movies})
+        .then(listaPeliculas => {
+            let peliculasFiltradas = []
+
+            for(let i = 0 ;  i< listaPeliculas.length ;i++){
+                if(listaPeliculas[i].title.toLowerCase().includes(palabraBuscada.toLowerCase())){
+                    peliculasFiltradas.push(listaPeliculas[i])
+                }
+            }
+            res.render('administrarProductos', {listaPeliculas, peliculasFiltradas,palabraBuscada, user: req.session.userLogged[0]})
         })
+    
     },
     listadoDeseos: (req,res)=>{
         db.Movie.findAll({include: [ {association:'users_wishlist'} ] } ) //,where:{ users_wishlist.movies_users_wishlist.id_user: req.session.userLogged.id }
