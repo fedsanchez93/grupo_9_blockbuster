@@ -35,7 +35,7 @@ export default class LastMovieInDb extends React.Component {
                                     className="img-fluid px-3 px-sm-4 mt-3 mb-4"
                                     style={{ maxWidth: 20 + "rem" }}
                                     src={this.state.lastMovieInDb.image_url}
-                                    alt=" Star Wars - Mandalorian "
+                                    alt={this.state.lastMovieInDb.title}
                                 />
                             </div>
                             <p>
