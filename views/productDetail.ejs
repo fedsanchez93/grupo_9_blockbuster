@@ -43,32 +43,24 @@
                 </div>
                 <iframe class="trailer" width="100%" height="350" src="<%= movie.trailer %> " title="YouTube video player" frameborder="0" ></iframe>
                 <div class="botones">
-                    <!-- <div class="boton trailer">
-                        <a href="#">Ver trailer</a>
-                    </div> -->
-                    <div class="boton-alquiler">
-                        <!-- <a href="/carrito/<%= movie.id %>">Alquilar/Ver</a>    -->
-                        <%- include('partials/ventanaEmergente1') %> 
-
-                    </div>
+                    <%- include('partials/ventanaEmergente1') %> 
                 </div>
             </div>
 
             <div class="bloque3">
                 <div class="calificaciones">
-                    <ul></a>
+                    <ul>
                         <li><a class="botonNav" href="/products/productDetail?id=<%= anterior %> "> <= Anterior </a>    <a class="botonNav" href="/products/productDetail?id=<%= siguiente %>"> Siguiente =></a></li>
+
                         <li><a href="#">Calificación Blockbuster</a><div class="calificacion"><%= movie.blockbuster_rating %></div></li>
                         <li><a href="#">Calificación IMDb</a> <div class="calificacion"><%= movie.imdb_rating %></div></li>
                         <li><a href="#">Calificación Rotten Tomatoes </a><div class="calificacion"><%= movie.rotten_tomatoes_rating %></div></li>
-                        <!-- <li><a class="botonNav" href="#"> <i class="fa-solid fa-heart-circle-plus"></i> Agregar a Mis Deseos</a></li> -->
+
                         <li><form action="/users/wishes/add/<%= user.id %>/<%= movie.id %>/" method="post"><button type="submit" class="botonNav2"><i class="fa-solid fa-heart-circle-plus"></i> Agregar a Mis Deseos</button></form></li>
                         <li><form action="/users/wishes/delete/<%= user.id %>/<%= movie.id %>/" method="post"><button type="submit" class="botonNav2"><i class="fa-solid fa-heart-circle-minus"></i> Quitar de Mis Deseos</button></form></li>
 
                         <li><form action="/users/cart/add/<%= user.id %>/<%= movie.id %>/" method="post"><button type="submit" class="botonNav2"><i class="fa-solid fa-cart-plus"></i> Agregar al Carrito</button></form></li>
                         <li><form action="/users/cart/delete/<%= user.id %>/<%= movie.id %>/" method="post"><button type="submit" class="botonNav2"><i class="fa-solid fa-trash"></i> Quitar del carrito</button></form></li>
-
-                        <!-- <li><a class="botonNav" href="#"> <i class="fa-solid fa-cart-plus"></i> Agregar al Carrito</a></li>  -->
                     </ul>
                 </div>
             </div>
@@ -78,27 +70,6 @@
 
     <footer>
         <%- include('partials/footer') %> 
-
-        <!-- <nav class="col-footer col1">
-            <ul>
-                <li><a href="#"></a>Ayuda</li>
-                <li><a href="#"></a>Soporte</li>
-            </ul>
-        </nav>
-        <nav class="col-footer col2">
-            <ul>
-                <li><a href="#"></a>Política y Privacidad</li>
-                <li><a href="#"></a>Cantactanos</li>
-            </ul>
-        </nav>
-        <nav class="col-footer col3">
-            <p>Seguinos</p>
-            <ul class="redes-sociales">
-                <li><a href="#"></a><i class="fab fa-instagram"></i></li>
-                <li><a href="#"></a><i class="fab fa-twitter"></i></li>
-                <li><a href="#"></a><i class="fab fa-facebook-square"></i></li>            
-            </ul>
-        </nav> -->
     </footer>
     
 </body>
