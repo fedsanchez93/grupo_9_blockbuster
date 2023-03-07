@@ -13,9 +13,13 @@
     <%- include('partials/header') %>  
 
     <main>
-    <div >
-
-    </div>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+  duration: 1200,
+});
+        </script>
 
     <div data-aos="fade-right"
     data-aos-offset="100"
@@ -29,7 +33,7 @@
     </div>
     <div
     data-aos="fade-left"
-    data-aos-offset="200"
+    data-aos-offset="100"
     data-aos-delay="50"
     data-aos-duration="500"
     data-aos-easing="ease-in-out"
@@ -66,7 +70,7 @@
     <!-- section-card -->
     <section class="d-flex flex-row justify-content-start overflow-x-scroll flex-nowrap" 
     data-aos="fade-right"
-    data-aos-offset="200"
+    data-aos-offset="100"
     data-aos-delay="50"
     data-aos-duration="500"
     data-aos-easing="ease-in-out"
@@ -87,7 +91,7 @@
     <p class="titulos">Recomendados Para Vos</p>
     <section class="section-card"
     data-aos="fade-left"
-    data-aos-offset="200"
+    data-aos-offset="100"
     data-aos-delay="50"
     data-aos-duration="500"
     data-aos-easing="ease-in-out"
@@ -109,11 +113,7 @@
         <div>Historias únicas, estrellas icónicas y mucho más..</div>
     </section>
    
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+   
 
     <%- include('partials/footer') %> 
 </body>
