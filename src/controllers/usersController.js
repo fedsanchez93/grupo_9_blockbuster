@@ -33,7 +33,7 @@ const controller = {
 
 		bcrypt.compare(req.body.password,req.session.userLogged[0].password, function(err, ok) {
 		
-			if(ok && req.body.password == '') {
+			if(req.body.password == '' && req.body.newPassword == '') {
 				db.User.update({
 					"name": req.body.name,
 					"username": req.body.username,
@@ -46,7 +46,7 @@ const controller = {
 					where: {id: req.params.id}
 				})
 				.then(res.redirect('/users/perfil'))
-			} else if (ok && req.body.password != '') {
+			} else if (ok && req.body.password !== '') {
 				db.User.update({
 					password: bcrypt.hashSync(req.body.newPassword, 10),
 				},
