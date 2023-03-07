@@ -16,7 +16,8 @@ function sendEmail(email, token) {
     });
  
     var mailOptions = {
-        from: 'elefantealegre1@outlook.com',
+        //from: 'elefantealegre1@outlook.com',
+        from:'"Blockbuster 👻👻👻👻" <elefantealegre1@outlook.com>',
         to: email,
         subject: 'Reestablecer contraseña',
         html: `
