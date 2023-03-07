@@ -15,11 +15,11 @@ function SideBar() {
                     to="/"
                 >
                     <div className="sidebar-brand-icon">
-                        <img
+                        <a href="http://localhost:5000"><img
                             className="w-100"
                             src={image}
                             alt="Digital House"
-                        />
+                        /></a>
                     </div>
                 </Link>
 
@@ -38,15 +38,15 @@ function SideBar() {
                 <hr className="sidebar-divider" />
 
                 {/*<!-- Heading -->*/}
-                <div className="sidebar-heading">Actions</div>
+                <div className="sidebar-heading">Acciones</div>
 
                 {/*<!-- Nav Item - Pages -->*/}
-                <li className="nav-item">
+                {/* <li className="nav-item">
                     <Link className="nav-link collapsed" to="/...">
                         <i className="fas fa-fw fa-folder"></i>
                         <span>Pages not found</span>
                     </Link>
-                </li>
+                </li> */}
 
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
@@ -69,13 +69,13 @@ function SideBar() {
                 <li className="nav-item">
                     <Link className="nav-link" to="/lastMovie">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Last Movie in Db</span>
+                        <span>Ultima pelicula en BD</span>
                     </Link>
                 </li>
                 <li className="nav-item">
                     <Link className="nav-link" to="/genres">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Genres in Db</span>
+                        <span>Generos en BD</span>
                     </Link>
                 </li>
             </ul>
