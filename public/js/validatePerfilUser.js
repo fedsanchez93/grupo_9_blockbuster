@@ -2,6 +2,7 @@ window.addEventListener('load', function() {
     let name = document.querySelector('#name');
     let user = document.querySelector('#usuario');
     let email = document.querySelector('#email');
+    let passwordOriginal = document.querySelector('#password');
     let password = document.querySelector('#newPassword');
     let submit = document.querySelector('.boton-guardar');
 
@@ -67,73 +68,78 @@ window.addEventListener('load', function() {
         };
        
         //Validación del password
-        let erroresDePassword = [];
-        let lowerCaseLetters = /[a-z]/g;
-        let upperCaseLetters = /[A-Z]/g;
-        let numbers = /[0-9]/g;
-        let specCharacters = /[!@#$%^&*]/;
         
-        if(password.value.length < 5){
-            cantidad.innerHTML ="-> La contraseña debe contener al menos 5 caracteres";
-            cantidad.style.color="red";
-            cantidad.style.fontSize="12px";
-            totalErrores.push(1);
-        } else {
-            cantidad.innerHTML = "-> La contraseña tiene al menos 5 caracteres";
-            cantidad.style.color = "green";
-            cantidad.style.fontSize="12px";
-        }; 
-
-        if(password.value.match(lowerCaseLetters)){
-            minusculas.innerHTML = "-> La contraseña tiene minúsculas";
-            minusculas.style.color = "green"
-        } else {
-            minusculas.innerHTML ="-> La contraseña debe contener al menos una minúscula";
-            minusculas.style.color="red";
-            minusculas.style.fontSize="12px";
-            totalErrores.push(1);
-        }
+            
+            let erroresDePassword = [];
+            let lowerCaseLetters = /[a-z]/g;
+            let upperCaseLetters = /[A-Z]/g;
+            let numbers = /[0-9]/g;
+            let specCharacters = /[!@#$%^&*]/;
         
-       if(password.value.match(upperCaseLetters)){
-            mayusculas.innerHTML = "-> La contraseña tiene mayúsculas";
-            mayusculas.style.color = "green";
-            minusculas.style.fontSize="12px";
-        } else {
-            mayusculas.innerHTML = "-> La contraseña debe contener al menos una mayúscula";
-            mayusculas.style.color="red";
-            mayusculas.style.fontSize="12px";
-            totalErrores.push(1);
-        }
-
-        if(password.value.match(numbers)){
-            numeros.innerHTML = "-> La contraseña tiene números";
-            numeros.style.color = "green"   ;
-            numeros.style.fontSize="12px";      
-        } else {
-            numeros.innerHTML="-> La contraseña debe contener al menos un número";
-            numeros.style.color="red";
-            numeros.style.fontSize="12px"; 
-            totalErrores.push(1);
-        }
-
-        if(!password.value.match(specCharacters)){  
-   
-            caracteres.innerHTML = "-> La contraseña debe contener al menos un caracter especial";
-            caracteres.style.color="red";
-            caracteres.style.fontSize="12px";
-            totalErrores.push(1);
-        } else {
-            caracteres.innerHTML = "-> La contraseña contiene al menos un caracter especial";
-            caracteres.style.color = "green"
-            caracteres.style.fontSize="12px";   
-        }
-
-
-
+        if(password.value != "" || passwordOriginal.value != ""){
+            
+            if(password.value.length < 5){
+                cantidad.innerHTML ="-> La contraseña debe contener al menos 5 caracteres";
+                cantidad.style.color="red";
+                cantidad.style.fontSize="12px";
+                totalErrores.push(1);
+            } else {
+                cantidad.innerHTML = "-> La contraseña tiene al menos 5 caracteres";
+                cantidad.style.color = "green";
+                cantidad.style.fontSize="12px";
+            }; 
+            
+            if(password.value.match(lowerCaseLetters)){
+                minusculas.innerHTML = "-> La contraseña tiene minúsculas";
+                minusculas.style.color = "green"
+                numeros.style.fontSize="12px"; 
+            } else {
+                minusculas.innerHTML ="-> La contraseña debe contener al menos una minúscula";
+                minusculas.style.color="red";
+                minusculas.style.fontSize="12px";
+                totalErrores.push(1);
+            }
+            
+            if(password.value.match(upperCaseLetters)){
+                mayusculas.innerHTML = "-> La contraseña tiene mayúsculas";
+                mayusculas.style.color = "green";
+                minusculas.style.fontSize="12px";
+            } else {
+                mayusculas.innerHTML = "-> La contraseña debe contener al menos una mayúscula";
+                mayusculas.style.color="red";
+                mayusculas.style.fontSize="12px";
+                totalErrores.push(1);
+            }
+        
+            if(password.value.match(numbers)){
+                numeros.innerHTML = "-> La contraseña tiene números";
+                numeros.style.color = "green"   ;
+                numeros.style.fontSize="12px";      
+            } else {
+                numeros.innerHTML="-> La contraseña debe contener al menos un número";
+                numeros.style.color="red";
+                numeros.style.fontSize="12px"; 
+                totalErrores.push(1);
+            }
+        
+            if(!password.value.match(specCharacters)){  
+            
+                caracteres.innerHTML = "-> La contraseña debe contener al menos un caracter especial";
+                caracteres.style.color="red";
+                caracteres.style.fontSize="12px";
+                totalErrores.push(1);
+            } else {
+                caracteres.innerHTML = "-> La contraseña contiene al menos un caracter especial";
+                caracteres.style.color = "green"
+                caracteres.style.fontSize="12px";   
+            };
+        };
+            
+            
         if(totalErrores.length > 0){
             event.preventDefault();
         }
-
+        
     });
 
 })
