@@ -3,6 +3,7 @@ const router = express.Router();
 const path = require('path');
 const app = express();
 const usersController = require('../src/controllers/usersController');
+const passwordController = require('../src/controllers/passwordController')
 
 const guestMiddleware = require('../src/middlewares/guestMiddleware');
 const authMiddleware = require('../src/middlewares/authMiddleware');
@@ -51,5 +52,12 @@ router.post('/cart/delete/:id_user/:id_movie', usersController.deleteCart)
 
 router.post('/rental/add/:id_user/:id_movie', usersController.addRental)
 router.post('/rental/delete/:id_user/:id_movie', usersController.deleteRental)
+
+router.get('/forgotPassword', passwordController.forgotPassword)
+router.post('/forgotPassword-sendEmail', passwordController.sendEmail) 
+
+router.get('/resetPassword', passwordController.resetPassword)
+router.post('/updatePassword', passwordController.updatePassword)
+
 
 module.exports = router;

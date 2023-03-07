@@ -3,6 +3,8 @@ const app = express();
 const path = require('path');
 const cookies = require('cookie-parser');
 app.use(cookies());
+var flash = require('express-flash');
+app.use(flash());
 
 const PORT = process.env.PORT || 5000;
 const router = express.Router()

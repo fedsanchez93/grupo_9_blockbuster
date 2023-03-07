@@ -1,11 +1,11 @@
-const path = require('path')
-const fs = require('fs');
+//const path = require('path')
+//const fs = require('fs');
 const db = require('../database/models');
-const Op = db.Sequelize.Op;
+//const Op = db.Sequelize.Op;
 
-const productsFilePath = path.join(__dirname, '../data/products.json');
+//const productsFilePath = path.join(__dirname, '../data/products.json');
 // const charactersFilePath = path.join(__dirname, '../data/characters.json')
-const listaPeliculas = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+//const listaPeliculas = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 // const listaPersonajes = JSON.parse(fs.readFileSync(charactersFilePath, 'utf-8'));
 
 // const masBuscadas = listaPeliculas.filter(function(product){
