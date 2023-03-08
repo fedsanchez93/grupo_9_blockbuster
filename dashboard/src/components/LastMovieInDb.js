@@ -34,10 +34,11 @@ export default class LastMovieInDb extends React.Component {
                                 <img
                                     className="img-fluid px-3 px-sm-4 mt-3 mb-4"
                                     style={{ maxWidth: 20 + "rem" }}
-                                    src={this.state.lastMovieInDb.image_url}
+                                    src={String(this.state.lastMovieInDb.image_url).includes('http') ? this.state.lastMovieInDb.image_url : 'http://localhost:5000/'+this.state.lastMovieInDb.image_url}
                                     alt={this.state.lastMovieInDb.title}
                                 />
-                            </div>
+                            </div> 
+                            {/* {String(this.state.lastMovieInDb.image_url).includes('www.') ? null : 'http://localhost:5000/'} */}
                             <p>
                                 {this.state.lastMovieInDb.description}
                             </p>
