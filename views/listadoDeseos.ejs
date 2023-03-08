@@ -4,7 +4,6 @@
 <head>
     <%- include('partials/head') %> 
     <title>Blockbuster</title>
-    <!-- <link rel="stylesheet" href="css/styles-home.css"> -->
     <link rel="stylesheet" href="/css/administrarProductos.css">  
 </head>
 <body>
@@ -18,8 +17,7 @@
                     <h2 class="tituloPeli texto"><%= element.title %></h2>
                     <h3 class="texto">$<%= element.price %></h3>
                 </div>
-                <!-- <a href="/carrito/<%= element.id %> " class="botonFormBusc">Comprar</a>
-                <a href="/products/productDetail?id=<%= element.id %> " class="botonFormBusc">Quitar</a> -->
+                
                 <div class="iconos-nav">
                     <li class="agregarAlCarrito"><form action="/users/cart/add/<%= user.id %>/<%= element.id %>/" method="post"><button type="submit" class="boton"><i class="fa-solid fa-cart-plus"></i></button></form></li>
                     <li class="QuitarDeMisDeseos"><form action="/users/wishes/delete/<%= user.id %>/<%= element.id %>/" method="post"><button type="submit" class="boton"><i class="fa-regular fa-trash-can"></i></button></form></li>
@@ -30,23 +28,7 @@
         <% }); %> 
     </section>
 
-    <section class="section-cards" style="display: none;">
-        <% listaPeliculas.forEach(element => { %>
-            <article class="card">
-                <div>
-                    <img class="img-pelicula" src="<%= element.imagen %> ">
-                    <h2 class="tituloPeli"><%= element.titulo %></h2>
-                    <h3 class="texto"><%= element.precio %></h3>
-                </div>
-                <!-- <a href="/carrito/<%= element.id %> " class="botonFormBusc">Comprar</a>
-                <a href="/products/productDetail?id=<%= element.id %> " class="botonFormBusc">Quitar</a> -->
-                <div class="iconos-nav">
-                    <i class="fa-solid fa-cart-plus"></i>
-                    <i class="fa-regular fa-trash-can"></i>
-                </div>
-            </article>
-        <% }); %> 
-    </section>
+    
 
     <div class="navbar fixed-bottom"><%- include('partials/footer') %> </div> 
 

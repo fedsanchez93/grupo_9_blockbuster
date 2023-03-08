@@ -61,11 +61,14 @@
                         <!-- <li><form action="/api/wishes/add/<%= user.id %>/<%= movie.id %>/" method="post">
                             <button  type="submit"  class="botonNav2"><i class="fa-solid fa-heart-circle-plus"></i> Agregar a Mis Deseos</button>
                         </form></li> -->
-                        <button id="agregarDeseos" value="<%= user.id %>"  class="botonNav2"><i class="fa-solid fa-heart-circle-plus"></i> Agregar a Mis Deseos</button>
-                        <li><form action="/users/wishes/delete/<%= user.id %>/<%= movie.id %>/" method="post"><button type="submit" class="botonNav2"><i class="fa-solid fa-heart-circle-minus"></i> Quitar de Mis Deseos</button></form></li>
+                        <li><button id="agregarDeseos" value="<%= user.id %>"  class="botonNav2"><i class="fa-solid fa-heart-circle-plus"></i> Agregar a Mis Deseos</button></li>
+                        <!-- <li><form action="/users/wishes/delete/<%= user.id %>/<%= movie.id %>/" method="post">
+                            <button type="submit" class="botonNav2"><i class="fa-solid fa-heart-circle-minus"></i> Quitar de Mis Deseos</button>
+                        </form></li> -->
+                        <li><button id="quitarDeseo" value="<%= user.id %>" class="botonNav2"><i class="fa-solid fa-heart-circle-minus"></i> Quitar de Mis Deseos</button></li>
 
-                        <li><form action="/users/cart/add/<%= user.id %>/<%= movie.id %>/" method="post"><button type="submit" class="botonNav2"><i class="fa-solid fa-cart-plus"></i> Agregar al Carrito</button></form></li>
-                        <li><form action="/users/cart/delete/<%= user.id %>/<%= movie.id %>/" method="post"><button type="submit" class="botonNav2"><i class="fa-solid fa-trash"></i> Quitar del carrito</button></form></li>
+                        <li><button id="agregarAlCarrito" value="<%= user.id %>" class="botonNav2"><i class="fa-solid fa-cart-plus"></i> Agregar al Carrito</button></li>
+                        <li><button id="quitarDelCarrito" value="<%= user.id %>" class="botonNav2"><i class="fa-solid fa-trash"></i> Quitar del carrito</button></li>
                     </ul>
                 </div>
             </div>
