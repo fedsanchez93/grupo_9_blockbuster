@@ -262,6 +262,8 @@ const controller = {
 			id_user:id_user
 		})
 		.then(result=>{
+			//res.redirect(req.originalUrl)
+			//console.log('req.originalUrl: ',req.originalUrl)
 			res.redirect('/products/listadoDeseos')
 		}) 
 	},

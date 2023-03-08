@@ -218,12 +218,18 @@ const productsController = {
 
     eliminarProducto:(req,res)=>{
         let idProducto = req.params.id
+        
         // let newProducts =[]
 
 		// listaPeliculas.forEach(element => {
 		// 	if(idProducto != element.id){newProducts.push(element)}
 		// });
 		// fs.writeFileSync(productsFilePath, JSON.stringify(newProducts,null, '\t'))
+
+        db.MovieUserWish.destroy(  {where: {id_movie: idProducto}}  )
+        db.MovieUserRental.destroy(  {where: {id_movie: idProducto}}  )
+        db.MovieUserCart.destroy(  {where: {id_movie: idProducto}}  )
+
         db.MovieLanguage.destroy(  {where: {id_movie: idProducto}}) 
         db.MovieGenre.destroy(  {where: {id_movie: idProducto}})
         db.Movie.destroy(  {where:  {id:idProducto}  }  )

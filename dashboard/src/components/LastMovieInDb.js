@@ -38,7 +38,6 @@ export default class LastMovieInDb extends React.Component {
                                     alt={this.state.lastMovieInDb.title}
                                 />
                             </div> 
-                            {/* {String(this.state.lastMovieInDb.image_url).includes('www.') ? null : 'http://localhost:5000/'} */}
                             <p>
                                 {this.state.lastMovieInDb.description}
                             </p>
