@@ -53,7 +53,7 @@ export default class MovieList extends React.Component {
                                         <th>Duración</th>
                                     </tr>
                                 </thead>
-                                <tfoot>
+                                {/* <tfoot>
                                 <tr>
                                         <th>Id</th>
                                         <th>Titulo</th>
@@ -63,7 +63,7 @@ export default class MovieList extends React.Component {
                                         <th>Año Lanzamiento</th>
                                         <th>Duración</th>
                                     </tr>
-                                </tfoot>
+                                </tfoot> */}
                                 <tbody>
                                     {this.state.movies.map((m) => {
                                         return <Movie key={m.id} movie={m} />;
