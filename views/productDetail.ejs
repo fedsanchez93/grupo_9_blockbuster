@@ -13,7 +13,7 @@
     
     <main>
 
-        <h2 class="titulo" id="agregarDeseos">
+        <h2 class="titulo" >
             <%= movie.title %> 
         </h2>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -58,7 +58,10 @@
                         <li><a href="#">Calificación IMDb</a> <div class="calificacion"><%= movie.imdb_rating %></div></li>
                         <li><a href="#">Calificación Rotten Tomatoes </a><div class="calificacion"><%= movie.rotten_tomatoes_rating %></div></li>
 
-                        <li><form action="/api/wishes/add/<%= user.id %>/<%= movie.id %>/" method="post"><button type="submit" id="agregarDeseos" class="botonNav2"><i class="fa-solid fa-heart-circle-plus"></i> Agregar a Mis Deseos</button></form></li>
+                        <!-- <li><form action="/api/wishes/add/<%= user.id %>/<%= movie.id %>/" method="post">
+                            <button  type="submit"  class="botonNav2"><i class="fa-solid fa-heart-circle-plus"></i> Agregar a Mis Deseos</button>
+                        </form></li> -->
+                        <button id="agregarDeseos" value="<%= user.id %>"  class="botonNav2"><i class="fa-solid fa-heart-circle-plus"></i> Agregar a Mis Deseos</button>
                         <li><form action="/users/wishes/delete/<%= user.id %>/<%= movie.id %>/" method="post"><button type="submit" class="botonNav2"><i class="fa-solid fa-heart-circle-minus"></i> Quitar de Mis Deseos</button></form></li>
 
                         <li><form action="/users/cart/add/<%= user.id %>/<%= movie.id %>/" method="post"><button type="submit" class="botonNav2"><i class="fa-solid fa-cart-plus"></i> Agregar al Carrito</button></form></li>
