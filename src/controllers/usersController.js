@@ -48,7 +48,13 @@ const controller = {
 				.then(res.redirect('/users/perfil'))
 			} else if (ok && req.body.password !== '') {
 				db.User.update({
+					//password: bcrypt.hashSync(req.body.newPassword, 10),
+					"name": req.body.name,
+					"username": req.body.username,
+					"email": req.body.email,
 					password: bcrypt.hashSync(req.body.newPassword, 10),
+					image_url: req.file ? req.file.filename : req.body.imagenAnterior,
+					id_favorite_genre: req.body.id_favorite_genre
 				},
 				{
 					where: {id: req.params.id}
@@ -202,7 +208,7 @@ const controller = {
 				//"id_favorite_genre":userToEdit.id_favorite_genre
 			})
 		
-	//	if(req.body.password == '') {		
+		if(req.body.password == '') {		
 			db.User.update(
 				{
 					"id": req.body.id,
@@ -218,7 +224,7 @@ const controller = {
 					where: {id: req.params.id}
 				})
 				.then(user => {res.redirect('/users/perfil'); console.log(req.body)});
-	/*	} else {
+		} else {
 			db.User.update(
 				{
 					password: bcrypt.hashSync(req.body.password, 10)
@@ -227,7 +233,7 @@ const controller = {
 					where: {id: req.params.id}
 				})			
 				.then(user => {res.redirect('/users/perfil'); console.log(req.body)});
-		} */
+		} 
 	},
 
 	confirmarBorrado: (req,res)=> {
