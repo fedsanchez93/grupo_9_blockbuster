@@ -202,7 +202,7 @@ const controller = {
 				//"id_favorite_genre":userToEdit.id_favorite_genre
 			})
 		
-		if(req.body.password == '') {		
+	//	if(req.body.password == '') {		
 			db.User.update(
 				{
 					"id": req.body.id,
@@ -218,7 +218,7 @@ const controller = {
 					where: {id: req.params.id}
 				})
 				.then(user => {res.redirect('/users/perfil'); console.log(req.body)});
-		} else {
+	/*	} else {
 			db.User.update(
 				{
 					password: bcrypt.hashSync(req.body.password, 10)
@@ -227,7 +227,7 @@ const controller = {
 					where: {id: req.params.id}
 				})			
 				.then(user => {res.redirect('/users/perfil'); console.log(req.body)});
-		}
+		} */
 	},
 
 	confirmarBorrado: (req,res)=> {
