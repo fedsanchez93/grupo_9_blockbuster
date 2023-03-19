@@ -31,3 +31,62 @@ Integrantes del equipo:
   - Tengo 31 años y soy ingeniero mecánico. Trabajo como ingeniero de diseño de equipos mecánicos en Techint. Disfruto de la música, el deporte y pasar tiempo con mi familia.
 - David Moshe Chami 23 años
   - Soy estudiante de programación, música y canto. Trabajo en ventas para un comercio familiar de telas para decoración y mantelería. Me gusta andar en bici, entrenar, escuchar música y participar en eventos. Considero que la responsabilidad y la buena onda son pilares para el éxito en cualquier desafío.
+
+
+***
+## Instalación del proyecto
+
+### Desde la terminal:
+
+- Clonar el proyecto:
+````
+git clone https://github.com/fedsanchez93/grupo_9_blockbuster.git
+````
+
+
+- Para instalar las dependencias correr: 
+````
+npm install
+````
+
+- Tambien Ingresar a la carpeta del dashboard en React e instalar dependencias: 
+````
+cd dashboard
+npm install
+````
+***
+
+## Instalación de la base de datos:
+
+**Debe tener instalado un gestor de base de datos, por ejemplo: MYSQL Workbench
+https://www.mysql.com/products/workbench/
+o Heidi db https://www.heidisql.com/.**
+
+
+### Desde la terminal de MySql:
+**Debe estar posicionado en la carpeta raiz**
+- Para Crear y Poblar las tablas con los datos, Desde su gestor de base de datos, correr el script que se encuentra en:
+`
+ src/database/blockbuster.sql
+ `
+- Una vez creadas las tablas, Configurar el archivo config.js ubicado en: 
+`
+/src/database/config/config.js
+`
+
+
+- Levantar el servidor para la base de datos desde su gestor de base de datos.
+
+### Levantar el servidor puerto 5000: 
+````
+npm start
+````
+- ingresar a: http://localhost:5000/
+
+***
+### Levantar el dashboard en el puerto 3000: 
+````
+cd dashoard
+npm start
+````
+***
